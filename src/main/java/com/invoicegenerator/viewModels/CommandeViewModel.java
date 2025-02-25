@@ -64,7 +64,7 @@ public class CommandeViewModel extends VBox {
         // Ajout du filtre de saisie pour codeContratField
         codeContratField.setTextFormatter(new TextFormatter<>(change -> {
             String newText = change.getControlNewText();
-            if (newText.matches("[\\d\\w]{0,15}")) {
+            if (newText.matches("[\\w]{0,15}")) {
                 return change;
             }
             return null;
@@ -244,11 +244,11 @@ public class CommandeViewModel extends VBox {
         if (dateFinPicker.getValue() == null) {
             return "Remplir le contrôle Date Fin";
         }
-        if (codeContratField.getText().isEmpty()) {
-            return "Remplir le contrôle Code Contrat";
-        }
         if (codeActiviteComboBox.getValue().isEmpty()) {
             return "Remplir le contrôle Code Activité";
+        }
+        if (codeContratField.getText().isEmpty()) {
+            return "Remplir le contrôle Code Contrat";
         }
         if(dateDebutPicker.getValue().isEqual(dateFinPicker.getValue())){
             return "La date de début doit être différente de la date de fin";
