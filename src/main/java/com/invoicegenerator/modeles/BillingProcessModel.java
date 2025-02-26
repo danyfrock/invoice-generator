@@ -3,39 +3,76 @@ package com.invoicegenerator.modeles;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents the billing process model which contains parameters, a list of PV entity models,
+ * and file name details.
+ */
 public class BillingProcessModel {
-    private ParametersModel parametres = new ParametersModel();
-    private List<PvEntityPvModel> pvEntityPvModels = new ArrayList<>();
-    private String nomFichierSortie;
-    private String complementNom;
+    private ParametersModel parameters = new ParametersModel();
+    private final List<PvEntityPvModel> pvEntityPvModels = new ArrayList<>();
+    private String outputFileName;
+    private String complement;
 
-
-
-    public List<PvEntityPvModel> getEntitePvModeles() {
+    /**
+     * Gets the list of PV entity models.
+     *
+     * @return A list of PvEntityPvModel.
+     */
+    public List<PvEntityPvModel> getPvEntities() {
         return pvEntityPvModels;
     }
 
-    public ParametersModel getParametres() {
-        return parametres;
+    /**
+     * Gets the parameters model.
+     *
+     * @return The ParametersModel.
+     */
+    public ParametersModel getParameters() {
+        return parameters;
     }
 
-    public void setParametres(ParametersModel parametres) {
-        this.parametres = parametres;
+    /**
+     * Sets the parameters model.
+     *
+     * @param parameters The ParametersModel to set.
+     */
+    public void setParameters(ParametersModel parameters) {
+        this.parameters = parameters;
     }
 
-    public String getNomFichierSortie() {
-        return nomFichierSortie;
+    /**
+     * Gets the output file name.
+     *
+     * @return The output file name.
+     */
+    public String getOutputFileName() {
+        return outputFileName;
     }
 
-    public void setNomFichierSortie(String nomFichierSortie) {
-        this.nomFichierSortie = nomFichierSortie;
+    /**
+     * Sets the output file name.
+     *
+     * @param outputFileName The output file name to set.
+     */
+    public void setOutputFileName(String outputFileName) {
+        this.outputFileName = outputFileName;
     }
 
-    public String getComplementNom() {
-        return complementNom;
+    /**
+     * Gets the name complement.
+     *
+     * @return The name complement.
+     */
+    public String getComplement() {
+        return complement;
     }
 
-    public void setComplementNom(String complementNom) {
-        this.complementNom = complementNom;
+    /**
+     * Sets the name complement.
+     *
+     * @param complement The name complement to set.
+     */
+    public void setComplement(String complement) {
+        this.complement = complement;
     }
 }

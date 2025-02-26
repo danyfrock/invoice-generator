@@ -38,11 +38,11 @@ public class ExcelPvReaderUtil {
                 Sheet sheet = workbook.getSheet("PV");
                 Row row11 = sheet.getRow(10);
                 Cell cellB11 = row11.getCell(1);
-                commande.setObjetDeLaPrestationSuffixe(cellB11.getStringCellValue());
+                commande.setBenefitPurposeSuffix(cellB11.getStringCellValue());
 
                 Row row9 = sheet.getRow(8);
                 Cell cellB9 = row11.getCell(1);
-                commande.setBonDeCommande(cellB9.getStringCellValue());
+                commande.setOrderForm(cellB9.getStringCellValue());
             } catch (IOException e) {
                 retour = new ActionResult(false, e.getMessage());
                 e.printStackTrace();
@@ -91,28 +91,28 @@ public class ExcelPvReaderUtil {
                         if (cell != null) {
                             switch (entry.getKey()) {
                                 case "Détails de la Commande - Libellé de la ligne de commande":
-                                    ligneCommande.setLibelle(cell.getStringCellValue());
+                                    ligneCommande.setCommandLabel(cell.getStringCellValue());
                                     break;
                                 case "Détails de la Commande - Type d’UO":
-                                    ligneCommande.setTypeUO(cell.getStringCellValue());
+                                    ligneCommande.setUoType(cell.getStringCellValue());
                                     break;
                                 case "Détails de la Commande - Prix Unitaire UO HT":
-                                    ligneCommande.setPrixUnitaire(cell.getNumericCellValue());
+                                    ligneCommande.setUnitPrice(cell.getNumericCellValue());
                                     break;
                                 case "Détails de la Commande - Nombre d’UO":
-                                    ligneCommande.setNombreUO((int) cell.getNumericCellValue());
+                                    ligneCommande.setUoNumber((int) cell.getNumericCellValue());
                                     break;
                                 case "Détails de la Commande - Taux de TVA":
                                     ligneCommande.setTVA(cell.getNumericCellValue());
                                     break;
                                 case "Total des PV signés (supposés facturés) - Nombre d’UO":
-                                    ligneCommande.getTotalPV().setNombre((int) cell.getNumericCellValue());
+                                    ligneCommande.getUoTotal().setNumber((int) cell.getNumericCellValue());
                                     break;
                                 case "Montant du PV (au jalon considéré) - Nombre d’UO":
-                                    ligneCommande.getMontantPV().setNombre((int) cell.getNumericCellValue());
+                                    ligneCommande.getUoCost().setNumber((int) cell.getNumericCellValue());
                                     break;
                                 case "Reste à dépenser (après ce PV) - Nombre d’UO":
-                                    ligneCommande.getResteADepenserPV().setNombre((int) cell.getNumericCellValue());
+                                    ligneCommande.getUoToSpend().setNumber((int) cell.getNumericCellValue());
                                     break;
                                 default:
                                     break;
@@ -123,7 +123,7 @@ public class ExcelPvReaderUtil {
                 }
             }
 
-            commande.setListeLigneCommande(listeLigneCommande);
+            commande.setCommandLines(listeLigneCommande);
 
         } catch (IOException e) {
             retour = new ActionResult(false, e.getMessage());

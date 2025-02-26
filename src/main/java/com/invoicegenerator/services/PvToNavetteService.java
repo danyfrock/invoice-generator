@@ -13,25 +13,25 @@ public class PvToNavetteService {
 		int i = 0;
 	    for (PvEntityPvModel entite : entites) {
 			i++;
-	        for (UoCommandLineModel ligne : entite.getCommande().getListeLigneCommande()) {
+	        for (UoCommandLineModel ligne : entite.getCommand().getCommandLines()) {
 	            BillingShuttleModel navette = new BillingShuttleModel();
 
 				navette.setPcBu("EU005");
-				navette.setUniteMesure("UNT = Units");
-	            navette.setActivite(entite.getCommande().getCodeActivite());
-				navette.setProjet(entite.getCommande().getCodeContrat());
-				navette.setNoteEvenement(
-						entite.getCommande().getBonDeCommande()+"-"+entite.getCommande().getObjetDeLaPrestation() +
-						"-" + ligne.getTypeUO() + "- " + ligne.getLibelle());
-				navette.setMontantFacturation(ligne.getTotalPV().getTotalTTC());
-				navette.setPrixUnitaire(ligne.getPrixUnitaire());
-				navette.setQuantite(ligne.getTotalPV().getNombre());
-				navette.setMontantEvenementCalcule(ligne.getTotalPV().getTotalTTC());
-				navette.setPeriodeFacturationDu(entite.getCommande().getDateDebut());
-				navette.setPeriodeFacturationAu(entite.getCommande().getDateFin());
-				navette.setNombreFactures(i);
-				navette.setItemId(ligne.getLibelle() + "-" + i);
-				navette.setNombreFactures(i);
+				navette.setMeasureUnit("UNT = Units");
+	            navette.setActivity(entite.getCommand().getActivityCode());
+				navette.setProject(entite.getCommand().getContractCode());
+				navette.setEventNote(
+						entite.getCommand().getOrderForm()+"-"+entite.getCommand().getBenefitPurpose() +
+						"-" + ligne.getUoType() + "- " + ligne.getCommandLabel());
+				navette.setBillAmount(ligne.getUoTotal().getTotalTTC());
+				navette.setUnitPrice(ligne.getUnitPrice());
+				navette.setQuantity(ligne.getUoTotal().getNumber());
+				navette.setCalculatedEventAmount(ligne.getUoTotal().getTotalTTC());
+				navette.setBillPeriodFrom(entite.getCommand().getDateDebut());
+				navette.setBillPeriodTo(entite.getCommand().getDateFin());
+				navette.setBillNumber(i);
+				navette.setItemId(ligne.getCommandLabel() + "-" + i);
+				navette.setBillNumber(i);
 
 	            navettesList.add(navette);
 	        }

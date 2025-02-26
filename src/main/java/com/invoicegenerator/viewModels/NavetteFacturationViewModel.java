@@ -29,61 +29,61 @@ public class NavetteFacturationViewModel {
     }
 
     public String getProjet() {
-        return (modele != null && modele.getProjet() != null) ? modele.getProjet() : "Default Projet";
+        return (modele != null && modele.getProject() != null) ? modele.getProject() : "Default Projet";
     }
 
     public String getActivite() {
-        return (modele != null && modele.getActivite() != null) ? modele.getActivite() : "Default Activite";
+        return (modele != null && modele.getActivity() != null) ? modele.getActivity() : "Default Activite";
     }
 
     public int getNombreFactures() {
-        return (modele != null) ? modele.getNombreFactures() : 0;
+        return (modele != null) ? modele.getBillNumber() : 0;
     }
 
     public String getNoteEvenement() {
-        return (modele != null && modele.getNoteEvenement() != null) ? modele.getNoteEvenement() : "Default Note";
+        return (modele != null && modele.getEventNote() != null) ? modele.getEventNote() : "Default Note";
     }
 
     public double getQuantite() {
-        return (modele != null) ? modele.getQuantite() : 0.0;
+        return (modele != null) ? modele.getQuantity() : 0.0;
     }
 
     public String getUniteMesure() {
-        return (modele != null && modele.getUniteMesure() != null) ? modele.getUniteMesure() : "Default Unite";
+        return (modele != null && modele.getMeasureUnit() != null) ? modele.getMeasureUnit() : "Default Unite";
     }
 
     public double getPrixUnitaireRound() {
-        return (modele != null) ? Math.round(modele.getPrixUnitaire() * 100.0) / 100.0 : 0.0;
+        return (modele != null) ? Math.round(modele.getUnitPrice() * 100.0) / 100.0 : 0.0;
     }
 
     public double getMontantFacturationRound() {
-        return (modele != null) ? Math.round(modele.getMontantFacturation() * 100.0) / 100.0 : 0.0;
+        return (modele != null) ? Math.round(modele.getBillAmount() * 100.0) / 100.0 : 0.0;
     }
 
     public double getMontantEvenementCalculeRound() {
-        return (modele != null) ? Math.round(modele.getMontantEvenementCalcule() * 100.0) / 100.0 : 0.0;
+        return (modele != null) ? Math.round(modele.getCalculatedEventAmount() * 100.0) / 100.0 : 0.0;
     }
 
 
     public double getPrixUnitaire() {
-        return (modele != null) ? modele.getPrixUnitaire() : 0.0;
+        return (modele != null) ? modele.getUnitPrice() : 0.0;
     }
 
     public double getMontantFacturation() {
-        return (modele != null) ? modele.getMontantFacturation() : 0.0;
+        return (modele != null) ? modele.getBillAmount() : 0.0;
     }
 
     public double getMontantEvenementCalcule() {
-        return (modele != null) ? modele.getMontantEvenementCalcule() : 0.0;
+        return (modele != null) ? modele.getCalculatedEventAmount() : 0.0;
     }
 
 
     public String getPeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationDu(), JOUR_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
     }
 
     public String getPeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationAu(), JOUR_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
     }
 
     public String getItemId() {
@@ -91,7 +91,7 @@ public class NavetteFacturationViewModel {
     }
 
     public String getFactureInitiale() {
-        return (modele != null && modele.getFactureInitiale() != null) ? modele.getFactureInitiale() : "Default Facture";
+        return (modele != null && modele.getInitialBill() != null) ? modele.getInitialBill() : "Default Facture";
     }
 
     public BillingShuttleModel getModel() {
@@ -99,26 +99,26 @@ public class NavetteFacturationViewModel {
     }
 
     public String getJourPeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationDu(), JOUR_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
     }
 
     public String getAnneePeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationDu(), ANNEE_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), ANNEE_FORMAT) : "";
     }
 
     public String getMoisTextePeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationDu(), MOIS_TEXTE_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), MOIS_TEXTE_FORMAT) : "";
     }
 
     public String getJourPeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationAu(), JOUR_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
     }
 
     public String getAnneePeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationAu(), ANNEE_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodTo(), ANNEE_FORMAT) : "";
     }
 
     public String getMoisTextePeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getPeriodeFacturationAu(), MOIS_TEXTE_FORMAT) : "";
+        return (modele != null) ? formatDate(modele.getBillPeriodTo(), MOIS_TEXTE_FORMAT) : "";
     }
 }

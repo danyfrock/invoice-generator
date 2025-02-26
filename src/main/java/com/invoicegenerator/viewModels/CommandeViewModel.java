@@ -87,41 +87,41 @@ public class CommandeViewModel extends VBox {
 
         TableColumn<UoCommandLineModel, String> prixUnitaireCol = new TableColumn<>("Prix Unitaire");
         prixUnitaireCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getPrixUnitaire())));
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUnitPrice())));
 
         TableColumn<UoCommandLineModel, String> totalNombreCol = new TableColumn<>("total nombre d'UO");
-        totalNombreCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getTotalPV().getNombre())));
+        totalNombreCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getUoTotal().getNumber())));
 
         TableColumn<UoCommandLineModel, String> totalHTCol = new TableColumn<>("total HT");
         totalHTCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getTotalPV().getTotalHT())));
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoTotal().getTotalHT())));
 
         TableColumn<UoCommandLineModel, String> totalTTCCol = new TableColumn<>("total TTC");
         totalTTCCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getTotalPV().getTotalTTC()))
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoTotal().getTotalTTC()))
         );
 
         TableColumn<UoCommandLineModel, String> doneNombreCol = new TableColumn<>("depensé nombre d'UO");
-        doneNombreCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getMontantPV().getNombre())));
+        doneNombreCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getUoCost().getNumber())));
 
         TableColumn<UoCommandLineModel, String> doneHTCol = new TableColumn<>("depensé HT");
         doneHTCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getMontantPV().getTotalHT())));
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoCost().getTotalHT())));
 
         TableColumn<UoCommandLineModel, String> doneTTCCol = new TableColumn<>("depensé TTC");
         doneTTCCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getMontantPV().getTotalTTC())));
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoCost().getTotalTTC())));
 
         TableColumn<UoCommandLineModel, String> restNombreCol = new TableColumn<>("reste nombre d'UO");
-        restNombreCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getResteADepenserPV().getNombre())));
+        restNombreCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getUoToSpend().getNumber())));
 
         TableColumn<UoCommandLineModel, String> restHTCol = new TableColumn<>("reste HT");
         restHTCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getResteADepenserPV().getTotalHT())));
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoToSpend().getTotalHT())));
 
         TableColumn<UoCommandLineModel, String> restTTCCol = new TableColumn<>("reste TTC");
         restTTCCol.setCellValueFactory(cellData ->
-                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getResteADepenserPV().getTotalTTC())));
+                new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoToSpend().getTotalTTC())));
 
         // Ajout des colonnes au TableView
         tableView.getColumns().add(libelleCol);
@@ -160,7 +160,7 @@ public class CommandeViewModel extends VBox {
     }
 
     private void chargerParametres() {
-        this.setParametres(new ParametresService(this.parametreModele.getParametresFileName()).chargerParametres());
+        this.setParametres(new ParametresService(this.parametreModele.getParametersFileName()).chargerParametres());
     }
 
     private void setParametres(ParametersModel parametersModel){
@@ -200,19 +200,19 @@ public class CommandeViewModel extends VBox {
     public void setSource(PvEntityPvModel pv) {
         removeListeners();
         this.source = pv;
-        if (pv != null && pv.getCommande() != null) {
-            CommandModel commande = pv.getCommande();
+        if (pv != null && pv.getCommand() != null) {
+            CommandModel commande = pv.getCommand();
             dateDebutPicker.setValue(commande.getDateDebut());
             dateFinPicker.setValue(commande.getDateFin());
-            codeContratField.setText(commande.getCodeContrat() != null ? commande.getCodeContrat() : "");
-            codeActiviteComboBox.setValue(commande.getCodeActivite() != null ? commande.getCodeActivite() : "");
-            nomFichier.set(pv.getNomFichier());
-            pathFichier.set(pv.getPathFichier());
+            codeContratField.setText(commande.getContractCode() != null ? commande.getContractCode() : "");
+            codeActiviteComboBox.setValue(commande.getActivityCode() != null ? commande.getActivityCode() : "");
+            nomFichier.set(pv.getFileName());
+            pathFichier.set(pv.getFilePath());
             nomFichierLabel.setText(nomFichier.getValue());
             pathFichierLabel.setText(pathFichier.getValue());
 
             // Remplir le TableView avec les lignes de commande
-            ObservableList<UoCommandLineModel> lignesCommande = FXCollections.observableArrayList(commande.getListeLigneCommande());
+            ObservableList<UoCommandLineModel> lignesCommande = FXCollections.observableArrayList(commande.getCommandLines());
             tableView.setItems(lignesCommande);
         } else {
             clearFields();
@@ -224,10 +224,10 @@ public class CommandeViewModel extends VBox {
     private void updateProperties() {
         if(!listen) return;
 
-        this.source.getCommande().setCodeActivite(codeActiviteComboBox.getValue());
-        this.source.getCommande().setCodeContrat(codeContratField.getText());
-        this.source.getCommande().setDateDebut(dateDebutPicker.getValue());
-        this.source.getCommande().setDateFin(dateFinPicker.getValue());
+        this.source.getCommand().setActivityCode(codeActiviteComboBox.getValue());
+        this.source.getCommand().setContractCode(codeContratField.getText());
+        this.source.getCommand().setDateDebut(dateDebutPicker.getValue());
+        this.source.getCommand().setDateFin(dateFinPicker.getValue());
         estVerifie.set(isEstVerifie());
         doitRemplir.set(getDoitRemplir());
         codeContrat.set(codeContratField.getText());
@@ -259,7 +259,7 @@ public class CommandeViewModel extends VBox {
 
         //dates minimales
         ////int yearMin = LocalDate.now().getYear() - 1;
-        int yearMin = this.parametreModele.getAnneeMin();
+        int yearMin = this.parametreModele.getMinYear();
         if(dateDebutPicker.getValue().getYear() < yearMin){
             return "La date de début doit être après " + yearMin;
         }
@@ -269,7 +269,7 @@ public class CommandeViewModel extends VBox {
 
         //dates maximales
         ////int yearMax = LocalDate.now().getYear() + 4;
-        int yearMax = this.parametreModele.getAnneeMax();
+        int yearMax = this.parametreModele.getMaxYear();
         if(dateDebutPicker.getValue().getYear() > yearMax){
             return "La date de début doit être avant " + yearMax;
         }

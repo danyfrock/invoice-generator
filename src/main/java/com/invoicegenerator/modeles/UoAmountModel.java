@@ -1,41 +1,78 @@
 package com.invoicegenerator.modeles;
 
+/**
+ * Represents the unit of amount model which contains details about the total amount,
+ * unit price, quantity, and tax.
+ */
 public class UoAmountModel {
     private double totalHT;
     private double totalTTC;
-    private int nombre;
-    private double prixUnitaire;
+    private int number;
+    private double unitPrice;
     private double tva;
 
-    public int getNombre() {
-        return nombre;
+    /**
+     * Gets the quantity.
+     *
+     * @return The quantity.
+     */
+    public int getNumber() {
+        return number;
     }
 
+    /**
+     * Gets the total amount excluding tax.
+     *
+     * @return The total amount excluding tax.
+     */
     public double getTotalHT() {
         return totalHT;
     }
 
+    /**
+     * Gets the total amount including tax.
+     *
+     * @return The total amount including tax.
+     */
     public double getTotalTTC() {
         return totalTTC;
     }
 
-    public void setNombre(int nombre) {
-        this.nombre = nombre;
-        calculerTotalTTC();
+    /**
+     * Sets the quantity and recalculates the total amount including tax.
+     *
+     * @param number The quantity to set.
+     */
+    public void setNumber(int number) {
+        this.number = number;
+        calculateTTC();
     }
 
-    public void setPrixUnitaire(double prixUnitaire) {
-        this.prixUnitaire = prixUnitaire;
-        calculerTotalTTC();
+    /**
+     * Sets the unit price and recalculates the total amount including tax.
+     *
+     * @param unitPrice The unit price to set.
+     */
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+        calculateTTC();
     }
 
+    /**
+     * Sets the tax rate and recalculates the total amount including tax.
+     *
+     * @param tva The tax rate to set.
+     */
     public void setTva(double tva) {
         this.tva = tva;
-        calculerTotalTTC();
+        calculateTTC();
     }
 
-    private void calculerTotalTTC() {
-        this.totalHT = this.nombre * this.prixUnitaire;
+    /**
+     * Recalculates the total amount including tax based on the current quantity, unit price, and tax rate.
+     */
+    private void calculateTTC() {
+        this.totalHT = this.number * this.unitPrice;
         this.totalTTC = this.totalHT * (1 + this.tva);
     }
 }

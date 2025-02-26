@@ -29,7 +29,7 @@ public class FileSelectorView extends Application {
         this.source = source;
         this.chargerParametres();
 
-        for(PvEntityPvModel pv : source.getEntitePvModeles()) {
+        for(PvEntityPvModel pv : source.getPvEntities()) {
             fileTable.getItems().add(pv);
         }
         updateNextButtonState();
@@ -43,10 +43,10 @@ public class FileSelectorView extends Application {
 
         TableColumn<PvEntityPvModel, String> fileNameColumn = new TableColumn<>("File Name");
         fileNameColumn.prefWidthProperty().bind(fileTable.widthProperty().multiply(0.5));
-        fileNameColumn.setCellValueFactory(new PropertyValueFactory<>("nomFichier"));
+        fileNameColumn.setCellValueFactory(new PropertyValueFactory<>("fileName"));
         TableColumn<PvEntityPvModel, String> filePathColumn = new TableColumn<>("File Path");
         filePathColumn.prefWidthProperty().bind(fileTable.widthProperty().multiply(0.5));
-        filePathColumn.setCellValueFactory(new PropertyValueFactory<>("pathFichier"));
+        filePathColumn.setCellValueFactory(new PropertyValueFactory<>("filePath"));
         fileTable.getColumns().addAll(fileNameColumn, filePathColumn);
 
         // Enable multiple selection
@@ -59,23 +59,23 @@ public class FileSelectorView extends Application {
         deleteButton.setOnAction(e -> deleteSelection());
 
         nextButton.setOnAction(e -> {
-            source.getEntitePvModeles().clear();
-            source.getEntitePvModeles().addAll(fileTable.getItems());
+            source.getPvEntities().clear();
+            source.getPvEntities().addAll(fileTable.getItems());
             new CommandesView(source).start(new Stage());
             primaryStage.close();
         });
 
         Button paramsButton = new Button("Paramètres");
         paramsButton.setOnAction(e -> {
-            source.getEntitePvModeles().clear();
-            source.getEntitePvModeles().addAll(fileTable.getItems());
+            source.getPvEntities().clear();
+            source.getPvEntities().addAll(fileTable.getItems());
             new ParametresView(source).start(new Stage());
             primaryStage.close();
         });
 
         HBox buttonBox = new HBox(10, selectButton, deleteButton, nextButton);
 
-        Label outputFolderPathLabel = new Label("Dossier de sortie: " + source.getParametres().getEmplacementDossierSortie());
+        Label outputFolderPathLabel = new Label("Dossier de sortie: " + source.getParameters().getOutputFolder());
 
         HBox outputBox = new HBox(10, outputFolderPathLabel, paramsButton);
 
@@ -97,9 +97,9 @@ public class FileSelectorView extends Application {
         if (files != null) {
             for (File file : files) {
                 boolean exists = fileTable.getItems().stream()
-                        .anyMatch(data -> data.getPathFichier().equals(file.getAbsolutePath()));
+                        .anyMatch(data -> data.getFilePath().equals(file.getAbsolutePath()));
                 if (!exists) {
-                    PvEntityPvModel entite = new PvEntityPvModel().setNomFichier(file.getName()).setPathFichier(file.getAbsolutePath());
+                    PvEntityPvModel entite = new PvEntityPvModel().setFileName(file.getName()).setFilePath(file.getAbsolutePath());
                     fileTable.getItems().add(entite);
                 }
             }
@@ -115,12 +115,12 @@ public class FileSelectorView extends Application {
 
     private void updateNextButtonState() {
         nextButton.setDisable(fileTable.getItems().isEmpty() ||
-                source.getParametres().getEmplacementDossierSortie() == null ||
-                source.getParametres().getEmplacementDossierSortie().isEmpty());
+                source.getParameters().getOutputFolder() == null ||
+                source.getParameters().getOutputFolder().isEmpty());
     }
 
     private void chargerParametres() {
-        this.source.setParametres(new ParametresService(this.source.getParametres().getParametresFileName()).chargerParametres());
+        this.source.setParameters(new ParametresService(this.source.getParameters().getParametersFileName()).chargerParametres());
     }
 
     public static void main(String[] args) {

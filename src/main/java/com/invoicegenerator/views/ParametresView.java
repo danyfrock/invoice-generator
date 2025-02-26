@@ -134,21 +134,21 @@ public class ParametresView extends Application {
     }
 
     private void enregistrerParametres() {
-        this.source.getParametres().setAnneeMax(Integer.parseInt(this.textAnneeMax.getText()));
-        this.source.getParametres().setAnneeMin(Integer.parseInt(this.textAnneeMin.getText()));
-        this.source.getParametres().setEmplacementDossierSortie(this.textDossier.getText());
-        this.source.getParametres().getCodesActivite().clear();
-        this.source.getParametres().getCodesActivite().addAll(listCodes.getItems());
-        new ParametresService(this.source.getParametres().getParametresFileName()).enregistrerParametres(this.source.getParametres());
+        this.source.getParameters().setMaxYear(Integer.parseInt(this.textAnneeMax.getText()));
+        this.source.getParameters().setMinYear(Integer.parseInt(this.textAnneeMin.getText()));
+        this.source.getParameters().setOutputFolder(this.textDossier.getText());
+        this.source.getParameters().getActivityCodes().clear();
+        this.source.getParameters().getActivityCodes().addAll(listCodes.getItems());
+        new ParametresService(this.source.getParameters().getParametersFileName()).enregistrerParametres(this.source.getParameters());
     }
 
     private void chargerParametres() {
-        this.source.setParametres(new ParametresService(this.source.getParametres().getParametresFileName()).chargerParametres());
+        this.source.setParameters(new ParametresService(this.source.getParameters().getParametersFileName()).chargerParametres());
 
-        this.textAnneeMax.setText("" + this.source.getParametres().getAnneeMax());
-        this.textAnneeMin.setText("" + this.source.getParametres().getAnneeMin());
-        this.textDossier.setText((this.source.getParametres().getEmplacementDossierSortie()));
-        listCodes.setItems(FXCollections.observableArrayList(this.source.getParametres().getCodesActivite()));
+        this.textAnneeMax.setText("" + this.source.getParameters().getMaxYear());
+        this.textAnneeMin.setText("" + this.source.getParameters().getMinYear());
+        this.textDossier.setText((this.source.getParameters().getOutputFolder()));
+        listCodes.setItems(FXCollections.observableArrayList(this.source.getParameters().getActivityCodes()));
     }
 
     private void selectOutputFolder() {

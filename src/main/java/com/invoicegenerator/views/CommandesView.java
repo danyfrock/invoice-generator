@@ -39,25 +39,25 @@ public class CommandesView extends Application {
             CommandeViewModel commandeViewModel = new CommandeViewModel();
             commandeViewModel.setSource(pv);
             commandeViewModel.fillWidthProperty().setValue(true);
-            source.getEntitePvModeles().add(pv);
+            source.getPvEntities().add(pv);
         }
     }
 
     public CommandesView(BillingProcessModel source) {
         this.source = source;
 
-        for(PvEntityPvModel pv : source.getEntitePvModeles()){
-            this.pvService.FillPvFrom(pv.getPathFichier(),pv);
+        for(PvEntityPvModel pv : source.getPvEntities()){
+            this.pvService.FillPvFrom(pv.getFilePath(),pv);
         }
 
-        this.dossierSortie = this.source.getParametres().getEmplacementDossierSortie();
+        this.dossierSortie = this.source.getParameters().getOutputFolder();
         this.filePaths.clear();
         this.filePaths.addAll(
-                source.getEntitePvModeles().stream()
-                        .map(PvEntityPvModel::getPathFichier)
+                source.getPvEntities().stream()
+                        .map(PvEntityPvModel::getFilePath)
                         .toList()
         );
-        this.complementField.setText(this.source.getComplementNom());
+        this.complementField.setText(this.source.getComplement());
         resetFichierSortie();
     }
 
@@ -103,7 +103,7 @@ public class CommandesView extends Application {
 
         fileTable.getColumns().addAll(fileNameColumn, filePathColumn, verifiedColumn, mustFillColumn);
 
-        for (PvEntityPvModel pv: source.getEntitePvModeles()){
+        for (PvEntityPvModel pv: source.getPvEntities()){
             CommandeViewModel commandeViewModel = new CommandeViewModel();
             commandeViewModel.setSource(pv);
             commandeViewModel.fillWidthProperty().setValue(true);
@@ -151,7 +151,7 @@ public class CommandesView extends Application {
             });
 
             this.complementField.textProperty().addListener((observable, oldValue, newValue) -> {
-                this.source.setComplementNom(newValue);
+                this.source.setComplement(newValue);
                 resetFichierSortie();
             });
         }
@@ -216,7 +216,7 @@ public class CommandesView extends Application {
     private void updateCodeContract(String oldVal, String newVal) {
         fileTable.getItems().forEach(item -> {
             if (!oldVal.equals(newVal)) {
-                item.getSource().getCommande().setCodeContrat(newVal);
+                item.getSource().getCommand().setContractCode(newVal);
                 item.setSource(item.getSource());
                 resetFichierSortie(newVal);
             }
@@ -224,11 +224,11 @@ public class CommandesView extends Application {
     }
 
     private void resetFichierSortie(String codeContrat){
-        String sortie = FileUtil.concat(dossierSortie, source.getParametres().getNomDefautFichierSortie());
+        String sortie = FileUtil.concat(dossierSortie, source.getParameters().getOutputFileDefaultName());
         sortie = FileUtil.addSuffixToFileName(sortie, codeContrat);
         sortie = FileUtil.addSuffixToFileName(sortie, this.complementField.getText());
 
-        this.source.setNomFichierSortie(sortie);
+        this.source.setOutputFileName(sortie);
         this.fichierSortieLabel.setText(sortie);
     }
 
@@ -237,13 +237,13 @@ public class CommandesView extends Application {
 
         if (fileTable != null && !fileTable.getItems().isEmpty()) {
             var firstItem = fileTable.getItems().getFirst();
-            if (firstItem != null && firstItem.getSource() != null && firstItem.getSource().getCommande() != null) {
-                codeContrat = firstItem.getSource().getCommande().getCodeContrat();
+            if (firstItem != null && firstItem.getSource() != null && firstItem.getSource().getCommand() != null) {
+                codeContrat = firstItem.getSource().getCommand().getContractCode();
             }
-        } else if (source != null && source.getEntitePvModeles() != null && !source.getEntitePvModeles().isEmpty()) {
-            var firstModel = source.getEntitePvModeles().getFirst();
-            if (firstModel != null && firstModel.getCommande() != null) {
-                codeContrat = firstModel.getCommande().getCodeContrat() != null ? firstModel.getCommande().getCodeContrat() : "";
+        } else if (source != null && source.getPvEntities() != null && !source.getPvEntities().isEmpty()) {
+            var firstModel = source.getPvEntities().getFirst();
+            if (firstModel != null && firstModel.getCommand() != null) {
+                codeContrat = firstModel.getCommand().getContractCode() != null ? firstModel.getCommand().getContractCode() : "";
             }
         }
 

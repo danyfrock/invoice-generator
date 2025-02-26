@@ -1,65 +1,128 @@
 package com.invoicegenerator.modeles;
 
+/**
+ * Represents the unit of order command line model which contains details about the unit of order,
+ * unit price, quantity, and various amounts.
+ */
 public class UoCommandLineModel {
-    private String libelle;
-    private String typeUO;
-    private double prixUnitaire;
-    private int nombreUO;
-    private UoAmountModel totalPV = new UoAmountModel();
-    private UoAmountModel montantPV = new UoAmountModel();
-    private UoAmountModel resteADepenserPV = new UoAmountModel();
+    private String commandLabel;
+    private String uoType;
+    private double unitPrice;
+    private int uoNumber;
+    private final UoAmountModel uoTotal = new UoAmountModel();
+    private final UoAmountModel uoCost = new UoAmountModel();
+    private UoAmountModel uoToSpend = new UoAmountModel();
 
-    // Getters et setters
-    public String getLibelle() {
-        return libelle;
+    /**
+     * Gets the label.
+     *
+     * @return The label.
+     */
+    public String getCommandLabel() {
+        return commandLabel;
     }
 
-    public void setLibelle(String libelle) {
-        this.libelle = libelle;
+    /**
+     * Sets the label.
+     *
+     * @param commandLabel The label to set.
+     */
+    public void setCommandLabel(String commandLabel) {
+        this.commandLabel = commandLabel;
     }
 
-    public String getTypeUO() {
-        return typeUO;
+    /**
+     * Gets the type of unit of order.
+     *
+     * @return The type of unit of order.
+     */
+    public String getUoType() {
+        return uoType;
     }
 
-    public void setTypeUO(String typeUO) {
-        this.typeUO = typeUO;
+    /**
+     * Sets the type of unit of order.
+     *
+     * @param uoType The type of unit of order to set.
+     */
+    public void setUoType(String uoType) {
+        this.uoType = uoType;
     }
 
-    public double getPrixUnitaire() {
-        return prixUnitaire;
+    /**
+     * Gets the unit price.
+     *
+     * @return The unit price.
+     */
+    public double getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setPrixUnitaire(double prixUnitaire) {
-        this.prixUnitaire = prixUnitaire;
-        this.montantPV.setPrixUnitaire(this.prixUnitaire);
-        this.totalPV.setPrixUnitaire(this.prixUnitaire);
-        this.resteADepenserPV.setPrixUnitaire(this.prixUnitaire);
+    /**
+     * Sets the unit price and updates the unit price in related amount models.
+     *
+     * @param unitPrice The unit price to set.
+     */
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+        this.uoCost.setUnitPrice(this.unitPrice);
+        this.uoTotal.setUnitPrice(this.unitPrice);
+        this.uoToSpend.setUnitPrice(this.unitPrice);
     }
 
-    public int getNombreUO() {
-        return nombreUO;
+    /**
+     * Gets the quantity of units of order.
+     *
+     * @return The quantity of units of order.
+     */
+    public int getUoNumber() {
+        return uoNumber;
     }
 
-    public void setNombreUO(int nombreUO) {
-        this.nombreUO = nombreUO;
+    /**
+     * Sets the quantity of units of order.
+     *
+     * @param uoNumber The quantity of units of order to set.
+     */
+    public void setUoNumber(int uoNumber) {
+        this.uoNumber = uoNumber;
     }
 
-    public UoAmountModel getTotalPV() {
-        return totalPV;
+    /**
+     * Gets the total amount model.
+     *
+     * @return The total amount model.
+     */
+    public UoAmountModel getUoTotal() {
+        return uoTotal;
     }
 
-    public UoAmountModel getMontantPV() {
-        return montantPV;
+    /**
+     * Gets the amount model.
+     *
+     * @return The amount model.
+     */
+    public UoAmountModel getUoCost() {
+        return uoCost;
     }
 
-    public UoAmountModel getResteADepenserPV() {
-        return resteADepenserPV;
+    /**
+     * Gets the remaining amount to be spent model.
+     *
+     * @return The remaining amount to be spent model.
+     */
+    public UoAmountModel getUoToSpend() {
+        return uoToSpend;
     }
 
+    /**
+     * Sets the tax rate and updates the tax rate in related amount models.
+     *
+     * @param tva The tax rate to set.
+     */
     public void setTVA(double tva) {
-        this.montantPV.setTva(tva);
-        this.totalPV.setTva(tva);
-        this.resteADepenserPV.setTva(tva);
+        this.uoCost.setTva(tva);
+        this.uoTotal.setTva(tva);
+        this.uoToSpend.setTva(tva);
     }
 }

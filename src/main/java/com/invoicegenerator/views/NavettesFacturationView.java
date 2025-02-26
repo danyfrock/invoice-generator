@@ -48,7 +48,7 @@ public class NavettesFacturationView extends Application {
 
     public NavettesFacturationView(BillingProcessModel source) {
         this.sourceFacturation = source;
-        this.fichierSortie = new File(this.sourceFacturation.getNomFichierSortie());
+        this.fichierSortie = new File(this.sourceFacturation.getOutputFileName());
 
         BillingShuttleModel[] aModeleSource;
         aModeleSource = this.getNavettes();
@@ -171,7 +171,7 @@ public class NavettesFacturationView extends Application {
     }
 
     private BillingShuttleModel[] getNavettes() {
-        return new PvToNavetteService().Convertir(sourceFacturation.getEntitePvModeles().toArray(new PvEntityPvModel[0]));
+        return new PvToNavetteService().Convertir(sourceFacturation.getPvEntities().toArray(new PvEntityPvModel[0]));
     }
 
     private void openFile(File file) {

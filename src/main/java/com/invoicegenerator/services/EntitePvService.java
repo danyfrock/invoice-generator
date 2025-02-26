@@ -15,13 +15,13 @@ public class EntitePvService {
     }
 
     public PvEntityPvModel FillPvFrom(String path, PvEntityPvModel pv) {
-        CommandModel commande = pv.getCommande();
-        pv.setPathFichier(path);
-        pv.setNomFichier(new File(path).getName());
+        CommandModel commande = pv.getCommand();
+        pv.setFilePath(path);
+        pv.setFileName(new File(path).getName());
         ActionResult ar = ExcelPvReaderUtil.lireFichierExcel(path, commande);
 
         if(!ar.success()){
-            pv.setPathFichier(ar.message());
+            pv.setFilePath(ar.message());
         }
 
         return pv;

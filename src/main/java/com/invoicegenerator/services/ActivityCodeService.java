@@ -7,6 +7,6 @@ import java.util.List;
 
 public class ActivityCodeService {
     public List<String> getActivityCodes() {
-        return new ParametresService(new ParametersModel().getParametresFileName()).chargerParametres().getCodesActivite();
+        return new ParametresService(new ParametersModel().getParametersFileName()).chargerParametres().getActivityCodes();
     }
 }
