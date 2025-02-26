@@ -1,7 +1,9 @@
 package com.invoicegenerator.modeles;
 
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -45,7 +47,11 @@ public class ParametersModel {
      * @return A list of activity codes.
      */
     public List<String> getActivityCodes() {
-        return activityCodes;
+        return activityCodes == null ? Collections.emptyList() : new ArrayList<>(activityCodes);
+    }
+
+    public void setActivityCodes(List<String> codes) {
+        this.activityCodes = codes == null ? new ArrayList<>() : new ArrayList<>(codes);
     }
 
     /**

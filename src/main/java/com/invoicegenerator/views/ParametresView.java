@@ -137,8 +137,7 @@ public class ParametresView extends Application {
         this.source.getParameters().setMaxYear(Integer.parseInt(this.textAnneeMax.getText()));
         this.source.getParameters().setMinYear(Integer.parseInt(this.textAnneeMin.getText()));
         this.source.getParameters().setOutputFolder(this.textDossier.getText());
-        this.source.getParameters().getActivityCodes().clear();
-        this.source.getParameters().getActivityCodes().addAll(listCodes.getItems());
+        this.source.getParameters().setActivityCodes(listCodes.getItems());
         new ParametresService(this.source.getParameters().getParametersFileName()).enregistrerParametres(this.source.getParameters());
     }
 
