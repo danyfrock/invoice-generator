@@ -1,6 +1,5 @@
 package com.invoicegenerator.viewModels;
 
-import com.invoicegenerator.services.ActivityCodeService;
 import com.invoicegenerator.services.ParametresService;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -80,10 +79,10 @@ public class CommandeViewModel extends VBox {
 
         // Création des colonnes
         TableColumn<UoCommandLineModel, String> libelleCol = new TableColumn<>("Libellé");
-        libelleCol.setCellValueFactory(new PropertyValueFactory<>("libelle"));
+        libelleCol.setCellValueFactory(new PropertyValueFactory<>("commandLabel"));
 
         TableColumn<UoCommandLineModel, String> typeCol = new TableColumn<>("Type");
-        typeCol.setCellValueFactory(new PropertyValueFactory<>("typeUO"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("uoType"));
 
         TableColumn<UoCommandLineModel, String> prixUnitaireCol = new TableColumn<>("Prix Unitaire");
         prixUnitaireCol.setCellValueFactory(cellData ->
@@ -184,8 +183,7 @@ public class CommandeViewModel extends VBox {
     }
 
     private void fillCodeActiviteComboBox() {
-        ActivityCodeService service = new ActivityCodeService();
-        List<String> activityCodes = service.getActivityCodes();
+        List<String> activityCodes = this.parametreModele.getActivityCodes();
         if (activityCodes != null) {
             codeActiviteComboBox.setItems(FXCollections.observableArrayList(activityCodes));
         } else {
@@ -246,6 +244,9 @@ public class CommandeViewModel extends VBox {
         }
         if (codeActiviteComboBox.getValue().isEmpty()) {
             return "Remplir le contrôle Code Activité";
+        }
+        if (!codeActiviteComboBox.getItems().contains(codeActiviteComboBox.getValue())) {
+            return "La valeur du Code Activité n'est pas valide.";
         }
         if (codeContratField.getText().isEmpty()) {
             return "Remplir le contrôle Code Contrat";

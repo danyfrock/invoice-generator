@@ -18,7 +18,6 @@ com\invoicegenerator\views\CommandesView.class
 com\invoicegenerator\views\FileSelectorView.class
 com\invoicegenerator\Main.class
 com\invoicegenerator\modeles\BillingShuttleModel.class
-com\invoicegenerator\services\ActivityCodeService.class
 com\invoicegenerator\services\EntitePvService.class
 com\invoicegenerator\views\CommandesView$2.class
 com\invoicegenerator\services\PvToNavetteService.class
