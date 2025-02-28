@@ -5,120 +5,319 @@ import com.invoicegenerator.modeles.BillingShuttleModel;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
+/**
+ * ViewModel pour la gestion des données de navette de facturation dans l'interface utilisateur.
+ * Cette classe encapsule les données du modèle BillingShuttleModel et fournit des méthodes pour y accéder formatées.
+ */
 public class NavetteFacturationViewModel {
+    private static final Logger logger = Logger.getLogger(NavetteFacturationViewModel.class.getName());
+
     private BillingShuttleModel modele;
     private static final DateTimeFormatter JOUR_FORMAT = DateTimeFormatter.ofPattern("dd");
     private static final DateTimeFormatter ANNEE_FORMAT = DateTimeFormatter.ofPattern("yyyy");
     private static final DateTimeFormatter MOIS_TEXTE_FORMAT = DateTimeFormatter.ofPattern("MMMM", Locale.FRANCE);
 
+    /**
+     * Constructeur par défaut. Initialise le modèle à null.
+     */
     public NavetteFacturationViewModel() {
-        this.modele = null; // Default value
+        logger.log(Level.INFO, "Initialisation de NavetteFacturationViewModel sans modèle");
+        this.modele = null;
     }
 
+    /**
+     * Constructeur avec un modèle. Initialise le modèle avec la valeur fournie ou un modèle par défaut si null.
+     *
+     * @param modele Le modèle BillingShuttleModel à utiliser
+     */
     public NavetteFacturationViewModel(BillingShuttleModel modele) {
-        this.modele = (modele != null) ? modele : new BillingShuttleModel(); // Default value if null
+        logger.log(Level.INFO, "Initialisation de NavetteFacturationViewModel avec modèle");
+        this.modele = (modele != null) ? modele : new BillingShuttleModel();
+        if (modele == null) {
+            logger.log(Level.WARNING, "Le modèle fourni était null, utilisation d'une instance par défaut");
+        }
     }
 
+    /**
+     * Formate une date selon un formateur donné.
+     *
+     * @param date La date à formater
+     * @param formatter Le formateur à utiliser
+     * @return La date formatée ou une chaîne vide si la date est null
+     */
     private String formatDate(LocalDate date, DateTimeFormatter formatter) {
-        return (date != null) ? date.format(formatter) : "";
+        if (date != null) {
+            String formattedDate = date.format(formatter);
+            logger.log(Level.FINE, "Date formatée : {0} avec le formatteur {1}", new Object[]{formattedDate, formatter.toString()});
+            return formattedDate;
+        }
+        logger.log(Level.FINE, "Date null, retour d'une chaîne vide");
+        return "";
     }
 
+    /**
+     * Retourne le PcBu du modèle.
+     *
+     * @return Le PcBu ou une valeur par défaut si non disponible
+     */
     public String getPcBu() {
-        return (modele != null && modele.getPcBu() != null) ? modele.getPcBu() : "Default PcBu";
+        String pcBu = (modele != null && modele.getPcBu() != null) ? modele.getPcBu() : "Default PcBu";
+        logger.log(Level.FINE, "Récupération de PcBu : {0}", pcBu);
+        return pcBu;
     }
 
+    /**
+     * Retourne le projet du modèle.
+     *
+     * @return Le projet ou une valeur par défaut si non disponible
+     */
     public String getProjet() {
-        return (modele != null && modele.getProject() != null) ? modele.getProject() : "Default Projet";
+        String projet = (modele != null && modele.getProject() != null) ? modele.getProject() : "Default Projet";
+        logger.log(Level.FINE, "Récupération de Projet : {0}", projet);
+        return projet;
     }
 
+    /**
+     * Retourne l'activité du modèle.
+     *
+     * @return L'activité ou une valeur par défaut si non disponible
+     */
     public String getActivite() {
-        return (modele != null && modele.getActivity() != null) ? modele.getActivity() : "Default Activite";
+        String activite = (modele != null && modele.getActivity() != null) ? modele.getActivity() : "Default Activite";
+        logger.log(Level.FINE, "Récupération de Activite : {0}", activite);
+        return activite;
     }
 
+    /**
+     * Retourne le nombre de factures du modèle.
+     *
+     * @return Le nombre de factures ou 0 si non disponible
+     */
     public int getNombreFactures() {
-        return (modele != null) ? modele.getBillNumber() : 0;
+        int nombre = (modele != null) ? modele.getBillNumber() : 0;
+        logger.log(Level.FINE, "Récupération de NombreFactures : {0}", nombre);
+        return nombre;
     }
 
+    /**
+     * Retourne la note d'événement du modèle.
+     *
+     * @return La note d'événement ou une valeur par défaut si non disponible
+     */
     public String getNoteEvenement() {
-        return (modele != null && modele.getEventNote() != null) ? modele.getEventNote() : "Default Note";
+        String note = (modele != null && modele.getEventNote() != null) ? modele.getEventNote() : "Default Note";
+        logger.log(Level.FINE, "Récupération de NoteEvenement : {0}", note);
+        return note;
     }
 
+    /**
+     * Retourne la quantité du modèle.
+     *
+     * @return La quantité ou 0.0 si non disponible
+     */
     public double getQuantite() {
-        return (modele != null) ? modele.getQuantity() : 0.0;
+        double quantite = (modele != null) ? modele.getQuantity() : 0.0;
+        logger.log(Level.FINE, "Récupération de Quantite : {0}", quantite);
+        return quantite;
     }
 
+    /**
+     * Retourne l'unité de mesure du modèle.
+     *
+     * @return L'unité de mesure ou une valeur par défaut si non disponible
+     */
     public String getUniteMesure() {
-        return (modele != null && modele.getMeasureUnit() != null) ? modele.getMeasureUnit() : "Default Unite";
+        String unite = (modele != null && modele.getMeasureUnit() != null) ? modele.getMeasureUnit() : "Default Unite";
+        logger.log(Level.FINE, "Récupération de UniteMesure : {0}", unite);
+        return unite;
     }
 
+    /**
+     * Retourne le prix unitaire arrondi à deux décimales.
+     *
+     * @return Le prix unitaire arrondi ou 0.0 si non disponible
+     */
     public double getPrixUnitaireRound() {
-        return (modele != null) ? Math.round(modele.getUnitPrice() * 100.0) / 100.0 : 0.0;
+        double prix = (modele != null) ? Math.round(modele.getUnitPrice() * 100.0) / 100.0 : 0.0;
+        logger.log(Level.FINE, "Récupération de PrixUnitaireRound : {0}", prix);
+        return prix;
     }
 
+    /**
+     * Retourne le montant de facturation arrondi à deux décimales.
+     *
+     * @return Le montant de facturation arrondi ou 0.0 si non disponible
+     */
     public double getMontantFacturationRound() {
-        return (modele != null) ? Math.round(modele.getBillAmount() * 100.0) / 100.0 : 0.0;
+        double montant = (modele != null) ? Math.round(modele.getBillAmount() * 100.0) / 100.0 : 0.0;
+        logger.log(Level.FINE, "Récupération de MontantFacturationRound : {0}", montant);
+        return montant;
     }
 
+    /**
+     * Retourne le montant calculé de l'événement arrondi à deux décimales.
+     *
+     * @return Le montant calculé arrondi ou 0.0 si non disponible
+     */
     public double getMontantEvenementCalculeRound() {
-        return (modele != null) ? Math.round(modele.getCalculatedEventAmount() * 100.0) / 100.0 : 0.0;
+        double montant = (modele != null) ? Math.round(modele.getCalculatedEventAmount() * 100.0) / 100.0 : 0.0;
+        logger.log(Level.FINE, "Récupération de MontantEvenementCalculeRound : {0}", montant);
+        return montant;
     }
 
-
+    /**
+     * Retourne le prix unitaire brut.
+     *
+     * @return Le prix unitaire ou 0.0 si non disponible
+     */
     public double getPrixUnitaire() {
-        return (modele != null) ? modele.getUnitPrice() : 0.0;
+        double prix = (modele != null) ? modele.getUnitPrice() : 0.0;
+        logger.log(Level.FINE, "Récupération de PrixUnitaire : {0}", prix);
+        return prix;
     }
 
+    /**
+     * Retourne le montant de facturation brut.
+     *
+     * @return Le montant de facturation ou 0.0 si non disponible
+     */
     public double getMontantFacturation() {
-        return (modele != null) ? modele.getBillAmount() : 0.0;
+        double montant = (modele != null) ? modele.getBillAmount() : 0.0;
+        logger.log(Level.FINE, "Récupération de MontantFacturation : {0}", montant);
+        return montant;
     }
 
+    /**
+     * Retourne le montant calculé de l'événement brut.
+     *
+     * @return Le montant calculé ou 0.0 si non disponible
+     */
     public double getMontantEvenementCalcule() {
-        return (modele != null) ? modele.getCalculatedEventAmount() : 0.0;
+        double montant = (modele != null) ? modele.getCalculatedEventAmount() : 0.0;
+        logger.log(Level.FINE, "Récupération de MontantEvenementCalcule : {0}", montant);
+        return montant;
     }
 
-
+    /**
+     * Retourne le jour de début de la période de facturation.
+     *
+     * @return Le jour ou une chaîne vide si non disponible
+     */
     public String getPeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de PeriodeFacturationDu : {0}", jour);
+        return jour;
     }
 
+    /**
+     * Retourne le jour de fin de la période de facturation.
+     *
+     * @return Le jour ou une chaîne vide si non disponible
+     */
     public String getPeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de PeriodeFacturationAu : {0}", jour);
+        return jour;
     }
 
+    /**
+     * Retourne l'identifiant de l'élément.
+     *
+     * @return L'identifiant ou une valeur par défaut si non disponible
+     */
     public String getItemId() {
-        return (modele != null && modele.getItemId() != null) ? modele.getItemId() : "Default ItemId";
+        String itemId = (modele != null && modele.getItemId() != null) ? modele.getItemId() : "Default ItemId";
+        logger.log(Level.FINE, "Récupération de ItemId : {0}", itemId);
+        return itemId;
     }
 
+    /**
+     * Retourne la facture initiale.
+     *
+     * @return La facture initiale ou une valeur par défaut si non disponible
+     */
     public String getFactureInitiale() {
-        return (modele != null && modele.getInitialBill() != null) ? modele.getInitialBill() : "Default Facture";
+        String facture = (modele != null && modele.getInitialBill() != null) ? modele.getInitialBill() : "Default Facture";
+        logger.log(Level.FINE, "Récupération de FactureInitiale : {0}", facture);
+        return facture;
     }
 
+    /**
+     * Retourne le modèle sous-jacent.
+     *
+     * @return Le modèle BillingShuttleModel
+     */
     public BillingShuttleModel getModel() {
+        logger.log(Level.FINE, "Récupération du modèle");
         return modele;
     }
 
+    /**
+     * Retourne le jour de début de la période de facturation.
+     *
+     * @return Le jour ou une chaîne vide si non disponible
+     */
     public String getJourPeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de JourPeriodeFacturationDu : {0}", jour);
+        return jour;
     }
 
+    /**
+     * Retourne l'année de début de la période de facturation.
+     *
+     * @return L'année ou une chaîne vide si non disponible
+     */
     public String getAnneePeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), ANNEE_FORMAT) : "";
+        String annee = (modele != null) ? formatDate(modele.getBillPeriodFrom(), ANNEE_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de AnneePeriodeFacturationDu : {0}", annee);
+        return annee;
     }
 
+    /**
+     * Retourne le mois en texte de début de la période de facturation.
+     *
+     * @return Le mois en texte ou une chaîne vide si non disponible
+     */
     public String getMoisTextePeriodeFacturationDu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodFrom(), MOIS_TEXTE_FORMAT) : "";
+        String mois = (modele != null) ? formatDate(modele.getBillPeriodFrom(), MOIS_TEXTE_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de MoisTextePeriodeFacturationDu : {0}", mois);
+        return mois;
     }
 
+    /**
+     * Retourne le jour de fin de la période de facturation.
+     *
+     * @return Le jour ou une chaîne vide si non disponible
+     */
     public String getJourPeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de JourPeriodeFacturationAu : {0}", jour);
+        return jour;
     }
 
+    /**
+     * Retourne l'année de fin de la période de facturation.
+     *
+     * @return L'année ou une chaîne vide si non disponible
+     */
     public String getAnneePeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodTo(), ANNEE_FORMAT) : "";
+        String annee = (modele != null) ? formatDate(modele.getBillPeriodTo(), ANNEE_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de AnneePeriodeFacturationAu : {0}", annee);
+        return annee;
     }
 
+    /**
+     * Retourne le mois en texte de fin de la période de facturation.
+     *
+     * @return Le mois en texte ou une chaîne vide si non disponible
+     */
     public String getMoisTextePeriodeFacturationAu() {
-        return (modele != null) ? formatDate(modele.getBillPeriodTo(), MOIS_TEXTE_FORMAT) : "";
+        String mois = (modele != null) ? formatDate(modele.getBillPeriodTo(), MOIS_TEXTE_FORMAT) : "";
+        logger.log(Level.FINE, "Récupération de MoisTextePeriodeFacturationAu : {0}", mois);
+        return mois;
     }
 }

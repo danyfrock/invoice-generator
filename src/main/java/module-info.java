@@ -6,6 +6,7 @@ module InvoiceGenerator {
     requires javafx.fxml;
     requires javafx.graphics;
     requires com.google.gson;
+    requires java.logging;
 
     exports com.invoicegenerator to javafx.graphics;
     opens com.invoicegenerator.modeles to com.google.gson, javafx.base;

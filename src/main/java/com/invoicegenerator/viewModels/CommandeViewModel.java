@@ -11,12 +11,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-
 import com.invoicegenerator.modeles.*;
 
 import java.util.List;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
+/**
+ * ViewModel pour la gestion des commandes dans l'interface utilisateur.
+ * Cette classe encapsule les contrôles UI et la logique pour afficher et modifier les données d'une commande.
+ */
 public class CommandeViewModel extends VBox {
+    private static final Logger logger = Logger.getLogger(CommandeViewModel.class.getName());
+
     private final DatePicker dateDebutPicker = new DatePicker();
     private final DatePicker dateFinPicker = new DatePicker();
     private final TextField codeContratField = new TextField();
@@ -35,13 +42,15 @@ public class CommandeViewModel extends VBox {
     private boolean listen = true;
     private ParametersModel parametreModele = new ParametersModel();
 
+    /**
+     * Constructeur par défaut. Initialise l'interface utilisateur et charge les paramètres.
+     */
     public CommandeViewModel() {
+        logger.log(Level.INFO, "Initialisation de CommandeViewModel");
         chargerParametres();
         tableView.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
 
         GridPane grid = new GridPane();
-        //grid.setGridLinesVisible(true);
-        //grid.setStyle("-fx-border-color: black; -fx-border-width: 5px;");
         grid.autosize();
         grid.setPrefWidth(Double.MAX_VALUE);
         grid.setHgap(10);
@@ -123,22 +132,8 @@ public class CommandeViewModel extends VBox {
                 new SimpleStringProperty(String.format("%.2f", cellData.getValue().getUoToSpend().getTotalTTC())));
 
         // Ajout des colonnes au TableView
-        tableView.getColumns().add(libelleCol);
-        tableView.getColumns().add(typeCol);
-        tableView.getColumns().add(prixUnitaireCol);
-
-
-        tableView.getColumns().add(totalNombreCol);
-        tableView.getColumns().add(totalHTCol);
-        tableView.getColumns().add(totalTTCCol);
-
-        tableView.getColumns().add(doneNombreCol);
-        tableView.getColumns().add(doneHTCol);
-        tableView.getColumns().add(doneTTCCol);
-
-        tableView.getColumns().add(restNombreCol);
-        tableView.getColumns().add(restHTCol);
-        tableView.getColumns().add(restTTCCol);
+        tableView.getColumns().addAll(libelleCol, typeCol, prixUnitaireCol, totalNombreCol, totalHTCol, totalTTCCol,
+                doneNombreCol, doneHTCol, doneTTCCol, restNombreCol, restHTCol, restTTCCol);
 
         // Ajout du TableView au GridPane
         GridPane.setHgrow(tableView, Priority.ALWAYS);
@@ -148,7 +143,6 @@ public class CommandeViewModel extends VBox {
         tableView.setPrefWidth(Double.MAX_VALUE);
         grid.add(tableView, 0, 6, 4, 1);
 
-
         this.getChildren().add(grid);
         this.setMaxWidth(Double.MAX_VALUE);
         VBox.setVgrow(this, Priority.ALWAYS);
@@ -156,17 +150,32 @@ public class CommandeViewModel extends VBox {
         this.setMaxWidth(Double.MAX_VALUE);
 
         AddListeners();
+        logger.log(Level.INFO, "Interface utilisateur initialisée avec succès");
     }
 
+    /**
+     * Charge les paramètres à partir du service de paramètres.
+     */
     private void chargerParametres() {
+        logger.log(Level.FINE, "Chargement des paramètres");
         this.setParametres(new ParametresService(this.parametreModele.getParametersFileName()).chargerParametres());
+        logger.log(Level.FINE, "Paramètres chargés avec succès");
     }
 
-    private void setParametres(ParametersModel parametersModel){
+    /**
+     * Définit le modèle de paramètres.
+     *
+     * @param parametersModel Le modèle de paramètres à définir
+     */
+    private void setParametres(ParametersModel parametersModel) {
         this.parametreModele = parametersModel;
     }
 
+    /**
+     * Ajoute des listeners aux propriétés des contrôles pour mettre à jour les données.
+     */
     private void AddListeners() {
+        logger.log(Level.FINE, "Ajout des listeners aux contrôles");
         dateDebutPicker.valueProperty().addListener((obs, oldVal, newVal) -> updateProperties());
         dateFinPicker.valueProperty().addListener((obs, oldVal, newVal) -> updateProperties());
         codeContratField.textProperty().addListener((obs, oldVal, newVal) -> updateProperties());
@@ -174,7 +183,11 @@ public class CommandeViewModel extends VBox {
         listen = true;
     }
 
+    /**
+     * Supprime les listeners des propriétés des contrôles.
+     */
     private void removeListeners() {
+        logger.log(Level.FINE, "Suppression des listeners des contrôles");
         dateDebutPicker.valueProperty().removeListener((obs, oldVal, newVal) -> updateProperties());
         dateFinPicker.valueProperty().removeListener((obs, oldVal, newVal) -> updateProperties());
         codeContratField.textProperty().removeListener((obs, oldVal, newVal) -> updateProperties());
@@ -182,20 +195,36 @@ public class CommandeViewModel extends VBox {
         listen = false;
     }
 
+    /**
+     * Remplit la ComboBox des codes d'activité avec les valeurs du modèle de paramètres.
+     */
     private void fillCodeActiviteComboBox() {
+        logger.log(Level.FINE, "Remplissage de la ComboBox des codes d'activité");
         List<String> activityCodes = this.parametreModele.getActivityCodes();
         if (activityCodes != null) {
             codeActiviteComboBox.setItems(FXCollections.observableArrayList(activityCodes));
         } else {
+            logger.log(Level.WARNING, "Impossible de récupérer les codes d'activité");
             System.out.println("Impossible de récupérer les codes d'activité.");
         }
     }
 
+    /**
+     * Retourne la source de données actuelle.
+     *
+     * @return L'entité PvEntityPvModel source
+     */
     public PvEntityPvModel getSource() {
         return this.source;
     }
 
+    /**
+     * Définit la source de données et met à jour l'interface utilisateur.
+     *
+     * @param pv L'entité PvEntityPvModel à définir comme source
+     */
     public void setSource(PvEntityPvModel pv) {
+        logger.log(Level.INFO, "Définition de la source PvEntityPvModel");
         removeListeners();
         this.source = pv;
         if (pv != null && pv.getCommand() != null) {
@@ -209,9 +238,9 @@ public class CommandeViewModel extends VBox {
             nomFichierLabel.setText(nomFichier.getValue());
             pathFichierLabel.setText(pathFichier.getValue());
 
-            // Remplir le TableView avec les lignes de commande
             ObservableList<UoCommandLineModel> lignesCommande = FXCollections.observableArrayList(commande.getCommandLines());
             tableView.setItems(lignesCommande);
+            logger.log(Level.FINE, "TableView rempli avec {0} lignes de commande", lignesCommande.size());
         } else {
             clearFields();
         }
@@ -219,9 +248,13 @@ public class CommandeViewModel extends VBox {
         updateProperties();
     }
 
+    /**
+     * Met à jour les propriétés en fonction des valeurs des contrôles.
+     */
     private void updateProperties() {
-        if(!listen) return;
+        if (!listen) return;
 
+        logger.log(Level.FINE, "Mise à jour des propriétés");
         this.source.getCommand().setActivityCode(codeActiviteComboBox.getValue());
         this.source.getCommand().setContractCode(codeContratField.getText());
         this.source.getCommand().setDateDebut(dateDebutPicker.getValue());
@@ -231,10 +264,20 @@ public class CommandeViewModel extends VBox {
         codeContrat.set(codeContratField.getText());
     }
 
+    /**
+     * Vérifie si tous les champs requis sont correctement remplis.
+     *
+     * @return true si tout est vérifié, false sinon
+     */
     public boolean isEstVerifie() {
         return getDoitRemplir().isEmpty();
     }
 
+    /**
+     * Retourne un message indiquant ce qui doit être rempli ou corrigé.
+     *
+     * @return Une chaîne de caractères décrivant les erreurs ou une chaîne vide si tout est correct
+     */
     public String getDoitRemplir() {
         if (dateDebutPicker.getValue() == null) {
             return "Remplir le contrôle Date Début";
@@ -242,7 +285,7 @@ public class CommandeViewModel extends VBox {
         if (dateFinPicker.getValue() == null) {
             return "Remplir le contrôle Date Fin";
         }
-        if (codeActiviteComboBox.getValue().isEmpty()) {
+        if (codeActiviteComboBox.getValue() == null || codeActiviteComboBox.getValue().isEmpty()) {
             return "Remplir le contrôle Code Activité";
         }
         if (!codeActiviteComboBox.getItems().contains(codeActiviteComboBox.getValue())) {
@@ -251,37 +294,37 @@ public class CommandeViewModel extends VBox {
         if (codeContratField.getText().isEmpty()) {
             return "Remplir le contrôle Code Contrat";
         }
-        if(dateDebutPicker.getValue().isEqual(dateFinPicker.getValue())){
+        if (dateDebutPicker.getValue().isEqual(dateFinPicker.getValue())) {
             return "La date de début doit être différente de la date de fin";
         }
-        if(dateDebutPicker.getValue().isAfter(dateFinPicker.getValue())){
+        if (dateDebutPicker.getValue().isAfter(dateFinPicker.getValue())) {
             return "La date de début doit être avant la date de fin";
         }
 
-        //dates minimales
-        ////int yearMin = LocalDate.now().getYear() - 1;
         int yearMin = this.parametreModele.getMinYear();
-        if(dateDebutPicker.getValue().getYear() < yearMin){
+        if (dateDebutPicker.getValue().getYear() < yearMin) {
             return "La date de début doit être après " + yearMin;
         }
-        if(dateFinPicker.getValue().getYear() < yearMin){
+        if (dateFinPicker.getValue().getYear() < yearMin) {
             return "La date de fin doit être après " + yearMin;
         }
 
-        //dates maximales
-        ////int yearMax = LocalDate.now().getYear() + 4;
         int yearMax = this.parametreModele.getMaxYear();
-        if(dateDebutPicker.getValue().getYear() > yearMax){
+        if (dateDebutPicker.getValue().getYear() > yearMax) {
             return "La date de début doit être avant " + yearMax;
         }
-        if(dateFinPicker.getValue().getYear() > yearMax){
+        if (dateFinPicker.getValue().getYear() > yearMax) {
             return "La date de fin doit être avant " + yearMax;
         }
 
         return "";
     }
 
+    /**
+     * Réinitialise tous les champs de l'interface utilisateur.
+     */
     private void clearFields() {
+        logger.log(Level.FINE, "Réinitialisation des champs");
         dateDebutPicker.setValue(null);
         dateFinPicker.setValue(null);
         codeContratField.setText("");
@@ -292,22 +335,47 @@ public class CommandeViewModel extends VBox {
         updateProperties();
     }
 
+    /**
+     * Retourne la propriété indiquant si les données sont vérifiées.
+     *
+     * @return SimpleBooleanProperty pour estVerifie
+     */
     public SimpleBooleanProperty estVerifieProperty() {
         return estVerifie;
     }
 
+    /**
+     * Retourne la propriété contenant le message de ce qui doit être rempli.
+     *
+     * @return SimpleStringProperty pour doitRemplir
+     */
     public SimpleStringProperty doitRemplirProperty() {
         return doitRemplir;
     }
 
+    /**
+     * Retourne la propriété contenant le nom du fichier.
+     *
+     * @return SimpleStringProperty pour nomFichier
+     */
     public SimpleStringProperty nomFichierProperty() {
         return nomFichier;
     }
 
+    /**
+     * Retourne la propriété contenant le chemin du fichier.
+     *
+     * @return SimpleStringProperty pour pathFichier
+     */
     public SimpleStringProperty pathFichierProperty() {
         return pathFichier;
     }
 
+    /**
+     * Retourne la propriété contenant le code du contrat.
+     *
+     * @return SimpleStringProperty pour codeContrat
+     */
     public SimpleStringProperty codeContratProperty() {
         return codeContrat;
     }

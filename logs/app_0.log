@@ -1,0 +1,200 @@
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:03 PM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'b' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_b.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_bv.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'f' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fbv.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'f' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fbv.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'f' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fbv.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'fg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'fg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'fg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
+févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.CommandesView lambda$start$5
+INFO: Ouverture de NavettesFacturationView
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.NavettesFacturationView <init>
+INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Début de la conversion des entités Pv en modèles de navette de facturation
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Traitement de l'entité Pv numéro : 1
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Traitement de l'entité Pv numéro : 2
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Traitement de l'entité Pv numéro : 3
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Conversion terminée avec succès
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Démarrage de l'interface NavettesFacturationView
+févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Interface NavettesFacturationView affichée avec succès
+févr. 28, 2025 12:24:47 PM com.invoicegenerator.views.NavettesFacturationView lambda$start$17
+INFO: Écriture des navettes dans le fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:47 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNavette
+INFO: Début de l'écriture des navettes dans le fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:47 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
+INFO: Début de l'écriture d'un nouveau modèle de fichier Excel à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:48 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
+INFO: Modèle de fichier Excel écrit avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
+févr. 28, 2025 12:24:50 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeAllNavettes
+INFO: Données ajoutées avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm

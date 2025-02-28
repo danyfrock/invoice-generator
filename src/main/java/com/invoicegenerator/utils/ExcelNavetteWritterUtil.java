@@ -10,41 +10,68 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.logging.Logger;
 
+/**
+ * Utilitaire pour écrire des données de navette de facturation dans un fichier Excel.
+ */
 public class ExcelNavetteWritterUtil {
-
+    private static final Logger logger = Logger.getLogger(ExcelNavetteWritterUtil.class.getName());
     private static final int HEADER_ROW_INDEX = 3; // Ligne 4 en Excel (index 3 en Java)
 
-    public static ActionResult writeNewTemplate(String sortie){
+    /**
+     * Écrit un nouveau modèle de fichier Excel à l'emplacement spécifié.
+     * @param sortie Le chemin de sortie du fichier Excel.
+     * @return Un résultat d'action indiquant le succès ou l'échec de l'opération.
+     */
+    public static ActionResult writeNewTemplate(String sortie) {
+        logger.info("Début de l'écriture d'un nouveau modèle de fichier Excel à : " + sortie);
         ActionResult result = new ActionResult(true, "");
         InputStream inputStream = ExcelNavetteWritterUtil.class.getClassLoader().getResourceAsStream("WST-CO_.xlsm");
         try {
             if (inputStream != null) {
                 Files.copy(inputStream, Paths.get(sortie), StandardCopyOption.REPLACE_EXISTING);
-            }
-            else {
-                throw new FileNotFoundException("fichier ressource non trouvé");
+                logger.info("Modèle de fichier Excel écrit avec succès à : " + sortie);
+            } else {
+                throw new FileNotFoundException("Fichier ressource non trouvé");
             }
         } catch (IOException e) {
+            logger.severe("Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
             result = new ActionResult(false, "Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
         }
 
         return result;
     }
 
+    /**
+     * Écrit les données de navette dans un fichier Excel.
+     * @param liste La liste des données de navette à écrire.
+     * @param pathExcel Le chemin du fichier Excel.
+     * @param sheetName Le nom de la feuille Excel où écrire les données.
+     * @return Un résultat d'action indiquant le succès ou l'échec de l'opération.
+     */
     public static ActionResult writeNavette(List<NavetteFacturationViewModel> liste, String pathExcel, String sheetName) {
-        return writeNewTemplate(pathExcel).plus(writeAllNavettes(liste, pathExcel,sheetName));
+        logger.info("Début de l'écriture des navettes dans le fichier Excel : " + pathExcel);
+        return writeNewTemplate(pathExcel).plus(writeAllNavettes(liste, pathExcel, sheetName));
     }
 
+    /**
+     * Écrit toutes les navettes dans la feuille Excel spécifiée.
+     * @param liste La liste des données de navette à écrire.
+     * @param pathExcel Le chemin du fichier Excel.
+     * @param sheetName Le nom de la feuille Excel où écrire les données.
+     * @return Un résultat d'action indiquant le succès ou l'échec de l'opération.
+     */
     private static ActionResult writeAllNavettes(List<NavetteFacturationViewModel> liste, String pathExcel, String sheetName) {
         try (FileInputStream fis = new FileInputStream(pathExcel);
              Workbook workbook = new XSSFWorkbook(fis)) {
-            
+
             Sheet sheet = workbook.getSheet(sheetName); // Utiliser le nom de la feuille spécifié
             if (sheet == null) {
+                logger.warning("La feuille " + sheetName + " n'existe pas dans le fichier Excel.");
                 return new ActionResult(false, "La feuille " + sheetName + " n'existe pas dans le fichier Excel.");
             }
-            
+
             // Trouver la première ligne vide
             int rowNum = findFirstEmptyRow(sheet);
 
@@ -78,15 +105,23 @@ public class ExcelNavetteWritterUtil {
             // Sauvegarde du fichier
             try (FileOutputStream fileOut = new FileOutputStream(pathExcel)) {
                 workbook.write(fileOut);
+                logger.info("Données ajoutées avec succès à : " + pathExcel);
             }
 
             return new ActionResult(true, "Données ajoutées avec succès à : " + pathExcel);
 
         } catch (IOException e) {
+            logger.severe("Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
             return new ActionResult(false, "Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
         }
     }
 
+    /**
+     * Met à jour la valeur d'une cellule avec un double.
+     * @param row La ligne contenant la cellule.
+     * @param cellIndex L'index de la cellule.
+     * @param value La valeur à écrire dans la cellule.
+     */
     private static void updateCell(Row row, int cellIndex, double value) {
         Cell cell = row.getCell(cellIndex);
         if (cell == null) {
@@ -95,6 +130,12 @@ public class ExcelNavetteWritterUtil {
         cell.setCellValue(value);
     }
 
+    /**
+     * Met à jour la valeur d'une cellule avec une chaîne de caractères.
+     * @param row La ligne contenant la cellule.
+     * @param cellIndex L'index de la cellule.
+     * @param value La valeur à écrire dans la cellule.
+     */
     private static void updateCell(Row row, int cellIndex, String value) {
         Cell cell = row.getCell(cellIndex);
         if (cell == null) {
@@ -103,10 +144,15 @@ public class ExcelNavetteWritterUtil {
         cell.setCellValue(value);
     }
 
+    /**
+     * Trouve la première ligne vide dans une feuille Excel.
+     * @param sheet La feuille Excel.
+     * @return L'index de la première ligne vide.
+     */
     private static int findFirstEmptyRow(Sheet sheet) {
         int rowNum = HEADER_ROW_INDEX + 1; // Commencer après les en-têtes
         while (sheet.getRow(rowNum) != null && sheet.getRow(rowNum).getCell(0) != null
-               && !sheet.getRow(rowNum).getCell(0).getStringCellValue().isEmpty()) {
+                && !sheet.getRow(rowNum).getCell(0).getStringCellValue().isEmpty()) {
             rowNum++;
         }
         return rowNum;

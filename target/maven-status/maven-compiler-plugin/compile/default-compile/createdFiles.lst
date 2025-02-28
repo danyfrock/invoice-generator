@@ -13,6 +13,7 @@ com\invoicegenerator\modeles\PvEntityPvModel.class
 com\invoicegenerator\viewModels\NavetteFacturationViewModel.class
 com\invoicegenerator\views\NavettesFacturationView.class
 com\invoicegenerator\utils\FileUtil.class
+com\invoicegenerator\utils\ExcelPvReaderUtil$1.class
 com\invoicegenerator\viewModels\CommandeViewModel.class
 com\invoicegenerator\views\CommandesView.class
 com\invoicegenerator\views\FileSelectorView.class
