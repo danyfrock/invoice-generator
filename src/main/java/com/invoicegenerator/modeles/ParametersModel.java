@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 /**
- * Represents the parameters model which contains various configuration settings for the invoice generator.
+ * Représente le modèle de paramètres qui contient diverses configurations pour le générateur de factures.
  */
 public class ParametersModel {
+    private static final Logger logger = Logger.getLogger(ParametersModel.class.getName());
+
     private String outputFolder = Paths.get(System.getProperty("user.home"), "Desktop").toString();
     private List<String> activityCodes = Arrays.asList("30001", "30003", "30005", "30007", "30009");
     private int minYear = 2024;
@@ -18,108 +22,127 @@ public class ParametersModel {
     private String parametersFileName = Paths.get(System.getProperty("user.home"), "") + "\\parametres.json";
 
     /**
-     * Default constructor for ParametersModel.
+     * Constructeur par défaut pour ParametersModel.
      */
     public ParametersModel() {
+        logger.log(Level.INFO, "Création d'une nouvelle instance de ParametersModel avec valeurs par défaut");
     }
 
     /**
-     * Gets the output folder location.
+     * Récupère l'emplacement du dossier de sortie.
      *
-     * @return The output folder location.
+     * @return L'emplacement du dossier de sortie.
      */
     public String getOutputFolder() {
+        logger.log(Level.FINE, "Récupération de l'emplacement du dossier de sortie : {0}", outputFolder);
         return outputFolder;
     }
 
     /**
-     * Sets the output folder location.
+     * Définit l'emplacement du dossier de sortie.
      *
-     * @param outputFolder The output folder location to set.
+     * @param outputFolder L'emplacement du dossier de sortie à définir.
      */
     public void setOutputFolder(String outputFolder) {
         this.outputFolder = outputFolder;
+        logger.log(Level.FINE, "Emplacement du dossier de sortie défini : {0}", outputFolder);
     }
 
     /**
-     * Gets the list of activity codes.
+     * Récupère la liste des codes d'activité.
      *
-     * @return A list of activity codes.
+     * @return Une liste des codes d'activité.
      */
     public List<String> getActivityCodes() {
-        return activityCodes == null ? Collections.emptyList() : new ArrayList<>(activityCodes);
-    }
-
-    public void setActivityCodes(List<String> codes) {
-        this.activityCodes = codes == null ? new ArrayList<>() : new ArrayList<>(codes);
+        List<String> result = (activityCodes == null) ? Collections.emptyList() : new ArrayList<>(activityCodes);
+        logger.log(Level.FINE, "Récupération de la liste des codes d'activité, taille : {0}", result.size());
+        return result;
     }
 
     /**
-     * Gets the minimum year.
+     * Définit la liste des codes d'activité.
      *
-     * @return The minimum year.
+     * @param codes La liste des codes d'activité à définir.
+     */
+    public void setActivityCodes(List<String> codes) {
+        this.activityCodes = (codes == null) ? new ArrayList<>() : new ArrayList<>(codes);
+        logger.log(Level.FINE, "Liste des codes d'activité définie, taille : {0}", this.activityCodes.size());
+    }
+
+    /**
+     * Récupère l'année minimum.
+     *
+     * @return L'année minimum.
      */
     public int getMinYear() {
+        logger.log(Level.FINE, "Récupération de l'année minimum : {0}", minYear);
         return minYear;
     }
 
     /**
-     * Sets the minimum year.
+     * Définit l'année minimum.
      *
-     * @param minYear The minimum year to set.
+     * @param minYear L'année minimum à définir.
      */
     public void setMinYear(int minYear) {
         this.minYear = minYear;
+        logger.log(Level.FINE, "Année minimum définie : {0}", minYear);
     }
 
     /**
-     * Gets the maximum year.
+     * Récupère l'année maximale.
      *
-     * @return The maximum year.
+     * @return L'année maximale.
      */
     public int getMaxYear() {
+        logger.log(Level.FINE, "Récupération de l'année maximale : {0}", maxYear);
         return maxYear;
     }
 
     /**
-     * Sets the maximum year.
+     * Définit l'année maximale.
      *
-     * @param maxYear The maximum year to set.
+     * @param maxYear L'année maximale à définir.
      */
     public void setMaxYear(int maxYear) {
         this.maxYear = maxYear;
+        logger.log(Level.FINE, "Année maximale définie : {0}", maxYear);
     }
 
     /**
-     * Gets the default output file name.
+     * Récupère le nom par défaut du fichier de sortie.
      *
-     * @return The default output file name.
+     * @return Le nom par défaut du fichier de sortie.
      */
     public String getOutputFileDefaultName() {
+        logger.log(Level.FINE, "Récupération du nom par défaut du fichier de sortie : {0}", outputFileDefaultName);
         return outputFileDefaultName;
     }
 
     /**
-     * Gets the parameters file name.
+     * Récupère le nom du fichier de paramètres.
      *
-     * @return The parameters file name.
+     * @return Le nom du fichier de paramètres.
      */
     public String getParametersFileName() {
+        logger.log(Level.FINE, "Récupération du nom du fichier de paramètres : {0}", parametersFileName);
         return parametersFileName;
     }
 
     /**
-     * Returns a string representation of the ParametersModel.
+     * Retourne une représentation sous forme de chaîne du ParametersModel.
      *
-     * @return A string representation of the ParametersModel.
+     * @return Une représentation sous forme de chaîne du ParametersModel.
      */
     @Override
     public String toString() {
-        return "ParametresModele{" +
+        String result = "ParametresModele{" +
                 "emplacementDossierSortie='" + outputFolder + '\'' +
                 ", codesActivite=" + activityCodes +
                 ", anneeMin=" + minYear +
                 ", anneeMax=" + maxYear +
                 '}';
+        logger.log(Level.FINE, "Génération de la représentation textuelle : {0}", result);
+        return result;
     }
 }

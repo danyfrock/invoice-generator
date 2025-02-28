@@ -1,8 +1,8 @@
 package com.invoicegenerator.modeles;
 
 /**
- * Represents the unit of order command line model which contains details about the unit of order,
- * unit price, quantity, and various amounts.
+ * Représente le modèle de ligne de commande d'unité de commande qui contient des détails sur l'unité de commande,
+ * le prix unitaire, la quantité et divers montants.
  */
 public class UoCommandLineModel {
     private String commandLabel;
@@ -14,54 +14,54 @@ public class UoCommandLineModel {
     private UoAmountModel uoToSpend = new UoAmountModel();
 
     /**
-     * Gets the label.
+     * Obtient l'étiquette.
      *
-     * @return The label.
+     * @return L'étiquette.
      */
     public String getCommandLabel() {
         return commandLabel;
     }
 
     /**
-     * Sets the label.
+     * Définit l'étiquette.
      *
-     * @param commandLabel The label to set.
+     * @param commandLabel L'étiquette à définir.
      */
     public void setCommandLabel(String commandLabel) {
         this.commandLabel = commandLabel;
     }
 
     /**
-     * Gets the type of unit of order.
+     * Obtient le type d'unité de commande.
      *
-     * @return The type of unit of order.
+     * @return Le type d'unité de commande.
      */
     public String getUoType() {
         return uoType;
     }
 
     /**
-     * Sets the type of unit of order.
+     * Définit le type d'unité de commande.
      *
-     * @param uoType The type of unit of order to set.
+     * @param uoType Le type d'unité de commande à définir.
      */
     public void setUoType(String uoType) {
         this.uoType = uoType;
     }
 
     /**
-     * Gets the unit price.
+     * Obtient le prix unitaire.
      *
-     * @return The unit price.
+     * @return Le prix unitaire.
      */
     public double getUnitPrice() {
         return unitPrice;
     }
 
     /**
-     * Sets the unit price and updates the unit price in related amount models.
+     * Définit le prix unitaire et met à jour le prix unitaire dans les modèles de montant associés.
      *
-     * @param unitPrice The unit price to set.
+     * @param unitPrice Le prix unitaire à définir.
      */
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
@@ -71,54 +71,54 @@ public class UoCommandLineModel {
     }
 
     /**
-     * Gets the quantity of units of order.
+     * Obtient la quantité d'unités de commande.
      *
-     * @return The quantity of units of order.
+     * @return La quantité d'unités de commande.
      */
     public int getUoNumber() {
         return uoNumber;
     }
 
     /**
-     * Sets the quantity of units of order.
+     * Définit la quantité d'unités de commande.
      *
-     * @param uoNumber The quantity of units of order to set.
+     * @param uoNumber La quantité d'unités de commande à définir.
      */
     public void setUoNumber(int uoNumber) {
         this.uoNumber = uoNumber;
     }
 
     /**
-     * Gets the total amount model.
+     * Obtient le modèle de montant total.
      *
-     * @return The total amount model.
+     * @return Le modèle de montant total.
      */
     public UoAmountModel getUoTotal() {
         return uoTotal;
     }
 
     /**
-     * Gets the amount model.
+     * Obtient le modèle de montant.
      *
-     * @return The amount model.
+     * @return Le modèle de montant.
      */
     public UoAmountModel getUoCost() {
         return uoCost;
     }
 
     /**
-     * Gets the remaining amount to be spent model.
+     * Obtient le modèle de montant restant à dépenser.
      *
-     * @return The remaining amount to be spent model.
+     * @return Le modèle de montant restant à dépenser.
      */
     public UoAmountModel getUoToSpend() {
         return uoToSpend;
     }
 
     /**
-     * Sets the tax rate and updates the tax rate in related amount models.
+     * Définit le taux de taxe et met à jour le taux de taxe dans les modèles de montant associés.
      *
-     * @param tva The tax rate to set.
+     * @param tva Le taux de taxe à définir.
      */
     public void setTVA(double tva) {
         this.uoCost.setTva(tva);

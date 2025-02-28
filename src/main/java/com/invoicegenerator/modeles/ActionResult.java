@@ -1,15 +1,15 @@
 package com.invoicegenerator.modeles;
 
 /**
- * Represents the result of an action with a success status and a message.
+ * Représente le résultat d'une action avec un statut de succès et un message.
  */
 public record ActionResult(boolean success, String message) {
 
     /**
-     * Combines this ActionResult with another one.
+     * Combine cet ActionResult avec un autre.
      *
-     * @param term The other ActionResult to combine with.
-     * @return A new ActionResult with combined success status and messages.
+     * @param term L'autre ActionResult à combiner avec celui-ci.
+     * @return Un nouvel ActionResult avec un statut de succès combiné et les messages combinés.
      */
     public ActionResult plus(ActionResult term) {
         boolean combinedSuccess = this.success && term.success();
@@ -18,9 +18,9 @@ public record ActionResult(boolean success, String message) {
     }
 
     /**
-     * Returns a string representation of the ActionResult.
+     * Retourne une représentation sous forme de chaîne de l'ActionResult.
      *
-     * @return A string representation of the ActionResult.
+     * @return Une représentation sous forme de chaîne de l'ActionResult.
      */
     @Override
     public String toString() {

@@ -1,59 +1,77 @@
 package com.invoicegenerator.modeles;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 /**
- * Represents the PV entity model which contains file details and a command model.
+ * Représente le modèle d'entité PV qui contient les détails du fichier et un modèle de commande.
  */
 public class PvEntityPvModel {
+    private static final Logger logger = Logger.getLogger(PvEntityPvModel.class.getName());
+
     private String fileName = "";
     private String filePath = "";
     private final CommandModel command = new CommandModel();
 
     /**
-     * Gets the file name.
+     * Constructeur par défaut pour PvEntityPvModel.
+     * Initialise le nom et le chemin du fichier à des chaînes vides et crée une nouvelle instance de CommandModel.
+     */
+    public PvEntityPvModel() {
+        logger.log(Level.INFO, "Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut");
+    }
+
+    /**
+     * Récupère le nom du fichier.
      *
-     * @return The file name.
+     * @return Le nom du fichier.
      */
     public String getFileName() {
+        logger.log(Level.FINE, "Récupération du nom du fichier : {0}", fileName);
         return fileName;
     }
 
     /**
-     * Sets the file name.
+     * Définit le nom du fichier.
      *
-     * @param fileName The file name to set.
-     * @return The current instance of PvEntityPvModel.
+     * @param fileName Le nom du fichier à définir.
+     * @return L'instance actuelle de PvEntityPvModel.
      */
     public PvEntityPvModel setFileName(String fileName) {
-        this.fileName = fileName;
+        this.fileName = (fileName != null) ? fileName : "";
+        logger.log(Level.FINE, "Nom du fichier défini : {0}", this.fileName);
         return this;
     }
 
     /**
-     * Gets the file path.
+     * Récupère le chemin du fichier.
      *
-     * @return The file path.
+     * @return Le chemin du fichier.
      */
     public String getFilePath() {
+        logger.log(Level.FINE, "Récupération du chemin du fichier : {0}", filePath);
         return filePath;
     }
 
     /**
-     * Sets the file path.
+     * Définit le chemin du fichier.
      *
-     * @param filePath The file path to set.
-     * @return The current instance of PvEntityPvModel.
+     * @param filePath Le chemin du fichier à définir.
+     * @return L'instance actuelle de PvEntityPvModel.
      */
     public PvEntityPvModel setFilePath(String filePath) {
-        this.filePath = filePath;
+        this.filePath = (filePath != null) ? filePath : "";
+        logger.log(Level.FINE, "Chemin du fichier défini : {0}", this.filePath);
         return this;
     }
 
     /**
-     * Gets the command model.
+     * Récupère le modèle de commande.
      *
-     * @return The command model.
+     * @return Le modèle de commande.
      */
     public CommandModel getCommand() {
+        logger.log(Level.FINE, "Récupération du modèle de commande");
         return command;
     }
 }

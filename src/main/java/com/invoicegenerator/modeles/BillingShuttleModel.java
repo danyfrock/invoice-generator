@@ -1,11 +1,15 @@
 package com.invoicegenerator.modeles;
 
 import java.time.LocalDate;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 /**
- * Represents the billing shuttle model which contains various details about the billing process.
+ * Représente le modèle de navette de facturation qui contient diverses informations sur le processus de facturation.
  */
 public class BillingShuttleModel {
+    private static final Logger logger = Logger.getLogger(BillingShuttleModel.class.getName());
+
     private String pcBu;
     private String project;
     private String activity;
@@ -22,27 +26,29 @@ public class BillingShuttleModel {
     private String initialBill;
 
     /**
-     * Default constructor for BillingShuttleModel.
+     * Constructeur par défaut pour BillingShuttleModel.
      */
-    public BillingShuttleModel() {}
+    public BillingShuttleModel() {
+        logger.log(Level.INFO, "Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut");
+    }
 
     /**
-     * Parameterized constructor for BillingShuttleModel.
+     * Constructeur paramétré pour BillingShuttleModel.
      *
-     * @param pcBu The PC BU.
-     * @param project The project name.
-     * @param activity The activity name.
-     * @param billNumber The number of invoices.
-     * @param eventNote The event note.
-     * @param quantity The quantity.
-     * @param measureUnit The unit of measure.
-     * @param unitPrice The unit price.
-     * @param billAmount The billing amount.
-     * @param calculatedEventAmount The calculated event amount.
-     * @param billPeriodFrom The billing period start date.
-     * @param billPeriodTo The billing period end date.
-     * @param itemId The item ID.
-     * @param initialBill The initial invoice.
+     * @param pcBu Le PC BU.
+     * @param project Le nom du projet.
+     * @param activity Le nom de l'activité.
+     * @param billNumber Le nombre de factures.
+     * @param eventNote La note de l'événement.
+     * @param quantity La quantité.
+     * @param measureUnit L'unité de mesure.
+     * @param unitPrice Le prix unitaire.
+     * @param billAmount Le montant de la facturation.
+     * @param calculatedEventAmount Le montant calculé de l'événement.
+     * @param billPeriodFrom La date de début de la période de facturation.
+     * @param billPeriodTo La date de fin de la période de facturation.
+     * @param itemId L'identifiant de l'élément.
+     * @param initialBill La facture initiale.
      */
     public BillingShuttleModel(String pcBu, String project, String activity, int billNumber, String eventNote,
                                double quantity, String measureUnit, double unitPrice, double billAmount,
@@ -62,214 +68,297 @@ public class BillingShuttleModel {
         this.billPeriodTo = billPeriodTo;
         this.itemId = itemId;
         this.initialBill = initialBill;
+        logger.log(Level.INFO, "Création d'une instance de BillingShuttleModel avec paramètres personnalisés");
     }
 
-    // Getters and Setters
-
     /**
-     * Gets the PC BU.
+     * Récupère le PC BU.
      *
-     * @return The PC BU.
+     * @return Le PC BU.
      */
-    public String getPcBu() { return pcBu; }
+    public String getPcBu() {
+        logger.log(Level.FINE, "Récupération du PC BU : {0}", pcBu);
+        return pcBu;
+    }
 
     /**
-     * Sets the PC BU.
+     * Définit le PC BU.
      *
-     * @param pcBu The PC BU to set.
+     * @param pcBu Le PC BU à définir.
      */
-    public void setPcBu(String pcBu) { this.pcBu = pcBu; }
+    public void setPcBu(String pcBu) {
+        this.pcBu = pcBu;
+        logger.log(Level.FINE, "PC BU défini : {0}", pcBu);
+    }
 
     /**
-     * Gets the project name.
+     * Récupère le nom du projet.
      *
-     * @return The project name.
+     * @return Le nom du projet.
      */
-    public String getProject() { return project; }
+    public String getProject() {
+        logger.log(Level.FINE, "Récupération du nom du projet : {0}", project);
+        return project;
+    }
 
     /**
-     * Sets the project name.
+     * Définit le nom du projet.
      *
-     * @param project The project name to set.
+     * @param project Le nom du projet à définir.
      */
-    public void setProject(String project) { this.project = project; }
+    public void setProject(String project) {
+        this.project = project;
+        logger.log(Level.FINE, "Nom du projet défini : {0}", project);
+    }
 
     /**
-     * Gets the activity name.
+     * Récupère le nom de l'activité.
      *
-     * @return The activity name.
+     * @return Le nom de l'activité.
      */
-    public String getActivity() { return activity; }
+    public String getActivity() {
+        logger.log(Level.FINE, "Récupération du nom de l'activité : {0}", activity);
+        return activity;
+    }
 
     /**
-     * Sets the activity name.
+     * Définit le nom de l'activité.
      *
-     * @param activity The activity name to set.
+     * @param activity Le nom de l'activité à définir.
      */
-    public void setActivity(String activity) { this.activity = activity; }
+    public void setActivity(String activity) {
+        this.activity = activity;
+        logger.log(Level.FINE, "Nom de l'activité défini : {0}", activity);
+    }
 
     /**
-     * Gets the number of invoices.
+     * Récupère le nombre de factures.
      *
-     * @return The number of invoices.
+     * @return Le nombre de factures.
      */
-    public int getBillNumber() { return billNumber; }
+    public int getBillNumber() {
+        logger.log(Level.FINE, "Récupération du nombre de factures : {0}", billNumber);
+        return billNumber;
+    }
 
     /**
-     * Sets the number of invoices.
+     * Définit le nombre de factures.
      *
-     * @param billNumber The number of invoices to set.
+     * @param billNumber Le nombre de factures à définir.
      */
-    public void setBillNumber(int billNumber) { this.billNumber = billNumber; }
+    public void setBillNumber(int billNumber) {
+        this.billNumber = billNumber;
+        logger.log(Level.FINE, "Nombre de factures défini : {0}", billNumber);
+    }
 
     /**
-     * Gets the event note.
+     * Récupère la note de l'événement.
      *
-     * @return The event note.
+     * @return La note de l'événement.
      */
-    public String getEventNote() { return eventNote; }
+    public String getEventNote() {
+        logger.log(Level.FINE, "Récupération de la note de l'événement : {0}", eventNote);
+        return eventNote;
+    }
 
     /**
-     * Sets the event note.
+     * Définit la note de l'événement.
      *
-     * @param eventNote The event note to set.
+     * @param eventNote La note de l'événement à définir.
      */
-    public void setEventNote(String eventNote) { this.eventNote = eventNote; }
+    public void setEventNote(String eventNote) {
+        this.eventNote = eventNote;
+        logger.log(Level.FINE, "Note de l'événement définie : {0}", eventNote);
+    }
 
     /**
-     * Gets the quantity.
+     * Récupère la quantité.
      *
-     * @return The quantity.
+     * @return La quantité.
      */
-    public double getQuantity() { return quantity; }
+    public double getQuantity() {
+        logger.log(Level.FINE, "Récupération de la quantité : {0}", quantity);
+        return quantity;
+    }
 
     /**
-     * Sets the quantity.
+     * Définit la quantité.
      *
-     * @param quantity The quantity to set.
+     * @param quantity La quantité à définir.
      */
-    public void setQuantity(double quantity) { this.quantity = quantity; }
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
+        logger.log(Level.FINE, "Quantité définie : {0}", quantity);
+    }
 
     /**
-     * Gets the unit of measure.
+     * Récupère l'unité de mesure.
      *
-     * @return The unit of measure.
+     * @return L'unité de mesure.
      */
-    public String getMeasureUnit() { return measureUnit; }
+    public String getMeasureUnit() {
+        logger.log(Level.FINE, "Récupération de l'unité de mesure : {0}", measureUnit);
+        return measureUnit;
+    }
 
     /**
-     * Sets the unit of measure.
+     * Définit l'unité de mesure.
      *
-     * @param measureUnit The unit of measure to set.
+     * @param measureUnit L'unité de mesure à définir.
      */
-    public void setMeasureUnit(String measureUnit) { this.measureUnit = measureUnit; }
+    public void setMeasureUnit(String measureUnit) {
+        this.measureUnit = measureUnit;
+        logger.log(Level.FINE, "Unité de mesure définie : {0}", measureUnit);
+    }
 
     /**
-     * Gets the unit price.
+     * Récupère le prix unitaire.
      *
-     * @return The unit price.
+     * @return Le prix unitaire.
      */
-    public double getUnitPrice() { return unitPrice; }
+    public double getUnitPrice() {
+        logger.log(Level.FINE, "Récupération du prix unitaire : {0}", unitPrice);
+        return unitPrice;
+    }
 
     /**
-     * Sets the unit price.
+     * Définit le prix unitaire.
      *
-     * @param unitPrice The unit price to set.
+     * @param unitPrice Le prix unitaire à définir.
      */
-    public void setUnitPrice(double unitPrice) { this.unitPrice = unitPrice; }
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+        logger.log(Level.FINE, "Prix unitaire défini : {0}", unitPrice);
+    }
 
     /**
-     * Gets the billing amount.
+     * Récupère le montant de la facturation.
      *
-     * @return The billing amount.
+     * @return Le montant de la facturation.
      */
-    public double getBillAmount() { return billAmount; }
+    public double getBillAmount() {
+        logger.log(Level.FINE, "Récupération du montant de la facturation : {0}", billAmount);
+        return billAmount;
+    }
 
     /**
-     * Sets the billing amount.
+     * Définit le montant de la facturation.
      *
-     * @param billAmount The billing amount to set.
+     * @param billAmount Le montant de la facturation à définir.
      */
-    public void setBillAmount(double billAmount) { this.billAmount = billAmount; }
+    public void setBillAmount(double billAmount) {
+        this.billAmount = billAmount;
+        logger.log(Level.FINE, "Montant de la facturation défini : {0}", billAmount);
+    }
 
     /**
-     * Gets the calculated event amount.
+     * Récupère le montant calculé de l'événement.
      *
-     * @return The calculated event amount.
+     * @return Le montant calculé de l'événement.
      */
-    public double getCalculatedEventAmount() { return calculatedEventAmount; }
+    public double getCalculatedEventAmount() {
+        logger.log(Level.FINE, "Récupération du montant calculé de l'événement : {0}", calculatedEventAmount);
+        return calculatedEventAmount;
+    }
 
     /**
-     * Sets the calculated event amount.
+     * Définit le montant calculé de l'événement.
      *
-     * @param calculatedEventAmount The calculated event amount to set.
+     * @param calculatedEventAmount Le montant calculé de l'événement à définir.
      */
-    public void setCalculatedEventAmount(double calculatedEventAmount) { this.calculatedEventAmount = calculatedEventAmount; }
+    public void setCalculatedEventAmount(double calculatedEventAmount) {
+        this.calculatedEventAmount = calculatedEventAmount;
+        logger.log(Level.FINE, "Montant calculé de l'événement défini : {0}", calculatedEventAmount);
+    }
 
     /**
-     * Gets the billing period start date.
+     * Récupère la date de début de la période de facturation.
      *
-     * @return The billing period start date.
+     * @return La date de début de la période de facturation.
      */
-    public LocalDate getBillPeriodFrom() { return billPeriodFrom; }
+    public LocalDate getBillPeriodFrom() {
+        logger.log(Level.FINE, "Récupération de la date de début de la période de facturation : {0}", billPeriodFrom);
+        return billPeriodFrom;
+    }
 
     /**
-     * Sets the billing period start date.
+     * Définit la date de début de la période de facturation.
      *
-     * @param billPeriodFrom The billing period start date to set.
+     * @param billPeriodFrom La date de début de la période de facturation à définir.
      */
-    public void setBillPeriodFrom(LocalDate billPeriodFrom) { this.billPeriodFrom = billPeriodFrom; }
+    public void setBillPeriodFrom(LocalDate billPeriodFrom) {
+        this.billPeriodFrom = billPeriodFrom;
+        logger.log(Level.FINE, "Date de début de la période de facturation définie : {0}", billPeriodFrom);
+    }
 
     /**
-     * Gets the billing period end date.
+     * Récupère la date de fin de la période de facturation.
      *
-     * @return The billing period end date.
+     * @return La date de fin de la période de facturation.
      */
-    public LocalDate getBillPeriodTo() { return billPeriodTo; }
+    public LocalDate getBillPeriodTo() {
+        logger.log(Level.FINE, "Récupération de la date de fin de la période de facturation : {0}", billPeriodTo);
+        return billPeriodTo;
+    }
 
     /**
-     * Sets the billing period end date.
+     * Définit la date de fin de la période de facturation.
      *
-     * @param billPeriodTo The billing period end date to set.
+     * @param billPeriodTo La date de fin de la période de facturation à définir.
      */
-    public void setBillPeriodTo(LocalDate billPeriodTo) { this.billPeriodTo = billPeriodTo; }
+    public void setBillPeriodTo(LocalDate billPeriodTo) {
+        this.billPeriodTo = billPeriodTo;
+        logger.log(Level.FINE, "Date de fin de la période de facturation définie : {0}", billPeriodTo);
+    }
 
     /**
-     * Gets the item ID.
+     * Récupère l'identifiant de l'élément.
      *
-     * @return The item ID.
+     * @return L'identifiant de l'élément.
      */
-    public String getItemId() { return itemId; }
+    public String getItemId() {
+        logger.log(Level.FINE, "Récupération de l'identifiant de l'élément : {0}", itemId);
+        return itemId;
+    }
 
     /**
-     * Sets the item ID.
+     * Définit l'identifiant de l'élément.
      *
-     * @param itemId The item ID to set.
+     * @param itemId L'identifiant de l'élément à définir.
      */
-    public void setItemId(String itemId) { this.itemId = itemId; }
+    public void setItemId(String itemId) {
+        this.itemId = itemId;
+        logger.log(Level.FINE, "Identifiant de l'élément défini : {0}", itemId);
+    }
 
     /**
-     * Gets the initial invoice.
+     * Récupère la facture initiale.
      *
-     * @return The initial invoice.
+     * @return La facture initiale.
      */
-    public String getInitialBill() { return initialBill; }
+    public String getInitialBill() {
+        logger.log(Level.FINE, "Récupération de la facture initiale : {0}", initialBill);
+        return initialBill;
+    }
 
     /**
-     * Sets the initial invoice.
+     * Définit la facture initiale.
      *
-     * @param initialBill The initial invoice to set.
+     * @param initialBill La facture initiale à définir.
      */
-    public void setInitialBill(String initialBill) { this.initialBill = initialBill; }
+    public void setInitialBill(String initialBill) {
+        this.initialBill = initialBill;
+        logger.log(Level.FINE, "Facture initiale définie : {0}", initialBill);
+    }
 
     /**
-     * Returns a string representation of the BillingShuttleModel.
+     * Retourne une représentation sous forme de chaîne du BillingShuttleModel.
      *
-     * @return A string representation of the BillingShuttleModel.
+     * @return Une représentation sous forme de chaîne du BillingShuttleModel.
      */
     @Override
     public String toString() {
-        return "NavetteFacturation{" +
+        String result = "NavetteFacturation{" +
                 "pcBu='" + pcBu + '\'' +
                 ", projet='" + project + '\'' +
                 ", activite='" + activity + '\'' +
@@ -285,5 +374,7 @@ public class BillingShuttleModel {
                 ", itemId='" + itemId + '\'' +
                 ", factureInitiale='" + initialBill + '\'' +
                 '}';
+        logger.log(Level.FINE, "Génération de la représentation textuelle : {0}", result);
+        return result;
     }
 }
