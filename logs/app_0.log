@@ -1,46 +1,404 @@
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 2
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Conversion terminée avec succès
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.views.NavettesFacturationView start
-INFO: Démarrage de l'interface NavettesFacturationView
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.views.NavettesFacturationView start
-INFO: Interface NavettesFacturationView affichée avec succès
-févr. 28, 2025 12:53:00 PM com.invoicegenerator.views.NavettesFacturationView lambda$start$17
-INFO: Écriture des navettes dans le fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
-févr. 28, 2025 12:53:00 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNavette
-INFO: Début de l'écriture des navettes dans le fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
-févr. 28, 2025 12:53:00 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
-INFO: Début de l'écriture d'un nouveau modèle de fichier Excel à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
-févr. 28, 2025 12:53:01 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
-INFO: Modèle de fichier Excel écrit avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
-févr. 28, 2025 12:53:02 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeAllNavettes
-INFO: Données ajoutées avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.CommandesView lambda$start$4
+INFO: Retour à FileSelectorView
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView avec modèle source
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.FileSelectorView chargerParametres
+FINE: Chargement des paramètres
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel getParameters
+FINE: Récupération du modèle de paramètres
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.ParametersModel getParametersFileName
+FINE: Récupération du nom du fichier de paramètres : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel setParameters
+FINE: Modèle de paramètres défini avec succès
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.FileSelectorView chargerParametres
+FINE: Paramètres chargés avec succès
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel getPvEntities
+FINE: Récupération de la liste des entités PV, taille : 2
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel getParameters
+FINE: Récupération du modèle de paramètres
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.ParametersModel getOutputFolder
+FINE: Récupération de lemplacement du dossier de sortie : {0}
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel getParameters
+FINE: Récupération du modèle de paramètres
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.ParametersModel getOutputFolder
+FINE: Récupération de lemplacement du dossier de sortie : {0}
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.FileSelectorView updateNextButtonState
+FINE: État du bouton Suivant mis à jour : désactivé = false
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.BillingProcessModel getParameters
+FINE: Récupération du modèle de paramètres
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.ParametersModel getOutputFolder
+FINE: Récupération de lemplacement du dossier de sortie : {0}
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:39 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+févr. 28, 2025 11:19:42 PM com.invoicegenerator.views.FileSelectorView selectFiles
+FINE: Ouverture du sélecteur de fichiers
+févr. 28, 2025 11:19:45 PM com.invoicegenerator.views.FileSelectorView selectFiles
+FINE: Aucun fichier sélectionné

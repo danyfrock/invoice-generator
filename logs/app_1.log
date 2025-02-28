@@ -1,526 +1,718 @@
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
-INFO: Interface utilisateur initialisée avec succès
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
-INFO: Initialisation de CommandeViewModel
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
-INFO: Interface utilisateur initialisée avec succès
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
-INFO: Initialisation de CommandeViewModel
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
-INFO: Interface utilisateur initialisée avec succès
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:03 PM com.invoicegenerator.views.CommandesView start
-INFO: Interface CommandesView affichée avec succès
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.BillingProcessModel getPvEntities
+FINE: Récupération de la liste des entités PV, taille : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.BillingProcessModel getPvEntities
+FINE: Récupération de la liste des entités PV, taille : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.BillingProcessModel getPvEntities
+FINE: Récupération de la liste des entités PV, taille : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getContractCode
+FINE: Récupération du code du contrat : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getContractCode
+FINE: Récupération du code du contrat : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.BillingProcessModel getParameters
+FINE: Récupération du modèle de paramètres
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getOutputFileDefaultName
+FINE: Récupération du nom par défaut du fichier de sortie : WST-CO_.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.utils.FileUtil concat
 INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.utils.FileUtil concat
 INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'b' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_b.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:10 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_bv.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'f' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fbv.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'f' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fbv.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'f' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_f.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fbv.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'fg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'fg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'fg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'bv' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fg.xlsm
-févr. 28, 2025 12:24:13 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.CommandesView lambda$start$5
-INFO: Ouverture de NavettesFacturationView
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.NavettesFacturationView <init>
-INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Début de la conversion des entités Pv en modèles de navette de facturation
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 1
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 2
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 3
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Conversion terminée avec succès
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.NavettesFacturationView start
-INFO: Démarrage de l'interface NavettesFacturationView
-févr. 28, 2025 12:24:42 PM com.invoicegenerator.views.NavettesFacturationView start
-INFO: Interface NavettesFacturationView affichée avec succès
-févr. 28, 2025 12:24:47 PM com.invoicegenerator.views.NavettesFacturationView lambda$start$17
-INFO: Écriture des navettes dans le fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:47 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNavette
-INFO: Début de l'écriture des navettes dans le fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:47 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
-INFO: Début de l'écriture d'un nouveau modèle de fichier Excel à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:48 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
-INFO: Modèle de fichier Excel écrit avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:24:50 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeAllNavettes
-INFO: Données ajoutées avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_fgbv.xlsm
-févr. 28, 2025 12:51:44 PM com.invoicegenerator.Main configureLogging
-INFO: Configuration de logging chargée avec succès
-févr. 28, 2025 12:51:44 PM com.invoicegenerator.Main main
-INFO: Lancement de l'application JavaFX
-févr. 28, 2025 12:51:44 PM com.sun.javafx.application.PlatformImpl startup
-WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d49b4d2'
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.Main start
-INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.modeles.BillingProcessModel <init>
-INFO: Création d'une nouvelle instance de BillingProcessModel
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.views.FileSelectorView <init>
-INFO: Initialisation de FileSelectorView sans modèle source
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.views.FileSelectorView start
-INFO: Démarrage de l'interface FileSelectorView
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.views.FileSelectorView start
-INFO: Interface FileSelectorView affichée avec succès
-févr. 28, 2025 12:51:45 PM com.invoicegenerator.Main start
-INFO: FileSelectorView initialisé avec succès
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.views.FileSelectorView lambda$start$3
-INFO: Passage à ParametresView avec 0 éléments
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.views.ParametresView <init>
-INFO: Initialisation de ParametresView
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.views.ParametresView chargerParametres
-INFO: Paramètres chargés avec succès
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.views.ParametresView start
-INFO: Démarrage de l'interface ParametresView
-févr. 28, 2025 12:51:48 PM com.invoicegenerator.views.ParametresView start
-INFO: Interface ParametresView affichée avec succès
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.views.ParametresView lambda$start$4
-INFO: Tentative d'enregistrement des paramètres
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.services.ParametresService enregistrerParametres
-INFO: Paramètres enregistrés avec succès dans le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.views.ParametresView enregistrerParametres
-INFO: Paramètres enregistrés avec succès
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.modeles.BillingProcessModel <init>
-INFO: Création d'une nouvelle instance de BillingProcessModel
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.views.FileSelectorView <init>
-INFO: Initialisation de FileSelectorView avec modèle source
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.views.FileSelectorView start
-INFO: Démarrage de l'interface FileSelectorView
-févr. 28, 2025 12:51:53 PM com.invoicegenerator.views.FileSelectorView start
-INFO: Interface FileSelectorView affichée avec succès
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.views.FileSelectorView lambda$start$3
-INFO: Passage à ParametresView avec 0 éléments
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.views.ParametresView <init>
-INFO: Initialisation de ParametresView
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.views.ParametresView chargerParametres
-INFO: Paramètres chargés avec succès
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.views.ParametresView start
-INFO: Démarrage de l'interface ParametresView
-févr. 28, 2025 12:51:56 PM com.invoicegenerator.views.ParametresView start
-INFO: Interface ParametresView affichée avec succès
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.views.ParametresView lambda$start$4
-INFO: Tentative d'enregistrement des paramètres
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.services.ParametresService enregistrerParametres
-INFO: Paramètres enregistrés avec succès dans le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.views.ParametresView enregistrerParametres
-INFO: Paramètres enregistrés avec succès
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.modeles.BillingProcessModel <init>
-INFO: Création d'une nouvelle instance de BillingProcessModel
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.views.FileSelectorView <init>
-INFO: Initialisation de FileSelectorView avec modèle source
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.views.FileSelectorView start
-INFO: Démarrage de l'interface FileSelectorView
-févr. 28, 2025 12:52:08 PM com.invoicegenerator.views.FileSelectorView start
-INFO: Interface FileSelectorView affichée avec succès
-févr. 28, 2025 12:52:16 PM com.invoicegenerator.modeles.CommandModel <init>
-INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
-févr. 28, 2025 12:52:16 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
-INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
-févr. 28, 2025 12:52:16 PM com.invoicegenerator.modeles.CommandModel <init>
-INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
-févr. 28, 2025 12:52:16 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
-INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
-févr. 28, 2025 12:52:18 PM com.invoicegenerator.views.FileSelectorView lambda$start$2
-INFO: Passage à CommandesView avec 2 éléments
-févr. 28, 2025 12:52:18 PM com.invoicegenerator.views.CommandesView <init>
-INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
-févr. 28, 2025 12:52:18 PM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
-févr. 28, 2025 12:52:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
-INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
-févr. 28, 2025 12:52:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
-INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
-INFO: Informations générales lues avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
-INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
-INFO: Détails des prestations lus avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Lecture du fichier Excel réussie
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Fin de FillPvFrom avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
-INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
-INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
-INFO: Informations générales lues avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
-INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
-INFO: Détails des prestations lus avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Lecture du fichier Excel réussie
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Fin de FillPvFrom avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_null.xlsm
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.views.CommandesView start
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'jk' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_jk.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'df' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_jk.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_jkdf.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.BillingProcessModel setOutputFileName
+FINE: Nom du fichier de sortie défini : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_jkdf.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.views.CommandesView resetFichierSortie
+FINE: Fichier de sortie réinitialisé : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_jkdf.xlsm
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.views.CommandesView start
 INFO: Démarrage de l'interface CommandesView
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.ParametersModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.BillingProcessModel getPvEntities
+FINE: Récupération de la liste des entités PV, taille : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel <init>
 INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
 INFO: Initialisation de CommandeViewModel
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.ParametresService <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel chargerParametres
+FINE: Chargement des paramètres
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getParametersFileName
+FINE: Récupération du nom du fichier de paramètres : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.services.ParametresService <init>
 INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.ParametersModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel <init>
 INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.ParametresService chargerParametres
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.services.ParametresService chargerParametres
 INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel chargerParametres
+FINE: Paramètres chargés avec succès
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel fillCodeActiviteComboBox
+FINE: Remplissage de la ComboBox des codes d'activité
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getActivityCodes
+FINE: Récupération de la liste des codes dactivité, taille : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel AddListeners
+FINE: Ajout des listeners aux contrôles
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
 INFO: Interface utilisateur initialisée avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
 INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.ParametersModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel removeListeners
+FINE: Suppression des listeners des contrôles
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getDateDebut
+FINE: Récupération de la date de début : 2025-01-29
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getDateFin
+FINE: Récupération de la date de fin : 2025-02-07
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getContractCode
+FINE: Récupération du code du contrat : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getContractCode
+FINE: Récupération du code du contrat : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getActivityCode
+FINE: Récupération du code de lactivité : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getActivityCode
+FINE: Récupération du code de lactivité : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getCommandLines
+FINE: Récupération de la liste des lignes de commande, taille : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+FINE: TableView rempli avec 3 lignes de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel AddListeners
+FINE: Ajout des listeners aux contrôles
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel updateProperties
+FINE: Mise à jour des propriétés
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setActivityCode
+FINE: Code de lactivité défini : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setContractCode
+FINE: Code du contrat défini : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setDateDebut
+FINE: Date de début définie : 2025-01-29
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setDateFin
+FINE: Date de fin définie : 2025-02-07
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMinYear
+FINE: Récupération de lannée minimum : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMaxYear
+FINE: Récupération de lannée maximale : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMinYear
+FINE: Récupération de lannée minimum : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMaxYear
+FINE: Récupération de lannée maximale : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel <init>
 INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
 INFO: Initialisation de CommandeViewModel
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.ParametresService <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel chargerParametres
+FINE: Chargement des paramètres
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getParametersFileName
+FINE: Récupération du nom du fichier de paramètres : C:\Users\daniel.lorenzi\parametres.json
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.services.ParametresService <init>
 INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.modeles.ParametersModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel <init>
 INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.services.ParametresService chargerParametres
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.services.ParametresService chargerParametres
 INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel chargerParametres
+FINE: Paramètres chargés avec succès
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel fillCodeActiviteComboBox
+FINE: Remplissage de la ComboBox des codes d'activité
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getActivityCodes
+FINE: Récupération de la liste des codes dactivité, taille : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel AddListeners
+FINE: Ajout des listeners aux contrôles
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
 INFO: Interface utilisateur initialisée avec succès
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
 INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:52:19 PM com.invoicegenerator.views.CommandesView start
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel removeListeners
+FINE: Suppression des listeners des contrôles
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getDateDebut
+FINE: Récupération de la date de début : 2024-12-03
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getDateFin
+FINE: Récupération de la date de fin : 2026-04-23
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getContractCode
+FINE: Récupération du code du contrat : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getContractCode
+FINE: Récupération du code du contrat : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getActivityCode
+FINE: Récupération du code de lactivité : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getActivityCode
+FINE: Récupération du code de lactivité : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getFileName
+FINE: Récupération du nom du fichier : Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getFilePath
+FINE: Récupération du chemin du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel getCommandLines
+FINE: Récupération de la liste des lignes de commande, taille : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+FINE: TableView rempli avec 3 lignes de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel AddListeners
+FINE: Ajout des listeners aux contrôles
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.viewModels.CommandeViewModel updateProperties
+FINE: Mise à jour des propriétés
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setActivityCode
+FINE: Code de lactivité défini : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setContractCode
+FINE: Code du contrat défini : jk
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setDateDebut
+FINE: Date de début définie : 2024-12-03
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.PvEntityPvModel getCommand
+FINE: Récupération du modèle de commande
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.CommandModel setDateFin
+FINE: Date de fin définie : 2026-04-23
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMinYear
+FINE: Récupération de lannée minimum : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMaxYear
+FINE: Récupération de lannée maximale : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMinYear
+FINE: Récupération de lannée minimum : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.ParametersModel getMaxYear
+FINE: Récupération de lannée maximale : {0}
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.views.CommandesView lambda$start$13
+FINE: Sélection changée dans fileTable : null -> Architecte applicatif-CGI-PVRECEP-5.xlsx
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.views.CommandesView selectFirstRow
+FINE: Sélection de la première ligne
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.views.CommandesView updatePreviewButtonState
+FINE: État du bouton Preview mis à jour : désactivé = false
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.views.CommandesView start
 INFO: Interface CommandesView affichée avec succès
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'd' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_d.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'df' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:28 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_df.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'g' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_g.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'df' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_g.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gdf.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'g' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_g.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'df' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_g.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gdf.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'gh' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gh.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'df' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gh.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'gh' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gh.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'df' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gh.xlsm
-févr. 28, 2025 12:52:37 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ghdf.xlsm
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.views.CommandesView lambda$start$5
-INFO: Ouverture de NavettesFacturationView
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.views.NavettesFacturationView <init>
-INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Début de la conversion des entités Pv en modèles de navette de facturation
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 1
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-févr. 28, 2025 12:52:58 PM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 4 364,24
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 5 237,088
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 13 092,72
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 15 711,264
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 4
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 8 728,48
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 10 474,176
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 6
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 7 385,64
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 8 862,768
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 1
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,82
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,384
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 2
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 1 477,12
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 1 772,544
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 5
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 3 692,8
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 4 431,36
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getNumber
+FINE: Récupération de la quantité : 3
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalHT
+FINE: Récupération du montant total HT : 2 215,68
+févr. 28, 2025 11:19:38 PM com.invoicegenerator.modeles.UoAmountModel getTotalTTC
+FINE: Récupération du montant total TTC : 2 658,816
