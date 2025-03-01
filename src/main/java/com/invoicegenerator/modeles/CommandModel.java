@@ -18,9 +18,9 @@ public class CommandModel {
     private String contractCode;
     private String activityCode;
     private List<UoCommandLineModel> commandLines = new ArrayList<>();
-    private static String orderFormPrefix = "BDC PO";
-    private String orderForm;
-    private String benefitPurposeSuffix;
+    private static final String bonDeCommandePrefix = "BDC PO";
+    private String bonDeCommandeCellB9;
+    private String objetDeLaPrestationCellB11;
 
     /**
      * Constructeur par défaut pour CommandModel.
@@ -138,9 +138,20 @@ public class CommandModel {
      *
      * @return Le bon de commande.
      */
-    public String getOrderForm() {
-        logger.log(Level.FINE, "Récupération du bon de commande : {0}", orderForm);
-        return orderForm;
+    public String getBonDeCommandeCellB9() {
+        logger.log(Level.FINE, "Récupération du bon de commande : {0}", bonDeCommandeCellB9);
+        return bonDeCommandeCellB9;
+    }
+
+
+    /**
+     * Récupère le préfix du bon de commande.
+     *
+     * @return Le préfix du bon de commande.
+     */
+    public String getBonDeCommandePrefix() {
+        logger.log(Level.FINE, "Récupération du bon de commande prefix : {0}", bonDeCommandePrefix);
+        return bonDeCommandePrefix;
     }
 
     /**
@@ -148,8 +159,8 @@ public class CommandModel {
      *
      * @param orderForm Le bon de commande à définir.
      */
-    public void setOrderForm(String orderForm) {
-        this.orderForm = orderForm;
+    public void setBonDeCommandeCellB9(String orderForm) {
+        this.bonDeCommandeCellB9 = orderForm;
         logger.log(Level.FINE, "Bon de commande défini : {0}", orderForm);
     }
 
@@ -158,19 +169,18 @@ public class CommandModel {
      *
      * @return L'objet de la prestation.
      */
-    public String getBenefitPurpose() {
-        String benefitPurpose = orderFormPrefix + benefitPurposeSuffix;
-        logger.log(Level.FINE, "Récupération de l'objet de la prestation : {0}", benefitPurpose);
-        return benefitPurpose;
+    public String getBenefitPurposeCellB11() {
+        logger.log(Level.FINE, "Récupération de l'objet de la prestation : {0}", objetDeLaPrestationCellB11);
+        return objetDeLaPrestationCellB11;
     }
 
     /**
-     * Définit le suffixe de l'objet de la prestation.
+     * Définit l'objet de la prestation.
      *
-     * @param benefitPurposeSuffix Le suffixe à définir.
+     * @param benefitPurpose défini l'objet de la prestation.
      */
-    public void setBenefitPurposeSuffix(String benefitPurposeSuffix) {
-        this.benefitPurposeSuffix = benefitPurposeSuffix;
-        logger.log(Level.FINE, "Suffixe de l'objet de la prestation défini : {0}", benefitPurposeSuffix);
+    public void setBenefitPurposeCellB11(String benefitPurpose) {
+        this.objetDeLaPrestationCellB11 = benefitPurpose;
+        logger.log(Level.FINE, "  : {0}", benefitPurpose);
     }
 }
