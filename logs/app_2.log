@@ -1,654 +1,638 @@
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.b- Architecture Applicative Moyen
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 44
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 44
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 2 182,12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
 FINE: Récupération de PrixUnitaireRound : 2 182,12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 115 215,936
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
 FINE: Récupération de MontantFacturationRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
 FINE: Récupération de MontantEvenementCalculeRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
+FINE: Récupération de PeriodeFacturationDu : 03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
+FINE: Récupération de PeriodeFacturationAu : 05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 115 215,936
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+FINE: Récupération de la facture initiale : null
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+FINE: Récupération de FactureInitiale : Default Facture
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.c- Architecture Applicative Complexe
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 3 692,82
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
 FINE: Récupération de PrixUnitaireRound : 3 692,82
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 8 862,768
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
 FINE: Récupération de MontantFacturationRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
 FINE: Récupération de MontantEvenementCalculeRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
+FINE: Récupération de PeriodeFacturationDu : 03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
+FINE: Récupération de PeriodeFacturationAu : 05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 8 862,768
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+FINE: Récupération de la facture initiale : null
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+FINE: Récupération de FactureInitiale : Default Facture
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.a- Architecture Applicative Simple
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 738,56
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
 FINE: Récupération de PrixUnitaireRound : 738,56
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 1 772,544
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
 FINE: Récupération de MontantFacturationRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
 FINE: Récupération de MontantEvenementCalculeRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
+FINE: Récupération de PeriodeFacturationDu : 03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
+FINE: Récupération de PeriodeFacturationAu : 05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Simple-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.b- Architecture Applicative Moyen
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 44
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 44
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 2 182,12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
 FINE: Récupération de PrixUnitaireRound : 2 182,12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 115 215,936
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
 FINE: Récupération de MontantFacturationRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
 FINE: Récupération de MontantEvenementCalculeRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
+FINE: Récupération de PeriodeFacturationDu : 03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
+FINE: Récupération de PeriodeFacturationAu : 05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.c- Architecture Applicative Complexe
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 3 692,82
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
 FINE: Récupération de PrixUnitaireRound : 3 692,82
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 8 862,768
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
 FINE: Récupération de MontantFacturationRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
 FINE: Récupération de MontantEvenementCalculeRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
+FINE: Récupération de PeriodeFacturationDu : 03
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
+FINE: Récupération de PeriodeFacturationAu : 05
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:43:30 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:43:30 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:43:30 PM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Interface NavettesFacturationView affichée avec succès
+mars 01, 2025 6:44:18 PM com.invoicegenerator.views.NavettesFacturationView lambda$start$17
+INFO: Écriture des navettes dans le fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_UG22FG44E.xlsm
+mars 01, 2025 6:44:18 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNavette
+INFO: Début de l'écriture des navettes dans le fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_UG22FG44E.xlsm
+mars 01, 2025 6:44:18 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
+INFO: Début de l'écriture d'un nouveau modèle de fichier Excel à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_UG22FG44E.xlsm
+mars 01, 2025 6:44:19 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
+INFO: Modèle de fichier Excel écrit avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_UG22FG44E.xlsm
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.a- Architecture Applicative Simple
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 738,56
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 738,56
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaire
+FINE: Récupération de PrixUnitaire : 738,56
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 1 772,544
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturation
+FINE: Récupération de MontantFacturation : 1 772,544
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalcule
+FINE: Récupération de MontantEvenementCalcule : 1 772,544
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getJourPeriodeFacturationDu
+FINE: Récupération de JourPeriodeFacturationDu : 03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : mars avec le formatteur Text(MonthOfYear)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMoisTextePeriodeFacturationDu
+FINE: Récupération de MoisTextePeriodeFacturationDu : mars
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 2025 avec le formatteur Value(YearOfEra,4,19,EXCEEDS_PAD)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getAnneePeriodeFacturationDu
+FINE: Récupération de AnneePeriodeFacturationDu : 2025
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getJourPeriodeFacturationAu
+FINE: Récupération de JourPeriodeFacturationAu : 05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : avril avec le formatteur Text(MonthOfYear)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMoisTextePeriodeFacturationAu
+FINE: Récupération de MoisTextePeriodeFacturationAu : avril
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 2025 avec le formatteur Value(YearOfEra,4,19,EXCEEDS_PAD)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getAnneePeriodeFacturationAu
+FINE: Récupération de AnneePeriodeFacturationAu : 2025
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Simple-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.b- Architecture Applicative Moyen
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 44
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 44
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 2 182,12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 2 182,12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaire
+FINE: Récupération de PrixUnitaire : 2 182,12
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 115 215,936
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturation
+FINE: Récupération de MontantFacturation : 115 215,936
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 115 215,94
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalcule
+FINE: Récupération de MontantEvenementCalcule : 115 215,936
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getJourPeriodeFacturationDu
+FINE: Récupération de JourPeriodeFacturationDu : 03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : mars avec le formatteur Text(MonthOfYear)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMoisTextePeriodeFacturationDu
+FINE: Récupération de MoisTextePeriodeFacturationDu : mars
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 2025 avec le formatteur Value(YearOfEra,4,19,EXCEEDS_PAD)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getAnneePeriodeFacturationDu
+FINE: Récupération de AnneePeriodeFacturationDu : 2025
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getJourPeriodeFacturationAu
+FINE: Récupération de JourPeriodeFacturationAu : 05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : avril avec le formatteur Text(MonthOfYear)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMoisTextePeriodeFacturationAu
+FINE: Récupération de MoisTextePeriodeFacturationAu : avril
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 2025 avec le formatteur Value(YearOfEra,4,19,EXCEEDS_PAD)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getAnneePeriodeFacturationAu
+FINE: Récupération de AnneePeriodeFacturationAu : 2025
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Moyen-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
 FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
 FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
+FINE: Récupération du nom du projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
+FINE: Récupération de Projet : UG22
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
 FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
 FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
 FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
 FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
 FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
 FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.c- Architecture Applicative Complexe
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
 FINE: Récupération de la quantité : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
 FINE: Récupération de Quantite : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
 FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
 FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
 FINE: Récupération du prix unitaire : 3 692,82
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 3 692,82
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaire
+FINE: Récupération de PrixUnitaire : 3 692,82
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
 FINE: Récupération du montant de la facturation : 8 862,768
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturation
+FINE: Récupération de MontantFacturation : 8 862,768
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
 FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 8 862,77
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2029-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalcule
+FINE: Récupération de MontantEvenementCalcule : 8 862,768
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 03 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getJourPeriodeFacturationDu
+FINE: Récupération de JourPeriodeFacturationDu : 03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : mars avec le formatteur Text(MonthOfYear)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMoisTextePeriodeFacturationDu
+FINE: Récupération de MoisTextePeriodeFacturationDu : mars
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
+FINE: Récupération de la date de début de la période de facturation : 2025-03-03
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 2025 avec le formatteur Value(YearOfEra,4,19,EXCEEDS_PAD)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getAnneePeriodeFacturationDu
+FINE: Récupération de AnneePeriodeFacturationDu : 2025
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 05 avec le formatteur Value(DayOfMonth,2)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getJourPeriodeFacturationAu
+FINE: Récupération de JourPeriodeFacturationAu : 05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : avril avec le formatteur Text(MonthOfYear)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMoisTextePeriodeFacturationAu
+FINE: Récupération de MoisTextePeriodeFacturationAu : avril
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
+FINE: Récupération de la date de fin de la période de facturation : 2025-04-05
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
+FINE: Date formatée : 2025 avec le formatteur Value(YearOfEra,4,19,EXCEEDS_PAD)
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getAnneePeriodeFacturationAu
+FINE: Récupération de AnneePeriodeFacturationAu : 2025
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
 FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
 FINE: Récupération de ItemId : Architecture Applicative Complexe-1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
+mars 01, 2025 6:44:19 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
 FINE: Récupération de la facture initiale : null
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
+mars 01, 2025 6:44:19 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
 FINE: Récupération de FactureInitiale : Default Facture
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : cntrt
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : ZA55X
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 1
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376966E9-DEV-L5 – P15.1.re.a- Architecture Applicative Simple
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 2
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 738,56
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 738,56
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 1 772,544
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 1 772,54
-mars 01, 2025 6:40:07 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-12-12
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 12 avec le formatteur Value(DayOfMonth,2)
-mars 01, 2025 6:40:07 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 12
+mars 01, 2025 6:44:20 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeAllNavettes
+INFO: Données ajoutées avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_UG22FG44E.xlsm
