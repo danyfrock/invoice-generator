@@ -35,17 +35,18 @@ public class PvToNavetteService {
 				navette.setProject(entite.getCommand().getContractCode());
 
 				/*
-									o	<Bon de commande>+<Objet de la prestation>+ <Référence UO> + <Description UO>
+					o	<Bon de commande>+<Objet de la prestation>+ <Référence UO> + <Description UO>
 					o	Ces informations sont issues des PVs :
 					A:	<Bon de commande>  Texte « BDC PO» + Onglet « PV » cellule B9  Exemple « BDC PO1000376967 »
 					B:	<Objet de la prestation>  Onglet « PV » cellule B11  Exemple « Accompagnement Architecture applicative »
 					C:	<Référence UO>  Onglet « Détails des prestations du PV » colonne « Type d’UO »  Exemple : « L5 – P15.1.re.a »
-					E:	<Description UO>  Onglet « Détails des prestations du PV » colonne « Libellé de la ligne de commande»  Exemple : « Architecture Applicative Simple»
+					D:	<Description UO>  Onglet « Détails des prestations du PV » colonne « Libellé de la ligne de commande»  Exemple : « Architecture Applicative Simple»
 				 */
 				navette.setEventNote(
-						entite.getCommand().getBonDeCommandePrefix() + entite.getCommand().getBonDeCommandeCellB9() + //A
-								"-" + entite.getCommand().getBenefitPurposeCellB11() + //B
-								"-" + ligne.getUoType() + "- " + ligne.getCommandLabel());
+						entite.getCommand().getBonDeCommandePrefix() + entite.getCommand().getBonDeCommandeCellB9() + // A
+								"-" + entite.getCommand().getBenefitPurposeCellB11() + // B
+								"-" + ligne.getUoType() + // C
+								"- " + ligne.getCommandLabel()); // D
 
 				navette.setBillAmount(ligne.getUoTotal().getTotalTTC());
 				navette.setUnitPrice(ligne.getUnitPrice());
