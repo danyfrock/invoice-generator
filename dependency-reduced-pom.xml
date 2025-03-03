@@ -22,6 +22,50 @@
         </configuration>
       </plugin>
       <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.6.3</version>
+        <executions>
+          <execution>
+            <id>generate-javadoc</id>
+            <phase>package</phase>
+            <goals>
+              <goal>javadoc</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <show>public</show>
+          <encoding>UTF-8</encoding>
+          <docencoding>UTF-8</docencoding>
+          <charset>UTF-8</charset>
+          <failOnError>false</failOnError>
+          <additionalJOption>-Xdoclint:none</additionalJOption>
+          <useStandardDocletOptions>true</useStandardDocletOptions>
+          <sourcepath>${project.basedir}/src/main/java</sourcepath>
+          <subpackages>com.invoicegenerator</subpackages>
+          <detectJavaApiLink>false</detectJavaApiLink>
+          <detectLinks>false</detectLinks>
+          <detectOfflineLinks>false</detectOfflineLinks>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/libs</outputDirectory>
+              <includeScope>runtime</includeScope>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.5.1</version>
         <executions>
@@ -44,6 +88,9 @@
   </build>
   <properties>
     <maven.compiler.release>22</maven.compiler.release>
+    <gson.version>2.11.0</gson.version>
+    <poi.version>5.4.0</poi.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <javafx.version>22</javafx.version>
   </properties>
 </project>
