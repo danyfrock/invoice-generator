@@ -82,13 +82,9 @@
                     <charset>UTF-8</charset>
                     <failOnError>false</failOnError>
                     <additionalJOption>-Xdoclint:none</additionalJOption>
-                    <!-- Réactiver les options standard -->
                     <useStandardDocletOptions>true</useStandardDocletOptions>
-                    <!-- Chemin explicite des sources -->
                     <sourcepath>${project.basedir}/src/main/java</sourcepath>
-                    <!-- Forcer les packages -->
                     <subpackages>com.invoicegenerator</subpackages>
-                    <!-- Désactiver détection modulaire -->
                     <detectJavaApiLink>false</detectJavaApiLink>
                     <detectLinks>false</detectLinks>
                     <detectOfflineLinks>false</detectOfflineLinks>
@@ -122,7 +118,8 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- Shade -->
+            <!-- Shade (commenté pour désactiver) -->
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -139,10 +136,23 @@
                                     <mainClass>com.invoicegenerator.Main</mainClass>
                                 </transformer>
                             </transformers>
+                            <filters>
+                                <filter>
+                                    <artifact>*:javafx*</artifact>
+                                    <includes>
+                                        <include>**/*.class</include>
+                                        <include>**/*.properties</include>
+                                        <include>**/*.so</include>
+                                        <include>**/*.dll</include>
+                                        <include>**/*.dylib</include>
+                                    </includes>
+                                </filter>
+                            </filters>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+            -->
         </plugins>
     </build>
 </project>

@@ -1,500 +1,560 @@
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI2' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI2' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI2' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI2' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI2' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI2compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22compl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22A' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22Acompl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22A' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22Acompl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22A' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22Acompl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22A' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22Acompl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22A' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22Acompl.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
-INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'ctrAI22A' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'compl' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22A.xlsm
-mars 04, 2025 11:35:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ctrAI22Acompl.xlsm
-mars 04, 2025 11:36:38 AM com.invoicegenerator.views.CommandesView lambda$start$5
-INFO: Ouverture de NavettesFacturationView
-mars 04, 2025 11:36:38 AM com.invoicegenerator.views.NavettesFacturationView <init>
-INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Début de la conversion des entités Pv en modèles de navette de facturation
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 1
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 2
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 3
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 4
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 5
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Traitement de l'entité Pv numéro : 6
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
-mars 04, 2025 11:36:38 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
-INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
-mars 04, 2025 11:36:38 AM com.invoicegenerator.services.PvToNavetteService Convertir
-INFO: Conversion terminée avec succès
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
-INFO: Initialisation de NavetteFacturationViewModel avec modèle
-mars 04, 2025 11:36:38 AM com.invoicegenerator.views.NavettesFacturationView start
-INFO: Démarrage de l'interface NavettesFacturationView
-mars 04, 2025 11:36:38 AM com.invoicegenerator.views.NavettesFacturationView start
-INFO: Interface NavettesFacturationView affichée avec succès
-mars 04, 2025 11:49:05 AM com.invoicegenerator.Main configureLogging
-INFO: Configuration de logging chargée avec succès
-mars 04, 2025 11:49:05 AM com.invoicegenerator.Main main
-INFO: Lancement de l'application JavaFX
-mars 04, 2025 11:49:05 AM com.sun.javafx.application.PlatformImpl startup
-WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d49b4d2'
-mars 04, 2025 11:49:05 AM com.invoicegenerator.Main start
-INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
-mars 04, 2025 11:49:06 AM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-mars 04, 2025 11:49:06 AM com.invoicegenerator.modeles.BillingProcessModel <init>
-INFO: Création d'une nouvelle instance de BillingProcessModel
-mars 04, 2025 11:49:06 AM com.invoicegenerator.views.FileSelectorView <init>
-INFO: Initialisation de FileSelectorView sans modèle source
-mars 04, 2025 11:49:06 AM com.invoicegenerator.services.ParametresService <init>
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService <init>
 INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-mars 04, 2025 11:49:06 AM com.invoicegenerator.modeles.ParametersModel <init>
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
 INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-mars 04, 2025 11:49:06 AM com.invoicegenerator.services.ParametresService chargerParametres
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService chargerParametres
 INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-mars 04, 2025 11:49:06 AM com.invoicegenerator.views.FileSelectorView start
-INFO: Démarrage de l'interface FileSelectorView
-mars 04, 2025 11:49:06 AM com.invoicegenerator.views.FileSelectorView start
-INFO: Interface FileSelectorView affichée avec succès
-mars 04, 2025 11:49:06 AM com.invoicegenerator.Main start
-INFO: FileSelectorView initialisé avec succès
-mars 04, 2025 11:49:20 AM com.invoicegenerator.modeles.CommandModel <init>
-INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
-mars 04, 2025 11:49:20 AM com.invoicegenerator.modeles.PvEntityPvModel <init>
-INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
-mars 04, 2025 11:49:22 AM com.invoicegenerator.views.FileSelectorView lambda$start$2
-INFO: Passage à CommandesView avec 1 éléments
-mars 04, 2025 11:49:22 AM com.invoicegenerator.views.CommandesView <init>
-INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
-mars 04, 2025 11:49:22 AM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-mars 04, 2025 11:49:22 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
-INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-mars 04, 2025 11:49:22 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
-INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
-INFO: Informations générales lues avec succès
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
-INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-4.xlsx
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.UoAmountModel <init>
-INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
-INFO: Détails des prestations lus avec succès
-mars 04, 2025 11:49:23 AM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Lecture du fichier Excel réussie
-mars 04, 2025 11:49:23 AM com.invoicegenerator.services.EntitePvService FillPvFrom
-INFO: Fin de FillPvFrom avec succès
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:23 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_null.xlsm
-mars 04, 2025 11:49:23 AM com.invoicegenerator.views.CommandesView start
-INFO: Démarrage de l'interface CommandesView
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
-INFO: Initialisation de CommandeViewModel
-mars 04, 2025 11:49:23 AM com.invoicegenerator.services.ParametresService <init>
-INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
-mars 04, 2025 11:49:23 AM com.invoicegenerator.modeles.ParametersModel <init>
-INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
-mars 04, 2025 11:49:23 AM com.invoicegenerator.services.ParametresService chargerParametres
-INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
-mars 04, 2025 11:49:23 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
 INFO: Interface utilisateur initialisée avec succès
-mars 04, 2025 11:49:23 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
 INFO: Définition de la source PvEntityPvModel
-mars 04, 2025 11:49:24 AM com.invoicegenerator.views.CommandesView start
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:24:08 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:24:08 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:24:08 PM com.invoicegenerator.views.CommandesView start
 INFO: Interface CommandesView affichée avec succès
-mars 04, 2025 11:49:26 AM com.invoicegenerator.utils.FileUtil concat
+mars 04, 2025 2:29:03 PM com.invoicegenerator.Main configureLogging
+INFO: Configuration de logging chargée avec succès
+mars 04, 2025 2:29:03 PM com.invoicegenerator.Main main
+INFO: Lancement de l'application JavaFX
+mars 04, 2025 2:29:03 PM com.invoicegenerator.Main start
+INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
+mars 04, 2025 2:29:03 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:29:03 PM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 2:29:03 PM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView sans modèle source
+mars 04, 2025 2:29:03 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:29:03 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:29:03 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:29:03 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 2:29:03 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 2:29:03 PM com.invoicegenerator.Main start
+INFO: FileSelectorView initialisé avec succès
+mars 04, 2025 2:29:11 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 2:29:11 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.views.FileSelectorView lambda$start$2
+INFO: Passage à CommandesView avec 1 éléments
+mars 04, 2025 2:29:14 PM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 2:29:14 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 2:29:14 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 2:29:14 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.FileUtil concat
 INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:49:26 AM com.invoicegenerator.utils.FileUtil concat
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.FileUtil concat
 INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:26 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
 INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:26 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
 INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:26 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'z' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:26 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_z.xlsm
-mars 04, 2025 11:49:27 AM com.invoicegenerator.utils.FileUtil concat
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:14 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_null.xlsm
+mars 04, 2025 2:29:14 PM com.invoicegenerator.views.CommandesView start
+INFO: Démarrage de l'interface CommandesView
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:29:14 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:29:14 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:29:14 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:29:14 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:29:14 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:29:15 PM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+mars 04, 2025 2:29:25 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:29:25 PM com.invoicegenerator.utils.FileUtil concat
 INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:49:27 AM com.invoicegenerator.utils.FileUtil concat
+mars 04, 2025 2:29:25 PM com.invoicegenerator.utils.FileUtil concat
 INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+mars 04, 2025 2:29:25 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'w' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:25 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_w.xlsm
+mars 04, 2025 2:29:25 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_w.xlsm
+mars 04, 2025 2:29:25 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_wnull.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'ww' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ww.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ww.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_wwnull.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'www' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:26 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_wwwnull.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'www' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '3' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www3.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'www' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '33' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www33.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'www' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '333' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:29:30 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:29:34 PM com.invoicegenerator.views.CommandesView lambda$start$5
+INFO: Ouverture de NavettesFacturationView
+mars 04, 2025 2:29:34 PM com.invoicegenerator.views.NavettesFacturationView <init>
+INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
+mars 04, 2025 2:29:34 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Début de la conversion des entités Pv en modèles de navette de facturation
+mars 04, 2025 2:29:34 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Traitement de l'entité Pv numéro : 1
+mars 04, 2025 2:29:34 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 2:29:34 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
+mars 04, 2025 2:29:34 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 2:29:34 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+mars 04, 2025 2:29:34 PM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 2:29:34 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
+mars 04, 2025 2:29:34 PM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Conversion terminée avec succès
+mars 04, 2025 2:29:34 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 2:29:34 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 2:29:34 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 2:29:34 PM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Démarrage de l'interface NavettesFacturationView
+mars 04, 2025 2:29:34 PM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Interface NavettesFacturationView affichée avec succès
+mars 04, 2025 2:30:01 PM com.invoicegenerator.views.NavettesFacturationView lambda$start$17
+INFO: Écriture des navettes dans le fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:30:01 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNavette
+INFO: Début de l'écriture des navettes dans le fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:30:01 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
+INFO: Début de l'écriture d'un nouveau modèle de fichier Excel à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:30:02 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeNewTemplate
+INFO: Modèle de fichier Excel écrit avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:30:03 PM com.invoicegenerator.utils.ExcelNavetteWritterUtil writeAllNavettes
+INFO: Données ajoutées avec succès à : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.views.NavettesFacturationView lambda$start$16
+INFO: Retour à CommandesView
+mars 04, 2025 2:30:50 PM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 2:30:50 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 2:30:50 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 2:30:50 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'www' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '333' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_www333.xlsm
+mars 04, 2025 2:30:50 PM com.invoicegenerator.views.CommandesView start
+INFO: Démarrage de l'interface CommandesView
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 2:30:50 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:30:50 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 2:30:50 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 2:30:50 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 2:30:50 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 2:30:50 PM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+mars 04, 2025 3:25:14 PM com.invoicegenerator.Main configureLogging
+INFO: Configuration de logging chargée avec succès
+mars 04, 2025 3:25:14 PM com.invoicegenerator.Main main
+INFO: Lancement de l'application JavaFX
+mars 04, 2025 3:25:14 PM com.invoicegenerator.Main start
+INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
+mars 04, 2025 3:25:14 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 3:25:14 PM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 3:25:14 PM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView sans modèle source
+mars 04, 2025 3:25:14 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 3:25:14 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 3:25:14 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 3:25:14 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 3:25:14 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 3:25:14 PM com.invoicegenerator.Main start
+INFO: FileSelectorView initialisé avec succès
+mars 04, 2025 3:25:22 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:25:22 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:25:26 PM com.invoicegenerator.views.FileSelectorView lambda$start$2
+INFO: Passage à CommandesView avec 1 éléments
+mars 04, 2025 3:25:26 PM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 3:25:26 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:25:26 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:25:26 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:25:47 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 3:25:47 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 3:25:48 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 3:25:48 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
 INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
 INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe 'zz' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:27 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_zz.xlsm
-mars 04, 2025 11:49:28 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
-mars 04, 2025 11:49:28 AM com.invoicegenerator.utils.FileUtil concat
-INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
-mars 04, 2025 11:49:28 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
-INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 3:25:48 PM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_null.xlsm
+mars 04, 2025 3:25:48 PM com.invoicegenerator.views.CommandesView start
+INFO: Démarrage de l'interface CommandesView
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 3:25:48 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 3:25:48 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 3:25:48 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 3:25:48 PM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 3:25:48 PM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 3:45:00 PM com.invoicegenerator.Main configureLogging
+INFO: Configuration de logging chargée avec succès
+mars 04, 2025 3:45:00 PM com.invoicegenerator.Main main
+INFO: Lancement de l'application JavaFX
+mars 04, 2025 3:45:00 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d49b4d2'
+mars 04, 2025 3:45:00 PM com.invoicegenerator.Main start
+INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
+mars 04, 2025 3:45:01 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 3:45:01 PM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 3:45:01 PM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView sans modèle source
+mars 04, 2025 3:45:01 PM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 3:45:01 PM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 3:45:01 PM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 3:45:01 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 3:45:01 PM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 3:45:01 PM com.invoicegenerator.Main start
+INFO: FileSelectorView initialisé avec succès
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 3:45:15 PM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 3:45:17 PM com.invoicegenerator.views.FileSelectorView lambda$start$2
+INFO: Passage à CommandesView avec 6 éléments
+mars 04, 2025 3:45:17 PM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 3:45:17 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:45:17 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:45:17 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-6.xlsx
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 3:45:18 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 3:45:18 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 3:45:18 PM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 3:45:18 PM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-5.xlsx
+mars 04, 2025 3:45:18 PM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut

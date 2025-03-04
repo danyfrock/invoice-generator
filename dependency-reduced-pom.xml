@@ -80,6 +80,18 @@
                   <mainClass>com.invoicegenerator.Main</mainClass>
                 </transformer>
               </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:javafx*</artifact>
+                  <includes>
+                    <include>**/*.class</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.so</include>
+                    <include>**/*.dll</include>
+                    <include>**/*.dylib</include>
+                  </includes>
+                </filter>
+              </filters>
             </configuration>
           </execution>
         </executions>
