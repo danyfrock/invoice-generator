@@ -117,8 +117,13 @@ public class NavettesFacturationView extends Application {
             TableColumn<NavetteFacturationViewModel, String> noteEvenementColumn = new TableColumn<>("Note de l'Événement");
             noteEvenementColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNoteEvenement()));
 
-            TableColumn<NavetteFacturationViewModel, Double> quantiteColumn = new TableColumn<>("Quantité");
-            quantiteColumn.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getQuantite()).asObject());
+            // Alternative si la quantité peux être décimale.
+            ////TableColumn<NavetteFacturationViewModel, Double> quantiteColumn = new TableColumn<>("Quantité");
+            ////quantiteColumn.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getQuantite()).asObject());
+
+            // Alternative si la quantité ne peux être que entière.
+            TableColumn<NavetteFacturationViewModel, Integer> quantiteColumn = new TableColumn<>("Quantité");
+            quantiteColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getQuantiteAsInt()).asObject());
 
             TableColumn<NavetteFacturationViewModel, String> uniteMesureColumn = new TableColumn<>("Unité de Mesure");
             uniteMesureColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getUniteMesure()));

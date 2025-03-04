@@ -87,7 +87,8 @@ public class ExcelNavetteWritterUtil {
                 updateCell(row, 2, navette.getActivite());
                 updateCell(row, 3, String.valueOf(navette.getNombreFactures()));
                 updateCell(row, 4, navette.getNoteEvenement());
-                updateCell(row, 5, navette.getQuantite());
+                ////updateCell(row, 5, navette.getQuantite());
+                updateCell(row, 5, navette.getQuantiteAsInt());
                 updateCell(row, 6, navette.getUniteMesure());
                 updateCell(row, 7, navette.getPrixUnitaire());
                 updateCell(row, 8, navette.getMontantFacturation());
@@ -123,6 +124,20 @@ public class ExcelNavetteWritterUtil {
      * @param value La valeur à écrire dans la cellule.
      */
     private static void updateCell(Row row, int cellIndex, double value) {
+        Cell cell = row.getCell(cellIndex);
+        if (cell == null) {
+            cell = row.createCell(cellIndex);
+        }
+        cell.setCellValue(value);
+    }
+
+    /**
+     * Met à jour la valeur d'une cellule avec un entier.
+     * @param row La ligne contenant la cellule.
+     * @param cellIndex L'index de la cellule.
+     * @param value La valeur à écrire dans la cellule.
+     */
+    private static void updateCell(Row row, int cellIndex, int value) {
         Cell cell = row.getCell(cellIndex);
         if (cell == null) {
             cell = row.createCell(cellIndex);

@@ -125,6 +125,17 @@ public class NavetteFacturationViewModel {
     }
 
     /**
+     * Retourne la quantité du modèle en tant qu'entier.
+     *
+     * @return La quantité ou 0 si non disponible
+     */
+    public int getQuantiteAsInt() {
+        int quantite = (modele != null) ? (int) modele.getQuantity() : 0;
+        logger.log(Level.FINE, "Récupération de Quantite : {0}", quantite);
+        return quantite;
+    }
+
+    /**
      * Retourne l'unité de mesure du modèle.
      *
      * @return L'unité de mesure ou une valeur par défaut si non disponible
