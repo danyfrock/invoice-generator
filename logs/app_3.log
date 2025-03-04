@@ -1,652 +1,566 @@
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376962E9-Accompagnement Architecture applicative-L5 – P15.1.re.a- Architecture Applicative Simple
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 738,56
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 738,56
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 2 658,816
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 2 658,82
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 2 658,82
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2025-03-06
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 06 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 06
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-28
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 28 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 28
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Simple-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : 30001
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376962E9-Accompagnement Architecture applicative-L5 – P15.1.re.b- Architecture Applicative Moyen
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 2 182,12
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 2 182,12
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 5 237,088
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 5 237,09
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 5 237,09
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2025-03-06
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 06 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 06
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-28
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 28 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 28
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Moyen-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : 30001
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376962E9-Accompagnement Architecture applicative-L5 – P15.1.re.c- Architecture Applicative Complexe
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 4
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 4
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 3 692,82
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 3 692,82
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 17 725,536
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 17 725,54
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 17 725,54
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2025-03-06
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 06 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 06
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-28
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 28 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 28
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Complexe-2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : VFX55
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376963E9-Accompagnement-L5 – P15.1.re.a- Architecture Applicative Simple
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 11
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 11
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 738,56
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 738,56
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 9 748,992
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 9 748,99
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 9 748,99
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-03-15
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 15 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 15
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-26
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 26 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 26
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Simple-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : VFX55
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376963E9-Accompagnement-L5 – P15.1.re.b- Architecture Applicative Moyen
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 22
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 22
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 2 182,12
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 2 182,12
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 57 607,968
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 57 607,97
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 57 607,97
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-03-15
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 15 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 15
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-26
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 26 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 26
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Moyen-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : VFX55
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376963E9-Accompagnement-L5 – P15.1.re.c- Architecture Applicative Complexe
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 2
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 3 692,82
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 3 692,82
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 8 862,768
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 8 862,77
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 8 862,77
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-03-15
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 15 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 15
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-26
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 26 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 26
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Complexe-3
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:08 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : ZA55X
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376964E9-Architecture applicative-L5 – P15.1.re.a- Architecture Applicative Simple
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 12
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 12
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 738,56
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 738,56
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 10 635,264
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 10 635,26
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 10 635,26
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-03-29
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 29 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 29
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-23
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 23 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 23
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Simple-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Simple-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : ZA55X
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376964E9-Architecture applicative-L5 – P15.1.re.b- Architecture Applicative Moyen
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 12
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 12
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 2 182,12
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 2 182,12
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 31 422,528
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 31 422,53
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 31 422,53
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-03-29
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 29 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 29
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-23
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 23 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 23
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Moyen-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Moyen-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : ZA55X
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNoteEvenement
-FINE: Récupération de NoteEvenement : BDC PO1.000376964E9-Architecture applicative-L5 – P15.1.re.c- Architecture Applicative Complexe
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getQuantity
-FINE: Récupération de la quantité : 2
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getQuantite
-FINE: Récupération de Quantite : 2
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getMeasureUnit
-FINE: Récupération de lunité de mesure : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getUniteMesure
-FINE: Récupération de UniteMesure : UNT = Units
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getUnitPrice
-FINE: Récupération du prix unitaire : 3 692,82
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPrixUnitaireRound
-FINE: Récupération de PrixUnitaireRound : 3 692,82
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillAmount
-FINE: Récupération du montant de la facturation : 8 862,768
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantFacturationRound
-FINE: Récupération de MontantFacturationRound : 8 862,77
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getCalculatedEventAmount
-FINE: Récupération du montant calculé de lévénement : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getMontantEvenementCalculeRound
-FINE: Récupération de MontantEvenementCalculeRound : 8 862,77
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodFrom
-FINE: Récupération de la date de début de la période de facturation : 2024-03-29
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 29 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationDu
-FINE: Récupération de PeriodeFacturationDu : 29
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillPeriodTo
-FINE: Récupération de la date de fin de la période de facturation : 2025-03-23
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel formatDate
-FINE: Date formatée : 23 avec le formatteur Value(DayOfMonth,2)
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPeriodeFacturationAu
-FINE: Récupération de PeriodeFacturationAu : 23
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getItemId
-FINE: Récupération de lidentifiant de lélément : Architecture Applicative Complexe-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getItemId
-FINE: Récupération de ItemId : Architecture Applicative Complexe-4
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getInitialBill
-FINE: Récupération de la facture initiale : null
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getFactureInitiale
-FINE: Récupération de FactureInitiale : Default Facture
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getPcBu
-FINE: Récupération du PC BU : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getPcBu
-FINE: Récupération de PcBu : EU005
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getProject
-FINE: Récupération du nom du projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getProjet
-FINE: Récupération de Projet : o55a6D
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getActivity
-FINE: Récupération du nom de lactivité : {0}
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getActivite
-FINE: Récupération de Activite : ZA55X
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getBillNumber
-FINE: Récupération du nombre de factures : 5
-mars 02, 2025 10:38:09 PM com.invoicegenerator.viewModels.NavetteFacturationViewModel getNombreFactures
-FINE: Récupération de NombreFactures : 5
-mars 02, 2025 10:38:09 PM com.invoicegenerator.modeles.BillingShuttleModel getEventNote
-FINE: Récupération de la note de lévénement : {0}
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:11 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:11 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:11 AM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+mars 04, 2025 10:37:15 AM com.invoicegenerator.views.CommandesView lambda$start$4
+INFO: Retour à FileSelectorView
+mars 04, 2025 10:37:15 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:15 AM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 10:37:15 AM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView avec modèle source
+mars 04, 2025 10:37:15 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:15 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:15 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:15 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 10:37:15 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 10:37:32 AM com.invoicegenerator.views.FileSelectorView lambda$start$2
+INFO: Passage à CommandesView avec 1 éléments
+mars 04, 2025 10:37:32 AM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 10:37:32 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 10:37:32 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 10:37:32 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:32 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_null.xlsm
+mars 04, 2025 10:37:32 AM com.invoicegenerator.views.CommandesView start
+INFO: Démarrage de l'interface CommandesView
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:37:32 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:32 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:37:32 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:37:32 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:37:32 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:32 AM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+mars 04, 2025 10:37:33 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:37:33 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:33 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:33 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:33 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'a' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:33 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_a.xlsm
+mars 04, 2025 10:37:57 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:37:57 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:37:57 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:57 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'q' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:37:57 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_q.xlsm
+mars 04, 2025 10:37:57 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'a' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_q.xlsm
+mars 04, 2025 10:37:57 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_qa.xlsm
+mars 04, 2025 10:38:06 AM com.invoicegenerator.views.CommandesView lambda$start$5
+INFO: Ouverture de NavettesFacturationView
+mars 04, 2025 10:38:06 AM com.invoicegenerator.views.NavettesFacturationView <init>
+INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
+mars 04, 2025 10:38:06 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Début de la conversion des entités Pv en modèles de navette de facturation
+mars 04, 2025 10:38:06 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Traitement de l'entité Pv numéro : 1
+mars 04, 2025 10:38:06 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 10:38:06 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
+mars 04, 2025 10:38:06 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 10:38:06 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+mars 04, 2025 10:38:06 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 10:38:06 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
+mars 04, 2025 10:38:06 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Conversion terminée avec succès
+mars 04, 2025 10:38:06 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 10:38:06 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 10:38:06 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 10:38:06 AM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Démarrage de l'interface NavettesFacturationView
+mars 04, 2025 10:38:06 AM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Interface NavettesFacturationView affichée avec succès
+mars 04, 2025 10:38:34 AM com.invoicegenerator.views.NavettesFacturationView lambda$start$16
+INFO: Retour à CommandesView
+mars 04, 2025 10:38:34 AM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 10:38:34 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 10:38:34 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 10:38:34 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'q' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_q.xlsm
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'a' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_q.xlsm
+mars 04, 2025 10:38:34 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_qa.xlsm
+mars 04, 2025 10:38:34 AM com.invoicegenerator.views.CommandesView start
+INFO: Démarrage de l'interface CommandesView
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:38:34 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:38:34 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:38:34 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:38:34 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:38:34 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:38:34 AM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+mars 04, 2025 10:38:39 AM com.invoicegenerator.views.CommandesView lambda$start$4
+INFO: Retour à FileSelectorView
+mars 04, 2025 10:38:39 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:38:39 AM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 10:38:39 AM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView avec modèle source
+mars 04, 2025 10:38:39 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:38:39 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:38:39 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:38:39 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 10:38:39 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 10:41:43 AM com.invoicegenerator.Main configureLogging
+INFO: Configuration de logging chargée avec succès
+mars 04, 2025 10:41:43 AM com.invoicegenerator.Main main
+INFO: Lancement de l'application JavaFX
+mars 04, 2025 10:41:43 AM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d49b4d2'
+mars 04, 2025 10:41:44 AM com.invoicegenerator.Main start
+INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
+mars 04, 2025 10:41:44 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:41:44 AM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 10:41:44 AM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView sans modèle source
+mars 04, 2025 10:41:44 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:41:44 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:41:44 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:41:44 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 10:41:45 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 10:41:45 AM com.invoicegenerator.Main start
+INFO: FileSelectorView initialisé avec succès
+mars 04, 2025 10:41:58 AM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 10:41:58 AM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 10:42:00 AM com.invoicegenerator.views.FileSelectorView lambda$start$2
+INFO: Passage à CommandesView avec 1 éléments
+mars 04, 2025 10:42:00 AM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 10:42:00 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 10:42:00 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 10:42:00 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-2.xlsx
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 10:42:01 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 10:42:01 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'null' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:01 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_null.xlsm
+mars 04, 2025 10:42:01 AM com.invoicegenerator.views.CommandesView start
+INFO: Démarrage de l'interface CommandesView
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Initialisation de CommandeViewModel
+mars 04, 2025 10:42:01 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:42:01 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 10:42:01 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 10:42:01 AM com.invoicegenerator.viewModels.CommandeViewModel <init>
+INFO: Interface utilisateur initialisée avec succès
+mars 04, 2025 10:42:01 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:42:01 AM com.invoicegenerator.views.CommandesView start
+INFO: Interface CommandesView affichée avec succès
+mars 04, 2025 10:42:04 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:42:04 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:04 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:04 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:04 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'z' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:04 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_z.xlsm
+mars 04, 2025 10:42:05 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:42:05 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:05 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:05 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:05 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'zz' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:05 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_zz.xlsm
+mars 04, 2025 10:42:24 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:42:24 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:42:24 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:24 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'g' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:24 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_g.xlsm
+mars 04, 2025 10:42:24 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'zz' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_g.xlsm
+mars 04, 2025 10:42:24 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gzz.xlsm
+mars 04, 2025 10:42:25 AM com.invoicegenerator.viewModels.CommandeViewModel setSource
+INFO: Définition de la source PvEntityPvModel
+mars 04, 2025 10:42:25 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 10:42:25 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:25 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'gg' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 10:42:25 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gg.xlsm
+mars 04, 2025 10:42:25 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe 'zz' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_gg.xlsm
+mars 04, 2025 10:42:25 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_ggzz.xlsm
+mars 04, 2025 10:42:27 AM com.invoicegenerator.views.CommandesView lambda$start$5
+INFO: Ouverture de NavettesFacturationView
+mars 04, 2025 10:42:27 AM com.invoicegenerator.views.NavettesFacturationView <init>
+INFO: Initialisation de NavettesFacturationView avec BillingProcessModel
+mars 04, 2025 10:42:27 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Début de la conversion des entités Pv en modèles de navette de facturation
+mars 04, 2025 10:42:27 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Traitement de l'entité Pv numéro : 1
+mars 04, 2025 10:42:27 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 10:42:27 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Simple
+mars 04, 2025 10:42:27 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 10:42:27 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Moyen
+mars 04, 2025 10:42:27 AM com.invoicegenerator.modeles.BillingShuttleModel <init>
+INFO: Création d'une nouvelle instance de BillingShuttleModel avec valeurs par défaut
+mars 04, 2025 10:42:27 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Ajout de la navette pour la ligne de commande : Architecture Applicative Complexe
+mars 04, 2025 10:42:27 AM com.invoicegenerator.services.PvToNavetteService Convertir
+INFO: Conversion terminée avec succès
+mars 04, 2025 10:42:27 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 10:42:27 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 10:42:27 AM com.invoicegenerator.viewModels.NavetteFacturationViewModel <init>
+INFO: Initialisation de NavetteFacturationViewModel avec modèle
+mars 04, 2025 10:42:27 AM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Démarrage de l'interface NavettesFacturationView
+mars 04, 2025 10:42:27 AM com.invoicegenerator.views.NavettesFacturationView start
+INFO: Interface NavettesFacturationView affichée avec succès
+mars 04, 2025 11:11:40 AM com.invoicegenerator.Main configureLogging
+INFO: Configuration de logging chargée avec succès
+mars 04, 2025 11:11:40 AM com.invoicegenerator.Main main
+INFO: Lancement de l'application JavaFX
+mars 04, 2025 11:11:40 AM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d49b4d2'
+mars 04, 2025 11:11:40 AM com.invoicegenerator.Main start
+INFO: Démarrage de l'application depuis : C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator
+mars 04, 2025 11:11:40 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 11:11:40 AM com.invoicegenerator.modeles.BillingProcessModel <init>
+INFO: Création d'une nouvelle instance de BillingProcessModel
+mars 04, 2025 11:11:40 AM com.invoicegenerator.views.FileSelectorView <init>
+INFO: Initialisation de FileSelectorView sans modèle source
+mars 04, 2025 11:11:40 AM com.invoicegenerator.services.ParametresService <init>
+INFO: ParametresService initialisé avec le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 11:11:40 AM com.invoicegenerator.modeles.ParametersModel <init>
+INFO: Création d'une nouvelle instance de ParametersModel avec valeurs par défaut
+mars 04, 2025 11:11:40 AM com.invoicegenerator.services.ParametresService chargerParametres
+INFO: Paramètres chargés avec succès depuis le fichier : C:\Users\daniel.lorenzi\parametres.json
+mars 04, 2025 11:11:40 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Démarrage de l'interface FileSelectorView
+mars 04, 2025 11:11:41 AM com.invoicegenerator.views.FileSelectorView start
+INFO: Interface FileSelectorView affichée avec succès
+mars 04, 2025 11:11:41 AM com.invoicegenerator.Main start
+INFO: FileSelectorView initialisé avec succès
+mars 04, 2025 11:11:48 AM com.invoicegenerator.modeles.CommandModel <init>
+INFO: Création d'une nouvelle instance de CommandModel avec valeurs par défaut
+mars 04, 2025 11:11:48 AM com.invoicegenerator.modeles.PvEntityPvModel <init>
+INFO: Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut
+mars 04, 2025 11:11:50 AM com.invoicegenerator.views.FileSelectorView lambda$start$2
+INFO: Passage à CommandesView avec 1 éléments
+mars 04, 2025 11:11:50 AM com.invoicegenerator.views.CommandesView <init>
+INFO: Initialisation de CommandesView avec un modèle BillingProcessModel
+mars 04, 2025 11:11:50 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Début de FillPvFrom avec le chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 11:11:50 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireFichierExcel
+INFO: Début de la lecture du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 11:11:50 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Lecture des informations générales du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireGeneral
+INFO: Informations générales lues avec succès
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Lecture des détails des prestations du fichier Excel : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\Architecte applicatif-CGI-PVRECEP-3.xlsx
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.modeles.UoAmountModel <init>
+INFO: Création d'une nouvelle instance de UoAmountModel avec valeurs par défaut
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.ExcelPvReaderUtil lireDetails
+INFO: Détails des prestations lus avec succès
+mars 04, 2025 11:11:51 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Lecture du fichier Excel réussie
+mars 04, 2025 11:11:51 AM com.invoicegenerator.services.EntitePvService FillPvFrom
+INFO: Fin de FillPvFrom avec succès
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Concaténation du chemin : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats avec le nom de fichier : WST-CO_.xlsm
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.FileUtil concat
+INFO: Chemin complet du fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Ajout du suffixe '' au fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm
+mars 04, 2025 11:11:51 AM com.invoicegenerator.utils.FileUtil addSuffixToFileName
+INFO: Nouveau chemin de fichier : C:\Users\daniel.lorenzi\Documents\missions\Outil de génération de navettes de facturation CGI\resultats\WST-CO_.xlsm

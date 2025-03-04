@@ -63,11 +63,13 @@ public class ExcelPvReaderUtil {
             Sheet sheet = workbook.getSheet("PV");
             Row row11 = sheet.getRow(10);
             Cell cellB11 = row11.getCell(1);
-            commande.setBenefitPurposeCellB11(getStringCellValue(cellB11));
+            String cellValueB11 = getStringCellValue(cellB11);
+            commande.setBenefitPurposeCellB11(cellValueB11);
 
             Row row9 = sheet.getRow(8);
             Cell cellB9 = row9.getCell(1);
-            commande.setBonDeCommandeCellB9(String.valueOf(getNumericCellValue(cellB9)));
+            String cellValueB9 = getStringCellValue(cellB9);
+            commande.setBonDeCommandeCellB9(cellValueB9);
 
             logger.log(Level.INFO, "Informations générales lues avec succès");
 
