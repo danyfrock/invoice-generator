@@ -53,19 +53,62 @@ public class Main extends Application {
      * @param args Arguments de la ligne de commande.
      */
     public static void main(String[] args) {
-        writeErrorToFile("just start");
+        writeAdHocLog("just start", false);
+
         if (args.length > 0) {
             logger.info("Arguments reçus : " + String.join(", ", args));
         } else {
             logger.info("Aucun argument fourni au démarrage");
         }
 
-        writeErrorToFile("configureLogging start");
+        writeAdHocLog("configureLogging start");
         configureLogging();
-        writeErrorToFile("configureLogging done");
+        writeAdHocLog("configureLogging done");
+        logTheLogs();
 
         logger.info("Lancement de l'application JavaFX");
         launch(args);
+    }
+
+    private static void logTheLogs() {
+        logger.info("Vérification de l'emplacement des logs");
+
+        // Récupérer la propriété du pattern des logs
+        String logPattern = System.getProperty("java.util.logging.FileHandler.pattern");
+
+        if (logPattern != null && !logPattern.isEmpty()) {
+            try {
+                // Construire le chemin absolu à partir du pattern
+                Path logPath = Paths.get(CURRENT_DIR, logPattern).normalize().toAbsolutePath();
+                writeAdHocLog("Logs configurés pour être écrits dans : " + logPath);
+                logger.info("Emplacement des logs : " + logPath);
+
+                // Vérifier si le dossier parent existe
+                Path parentDir = logPath.getParent();
+                if (parentDir != null && Files.exists(parentDir)) {
+                    writeAdHocLog("Dossier de logs vérifié comme existant : " + parentDir);
+                } else {
+                    writeAdHocLog("Attention : le dossier de logs n'existe pas encore : " + parentDir);
+                }
+            } catch (Exception e) {
+                writeAdHocLog("Erreur lors de la vérification du chemin des logs : " + e.getMessage());
+            }
+        } else {
+            // Cas par défaut quand le pattern n'est pas défini
+            Path defaultLogPath = Paths.get(CURRENT_DIR, LOG_DIR).toAbsolutePath();
+            writeAdHocLog("Pattern de log non défini. Utilisation du chemin par défaut : " + defaultLogPath);
+            logger.info("Pattern de log non défini. Utilisation du chemin par défaut : " + defaultLogPath);
+
+            try {
+                if (Files.exists(defaultLogPath)) {
+                    writeAdHocLog("Dossier de logs par défaut existe : " + defaultLogPath);
+                } else {
+                    writeAdHocLog("Dossier de logs par défaut n'existe pas encore : " + defaultLogPath);
+                }
+            } catch (Exception e) {
+                writeAdHocLog("Erreur lors de la vérification du dossier par défaut : " + e.getMessage());
+            }
+        }
     }
 
     /**
@@ -82,7 +125,7 @@ public class Main extends Application {
 
             InputStream configFile = Main.class.getResourceAsStream(LOGGING_CONFIG_FILE);
             if (configFile == null) {
-                writeErrorToFile("Fichier logging.properties non trouvé dans les resources");
+                writeAdHocLog("Fichier logging.properties non trouvé dans les resources");
                 throw new IllegalStateException("Fichier logging.properties non trouvé dans les resources");
             }
 
@@ -96,21 +139,29 @@ public class Main extends Application {
             e.printStackTrace();
 
             // Si l'erreur persiste, on écrit l'erreur dans un fichier texte simple
-            writeErrorToFile("Erreur de configuration du logging : " + e.getMessage());
+            writeAdHocLog("Erreur de configuration du logging : " + e.getMessage());
         }
     }
 
     /**
-     * Écrit un message d'erreur dans un fichier texte dans le répertoire de l'utilisateur.
+     * Écrit un message dans un fichier texte dans le répertoire de l'utilisateur.
      * @param errorMessage Le message d'erreur à écrire.
      */
-    private static void writeErrorToFile(String errorMessage) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, true))) {
+    private static void writeAdHocLog(String errorMessage, boolean append) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, append))) {
             writer.write("Erreur survenue à " + java.time.LocalDateTime.now() + " : " + errorMessage);
             writer.newLine();
             logger.info("Erreur enregistrée dans le fichier : " + ERROR_LOG_FILE);
         } catch (IOException e) {
             logger.severe("Erreur lors de l'écriture du fichier d'erreur : " + e.getMessage());
         }
+    }
+
+    /**
+     * Écrit un message dans un fichier texte dans le répertoire de l'utilisateur.
+     * @param errorMessage Le message d'erreur à écrire.
+     */
+    private static void writeAdHocLog(String errorMessage) {
+        writeAdHocLog(errorMessage, true);
     }
 }
