@@ -74,7 +74,8 @@ public class Main extends Application {
         logger.info("Vérification de l'emplacement des logs");
 
         // Récupérer la propriété du pattern des logs
-        String logPattern = System.getProperty("java.util.logging.FileHandler.pattern");
+        ////String logPattern = System.getProperty("java.util.logging.FileHandler.pattern");
+        String logPattern = LogManager.getLogManager().getProperty("java.util.logging.FileHandler.pattern");
 
         if (logPattern != null && !logPattern.isEmpty()) {
             try {
@@ -149,11 +150,11 @@ public class Main extends Application {
      */
     private static void writeAdHocLog(String errorMessage, boolean append) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, append))) {
-            writer.write("Erreur survenue à " + java.time.LocalDateTime.now() + " : " + errorMessage);
+            writer.write("log de secours survenue à " + java.time.LocalDateTime.now() + " : " + errorMessage);
             writer.newLine();
-            logger.info("Erreur enregistrée dans le fichier : " + ERROR_LOG_FILE);
+            logger.info("log de secours enregistrée dans le fichier : " + ERROR_LOG_FILE);
         } catch (IOException e) {
-            logger.severe("Erreur lors de l'écriture du fichier d'erreur : " + e.getMessage());
+            logger.severe("Erreur lors de l'écriture du fichier du log de secours : " + e.getMessage());
         }
     }
 
