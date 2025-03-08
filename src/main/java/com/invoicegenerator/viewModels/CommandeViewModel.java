@@ -1,6 +1,7 @@
 package com.invoicegenerator.viewModels;
 
 import com.invoicegenerator.services.ParametresService;
+import com.invoicegenerator.utils.LoggerFactory;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -22,7 +23,7 @@ import java.util.logging.Level;
  * Cette classe encapsule les contrôles UI et la logique pour afficher et modifier les données d'une commande.
  */
 public class CommandeViewModel extends VBox {
-    private static final Logger logger = Logger.getLogger(CommandeViewModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(CommandeViewModel.class.getName());
 
     private final DatePicker dateDebutPicker = new DatePicker();
     private final DatePicker dateFinPicker = new DatePicker();

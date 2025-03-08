@@ -1,6 +1,7 @@
 package com.invoicegenerator.viewModels;
 
 import com.invoicegenerator.modeles.BillingShuttleModel;
+import com.invoicegenerator.utils.LoggerFactory;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -13,7 +14,7 @@ import java.util.logging.Level;
  * Cette classe encapsule les données du modèle BillingShuttleModel et fournit des méthodes pour y accéder formatées.
  */
 public class NavetteFacturationViewModel {
-    private static final Logger logger = Logger.getLogger(NavetteFacturationViewModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(NavetteFacturationViewModel.class.getName());
 
     private BillingShuttleModel modele;
     private static final DateTimeFormatter JOUR_FORMAT = DateTimeFormatter.ofPattern("dd");
