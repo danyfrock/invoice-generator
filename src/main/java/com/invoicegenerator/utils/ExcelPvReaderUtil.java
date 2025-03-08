@@ -17,7 +17,7 @@ import java.util.logging.Level;
  * Utilitaire pour lire les données des fichiers Excel pour les entités Pv.
  */
 public class ExcelPvReaderUtil {
-    private static final Logger logger = Logger.getLogger(ExcelPvReaderUtil.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(ExcelPvReaderUtil.class.getName());
 
     /**
      * Obtient l'index de la ligne de départ pour la lecture des données.

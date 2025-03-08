@@ -1,5 +1,7 @@
 package com.invoicegenerator.modeles;
 
+import com.invoicegenerator.utils.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,7 +12,7 @@ import java.util.logging.Level;
  * une liste de modèles d'entités PV et les détails du nom de fichier.
  */
 public class BillingProcessModel {
-    private static final Logger logger = Logger.getLogger(BillingProcessModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(BillingProcessModel.class.getName());
 
     private ParametersModel parameters = new ParametersModel();
     private final List<PvEntityPvModel> pvEntityPvModels = new ArrayList<>();

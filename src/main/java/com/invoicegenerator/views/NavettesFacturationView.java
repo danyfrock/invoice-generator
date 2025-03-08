@@ -15,6 +15,7 @@ import com.invoicegenerator.modeles.ActionResult;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.PvToNavetteService;
 import com.invoicegenerator.utils.ExcelNavetteWritterUtil;
+import com.invoicegenerator.utils.LoggerFactory;
 import com.invoicegenerator.viewModels.NavetteFacturationViewModel;
 import javafx.application.Application;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -37,7 +38,7 @@ import javafx.stage.Stage;
  * Permet de visualiser les données, écrire dans un fichier Excel, et ouvrir des fichiers/dossiers.
  */
 public class NavettesFacturationView extends Application {
-    private static final Logger logger = Logger.getLogger(NavettesFacturationView.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(NavettesFacturationView.class.getName());
 
     private TableView<NavetteFacturationViewModel> table;
     private NavetteFacturationViewModel[] source;

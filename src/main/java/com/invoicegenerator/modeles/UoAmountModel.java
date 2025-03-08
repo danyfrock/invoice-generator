@@ -1,5 +1,7 @@
 package com.invoicegenerator.modeles;
 
+import com.invoicegenerator.utils.LoggerFactory;
+
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -8,7 +10,7 @@ import java.util.logging.Level;
  * le prix unitaire, la quantité et la taxe.
  */
 public class UoAmountModel {
-    private static final Logger logger = Logger.getLogger(UoAmountModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(UoAmountModel.class.getName());
 
     private double totalHT;
     private double totalTTC;

@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * Utilitaire pour écrire des données de navette de facturation dans un fichier Excel.
  */
 public class ExcelNavetteWritterUtil {
-    private static final Logger logger = Logger.getLogger(ExcelNavetteWritterUtil.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(ExcelNavetteWritterUtil.class.getName());
     private static final int HEADER_ROW_INDEX = 3; // Ligne 4 en Excel (index 3 en Java)
 
     /**

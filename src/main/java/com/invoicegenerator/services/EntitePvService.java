@@ -4,6 +4,7 @@ import com.invoicegenerator.modeles.ActionResult;
 import com.invoicegenerator.modeles.CommandModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.utils.ExcelPvReaderUtil;
+import com.invoicegenerator.utils.LoggerFactory;
 
 import java.io.File;
 import java.util.logging.Logger;
@@ -12,7 +13,7 @@ import java.util.logging.Logger;
  * Service pour gérer les entités Pv.
  */
 public class EntitePvService {
-    private static final Logger logger = Logger.getLogger(EntitePvService.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(EntitePvService.class.getName());
 
     /**
      * Obtient un modèle PvEntityPv à partir d'un chemin de fichier.

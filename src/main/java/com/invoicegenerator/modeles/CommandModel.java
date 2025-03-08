@@ -1,5 +1,7 @@
 package com.invoicegenerator.modeles;
 
+import com.invoicegenerator.utils.LoggerFactory;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ import java.util.logging.Level;
  * le code du contrat, le code d'activité et une liste de lignes de commande.
  */
 public class CommandModel {
-    private static final Logger logger = Logger.getLogger(CommandModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(CommandModel.class.getName());
 
     private LocalDate dateDebut;
     private LocalDate dateFin;

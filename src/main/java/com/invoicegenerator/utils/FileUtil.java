@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  * Utilitaire pour les opérations sur les fichiers.
  */
 public class FileUtil {
-    private static final Logger logger = Logger.getLogger(FileUtil.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(FileUtil.class.getName());
 
     /**
      * Ajoute un suffixe au nom de fichier avant l'extension.

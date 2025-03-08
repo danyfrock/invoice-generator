@@ -1,5 +1,7 @@
 package com.invoicegenerator.modeles;
 
+import com.invoicegenerator.utils.LoggerFactory;
+
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +14,7 @@ import java.util.logging.Level;
  * Représente le modèle de paramètres qui contient diverses configurations pour le générateur de factures.
  */
 public class ParametersModel {
-    private static final Logger logger = Logger.getLogger(ParametersModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(ParametersModel.class.getName());
 
     private String outputFolder = Paths.get(System.getProperty("user.home"), "Desktop").toString();
     private List<String> activityCodes = Arrays.asList("30001", "30003", "30005", "30007", "30009");

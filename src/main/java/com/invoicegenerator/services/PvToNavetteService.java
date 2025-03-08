@@ -7,12 +7,13 @@ import java.util.logging.Logger;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.UoCommandLineModel;
 import com.invoicegenerator.modeles.BillingShuttleModel;
+import com.invoicegenerator.utils.LoggerFactory;
 
 /**
  * Service pour convertir les entités Pv en modèles de navette de facturation.
  */
 public class PvToNavetteService {
-	private static final Logger logger = Logger.getLogger(PvToNavetteService.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(PvToNavetteService.class.getName());
 
 	/**
 	 * Convertit un tableau d'entités PvEntityPvModel en un tableau de BillingShuttleModel.

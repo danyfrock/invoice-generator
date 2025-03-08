@@ -1,5 +1,7 @@
 package com.invoicegenerator.modeles;
 
+import com.invoicegenerator.utils.LoggerFactory;
+
 import java.time.LocalDate;
 import java.util.logging.Logger;
 import java.util.logging.Level;
@@ -8,7 +10,7 @@ import java.util.logging.Level;
  * Représente le modèle de navette de facturation qui contient diverses informations sur le processus de facturation.
  */
 public class BillingShuttleModel {
-    private static final Logger logger = Logger.getLogger(BillingShuttleModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(BillingShuttleModel.class.getName());
 
     private String pcBu;
     private String project;

@@ -1,5 +1,7 @@
 package com.invoicegenerator.modeles;
 
+import com.invoicegenerator.utils.LoggerFactory;
+
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -7,7 +9,7 @@ import java.util.logging.Level;
  * Représente le modèle d'entité PV qui contient les détails du fichier et un modèle de commande.
  */
 public class PvEntityPvModel {
-    private static final Logger logger = Logger.getLogger(PvEntityPvModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(PvEntityPvModel.class.getName());
 
     private String fileName = "";
     private String filePath = "";

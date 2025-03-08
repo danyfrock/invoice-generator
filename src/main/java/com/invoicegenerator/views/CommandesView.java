@@ -9,6 +9,7 @@ import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.EntitePvService;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.utils.FileUtil;
+import com.invoicegenerator.utils.LoggerFactory;
 import com.invoicegenerator.viewModels.CommandeViewModel;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -24,7 +25,7 @@ import javafx.stage.Stage;
  * Cette classe étend Application pour créer une interface utilisateur JavaFX.
  */
 public class CommandesView extends Application {
-    private static final Logger logger = Logger.getLogger(CommandesView.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(CommandesView.class.getName());
 
     private TableView<CommandeViewModel> fileTable;
     private String dossierSortie;

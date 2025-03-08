@@ -2,6 +2,7 @@ package com.invoicegenerator.services;
 
 import com.google.gson.Gson;
 import com.invoicegenerator.modeles.ParametersModel;
+import com.invoicegenerator.utils.LoggerFactory;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -13,7 +14,7 @@ import java.util.logging.Logger;
  * Service pour gérer les paramètres de l'application.
  */
 public class ParametresService {
-    private static final Logger logger = Logger.getLogger(ParametresService.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(ParametresService.class.getName());
     private String parametresFileName;
 
     /**

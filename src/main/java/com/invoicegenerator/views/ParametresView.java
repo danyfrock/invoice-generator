@@ -2,6 +2,7 @@ package com.invoicegenerator.views;
 
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.ParametresService;
+import com.invoicegenerator.utils.LoggerFactory;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.scene.Scene;
@@ -19,7 +20,7 @@ import java.util.logging.Level;
  * Permet de configurer le dossier de sortie, les années min/max et les codes d'activité.
  */
 public class ParametresView extends Application {
-    private static final Logger logger = Logger.getLogger(ParametresView.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(ParametresView.class.getName());
 
     private final BillingProcessModel source;
     private final TextField textAnneeMin = new TextField();

@@ -3,6 +3,7 @@ package com.invoicegenerator.views;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.ParametresService;
+import com.invoicegenerator.utils.LoggerFactory;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -22,7 +23,7 @@ import java.util.logging.Level;
  * Permet à l'utilisateur de choisir des fichiers Excel, de les supprimer et de passer à l'étape suivante.
  */
 public class FileSelectorView extends Application {
-    private static final Logger logger = Logger.getLogger(FileSelectorView.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(FileSelectorView.class.getName());
 
     private TableView<PvEntityPvModel> fileTable = new TableView<>();
     private Button nextButton = new Button("Suivant");
