@@ -13,7 +13,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import com.invoicegenerator.modeles.*;
+import javafx.util.StringConverter;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.logging.Level;
@@ -27,6 +30,26 @@ public class CommandeViewModel extends VBox {
 
     private final DatePicker dateDebutPicker = new DatePicker();
     private final DatePicker dateFinPicker = new DatePicker();
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    StringConverter<LocalDate> converter = new StringConverter<LocalDate>() {
+        @Override
+        public String toString(LocalDate date) {
+            if (date != null) {
+                return formatter.format(date);
+            }
+            return "";
+        }
+
+        @Override
+        public LocalDate fromString(String string) {
+            if (string != null && !string.isEmpty()) {
+                return LocalDate.parse(string, formatter);
+            }
+            return null;
+        }
+    };
+
     private final TextField codeContratField = new TextField();
     private final ComboBox<String> codeActiviteComboBox = new ComboBox<>(FXCollections.observableArrayList("30002", "30005", "30007", "30009"));
     private final Label nomFichierLabel = new Label();
@@ -49,6 +72,10 @@ public class CommandeViewModel extends VBox {
     public CommandeViewModel() {
         logger.log(Level.INFO, "Initialisation de CommandeViewModel");
         chargerParametres();
+
+        dateDebutPicker.setConverter(converter);
+        dateFinPicker.setConverter(converter);
+
         tableView.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
 
         GridPane grid = new GridPane();

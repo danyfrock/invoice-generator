@@ -1,7 +1,0 @@
-module:InvoiceGenerator
-com.invoicegenerator
-com.invoicegenerator.modeles
-com.invoicegenerator.services
-com.invoicegenerator.utils
-com.invoicegenerator.viewModels
-com.invoicegenerator.views

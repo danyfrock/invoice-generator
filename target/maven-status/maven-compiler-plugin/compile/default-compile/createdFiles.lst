@@ -1,4 +1,5 @@
 com\invoicegenerator\modeles\BillingProcessModel.class
+com\invoicegenerator\viewModels\CommandeViewModel$1.class
 com\invoicegenerator\utils\ExcelNavetteWritterUtil.class
 com\invoicegenerator\modeles\ActionResult.class
 com\invoicegenerator\modeles\ParametersModel.class
@@ -14,6 +15,7 @@ com\invoicegenerator\utils\LoggerFactory.class
 com\invoicegenerator\viewModels\NavetteFacturationViewModel.class
 com\invoicegenerator\views\NavettesFacturationView.class
 com\invoicegenerator\utils\FileUtil.class
+com\invoicegenerator\services\MoisService.class
 com\invoicegenerator\utils\ExcelPvReaderUtil$1.class
 com\invoicegenerator\viewModels\CommandeViewModel.class
 com\invoicegenerator\views\CommandesView.class
