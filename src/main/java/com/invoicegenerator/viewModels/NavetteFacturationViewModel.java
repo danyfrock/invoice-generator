@@ -1,7 +1,6 @@
 package com.invoicegenerator.viewModels;
 
 import com.invoicegenerator.modeles.BillingShuttleModel;
-import com.invoicegenerator.modeles.Langue;
 import com.invoicegenerator.services.MoisService;
 import com.invoicegenerator.utils.LoggerFactory;
 
@@ -309,7 +308,7 @@ public class NavetteFacturationViewModel {
 
     private String extraireMois(LocalDate date) {
         String mois = (modele != null) ? formatDate(date, MOIS_TEXTE_FORMAT) : "";
-        mois = moisService.extraireMois(date, Langue.FRANCAIS);
+        mois = moisService.extraireMois(date, Locale.FRANCE);
         logger.log(Level.FINE, "Récupération du mois : {0} sur la date {1}", new Object[]{mois, date.toString()});
         return mois;
     }
