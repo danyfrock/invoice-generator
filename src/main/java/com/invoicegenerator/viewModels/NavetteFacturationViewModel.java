@@ -1,6 +1,8 @@
 package com.invoicegenerator.viewModels;
 
 import com.invoicegenerator.modeles.BillingShuttleModel;
+import com.invoicegenerator.modeles.Langue;
+import com.invoicegenerator.services.MoisService;
 import com.invoicegenerator.utils.LoggerFactory;
 
 import java.time.LocalDate;
@@ -15,6 +17,7 @@ import java.util.logging.Level;
  */
 public class NavetteFacturationViewModel {
     private static final Logger logger = LoggerFactory.getLogger(NavetteFacturationViewModel.class.getName());
+    private MoisService moisService = new MoisService();
 
     private BillingShuttleModel modele;
     private static final DateTimeFormatter JOUR_FORMAT = DateTimeFormatter.ofPattern("dd");
@@ -306,7 +309,7 @@ public class NavetteFacturationViewModel {
 
     private String extraireMois(LocalDate date) {
         String mois = (modele != null) ? formatDate(date, MOIS_TEXTE_FORMAT) : "";
-        mois = capitalizeFirstLetter(mois);
+        mois = moisService.extraireMois(date, Langue.FRANCAIS);
         logger.log(Level.FINE, "Récupération du mois : {0} sur la date {1}", new Object[]{mois, date.toString()});
         return mois;
     }
