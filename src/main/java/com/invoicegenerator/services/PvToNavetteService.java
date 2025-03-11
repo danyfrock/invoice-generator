@@ -49,10 +49,10 @@ public class PvToNavetteService {
 								"-" + ligne.getUoType() + // C
 								"- " + ligne.getCommandLabel()); // D
 
-				navette.setBillAmount(ligne.getUoTotal().getTotalTTC());
+				navette.setBillAmount(ligne.getUoTotal().getTotalHT());
 				navette.setUnitPrice(ligne.getUnitPrice());
 				navette.setQuantity(ligne.getUoTotal().getNumber());
-				navette.setCalculatedEventAmount(ligne.getUoTotal().getTotalTTC());
+				navette.setCalculatedEventAmount(ligne.getUoTotal().getTotalHT());
 				navette.setBillPeriodFrom(entite.getCommand().getDateDebut());
 				navette.setBillPeriodTo(entite.getCommand().getDateFin());
 				navette.setBillNumber(i);

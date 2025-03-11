@@ -263,7 +263,9 @@ public class CommandesView extends Application {
     private void resetFichierSortie(String codeContrat) {
         String sortie = FileUtil.concat(dossierSortie, source.getParameters().getOutputFileDefaultName());
         sortie = FileUtil.addSuffixToFileName(sortie, codeContrat);
-        sortie = FileUtil.addSuffixToFileName(sortie, this.complementField.getText());
+        sortie = FileUtil.addSuffixToFileName(sortie,
+                this.complementField.getText() != null && !this.complementField.getText().isEmpty() ?
+                        this.complementField.getText() : "");
 
         this.source.setOutputFileName(sortie);
         this.fichierSortieLabel.setText(sortie);

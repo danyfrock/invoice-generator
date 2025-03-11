@@ -87,17 +87,16 @@ public class ExcelNavetteWritterUtil {
                 updateCell(row, 2, navette.getActivite());
                 updateCell(row, 3, String.valueOf(navette.getNombreFactures()));
                 updateCell(row, 4, navette.getNoteEvenement());
-                ////updateCell(row, 5, navette.getQuantite());
-                updateCell(row, 5, navette.getQuantiteAsInt());
+                updateCell(row, 5, navette.getQuantiteAsDouble());
                 updateCell(row, 6, navette.getUniteMesure());
                 updateCell(row, 7, navette.getPrixUnitaire());
-                updateCell(row, 8, navette.getMontantFacturation());
-                updateCell(row, 9, navette.getMontantEvenementCalcule());
-                updateCell(row, 10, navette.getJourPeriodeFacturationDu());
-                updateCell(row, 11, navette.getMoisTextePeriodeFacturationDu());
+                row.getCell(8).setCellFormula("H" + rowNum + "*F" + rowNum);
+                updateCell(row, 9, navette.getMontantEvenementCalcule()); // contient déjà une formule
+                updateCell(row, 10, navette.getMoisTextePeriodeFacturationDu());
+                updateCell(row, 11, navette.getJourPeriodeFacturationDu());
                 updateCell(row, 12, navette.getAnneePeriodeFacturationDu());
-                updateCell(row, 13, navette.getJourPeriodeFacturationAu());
-                updateCell(row, 14, navette.getMoisTextePeriodeFacturationAu());
+                updateCell(row, 13, navette.getMoisTextePeriodeFacturationAu());
+                updateCell(row, 14, navette.getJourPeriodeFacturationAu());
                 updateCell(row, 15, navette.getAnneePeriodeFacturationAu());
                 updateCell(row, 16, navette.getItemId());
                 updateCell(row, 17, navette.getFactureInitiale());

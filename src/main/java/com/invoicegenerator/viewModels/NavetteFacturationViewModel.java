@@ -136,6 +136,10 @@ public class NavetteFacturationViewModel {
         return quantite;
     }
 
+    public double getQuantiteAsDouble(){
+        return modele.getQuantity();
+    }
+
     /**
      * Retourne l'unité de mesure du modèle.
      *
@@ -295,9 +299,29 @@ public class NavetteFacturationViewModel {
      * @return Le mois en texte ou une chaîne vide si non disponible
      */
     public String getMoisTextePeriodeFacturationDu() {
-        String mois = (modele != null) ? formatDate(modele.getBillPeriodFrom(), MOIS_TEXTE_FORMAT) : "";
-        logger.log(Level.FINE, "Récupération de MoisTextePeriodeFacturationDu : {0}", mois);
+        String mois;
+        mois = extraireMois(modele.getBillPeriodFrom());
         return mois;
+    }
+
+    private String extraireMois(LocalDate date) {
+        String mois = (modele != null) ? formatDate(date, MOIS_TEXTE_FORMAT) : "";
+        mois = capitalizeFirstLetter(mois);
+        logger.log(Level.FINE, "Récupération du mois : {0} sur la date {1}", new Object[]{mois, date.toString()});
+        return mois;
+    }
+
+    /**
+     * Capitalize the first letter of the given string.
+     *
+     * @param mois The string to capitalize.
+     * @return The string with the first letter capitalized.
+     */
+    private String capitalizeFirstLetter(String mois) {
+        if (mois == null || mois.isEmpty()) {
+            return mois;
+        }
+        return mois.substring(0, 1).toUpperCase() + mois.substring(1).toLowerCase();
     }
 
     /**
@@ -328,8 +352,8 @@ public class NavetteFacturationViewModel {
      * @return Le mois en texte ou une chaîne vide si non disponible
      */
     public String getMoisTextePeriodeFacturationAu() {
-        String mois = (modele != null) ? formatDate(modele.getBillPeriodTo(), MOIS_TEXTE_FORMAT) : "";
-        logger.log(Level.FINE, "Récupération de MoisTextePeriodeFacturationAu : {0}", mois);
+        String mois;
+        mois = extraireMois(modele.getBillPeriodTo());
         return mois;
     }
 }

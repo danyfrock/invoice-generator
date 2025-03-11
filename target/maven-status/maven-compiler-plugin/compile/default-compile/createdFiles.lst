@@ -10,6 +10,7 @@ com\invoicegenerator\services\ParametresService.class
 com\invoicegenerator\views\CommandesView$1.class
 com\invoicegenerator\utils\ExcelPvReaderUtil.class
 com\invoicegenerator\modeles\PvEntityPvModel.class
+com\invoicegenerator\utils\LoggerFactory.class
 com\invoicegenerator\viewModels\NavetteFacturationViewModel.class
 com\invoicegenerator\views\NavettesFacturationView.class
 com\invoicegenerator\utils\FileUtil.class
