@@ -19,6 +19,7 @@ public class NavetteFacturationViewModel {
     private MoisService moisService = new MoisService();
 
     private BillingShuttleModel modele;
+    private static final DateTimeFormatter PRETTYDATE_FORMAT = DateTimeFormatter.ofPattern("dd MMMM yyyy");
     private static final DateTimeFormatter JOUR_FORMAT = DateTimeFormatter.ofPattern("dd");
     private static final DateTimeFormatter ANNEE_FORMAT = DateTimeFormatter.ofPattern("yyyy");
     private static final DateTimeFormatter MOIS_TEXTE_FORMAT = DateTimeFormatter.ofPattern("MMMM", Locale.FRANCE);
@@ -225,7 +226,7 @@ public class NavetteFacturationViewModel {
      * @return Le jour ou une chaîne vide si non disponible
      */
     public String getPeriodeFacturationDu() {
-        String jour = (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillPeriodFrom(), PRETTYDATE_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de PeriodeFacturationDu : {0}", jour);
         return jour;
     }
@@ -236,7 +237,7 @@ public class NavetteFacturationViewModel {
      * @return Le jour ou une chaîne vide si non disponible
      */
     public String getPeriodeFacturationAu() {
-        String jour = (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillPeriodTo(), PRETTYDATE_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de PeriodeFacturationAu : {0}", jour);
         return jour;
     }
