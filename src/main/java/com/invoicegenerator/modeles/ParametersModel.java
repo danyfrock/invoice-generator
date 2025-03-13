@@ -22,6 +22,7 @@ public class ParametersModel {
     private int maxYear = 2029;
     private String outputFileDefaultName = "WST-CO_.xlsm";
     private String parametersFileName = Paths.get(System.getProperty("user.home"), "") + "\\parametres.json";
+    private  String dernierEmplacementConnu =  Paths.get(System.getProperty("user.home"), "") + "\\";
 
     /**
      * Constructeur par défaut pour ParametersModel.
@@ -146,5 +147,13 @@ public class ParametersModel {
                 '}';
         logger.log(Level.FINE, "Génération de la représentation textuelle : {0}", result);
         return result;
+    }
+
+    public String getDernierEmplacementConnu() {
+        return dernierEmplacementConnu;
+    }
+
+    public void setDernierEmplacementConnu(String dernierEmplacementConnu) {
+        this.dernierEmplacementConnu = dernierEmplacementConnu;
     }
 }

@@ -10,6 +10,7 @@ import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.BillingProcessService;
 import com.invoicegenerator.services.EntitePvService;
 import com.invoicegenerator.modeles.PvEntityPvModel;
+import com.invoicegenerator.services.ParametresService;
 import com.invoicegenerator.utils.FileUtil;
 import com.invoicegenerator.utils.LoggerFactory;
 import com.invoicegenerator.viewModels.CommandeViewModel;
@@ -37,10 +38,10 @@ public class CommandesView extends Application {
     private Button previewButton;
     private final Label fichierSortieLabel = new Label();
     private final TextField complementField = new TextField();
-    private BillingProcessModel source;
-    private EntitePvService pvService = new EntitePvService();
+    private BillingProcessModel source = new BillingProcessModel();;
+    private final EntitePvService pvService = new EntitePvService();
     private BillingProcessService billingService = new BillingProcessService("billing_process.json");
-
+    private final ParametresService parametresService = new ParametresService(this.source.getParameters().getParametersFileName());
     /**
      * Constructeur avec une liste de chemins de fichiers et un dossier de sortie.
      *
@@ -218,10 +219,13 @@ public class CommandesView extends Application {
         saveProgressItem.setOnAction(e -> {
             logger.log(Level.INFO, "Sauvegarde de la progression demandée");
             FileChooser fileChooser = new FileChooser();
+            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnu()));
             fileChooser.setTitle("Sauvegarder progression");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
             File file = fileChooser.showSaveDialog(primaryStage);
             if (file != null) {
+                this.source.getParameters().setDernierEmplacementConnu(file.getParentFile().getAbsolutePath());
+                this.parametresService.enregistrerParametres(this.source.getParameters());
                 billingService = new BillingProcessService(file.getAbsolutePath());
                 billingService.enregistrerBillingProcess(this.source);
             }

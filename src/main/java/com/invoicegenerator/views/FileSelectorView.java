@@ -32,6 +32,7 @@ public class FileSelectorView extends Application {
     private Button nextButton = new Button("Suivant");
     private BillingProcessModel source = new BillingProcessModel();
     private BillingProcessService billingService = new BillingProcessService("billing_process.json"); // Instance par défaut
+    private final ParametresService parametresService = new ParametresService(this.source.getParameters().getParametersFileName());
 
     /**
      * Constructeur par défaut. Initialise le modèle et charge les paramètres.
@@ -120,10 +121,13 @@ public class FileSelectorView extends Application {
         loadBackupItem.setOnAction(e -> {
             logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
             FileChooser fileChooser = new FileChooser();
+            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnu()));
             fileChooser.setTitle("Charger sauvegarde");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
             File file = fileChooser.showOpenDialog(primaryStage);
             if (file != null) {
+                this.source.getParameters().setDernierEmplacementConnu(file.getParentFile().getAbsolutePath());
+                this.parametresService.enregistrerParametres(this.source.getParameters());
                 billingService = new BillingProcessService(file.getAbsolutePath());
                 BillingProcessModel loadedModel = billingService.chargerBillingProcess();
                 new FileSelectorView(loadedModel).start(new Stage());
@@ -154,10 +158,13 @@ public class FileSelectorView extends Application {
     private void selectFiles() {
         logger.log(Level.FINE, "Ouverture du sélecteur de fichiers");
         FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnu()));
         fileChooser.setTitle("Select Files");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Excel Files", "*.xls", "*.xlsx", "*.xlsm", "*.xlam"));
         List<File> files = fileChooser.showOpenMultipleDialog(null);
         if (files != null) {
+            this.source.getParameters().setDernierEmplacementConnu(files.getFirst().getParentFile().getAbsolutePath());
+            this.parametresService.enregistrerParametres(this.source.getParameters());
             for (File file : files) {
                 boolean exists = fileTable.getItems().stream()
                         .anyMatch(data -> data.getFilePath().equals(file.getAbsolutePath()));
