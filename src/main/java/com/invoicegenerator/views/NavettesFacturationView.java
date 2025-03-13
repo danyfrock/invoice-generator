@@ -89,7 +89,7 @@ public class NavettesFacturationView extends Application {
 
         try {
             MenuBar menuBar = new MenuBar();
-            Menu fileMenu = new Menu("File");
+            Menu fileMenu = new Menu("Menu");
 
             MenuItem openFileItem = new MenuItem("Ouvrir Fichier");
             openFileItem.setOnAction(e -> openFile(fichierSortie));

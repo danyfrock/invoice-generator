@@ -2,14 +2,17 @@ package com.invoicegenerator.views;
 
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.BillingProcessModel;
+import com.invoicegenerator.services.BillingProcessService; // Ajout de l'import
 import com.invoicegenerator.services.ParametresService;
 import com.invoicegenerator.utils.LoggerFactory;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -28,6 +31,7 @@ public class FileSelectorView extends Application {
     private TableView<PvEntityPvModel> fileTable = new TableView<>();
     private Button nextButton = new Button("Suivant");
     private BillingProcessModel source = new BillingProcessModel();
+    private BillingProcessService billingService = new BillingProcessService("billing_process.json"); // Instance par défaut
 
     /**
      * Constructeur par défaut. Initialise le modèle et charge les paramètres.
@@ -62,7 +66,7 @@ public class FileSelectorView extends Application {
     @Override
     public void start(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l'interface FileSelectorView");
-        primaryStage.setTitle("<<<V0>>> application d'enregistrement de navettes de facturation.");
+        primaryStage.setTitle("Application d'enregistrement de navettes de facturation.");
 
         fileTable.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
 
@@ -103,10 +107,39 @@ public class FileSelectorView extends Application {
         Label outputFolderPathLabel = new Label("Dossier de sortie: " + source.getParameters().getOutputFolder());
         HBox outputBox = new HBox(10, outputFolderPathLabel, paramsButton);
 
+        // Ajout du MenuBar
+        MenuBar menuBar = new MenuBar();
+        Menu fileMenu = new Menu("Menu");
+
+        MenuItem selectFileItem = new MenuItem("Sélectionner fichier (Ctrl+O)");
+        selectFileItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
+        selectFileItem.setOnAction(e -> selectFiles());
+
+        MenuItem loadBackupItem = new MenuItem("Charger sauvegarde (Ctrl+L)"); // Changement à Ctrl+L
+        loadBackupItem.setAccelerator(KeyCombination.keyCombination("Ctrl+L"));
+        loadBackupItem.setOnAction(e -> {
+            logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Charger sauvegarde");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
+            File file = fileChooser.showOpenDialog(primaryStage);
+            if (file != null) {
+                billingService = new BillingProcessService(file.getAbsolutePath());
+                BillingProcessModel loadedModel = billingService.chargerBillingProcess();
+                new FileSelectorView(loadedModel).start(new Stage());
+                primaryStage.close();
+            } else {
+                logger.log(Level.FINE, "Chargement de sauvegarde annulé par l'utilisateur");
+            }
+        });
+
+        fileMenu.getItems().addAll(selectFileItem, loadBackupItem);
+        menuBar.getMenus().add(fileMenu);
+
         BorderPane root = new BorderPane();
+        root.setTop(new VBox(menuBar, outputBox)); // Combinaison du MenuBar et de outputBox en haut
         root.setCenter(fileTable);
         root.setBottom(buttonBox);
-        root.setTop(outputBox);
 
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);

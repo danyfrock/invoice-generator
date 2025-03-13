@@ -1,11 +1,13 @@
 package com.invoicegenerator.views;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
 import com.invoicegenerator.modeles.BillingProcessModel;
+import com.invoicegenerator.services.BillingProcessService;
 import com.invoicegenerator.services.EntitePvService;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.utils.FileUtil;
@@ -17,7 +19,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -35,6 +39,7 @@ public class CommandesView extends Application {
     private final TextField complementField = new TextField();
     private BillingProcessModel source;
     private EntitePvService pvService = new EntitePvService();
+    private BillingProcessService billingService = new BillingProcessService("billing_process.json");
 
     /**
      * Constructeur avec une liste de chemins de fichiers et un dossier de sortie.
@@ -204,8 +209,29 @@ public class CommandesView extends Application {
         mainContent.setPrefWidth(Double.MAX_VALUE);
         mainContent.setMaxWidth(Double.MAX_VALUE);
 
+        // Ajout du MenuBar
+        MenuBar menuBar = new MenuBar();
+        Menu menu = new Menu("Menu");
+
+        MenuItem saveProgressItem = new MenuItem("Sauvegarder progression (Ctrl+S)");
+        saveProgressItem.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
+        saveProgressItem.setOnAction(e -> {
+            logger.log(Level.INFO, "Sauvegarde de la progression demandée");
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Sauvegarder progression");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
+            File file = fileChooser.showSaveDialog(primaryStage);
+            if (file != null) {
+                billingService = new BillingProcessService(file.getAbsolutePath());
+                billingService.enregistrerBillingProcess(this.source);
+            }
+        });
+
+        menu.getItems().add(saveProgressItem);
+        menuBar.getMenus().add(menu);
+
         BorderPane root = new BorderPane();
-        root.setTop(sortieBox);
+        root.setTop(new VBox(menuBar, sortieBox));
         root.setCenter(mainContent);
         root.setBottom(buttonBox);
 

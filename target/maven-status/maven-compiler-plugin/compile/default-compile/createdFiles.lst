@@ -7,6 +7,7 @@ module-info.class
 com\invoicegenerator\modeles\UoAmountModel.class
 com\invoicegenerator\views\ParametresView.class
 com\invoicegenerator\modeles\UoCommandLineModel.class
+com\invoicegenerator\services\BillingProcessService.class
 com\invoicegenerator\services\ParametresService.class
 com\invoicegenerator\views\CommandesView$1.class
 com\invoicegenerator\utils\ExcelPvReaderUtil.class
@@ -24,5 +25,6 @@ com\invoicegenerator\Main.class
 com\invoicegenerator\modeles\BillingShuttleModel.class
 com\invoicegenerator\services\EntitePvService.class
 com\invoicegenerator\views\CommandesView$2.class
+com\invoicegenerator\services\BillingProcessService$LocalDateAdapter.class
 com\invoicegenerator\services\PvToNavetteService.class
 com\invoicegenerator\modeles\CommandModel.class
