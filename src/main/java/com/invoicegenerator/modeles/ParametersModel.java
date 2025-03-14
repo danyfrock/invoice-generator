@@ -22,8 +22,8 @@ public class ParametersModel {
     private int maxYear = 2029;
     private String outputFileDefaultName = "WST-CO_.xlsm";
     private String parametersFileName = Paths.get(System.getProperty("user.home"), "") + "\\parametres.json";
-    private  String dernierEmplacementConnuEntrees =  Paths.get(System.getProperty("user.home"), "") + "\\";
-    private  String dernierEmplacementConnuProgression =  Paths.get(System.getProperty("user.home"), "") + "\\";
+    private String dernierEmplacementConnuEntrees = Paths.get(System.getProperty("user.home"), "") + "\\";
+    private String dernierEmplacementConnuProgression = Paths.get(System.getProperty("user.home"), "") + "\\";
 
     /**
      * Constructeur par défaut pour ParametersModel.
@@ -74,7 +74,7 @@ public class ParametersModel {
     }
 
     /**
-     * Récupère l'année minimum.
+     * Récupère l'année minimum autorisée.
      *
      * @return L'année minimum.
      */
@@ -84,7 +84,7 @@ public class ParametersModel {
     }
 
     /**
-     * Définit l'année minimum.
+     * Définit l'année minimum autorisée.
      *
      * @param minYear L'année minimum à définir.
      */
@@ -94,7 +94,7 @@ public class ParametersModel {
     }
 
     /**
-     * Récupère l'année maximale.
+     * Récupère l'année maximale autorisée.
      *
      * @return L'année maximale.
      */
@@ -104,7 +104,7 @@ public class ParametersModel {
     }
 
     /**
-     * Définit l'année maximale.
+     * Définit l'année maximale autorisée.
      *
      * @param maxYear L'année maximale à définir.
      */
@@ -124,9 +124,9 @@ public class ParametersModel {
     }
 
     /**
-     * Récupère le nom du fichier de paramètres.
+     * Récupère le chemin du fichier de paramètres.
      *
-     * @return Le nom du fichier de paramètres.
+     * @return Le chemin du fichier de paramètres.
      */
     public String getParametersFileName() {
         logger.log(Level.FINE, "Récupération du nom du fichier de paramètres : {0}", parametersFileName);
@@ -150,20 +150,39 @@ public class ParametersModel {
         return result;
     }
 
+    /**
+     * Récupère le dernier emplacement connu pour les fichiers d'entrée Excel.
+     *
+     * @return Le chemin du dernier dossier connu pour les fichiers d'entrée.
+     */
     public String getDernierEmplacementConnuEntrees() {
         return dernierEmplacementConnuEntrees;
     }
 
+    /**
+     * Définit le dernier emplacement connu pour les fichiers d'entrée Excel.
+     *
+     * @param dernierEmplacementConnuEntrees Le chemin du dernier dossier connu.
+     */
     public void setDernierEmplacementConnuEntrees(String dernierEmplacementConnuEntrees) {
         this.dernierEmplacementConnuEntrees = dernierEmplacementConnuEntrees;
     }
 
+    /**
+     * Récupère le dernier emplacement connu pour les fichiers de sauvegarde.
+     *
+     * @return Le chemin du dernier dossier connu pour les fichiers de sauvegarde.
+     */
     public String getDernierEmplacementConnuProgression() {
         return dernierEmplacementConnuProgression;
     }
 
+    /**
+     * Définit le dernier emplacement connu pour les fichiers de sauvegarde.
+     *
+     * @param dernierEmplacementConnuProgression Le chemin du dernier dossier connu.
+     */
     public void setDernierEmplacementConnuProgression(String dernierEmplacementConnuProgression) {
         this.dernierEmplacementConnuProgression = dernierEmplacementConnuProgression;
     }
-
 }

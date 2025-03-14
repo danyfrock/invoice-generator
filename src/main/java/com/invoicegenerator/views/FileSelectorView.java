@@ -137,6 +137,9 @@ public class FileSelectorView extends Application {
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
     }
 
+    /**
+     * Ouvre un sélecteur de fichiers json pour sélectionner la sauvegarde d'une saisie.
+     */
     private void chargerUneProgression(Stage primaryStage) {
         logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
         FileChooser fileChooser = new FileChooser();
