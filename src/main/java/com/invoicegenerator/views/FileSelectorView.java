@@ -51,7 +51,6 @@ public class FileSelectorView extends Application {
     public FileSelectorView(BillingProcessModel source) {
         logger.log(Level.INFO, "Initialisation de FileSelectorView avec modèle source");
         this.source = source;
-        this.chargerParametres();
 
         for (PvEntityPvModel pv : source.getPvEntities()) {
             fileTable.getItems().add(pv);
@@ -70,6 +69,7 @@ public class FileSelectorView extends Application {
         primaryStage.setTitle("Application d'enregistrement de navettes de facturation.");
 
         fileTable.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
+        this.source.setParameters(new ParametresService(this.source.getParameters().getParametersFileName()).chargerParametres());
 
         TableColumn<PvEntityPvModel, String> fileNameColumn = new TableColumn<>("File Name");
         fileNameColumn.prefWidthProperty().bind(fileTable.widthProperty().multiply(0.5));
@@ -119,22 +119,7 @@ public class FileSelectorView extends Application {
         MenuItem loadBackupItem = new MenuItem("Charger sauvegarde (Ctrl+L)"); // Changement à Ctrl+L
         loadBackupItem.setAccelerator(KeyCombination.keyCombination("Ctrl+L"));
         loadBackupItem.setOnAction(e -> {
-            logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
-            fileChooser.setTitle("Charger sauvegarde");
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
-            File file = fileChooser.showOpenDialog(primaryStage);
-            if (file != null) {
-                this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
-                this.parametresService.enregistrerParametres(this.source.getParameters());
-                billingService = new BillingProcessService(file.getAbsolutePath());
-                BillingProcessModel loadedModel = billingService.chargerBillingProcess();
-                new FileSelectorView(loadedModel).start(new Stage());
-                primaryStage.close();
-            } else {
-                logger.log(Level.FINE, "Chargement de sauvegarde annulé par l'utilisateur");
-            }
+            chargerUneProgression(primaryStage);
         });
 
         fileMenu.getItems().addAll(selectFileItem, loadBackupItem);
@@ -150,6 +135,25 @@ public class FileSelectorView extends Application {
         primaryStage.show();
 
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
+    }
+
+    private void chargerUneProgression(Stage primaryStage) {
+        logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
+        fileChooser.setTitle("Charger sauvegarde");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
+        File file = fileChooser.showOpenDialog(primaryStage);
+        if (file != null) {
+            this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
+            billingService = new BillingProcessService(file.getAbsolutePath());
+            BillingProcessModel loadedModel = billingService.chargerBillingProcess();
+            this.parametresService.enregistrerParametres(loadedModel.getParameters());
+            new FileSelectorView(loadedModel).start(new Stage());
+            primaryStage.close();
+        } else {
+            logger.log(Level.FINE, "Chargement de sauvegarde annulé par l'utilisateur");
+        }
     }
 
     /**

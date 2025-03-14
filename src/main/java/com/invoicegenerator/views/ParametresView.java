@@ -178,7 +178,6 @@ public class ParametresView extends Application {
     private void chargerParametres() {
         logger.log(Level.FINE, "Chargement des paramètres");
         try {
-            this.source.setParameters(new ParametresService(this.source.getParameters().getParametersFileName()).chargerParametres());
             this.textAnneeMax.setText(String.valueOf(this.source.getParameters().getMaxYear()));
             this.textAnneeMin.setText(String.valueOf(this.source.getParameters().getMinYear()));
             this.textDossier.setText(this.source.getParameters().getOutputFolder());
