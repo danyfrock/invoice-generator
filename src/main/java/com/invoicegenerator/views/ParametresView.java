@@ -195,6 +195,7 @@ public class ParametresView extends Application {
     private void selectOutputFolder() {
         logger.log(Level.FINE, "Ouverture du sélecteur de dossier de sortie");
         DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setInitialDirectory(new File(this.source.getParameters().getOutputFolder()));
         directoryChooser.setTitle("Sélectionner un dossier de sortie");
         File selectedFolder = directoryChooser.showDialog(null);
         if (selectedFolder != null) {

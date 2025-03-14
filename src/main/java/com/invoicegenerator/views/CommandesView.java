@@ -219,12 +219,12 @@ public class CommandesView extends Application {
         saveProgressItem.setOnAction(e -> {
             logger.log(Level.INFO, "Sauvegarde de la progression demandée");
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnu()));
+            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
             fileChooser.setTitle("Sauvegarder progression");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
             File file = fileChooser.showSaveDialog(primaryStage);
             if (file != null) {
-                this.source.getParameters().setDernierEmplacementConnu(file.getParentFile().getAbsolutePath());
+                this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
                 this.parametresService.enregistrerParametres(this.source.getParameters());
                 billingService = new BillingProcessService(file.getAbsolutePath());
                 billingService.enregistrerBillingProcess(this.source);

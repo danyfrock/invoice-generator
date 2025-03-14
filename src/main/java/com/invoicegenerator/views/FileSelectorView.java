@@ -121,12 +121,12 @@ public class FileSelectorView extends Application {
         loadBackupItem.setOnAction(e -> {
             logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnu()));
+            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
             fileChooser.setTitle("Charger sauvegarde");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
             File file = fileChooser.showOpenDialog(primaryStage);
             if (file != null) {
-                this.source.getParameters().setDernierEmplacementConnu(file.getParentFile().getAbsolutePath());
+                this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
                 this.parametresService.enregistrerParametres(this.source.getParameters());
                 billingService = new BillingProcessService(file.getAbsolutePath());
                 BillingProcessModel loadedModel = billingService.chargerBillingProcess();
@@ -158,12 +158,12 @@ public class FileSelectorView extends Application {
     private void selectFiles() {
         logger.log(Level.FINE, "Ouverture du sélecteur de fichiers");
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnu()));
+        fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuEntrees()));
         fileChooser.setTitle("Select Files");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Excel Files", "*.xls", "*.xlsx", "*.xlsm", "*.xlam"));
         List<File> files = fileChooser.showOpenMultipleDialog(null);
         if (files != null) {
-            this.source.getParameters().setDernierEmplacementConnu(files.getFirst().getParentFile().getAbsolutePath());
+            this.source.getParameters().setDernierEmplacementConnuEntrees(files.getFirst().getParentFile().getAbsolutePath());
             this.parametresService.enregistrerParametres(this.source.getParameters());
             for (File file : files) {
                 boolean exists = fileTable.getItems().stream()
