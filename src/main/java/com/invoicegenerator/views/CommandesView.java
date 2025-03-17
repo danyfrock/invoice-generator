@@ -234,11 +234,11 @@ public class CommandesView extends Application {
         // Menu naviguer
         Menu navigateMenu = new Menu("Naviguer");
 
-        MenuItem nextItem = new MenuItem("Suivant (Ctrl+Flèche Droite)");
+        MenuItem nextItem = new MenuItem("Prévisualisation (Ctrl+Flèche Droite)");
         nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
         nextItem.setOnAction(e -> goNext(primaryStage));
 
-        MenuItem previousItem = new MenuItem("Suivant (Ctrl+Flèche Gauche)");
+        MenuItem previousItem = new MenuItem("Retour au choix de fichiers (Ctrl+Flèche Gauche)");
         previousItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Left"));
         previousItem.setOnAction(e -> goPrecedent(primaryStage));
 

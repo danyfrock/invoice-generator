@@ -107,11 +107,11 @@ public class NavettesFacturationView extends Application {
             // Menu naviguer
             Menu navigateMenu = new Menu("Naviguer");
 
-            MenuItem nextItem = new MenuItem("Suivant (Ctrl+Flèche Droite)");
+            MenuItem nextItem = new MenuItem("Écrire Navettes (Ctrl+Flèche Droite)");
             nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
             nextItem.setOnAction(e -> goNext());
 
-            MenuItem previousItem = new MenuItem("Précedent (Ctrl+Flèche Gauche)");
+            MenuItem previousItem = new MenuItem("Retour à la saisie (Ctrl+Flèche Gauche)");
             previousItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Left"));
             previousItem.setOnAction(e -> goPrecedent(primaryStage));
 
@@ -175,7 +175,7 @@ public class NavettesFacturationView extends Application {
 
             table.getItems().addAll(source);
 
-            Button backButton = new Button("Retour");
+            Button backButton = new Button("Retour à la saisie");
             backButton.setOnAction(e -> {
                 goPrecedent(primaryStage);
             });

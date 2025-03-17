@@ -83,7 +83,7 @@ public class FileSelectorView extends Application {
 
         fileTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        Button selectButton = new Button("Select Files");
+        Button selectButton = new Button("Sélectionner fichier (Ctrl+O)");
         selectButton.setOnAction(e -> selectFiles());
 
         Button deleteButton = new Button("Delete Selection");
@@ -115,13 +115,36 @@ public class FileSelectorView extends Application {
         selectFileItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
         selectFileItem.setOnAction(e -> selectFiles());
 
-        MenuItem loadBackupItem = new MenuItem("Charger sauvegarde (Ctrl+L)"); // Changement à Ctrl+L
+        MenuItem loadBackupItem = new MenuItem("Charger sauvegarde + paramètres (Ctrl+L)"); // Changement à Ctrl+L
         loadBackupItem.setAccelerator(KeyCombination.keyCombination("Ctrl+L"));
         loadBackupItem.setOnAction(e -> {
-            chargerUneProgression(primaryStage);
+            chargerUneProgression(primaryStage, true);
         });
 
-        fileMenu.getItems().addAll(selectFileItem, loadBackupItem);
+        MenuItem loadBackupItemNoParam = new MenuItem("Charger une sauvegarde sans ses paramètres (Ctrl+M)"); // Changement à Ctrl+L
+        loadBackupItemNoParam.setAccelerator(KeyCombination.keyCombination("Ctrl+M"));
+        loadBackupItemNoParam.setOnAction(e -> {
+            chargerUneProgression(primaryStage, false);
+        });
+
+        MenuItem saveProgressItem = new MenuItem("Sauvegarder progression (Ctrl+S)");
+        saveProgressItem.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
+        saveProgressItem.setOnAction(e -> {
+            logger.log(Level.INFO, "Sauvegarde de la progression demandée");
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
+            fileChooser.setTitle("Sauvegarder progression");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
+            File file = fileChooser.showSaveDialog(primaryStage);
+            if (file != null) {
+                this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
+                this.parametresService.enregistrerParametres(this.source.getParameters());
+                billingService = new BillingProcessService(file.getAbsolutePath());
+                billingService.enregistrerBillingProcess(this.source);
+            }
+        });
+
+        fileMenu.getItems().addAll(selectFileItem, loadBackupItem, loadBackupItemNoParam, saveProgressItem);
         menuBar.getMenus().add(fileMenu);
 
         // Menu naviguer
@@ -165,7 +188,7 @@ public class FileSelectorView extends Application {
     /**
      * Ouvre un sélecteur de fichiers json pour sélectionner la sauvegarde d'une saisie.
      */
-    private void chargerUneProgression(Stage primaryStage) {
+    private void chargerUneProgression(Stage primaryStage, boolean avecParametres) {
         logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
@@ -176,7 +199,16 @@ public class FileSelectorView extends Application {
             this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
             billingService = new BillingProcessService(file.getAbsolutePath());
             BillingProcessModel loadedModel = billingService.chargerBillingProcess();
-            this.parametresService.enregistrerParametres(loadedModel.getParameters());
+
+            if(avecParametres) {
+                // 1 charger une sauvegarde modifie les paramètres utilisés
+                this.parametresService.enregistrerParametres(loadedModel.getParameters());
+            }
+            else {
+                // 2 appliquer les paramètres en cours à la sauvegarde chargée
+                this.source.setParameters(this.parametresService.chargerParametres());
+            }
+
             new FileSelectorView(loadedModel).start(new Stage());
             primaryStage.close();
         } else {
@@ -191,7 +223,7 @@ public class FileSelectorView extends Application {
         logger.log(Level.FINE, "Ouverture du sélecteur de fichiers");
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuEntrees()));
-        fileChooser.setTitle("Select Files");
+        fileChooser.setTitle("Sélectionner fichier");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Excel Files", "*.xls", "*.xlsx", "*.xlsm", "*.xlam"));
         List<File> files = fileChooser.showOpenMultipleDialog(null);
         if (files != null) {
