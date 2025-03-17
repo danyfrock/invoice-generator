@@ -18,6 +18,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.logging.Level;
@@ -156,6 +157,40 @@ public class FileSelectorView extends Application {
 
         navigateMenu.getItems().add(nextItem);
         menuBar.getMenus().add(navigateMenu);
+
+        // help menu
+        Menu helpMenu = new Menu("Help");
+        MenuItem helpItem = new MenuItem("Aide (F11)");
+        helpItem.setAccelerator(KeyCombination.keyCombination("F11"));
+        helpItem.setOnAction(e -> {
+            try {
+                // Récupérer le fichier depuis le classpath
+                InputStream inputStream = getClass().getClassLoader().getResourceAsStream("help.html");
+                if (inputStream == null) {
+                    throw new java.io.IOException("Resource help.html not found in classpath");
+                }
+
+                // Créer un fichier temporaire
+                File tempFile = File.createTempFile("help", ".html");
+                tempFile.deleteOnExit(); // Supprimer le fichier à la fin de l'exécution
+
+                // Copier le contenu du fichier depuis le classpath vers le fichier temporaire
+                try (java.io.FileOutputStream outputStream = new java.io.FileOutputStream(tempFile)) {
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+                    while ((bytesRead = inputStream.read(buffer)) != -1) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                }
+
+                // Ouvrir le fichier temporaire avec le navigateur
+                java.awt.Desktop.getDesktop().browse(tempFile.toURI());
+            } catch (java.io.IOException ex) {
+                logger.log(Level.SEVERE, "Failed to open help.html: " + ex.getMessage(), ex);
+            }
+        });
+        helpMenu.getItems().add(helpItem);
+        menuBar.getMenus().add(helpMenu);
 
         //placement des contrôles
         BorderPane root = new BorderPane();
