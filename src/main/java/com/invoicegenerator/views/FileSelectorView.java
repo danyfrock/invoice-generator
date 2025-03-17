@@ -134,6 +134,7 @@ public class FileSelectorView extends Application {
         navigateMenu.getItems().add(nextItem);
         menuBar.getMenus().add(navigateMenu);
 
+        //placement des contrôles
         BorderPane root = new BorderPane();
         root.setTop(new VBox(menuBar, outputBox)); // Combinaison du MenuBar et de outputBox en haut
         root.setCenter(fileTable);

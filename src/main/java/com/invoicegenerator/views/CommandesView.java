@@ -34,6 +34,7 @@ public class CommandesView extends Application {
 
     private TableView<CommandeViewModel> fileTable;
     private String dossierSortie;
+    private  boolean canGoNext = false;
     private List<String> filePaths = new ArrayList<>();
     private Button previewButton;
     private final Label fichierSortieLabel = new Label();
@@ -128,17 +129,13 @@ public class CommandesView extends Application {
 
         Button backButton = new Button("Retour au choix de fichiers");
         backButton.setOnAction(e -> {
-            logger.log(Level.INFO, "Retour à FileSelectorView");
-            new FileSelectorView(source).start(new Stage());
-            primaryStage.close();
+            goPrecedent(primaryStage);
         });
 
-        previewButton = new Button("Preview");
+        previewButton = new Button("Prévisualisation");
         previewButton.setDisable(true);
         previewButton.setOnAction(e -> {
-            logger.log(Level.INFO, "Ouverture de NavettesFacturationView");
-            new NavettesFacturationView(this.source).start(new Stage());
-            primaryStage.close();
+            goNext(primaryStage);
         });
 
         // Ajout du filtre de saisie pour complementField
@@ -234,6 +231,22 @@ public class CommandesView extends Application {
         menu.getItems().add(saveProgressItem);
         menuBar.getMenus().add(menu);
 
+        // Menu naviguer
+        Menu navigateMenu = new Menu("Naviguer");
+
+        MenuItem nextItem = new MenuItem("Suivant (Ctrl+Flèche Droite)");
+        nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
+        nextItem.setOnAction(e -> goNext(primaryStage));
+
+        MenuItem previousItem = new MenuItem("Suivant (Ctrl+Flèche Gauche)");
+        previousItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Left"));
+        previousItem.setOnAction(e -> goPrecedent(primaryStage));
+
+        navigateMenu.getItems().add(nextItem);
+        navigateMenu.getItems().add(previousItem);
+        menuBar.getMenus().add(navigateMenu);
+
+        //placement des contrôles
         BorderPane root = new BorderPane();
         root.setTop(new VBox(menuBar, sortieBox));
         root.setCenter(mainContent);
@@ -246,6 +259,20 @@ public class CommandesView extends Application {
         selectFirstRow();
         updatePreviewButtonState();
         logger.log(Level.INFO, "Interface CommandesView affichée avec succès");
+    }
+
+    private void goPrecedent(Stage primaryStage) {
+        logger.log(Level.INFO, "Retour à FileSelectorView");
+        new FileSelectorView(source).start(new Stage());
+        primaryStage.close();
+    }
+
+    private void goNext(Stage primaryStage) {
+        if(this.canGoNext){
+            logger.log(Level.INFO, "Ouverture de NavettesFacturationView");
+            new NavettesFacturationView(this.source).start(new Stage());
+            primaryStage.close();
+        }
     }
 
     private static TableColumn<CommandeViewModel, Boolean> getCommandeViewModelBooleanTableColumn() {
@@ -374,6 +401,7 @@ public class CommandesView extends Application {
         boolean allVerified = fileTable.getItems().stream()
                 .allMatch(item -> item.estVerifieProperty().get());
         previewButton.setDisable(!allVerified);
+        this.canGoNext = allVerified;
         logger.log(Level.FINE, "État du bouton Preview mis à jour : désactivé = {0}", !allVerified);
     }
 

@@ -28,6 +28,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -91,14 +92,32 @@ public class NavettesFacturationView extends Application {
             MenuBar menuBar = new MenuBar();
             Menu fileMenu = new Menu("Menu");
 
-            MenuItem openFileItem = new MenuItem("Ouvrir Fichier");
+            MenuItem openFileItem = new MenuItem("Ouvrir Fichier (Ctrl+O)");
+            openFileItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
             openFileItem.setOnAction(e -> openFile(fichierSortie));
 
-            MenuItem openFolderItem = new MenuItem("Ouvrir Dossier");
+            MenuItem openFolderItem = new MenuItem("Ouvrir Dossier (Ctrl+D)");
+            openFolderItem.setAccelerator(KeyCombination.keyCombination("Ctrl+D"));
             openFolderItem.setOnAction(e -> openFolder(fichierSortie.getParentFile()));
 
             fileMenu.getItems().addAll(openFileItem, openFolderItem);
             menuBar.getMenus().add(fileMenu);
+
+
+            // Menu naviguer
+            Menu navigateMenu = new Menu("Naviguer");
+
+            MenuItem nextItem = new MenuItem("Suivant (Ctrl+Flèche Droite)");
+            nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
+            nextItem.setOnAction(e -> goNext());
+
+            MenuItem previousItem = new MenuItem("Précedent (Ctrl+Flèche Gauche)");
+            previousItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Left"));
+            previousItem.setOnAction(e -> goPrecedent(primaryStage));
+
+            navigateMenu.getItems().add(nextItem);
+            navigateMenu.getItems().add(previousItem);
+            menuBar.getMenus().add(navigateMenu);
 
             table = new TableView<>();
             table.setEditable(false);
@@ -158,22 +177,12 @@ public class NavettesFacturationView extends Application {
 
             Button backButton = new Button("Retour");
             backButton.setOnAction(e -> {
-                logger.log(Level.INFO, "Retour à CommandesView");
-                new CommandesView(sourceFacturation).start(new Stage());
-                primaryStage.close();
+                goPrecedent(primaryStage);
             });
 
             Button writeButton = new Button("Écrire Navettes");
             writeButton.setOnAction(e -> {
-                try {
-                    logger.log(Level.INFO, "Écriture des navettes dans le fichier : {0}", fichierSortie.getAbsolutePath());
-                    ActionResult resultat = ExcelNavetteWritterUtil.writeNavette(Arrays.asList(source), fichierSortie.getAbsolutePath(), "Facturation uniquement");
-                    resultLabel.setText(resultat.message());
-                    logger.log(Level.FINE, "Résultat de l'écriture : {0}", resultat.message());
-                } catch (Exception ex) {
-                    logger.log(Level.SEVERE, "Erreur lors de l'écriture des navettes : {0}", ex.getMessage());
-                    resultLabel.setText("Erreur lors de l'écriture : " + ex.getMessage());
-                }
+                goNext();
             });
 
             resultLabel = new Label();
@@ -195,6 +204,24 @@ public class NavettesFacturationView extends Application {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Erreur lors de l'initialisation : " + e.getMessage());
             alert.showAndWait();
         }
+    }
+
+    private void goNext() {
+        try {
+            logger.log(Level.INFO, "Écriture des navettes dans le fichier : {0}", fichierSortie.getAbsolutePath());
+            ActionResult resultat = ExcelNavetteWritterUtil.writeNavette(Arrays.asList(source), fichierSortie.getAbsolutePath(), "Facturation uniquement");
+            resultLabel.setText(resultat.message());
+            logger.log(Level.FINE, "Résultat de l'écriture : {0}", resultat.message());
+        } catch (Exception ex) {
+            logger.log(Level.SEVERE, "Erreur lors de l'écriture des navettes : {0}", ex.getMessage());
+            resultLabel.setText("Erreur lors de l'écriture : " + ex.getMessage());
+        }
+    }
+
+    private void goPrecedent(Stage primaryStage) {
+        logger.log(Level.INFO, "Retour à CommandesView");
+        new CommandesView(sourceFacturation).start(new Stage());
+        primaryStage.close();
     }
 
     /**
