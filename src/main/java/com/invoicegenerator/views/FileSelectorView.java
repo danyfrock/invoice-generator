@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -33,6 +34,7 @@ public class FileSelectorView extends Application {
     private BillingProcessModel source = new BillingProcessModel();
     private BillingProcessService billingService = new BillingProcessService("billing_process.json"); // Instance par défaut
     private final ParametresService parametresService = new ParametresService(this.source.getParameters().getParametersFileName());
+    private  boolean canGoNext = false;
 
     /**
      * Constructeur par défaut. Initialise le modèle et charge les paramètres.
@@ -88,11 +90,7 @@ public class FileSelectorView extends Application {
         deleteButton.setOnAction(e -> deleteSelection());
 
         nextButton.setOnAction(e -> {
-            logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
-            source.getPvEntities().clear();
-            source.getPvEntities().addAll(fileTable.getItems());
-            new CommandesView(source).start(new Stage());
-            primaryStage.close();
+            goNext(primaryStage);
         });
 
         Button paramsButton = new Button("Paramètres");
@@ -112,6 +110,7 @@ public class FileSelectorView extends Application {
         MenuBar menuBar = new MenuBar();
         Menu fileMenu = new Menu("Menu");
 
+        // ouvrir charger
         MenuItem selectFileItem = new MenuItem("Sélectionner fichier (Ctrl+O)");
         selectFileItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
         selectFileItem.setOnAction(e -> selectFiles());
@@ -125,16 +124,41 @@ public class FileSelectorView extends Application {
         fileMenu.getItems().addAll(selectFileItem, loadBackupItem);
         menuBar.getMenus().add(fileMenu);
 
+        // Menu naviguer
+        Menu navigateMenu = new Menu("Naviguer");
+
+        MenuItem nextItem = new MenuItem("Suivant (Ctrl+Flèche Droite)");
+        nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
+        nextItem.setOnAction(e -> goNext(primaryStage));
+
+        navigateMenu.getItems().add(nextItem);
+        menuBar.getMenus().add(navigateMenu);
+
         BorderPane root = new BorderPane();
         root.setTop(new VBox(menuBar, outputBox)); // Combinaison du MenuBar et de outputBox en haut
         root.setCenter(fileTable);
         root.setBottom(buttonBox);
 
         Scene scene = new Scene(root, 800, 600);
+        scene.setOnKeyPressed(keyEvent -> {
+            if (keyEvent.getCode() == KeyCode.DELETE) {
+                deleteSelection();
+            }
+        });
         primaryStage.setScene(scene);
         primaryStage.show();
 
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
+    }
+
+    private void goNext(Stage primaryStage) {
+        if(this.canGoNext){
+            logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
+            source.getPvEntities().clear();
+            source.getPvEntities().addAll(fileTable.getItems());
+            new CommandesView(source).start(new Stage());
+            primaryStage.close();
+        }
     }
 
     /**
@@ -211,6 +235,7 @@ public class FileSelectorView extends Application {
                 source.getParameters().getOutputFolder() == null ||
                 source.getParameters().getOutputFolder().isEmpty();
         nextButton.setDisable(isDisabled);
+        this.canGoNext = !isDisabled;
         logger.log(Level.FINE, "État du bouton Suivant mis à jour : désactivé = {0}", isDisabled);
     }
 
