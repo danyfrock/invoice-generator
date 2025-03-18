@@ -2,7 +2,7 @@ package com.invoicegenerator.services;
 
 import com.google.gson.*;
 import com.invoicegenerator.modeles.BillingProcessModel;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 
 import java.io.File;
 import java.io.FileReader;

@@ -2,26 +2,25 @@ package com.invoicegenerator.views;
 
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.BillingProcessModel;
-import com.invoicegenerator.services.BillingProcessService; // Ajout de l'import
+import com.invoicegenerator.services.BillingProcessService;
 import com.invoicegenerator.services.ParametresService;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
+import com.invoicegenerator.utils.ihm.FileChooserHelper;
+import com.invoicegenerator.utils.ihm.MenuBuilder;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Vue pour la sélection des fichiers dans l'application de gestion des navettes de facturation.
@@ -35,37 +34,23 @@ public class FileSelectorView extends Application {
     private BillingProcessModel source = new BillingProcessModel();
     private BillingProcessService billingService = new BillingProcessService("billing_process.json"); // Instance par défaut
     private final ParametresService parametresService = new ParametresService(this.source.getParameters().getParametersFileName());
-    private  boolean canGoNext = false;
+    private boolean canGoNext = false;
 
-    /**
-     * Constructeur par défaut. Initialise le modèle et charge les paramètres.
-     */
     public FileSelectorView() {
         logger.log(Level.INFO, "Initialisation de FileSelectorView sans modèle source");
         this.chargerParametres();
         updateNextButtonState();
     }
 
-    /**
-     * Constructeur avec un modèle de processus de facturation.
-     *
-     * @param source Le modèle BillingProcessModel contenant les données existantes
-     */
     public FileSelectorView(BillingProcessModel source) {
         logger.log(Level.INFO, "Initialisation de FileSelectorView avec modèle source");
         this.source = source;
-
         for (PvEntityPvModel pv : source.getPvEntities()) {
             fileTable.getItems().add(pv);
         }
         updateNextButtonState();
     }
 
-    /**
-     * Méthode principale pour démarrer l'interface utilisateur JavaFX.
-     *
-     * @param primaryStage La fenêtre principale de l'application
-     */
     @Override
     public void start(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l'interface FileSelectorView");
@@ -90,9 +75,7 @@ public class FileSelectorView extends Application {
         Button deleteButton = new Button("Delete Selection");
         deleteButton.setOnAction(e -> deleteSelection());
 
-        nextButton.setOnAction(e -> {
-            goNext(primaryStage);
-        });
+        nextButton.setOnAction(e -> goNext(primaryStage));
 
         Button paramsButton = new Button("Paramètres");
         paramsButton.setOnAction(e -> {
@@ -107,94 +90,45 @@ public class FileSelectorView extends Application {
         Label outputFolderPathLabel = new Label("Dossier de sortie: " + source.getParameters().getOutputFolder());
         HBox outputBox = new HBox(10, outputFolderPathLabel, paramsButton);
 
-        // Ajout du MenuBar
+        // Ajout du MenuBar avec MenuBuilder
         MenuBar menuBar = new MenuBar();
-        Menu fileMenu = new Menu("Menu");
+        Menu fileMenu = new MenuBuilder("Menu", primaryStage)
+                .avecSelectionExcel(
+                        this.source.getParameters().getDernierEmplacementConnuEntrees(),
+                        this::selectFiles
+                )
+                .avecChargementJson(
+                        "Charger sauvegarde + paramètres (Ctrl+L)", "Ctrl+L",
+                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        "Charger sauvegarde",
+                        file -> chargerUneProgression(primaryStage, file, true)
+                )
+                .avecChargementJson(
+                        "Charger une sauvegarde sans paramètres (Ctrl+M)", "Ctrl+M",
+                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        "Charger sauvegarde sans paramètres",
+                        file -> chargerUneProgression(primaryStage, file, false)
+                )
+                .avecSauvegardeJson(
+                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        "Sauvegarder progression",
+                        this::sauvegarderProgression
+                )
+                .silVousPlait();
 
-        // ouvrir charger
-        MenuItem selectFileItem = new MenuItem("Sélectionner fichier (Ctrl+O)");
-        selectFileItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
-        selectFileItem.setOnAction(e -> selectFiles());
+        Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
+                .avecNavigationSuivant("Suivant (Ctrl+Flèche Droite)", "Ctrl+Right", e -> goNext(primaryStage))
+                .silVousPlait();
 
-        MenuItem loadBackupItem = new MenuItem("Charger sauvegarde + paramètres (Ctrl+L)"); // Changement à Ctrl+L
-        loadBackupItem.setAccelerator(KeyCombination.keyCombination("Ctrl+L"));
-        loadBackupItem.setOnAction(e -> {
-            chargerUneProgression(primaryStage, true);
-        });
+        Menu helpMenu = new MenuBuilder("Help", primaryStage)
+                .avecAide() // Utilisation de la méthode par défaut pour help.html
+                .silVousPlait();
 
-        MenuItem loadBackupItemNoParam = new MenuItem("Charger une sauvegarde sans ses paramètres (Ctrl+M)"); // Changement à Ctrl+L
-        loadBackupItemNoParam.setAccelerator(KeyCombination.keyCombination("Ctrl+M"));
-        loadBackupItemNoParam.setOnAction(e -> {
-            chargerUneProgression(primaryStage, false);
-        });
+        menuBar.getMenus().addAll(fileMenu, navigateMenu, helpMenu);
 
-        MenuItem saveProgressItem = new MenuItem("Sauvegarder progression (Ctrl+S)");
-        saveProgressItem.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
-        saveProgressItem.setOnAction(e -> {
-            logger.log(Level.INFO, "Sauvegarde de la progression demandée");
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
-            fileChooser.setTitle("Sauvegarder progression");
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
-            File file = fileChooser.showSaveDialog(primaryStage);
-            if (file != null) {
-                this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
-                this.parametresService.enregistrerParametres(this.source.getParameters());
-                billingService = new BillingProcessService(file.getAbsolutePath());
-                billingService.enregistrerBillingProcess(this.source);
-            }
-        });
-
-        fileMenu.getItems().addAll(selectFileItem, loadBackupItem, loadBackupItemNoParam, saveProgressItem);
-        menuBar.getMenus().add(fileMenu);
-
-        // Menu naviguer
-        Menu navigateMenu = new Menu("Naviguer");
-
-        MenuItem nextItem = new MenuItem("Suivant (Ctrl+Flèche Droite)");
-        nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
-        nextItem.setOnAction(e -> goNext(primaryStage));
-
-        navigateMenu.getItems().add(nextItem);
-        menuBar.getMenus().add(navigateMenu);
-
-        // help menu
-        Menu helpMenu = new Menu("Help");
-        MenuItem helpItem = new MenuItem("Aide (F11)");
-        helpItem.setAccelerator(KeyCombination.keyCombination("F11"));
-        helpItem.setOnAction(e -> {
-            try {
-                // Récupérer le fichier depuis le classpath
-                InputStream inputStream = getClass().getClassLoader().getResourceAsStream("help.html");
-                if (inputStream == null) {
-                    throw new java.io.IOException("Resource help.html not found in classpath");
-                }
-
-                // Créer un fichier temporaire
-                File tempFile = File.createTempFile("help", ".html");
-                tempFile.deleteOnExit(); // Supprimer le fichier à la fin de l'exécution
-
-                // Copier le contenu du fichier depuis le classpath vers le fichier temporaire
-                try (java.io.FileOutputStream outputStream = new java.io.FileOutputStream(tempFile)) {
-                    byte[] buffer = new byte[1024];
-                    int bytesRead;
-                    while ((bytesRead = inputStream.read(buffer)) != -1) {
-                        outputStream.write(buffer, 0, bytesRead);
-                    }
-                }
-
-                // Ouvrir le fichier temporaire avec le navigateur
-                java.awt.Desktop.getDesktop().browse(tempFile.toURI());
-            } catch (java.io.IOException ex) {
-                logger.log(Level.SEVERE, "Failed to open help.html: " + ex.getMessage(), ex);
-            }
-        });
-        helpMenu.getItems().add(helpItem);
-        menuBar.getMenus().add(helpMenu);
-
-        //placement des contrôles
+        // Placement des contrôles
         BorderPane root = new BorderPane();
-        root.setTop(new VBox(menuBar, outputBox)); // Combinaison du MenuBar et de outputBox en haut
+        root.setTop(new VBox(menuBar, outputBox));
         root.setCenter(fileTable);
         root.setBottom(buttonBox);
 
@@ -211,7 +145,7 @@ public class FileSelectorView extends Application {
     }
 
     private void goNext(Stage primaryStage) {
-        if(this.canGoNext){
+        if (this.canGoNext) {
             logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
             source.getPvEntities().clear();
             source.getPvEntities().addAll(fileTable.getItems());
@@ -220,70 +154,57 @@ public class FileSelectorView extends Application {
         }
     }
 
-    /**
-     * Ouvre un sélecteur de fichiers json pour sélectionner la sauvegarde d'une saisie.
-     */
-    private void chargerUneProgression(Stage primaryStage, boolean avecParametres) {
-        logger.log(Level.INFO, "Option Charger sauvegarde sélectionnée");
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
-        fileChooser.setTitle("Charger sauvegarde");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
-        File file = fileChooser.showOpenDialog(primaryStage);
-        if (file != null) {
-            this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
-            billingService = new BillingProcessService(file.getAbsolutePath());
-            BillingProcessModel loadedModel = billingService.chargerBillingProcess();
+    private void chargerUneProgression(Stage primaryStage, File file, boolean avecParametres) {
+        logger.log(Level.INFO, "Chargement d'une sauvegarde depuis : {0}", file.getAbsolutePath());
+        this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
+        billingService = new BillingProcessService(file.getAbsolutePath());
+        BillingProcessModel loadedModel = billingService.chargerBillingProcess();
 
-            if(avecParametres) {
-                // 1 charger une sauvegarde modifie les paramètres utilisés
-                this.parametresService.enregistrerParametres(loadedModel.getParameters());
-            }
-            else {
-                // 2 appliquer les paramètres en cours à la sauvegarde chargée
-                this.source.setParameters(this.parametresService.chargerParametres());
-            }
-
-            new FileSelectorView(loadedModel).start(new Stage());
-            primaryStage.close();
+        if (avecParametres) {
+            this.parametresService.enregistrerParametres(loadedModel.getParameters());
         } else {
-            logger.log(Level.FINE, "Chargement de sauvegarde annulé par l'utilisateur");
+            this.source.setParameters(this.parametresService.chargerParametres());
         }
+
+        new FileSelectorView(loadedModel).start(new Stage());
+        primaryStage.close();
     }
 
-    /**
-     * Ouvre un sélecteur de fichiers pour ajouter des fichiers Excel à la table.
-     */
-    private void selectFiles() {
-        logger.log(Level.FINE, "Ouverture du sélecteur de fichiers");
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuEntrees()));
-        fileChooser.setTitle("Sélectionner fichier");
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Excel Files", "*.xls", "*.xlsx", "*.xlsm", "*.xlam"));
-        List<File> files = fileChooser.showOpenMultipleDialog(null);
-        if (files != null) {
-            this.source.getParameters().setDernierEmplacementConnuEntrees(files.getFirst().getParentFile().getAbsolutePath());
-            this.parametresService.enregistrerParametres(this.source.getParameters());
-            for (File file : files) {
-                boolean exists = fileTable.getItems().stream()
-                        .anyMatch(data -> data.getFilePath().equals(file.getAbsolutePath()));
-                if (!exists) {
-                    PvEntityPvModel entite = new PvEntityPvModel().setFileName(file.getName()).setFilePath(file.getAbsolutePath());
-                    fileTable.getItems().add(entite);
-                    logger.log(Level.FINE, "Fichier ajouté : {0}", file.getAbsolutePath());
-                } else {
-                    logger.log(Level.FINE, "Fichier déjà existant ignoré : {0}", file.getAbsolutePath());
-                }
+    private void sauvegarderProgression(File file) {
+        logger.log(Level.INFO, "Sauvegarde de la progression dans : {0}", file.getAbsolutePath());
+        this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
+        this.parametresService.enregistrerParametres(this.source.getParameters());
+        billingService = new BillingProcessService(file.getAbsolutePath());
+        billingService.enregistrerBillingProcess(this.source);
+    }
+
+    private void selectFiles(List<File> files) {
+        logger.log(Level.FINE, "Ajout de {0} fichiers sélectionnés", files.size());
+        this.source.getParameters().setDernierEmplacementConnuEntrees(files.getFirst().getParentFile().getAbsolutePath());
+        this.parametresService.enregistrerParametres(this.source.getParameters());
+        for (File file : files) {
+            boolean exists = fileTable.getItems().stream()
+                    .anyMatch(data -> data.getFilePath().equals(file.getAbsolutePath()));
+            if (!exists) {
+                PvEntityPvModel entite = new PvEntityPvModel().setFileName(file.getName()).setFilePath(file.getAbsolutePath());
+                fileTable.getItems().add(entite);
+                logger.log(Level.FINE, "Fichier ajouté : {0}", file.getAbsolutePath());
+            } else {
+                logger.log(Level.FINE, "Fichier déjà existant ignoré : {0}", file.getAbsolutePath());
             }
-            updateNextButtonState();
+        }
+        updateNextButtonState();
+    }
+
+    private void selectFiles() {
+        List<File> files = FileChooserHelper.showOpenExcelDialog(null, this.source.getParameters().getDernierEmplacementConnuEntrees(), "Sélectionner fichier");
+        if (files != null) {
+            selectFiles(files);
         } else {
             logger.log(Level.FINE, "Aucun fichier sélectionné");
         }
     }
 
-    /**
-     * Supprime les éléments sélectionnés de la table.
-     */
     private void deleteSelection() {
         List<PvEntityPvModel> selectedItems = fileTable.getSelectionModel().getSelectedItems();
         if (!selectedItems.isEmpty()) {
@@ -295,9 +216,6 @@ public class FileSelectorView extends Application {
         }
     }
 
-    /**
-     * Met à jour l'état du bouton "Suivant" en fonction des éléments et des paramètres.
-     */
     private void updateNextButtonState() {
         boolean isDisabled = fileTable.getItems().isEmpty() ||
                 source.getParameters().getOutputFolder() == null ||
@@ -307,20 +225,12 @@ public class FileSelectorView extends Application {
         logger.log(Level.FINE, "État du bouton Suivant mis à jour : désactivé = {0}", isDisabled);
     }
 
-    /**
-     * Charge les paramètres à partir du service de paramètres.
-     */
     private void chargerParametres() {
         logger.log(Level.FINE, "Chargement des paramètres");
         this.source.setParameters(new ParametresService(this.source.getParameters().getParametersFileName()).chargerParametres());
         logger.log(Level.FINE, "Paramètres chargés avec succès");
     }
 
-    /**
-     * Point d'entrée principal pour lancer l'application.
-     *
-     * @param args Arguments de la ligne de commande
-     */
     public static void main(String[] args) {
         logger.log(Level.INFO, "Lancement de l'application FileSelectorView");
         launch(args);

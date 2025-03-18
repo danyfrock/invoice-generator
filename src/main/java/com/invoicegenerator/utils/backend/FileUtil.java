@@ -1,4 +1,4 @@
-package com.invoicegenerator.utils;
+package com.invoicegenerator.utils.backend;
 
 import java.io.File;
 import java.nio.file.Path;

@@ -1,4 +1,4 @@
-package com.invoicegenerator.utils;
+package com.invoicegenerator.utils.backend;
 
 import java.util.logging.Logger;
 import java.util.logging.LogManager;

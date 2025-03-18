@@ -14,8 +14,9 @@ import com.invoicegenerator.modeles.BillingShuttleModel;
 import com.invoicegenerator.modeles.ActionResult;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.PvToNavetteService;
-import com.invoicegenerator.utils.ExcelNavetteWritterUtil;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.ExcelNavetteWritterUtil;
+import com.invoicegenerator.utils.backend.LoggerFactory;
+import com.invoicegenerator.utils.ihm.MenuBuilder;
 import com.invoicegenerator.viewModels.NavetteFacturationViewModel;
 import javafx.application.Application;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -89,35 +90,26 @@ public class NavettesFacturationView extends Application {
         primaryStage.setTitle("Navettes de Facturation");
 
         try {
+            // Ajout du MenuBar avec MenuBuilder
             MenuBar menuBar = new MenuBar();
-            Menu fileMenu = new Menu("Menu");
+            Menu fileMenu = new MenuBuilder("Menu", primaryStage)
+                    .avecAction("Ouvrir Fichier (Ctrl+O)", "Ctrl+O", e -> openFile(fichierSortie))
+                    .avecOuvrirDossier(
+                            fichierSortie.getParent(),
+                            this::openFolder
+                    )
+                    .silVousPlait();
 
-            MenuItem openFileItem = new MenuItem("Ouvrir Fichier (Ctrl+O)");
-            openFileItem.setAccelerator(KeyCombination.keyCombination("Ctrl+O"));
-            openFileItem.setOnAction(e -> openFile(fichierSortie));
+            Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
+                    .avecNavigationSuivant("Écrire Navettes (Ctrl+Flèche Droite)", "Ctrl+Right", e -> goNext())
+                    .avecNavigationPrecedent("Retour à la saisie (Ctrl+Flèche Gauche)", "Ctrl+Left", e -> goPrecedent(primaryStage))
+                    .silVousPlait();
 
-            MenuItem openFolderItem = new MenuItem("Ouvrir Dossier (Ctrl+D)");
-            openFolderItem.setAccelerator(KeyCombination.keyCombination("Ctrl+D"));
-            openFolderItem.setOnAction(e -> openFolder(fichierSortie.getParentFile()));
+            Menu helpMenu = new MenuBuilder("Help", primaryStage)
+                    .avecAide()
+                    .silVousPlait();
 
-            fileMenu.getItems().addAll(openFileItem, openFolderItem);
-            menuBar.getMenus().add(fileMenu);
-
-
-            // Menu naviguer
-            Menu navigateMenu = new Menu("Naviguer");
-
-            MenuItem nextItem = new MenuItem("Écrire Navettes (Ctrl+Flèche Droite)");
-            nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
-            nextItem.setOnAction(e -> goNext());
-
-            MenuItem previousItem = new MenuItem("Retour à la saisie (Ctrl+Flèche Gauche)");
-            previousItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Left"));
-            previousItem.setOnAction(e -> goPrecedent(primaryStage));
-
-            navigateMenu.getItems().add(nextItem);
-            navigateMenu.getItems().add(previousItem);
-            menuBar.getMenus().add(navigateMenu);
+            menuBar.getMenus().addAll(fileMenu, navigateMenu, helpMenu);
 
             table = new TableView<>();
             table.setEditable(false);

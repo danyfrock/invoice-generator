@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.UoCommandLineModel;
 import com.invoicegenerator.modeles.BillingShuttleModel;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 
 /**
  * Service pour convertir les entités Pv en modèles de navette de facturation.

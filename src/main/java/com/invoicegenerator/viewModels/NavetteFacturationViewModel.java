@@ -2,7 +2,7 @@ package com.invoicegenerator.viewModels;
 
 import com.invoicegenerator.modeles.BillingShuttleModel;
 import com.invoicegenerator.services.MoisService;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

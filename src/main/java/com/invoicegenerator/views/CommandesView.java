@@ -1,29 +1,25 @@
 package com.invoicegenerator.views;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
-import java.util.logging.Level;
-
 import com.invoicegenerator.modeles.BillingProcessModel;
+import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.services.BillingProcessService;
 import com.invoicegenerator.services.EntitePvService;
-import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.services.ParametresService;
-import com.invoicegenerator.utils.FileUtil;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.FileUtil;
+import com.invoicegenerator.utils.backend.LoggerFactory;
+import com.invoicegenerator.utils.ihm.MenuBuilder;
 import com.invoicegenerator.viewModels.CommandeViewModel;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.*;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Vue principale pour l'affichage et la gestion des commandes dans l'application.
@@ -34,21 +30,16 @@ public class CommandesView extends Application {
 
     private TableView<CommandeViewModel> fileTable;
     private String dossierSortie;
-    private  boolean canGoNext = false;
+    private boolean canGoNext = false;
     private List<String> filePaths = new ArrayList<>();
     private Button previewButton;
     private final Label fichierSortieLabel = new Label();
     private final TextField complementField = new TextField();
-    private BillingProcessModel source = new BillingProcessModel();;
+    private BillingProcessModel source = new BillingProcessModel();
     private final EntitePvService pvService = new EntitePvService();
     private BillingProcessService billingService = new BillingProcessService("billing_process.json");
     private final ParametresService parametresService = new ParametresService(this.source.getParameters().getParametersFileName());
-    /**
-     * Constructeur avec une liste de chemins de fichiers et un dossier de sortie.
-     *
-     * @param filePaths Liste des chemins des fichiers à traiter
-     * @param dossierSortie Chemin du dossier de sortie
-     */
+
     public CommandesView(List<String> filePaths, String dossierSortie) {
         logger.log(Level.INFO, "Initialisation de CommandesView avec {0} chemins de fichiers et dossier de sortie : {1}", new Object[]{filePaths.size(), dossierSortie});
         this.filePaths = filePaths;
@@ -64,11 +55,6 @@ public class CommandesView extends Application {
         }
     }
 
-    /**
-     * Constructeur avec un modèle de processus de facturation.
-     *
-     * @param source Le modèle BillingProcessModel contenant les données
-     */
     public CommandesView(BillingProcessModel source) {
         logger.log(Level.INFO, "Initialisation de CommandesView avec un modèle BillingProcessModel");
         this.source = source;
@@ -88,11 +74,6 @@ public class CommandesView extends Application {
         resetFichierSortie();
     }
 
-    /**
-     * Méthode principale pour démarrer l'interface utilisateur JavaFX.
-     *
-     * @param primaryStage La fenêtre principale de l'application
-     */
     @Override
     public void start(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l'interface CommandesView");
@@ -128,17 +109,12 @@ public class CommandesView extends Application {
         }
 
         Button backButton = new Button("Retour au choix de fichiers");
-        backButton.setOnAction(e -> {
-            goPrecedent(primaryStage);
-        });
+        backButton.setOnAction(e -> goPrecedent(primaryStage));
 
         previewButton = new Button("Prévisualisation");
         previewButton.setDisable(true);
-        previewButton.setOnAction(e -> {
-            goNext(primaryStage);
-        });
+        previewButton.setOnAction(e -> goNext(primaryStage));
 
-        // Ajout du filtre de saisie pour complementField
         complementField.setTextFormatter(new TextFormatter<>(change -> {
             String newText = change.getControlNewText();
             if (newText.matches("\\w*")) {
@@ -207,46 +183,28 @@ public class CommandesView extends Application {
         mainContent.setPrefWidth(Double.MAX_VALUE);
         mainContent.setMaxWidth(Double.MAX_VALUE);
 
-        // Ajout du MenuBar
+        // Ajout du MenuBar avec MenuBuilder
         MenuBar menuBar = new MenuBar();
-        Menu menu = new Menu("Menu");
+        Menu menu = new MenuBuilder("Menu", primaryStage)
+                .avecSauvegardeJson(
+                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        "Sauvegarder progression",
+                        this::sauvegarderProgression
+                )
+                .silVousPlait();
 
-        MenuItem saveProgressItem = new MenuItem("Sauvegarder progression (Ctrl+S)");
-        saveProgressItem.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
-        saveProgressItem.setOnAction(e -> {
-            logger.log(Level.INFO, "Sauvegarde de la progression demandée");
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File(this.source.getParameters().getDernierEmplacementConnuProgression()));
-            fileChooser.setTitle("Sauvegarder progression");
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json"));
-            File file = fileChooser.showSaveDialog(primaryStage);
-            if (file != null) {
-                this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
-                this.parametresService.enregistrerParametres(this.source.getParameters());
-                billingService = new BillingProcessService(file.getAbsolutePath());
-                billingService.enregistrerBillingProcess(this.source);
-            }
-        });
+        Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
+                .avecNavigationSuivant("Prévisualisation (Ctrl+Flèche Droite)", "Ctrl+Right", e -> goNext(primaryStage))
+                .avecNavigationPrecedent("Retour au choix de fichiers (Ctrl+Flèche Gauche)", "Ctrl+Left", e -> goPrecedent(primaryStage))
+                .silVousPlait();
 
-        menu.getItems().add(saveProgressItem);
-        menuBar.getMenus().add(menu);
+        Menu helpMenu = new MenuBuilder("Help", primaryStage)
+                .avecAide()
+                .silVousPlait();
 
-        // Menu naviguer
-        Menu navigateMenu = new Menu("Naviguer");
+        menuBar.getMenus().addAll(menu, navigateMenu, helpMenu);
 
-        MenuItem nextItem = new MenuItem("Prévisualisation (Ctrl+Flèche Droite)");
-        nextItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Right"));
-        nextItem.setOnAction(e -> goNext(primaryStage));
-
-        MenuItem previousItem = new MenuItem("Retour au choix de fichiers (Ctrl+Flèche Gauche)");
-        previousItem.setAccelerator(KeyCombination.keyCombination("Ctrl+Left"));
-        previousItem.setOnAction(e -> goPrecedent(primaryStage));
-
-        navigateMenu.getItems().add(nextItem);
-        navigateMenu.getItems().add(previousItem);
-        menuBar.getMenus().add(navigateMenu);
-
-        //placement des contrôles
+        // Placement des contrôles
         BorderPane root = new BorderPane();
         root.setTop(new VBox(menuBar, sortieBox));
         root.setCenter(mainContent);
@@ -268,11 +226,19 @@ public class CommandesView extends Application {
     }
 
     private void goNext(Stage primaryStage) {
-        if(this.canGoNext){
+        if (this.canGoNext) {
             logger.log(Level.INFO, "Ouverture de NavettesFacturationView");
             new NavettesFacturationView(this.source).start(new Stage());
             primaryStage.close();
         }
+    }
+
+    private void sauvegarderProgression(File file) {
+        logger.log(Level.INFO, "Sauvegarde de la progression dans : {0}", file.getAbsolutePath());
+        this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
+        this.parametresService.enregistrerParametres(this.source.getParameters());
+        billingService = new BillingProcessService(file.getAbsolutePath());
+        billingService.enregistrerBillingProcess(this.source);
     }
 
     private static TableColumn<CommandeViewModel, Boolean> getCommandeViewModelBooleanTableColumn() {
@@ -296,12 +262,6 @@ public class CommandesView extends Application {
         return verifiedColumn;
     }
 
-    /**
-     * Met à jour le code du contrat pour tous les éléments de la table.
-     *
-     * @param oldVal Ancienne valeur du code contrat
-     * @param newVal Nouvelle valeur du code contrat
-     */
     private void updateCodeContract(String oldVal, String newVal) {
         fileTable.getItems().forEach(item -> {
             if (!oldVal.equals(newVal)) {
@@ -312,11 +272,6 @@ public class CommandesView extends Application {
         });
     }
 
-    /**
-     * Réinitialise le nom du fichier de sortie avec un code contrat donné.
-     *
-     * @param codeContrat Le code contrat à utiliser pour le suffixe
-     */
     private void resetFichierSortie(String codeContrat) {
         String sortie = FileUtil.concat(dossierSortie, source.getParameters().getOutputFileDefaultName());
         sortie = FileUtil.addSuffixToFileName(sortie, codeContrat);
@@ -329,12 +284,8 @@ public class CommandesView extends Application {
         logger.log(Level.FINE, "Fichier de sortie réinitialisé : {0}", sortie);
     }
 
-    /**
-     * Réinitialise le nom du fichier de sortie en utilisant le premier code contrat disponible.
-     */
     private void resetFichierSortie() {
         String codeContrat = "";
-
         if (fileTable != null && !fileTable.getItems().isEmpty()) {
             var firstItem = fileTable.getItems().getFirst();
             if (firstItem != null && firstItem.getSource() != null && firstItem.getSource().getCommand() != null) {
@@ -346,13 +297,9 @@ public class CommandesView extends Application {
                 codeContrat = firstModel.getCommand().getContractCode() != null ? firstModel.getCommand().getContractCode() : "";
             }
         }
-
         resetFichierSortie(codeContrat);
     }
 
-    /**
-     * Sélectionne la ligne précédente dans la table.
-     */
     private void selectPreviousRow() {
         int selectedIndex = fileTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex > 0) {
@@ -361,9 +308,6 @@ public class CommandesView extends Application {
         }
     }
 
-    /**
-     * Sélectionne la ligne suivante dans la table.
-     */
     private void selectNextRow() {
         int selectedIndex = fileTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex < fileTable.getItems().size() - 1) {
@@ -372,9 +316,6 @@ public class CommandesView extends Application {
         }
     }
 
-    /**
-     * Sélectionne la première ligne de la table si elle existe.
-     */
     private void selectFirstRow() {
         if (!fileTable.getItems().isEmpty()) {
             fileTable.getSelectionModel().select(0);
@@ -382,21 +323,12 @@ public class CommandesView extends Application {
         }
     }
 
-    /**
-     * Convertit un chemin de fichier en un modèle PvEntityPvModel.
-     *
-     * @param path Le chemin du fichier
-     * @return Le modèle PvEntityPvModel correspondant
-     */
     private PvEntityPvModel convertToPv(String path) {
         PvEntityPvModel pv = this.pvService.GetPvFrom(path);
         logger.log(Level.FINE, "Conversion du fichier {0} en PvEntityPvModel", path);
         return pv;
     }
 
-    /**
-     * Met à jour l'état du bouton "Preview" en fonction de la vérification des éléments.
-     */
     private void updatePreviewButtonState() {
         boolean allVerified = fileTable.getItems().stream()
                 .allMatch(item -> item.estVerifieProperty().get());
@@ -405,11 +337,6 @@ public class CommandesView extends Application {
         logger.log(Level.FINE, "État du bouton Preview mis à jour : désactivé = {0}", !allVerified);
     }
 
-    /**
-     * Point d'entrée principal pour lancer l'application.
-     *
-     * @param args Arguments de la ligne de commande
-     */
     public static void main(String[] args) {
         List<String> filePaths = List.of("chemin/vers/fichier1.xlsx", "chemin/vers/fichier2.xlsx");
         String dossierSortie = "chemin/vers";

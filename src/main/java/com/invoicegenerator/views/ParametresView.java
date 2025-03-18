@@ -2,7 +2,7 @@ package com.invoicegenerator.views;
 
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.ParametresService;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.scene.Scene;

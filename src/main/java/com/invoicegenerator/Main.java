@@ -1,6 +1,6 @@
 package com.invoicegenerator;
 
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.views.FileSelectorView;
 import javafx.application.Application;
 import javafx.stage.Stage;

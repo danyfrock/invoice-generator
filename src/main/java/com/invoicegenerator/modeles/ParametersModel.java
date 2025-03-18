@@ -1,6 +1,6 @@
 package com.invoicegenerator.modeles;
 
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package com.invoicegenerator.viewModels;
 
 import com.invoicegenerator.services.ParametresService;
-import com.invoicegenerator.utils.LoggerFactory;
+import com.invoicegenerator.utils.backend.LoggerFactory;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
