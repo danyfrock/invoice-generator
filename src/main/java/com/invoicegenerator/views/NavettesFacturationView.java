@@ -94,10 +94,7 @@ public class NavettesFacturationView extends Application {
             MenuBar menuBar = new MenuBar();
             Menu fileMenu = new MenuBuilder("Menu", primaryStage)
                     .avecAction("Ouvrir Fichier (Ctrl+O)", "Ctrl+O", e -> openFile(fichierSortie))
-                    .avecOuvrirDossier(
-                            fichierSortie.getParent(),
-                            this::openFolder
-                    )
+                    .avecAction("Ouvrir Dossier (Ctrl+D)", "Ctrl+D", e -> openFile(fichierSortie.getParentFile()))
                     .silVousPlait();
 
             Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
@@ -297,19 +294,60 @@ public class NavettesFacturationView extends Application {
     private void openFolder(File folder) {
         logger.log(Level.FINE, "Tentative d'ouverture du dossier : {0}", folder.getAbsolutePath());
         try {
-            if (folder.exists()) {
-                Desktop.getDesktop().open(folder);
-                logger.log(Level.FINE, "Dossier ouvert avec succès");
+                if (folder.exists()) {
+                    openFolderInExplorer(folder);
+                    logger.log(Level.FINE, "Dossier ouvert avec succès");
+                } else {
+                    logger.log(Level.WARNING, "Le dossier n'existe pas : {0}", folder.getAbsolutePath());
+                    resultLabel.setText("Le dossier n'existe pas.");
+                }
+            } catch (Exception e) {
+                logger.log(Level.SEVERE, "Erreur inattendue lors de l'ouverture du dossier : {0}", e.getMessage());
+                resultLabel.setText("Erreur inattendue : " + e.getMessage());
+            }
+    }
+
+    /**
+     * Opens the file explorer at the specified folder location based on the operating system.
+     * <p>
+     * This method uses {@link ProcessBuilder} to launch the system's default file explorer:
+     * <ul>
+     *     <li><b>Windows</b>: Opens Windows Explorer using "explorer.exe".</li>
+     *     <li><b>macOS</b>: Opens Finder using "open".</li>
+     *     <li><b>Linux</b>: Opens the default file manager using "xdg-open".</li>
+     * </ul>
+     * If the operation succeeds, an INFO log is recorded. If the operating system is not supported,
+     * a WARNING log is recorded. In case of an I/O error, a SEVERE log is recorded with the error details.
+     * </p>
+     *
+     * @param folder the {@link File} object representing the folder to open in the file explorer
+     */
+    public void openFolderInExplorer(File folder) {
+        String os = System.getProperty("os.name").toLowerCase();
+        String path = folder.getAbsolutePath();
+
+        try {
+            ProcessBuilder pb;
+            if (os.contains("win")) {
+                // Pour Windows
+                pb = new ProcessBuilder("explorer.exe", path);
+                pb.start();
+                logger.log(Level.INFO, "Explorateur ouvert avec succès : " + path);
+            } else if (os.contains("mac")) {
+                // Pour macOS
+                pb = new ProcessBuilder("open", path);
+                pb.start();
+                logger.log(Level.INFO, "Finder ouvert avec succès : " + path);
+            } else if (os.contains("nix") || os.contains("nux")) {
+                // Pour Linux
+                pb = new ProcessBuilder("xdg-open", path);
+                pb.start();
+                logger.log(Level.INFO, "Gestionnaire de fichiers ouvert avec succès : " + path);
             } else {
-                logger.log(Level.WARNING, "Le dossier n'existe pas : {0}", folder.getAbsolutePath());
-                resultLabel.setText("Le dossier n'existe pas.");
+                logger.log(Level.WARNING, "Système d'exploitation non pris en charge : " + os);
             }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Erreur lors de l'ouverture du dossier : {0}", e.getMessage());
-            resultLabel.setText("Erreur lors de l'ouverture du dossier : " + e.getMessage());
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Erreur inattendue lors de l'ouverture du dossier : {0}", e.getMessage());
-            resultLabel.setText("Erreur inattendue : " + e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l'ouverture du dossier : " + folder.getAbsolutePath(), e);
         }
     }
 
