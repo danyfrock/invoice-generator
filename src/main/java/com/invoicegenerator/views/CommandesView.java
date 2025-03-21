@@ -42,6 +42,19 @@ public class CommandesView extends Application {
         fileTable = new TableView<>();
         fileTable.setItems(source.getCommandes());
 
+        TableColumn<CommandeViewModel, Boolean> leadColumn = new TableColumn<>("Lead");
+        leadColumn.setCellValueFactory(cellData -> cellData.getValue().estLeaderProperty());
+        leadColumn.setCellFactory(col -> new TableCell<>() {
+            private final CheckBox checkBox = new CheckBox();
+            { checkBox.setDisable(true); }
+            @Override
+            protected void updateItem(Boolean item, boolean empty) {
+                super.updateItem(item, empty);
+                setGraphic(empty || item == null ? null : checkBox);
+                if (!empty && item != null) checkBox.setSelected(item);
+            }
+        });
+
         TableColumn<CommandeViewModel, String> fileNameColumn = new TableColumn<>("File Name");
         fileNameColumn.setCellValueFactory(cellData -> cellData.getValue().nomFichierProperty());
 
@@ -71,7 +84,7 @@ public class CommandesView extends Application {
             }
         });
 
-        fileTable.getColumns().addAll(fileNameColumn, filePathColumn, verifiedColumn, mustFillColumn);
+        fileTable.getColumns().addAll(leadColumn, fileNameColumn, filePathColumn, verifiedColumn, mustFillColumn);
 
         // Boutons de navigation
         Button backButton = new Button("Retour au choix de fichiers");
