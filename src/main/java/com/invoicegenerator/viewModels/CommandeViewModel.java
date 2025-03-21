@@ -90,7 +90,7 @@ public class CommandeViewModel {
         }
 
         //contrat
-        if (commande.getContractCode().isEmpty()) {
+        if (commande.getContractCode() == null || commande.getContractCode().isEmpty()) {
             return "Remplir le contrôle Code Contrat";
         }
 

@@ -1,8 +1,6 @@
 package com.invoicegenerator.views;
 
 import com.invoicegenerator.modeles.BillingProcessModel;
-import com.invoicegenerator.services.BillingProcessService;
-import com.invoicegenerator.services.ParametresService;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
 import com.invoicegenerator.viewModels.CommandeViewModel;
