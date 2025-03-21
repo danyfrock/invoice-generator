@@ -13,6 +13,10 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Factory class for creating and managing logger instances.
+ * Provides a centralized way to obtain loggers for different classes.
+ */
 public class LoggerFactory {
     private static final String LOGGING_CONFIG_FILE = "/logging.properties";
     private static final String DEFAULT_LOG_DIR = Paths.get(System.getenv("APPDATA"), "InvoiceGenerator", "logs").toString();
@@ -47,11 +51,23 @@ public class LoggerFactory {
         configureDefaultHandler();
     }
 
+    /**
+     * Récupère la valeur de configuration pour une propriété donnée, ou retourne une valeur par défaut.
+     * @param property La propriété de configuration.
+     * @param defaultValue La valeur par défaut si la propriété n'est pas définie.
+     * @return La valeur de la propriété ou la valeur par défaut.
+     */
     private static String recupConfig(String property, String defaultValue) {
         String value = LogManager.getLogManager().getProperty(property);
         return (value != null && !value.isEmpty()) ? value : defaultValue;
     }
 
+    /**
+     * Récupère la valeur de configuration pour une propriété donnée, ou retourne une valeur par défaut.
+     * @param property La propriété de configuration.
+     * @param defaultValue La valeur par défaut si la propriété n'est pas définie.
+     * @return La valeur de la propriété ou la valeur par défaut.
+     */
     private static int recupConfig(String property, int defaultValue) {
         String value = LogManager.getLogManager().getProperty(property);
         if (value != null && !value.isEmpty()) {
@@ -64,6 +80,10 @@ public class LoggerFactory {
         return defaultValue;
     }
 
+    /**
+     * Configure et retourne un FileHandler partagé pour la journalisation.
+     * @return Le FileHandler configuré.
+     */
     private static FileHandler configureFileHandler() {
         if (sharedFileHandler == null) {
             try {
@@ -84,6 +104,11 @@ public class LoggerFactory {
         return sharedFileHandler;
     }
 
+    /**
+     * Obtient un logger pour le nom spécifié.
+     * @param name Le nom du logger.
+     * @return Le logger configuré.
+     */
     public static Logger getLogger(String name) {
         Logger logger = Logger.getLogger(name);
         logger.setUseParentHandlers(false);
@@ -101,6 +126,9 @@ public class LoggerFactory {
         return logger;
     }
 
+    /**
+     * Configure le handler par défaut pour le logger racine.
+     */
     private static void configureDefaultHandler() {
         try {
             Logger rootLogger = LogManager.getLogManager().getLogger("");
@@ -118,6 +146,11 @@ public class LoggerFactory {
         }
     }
 
+    /**
+     * Écrit un log ad hoc dans un fichier de secours.
+     * @param message Le message à écrire.
+     * @param append Indique si le message doit être ajouté à la fin du fichier.
+     */
     public static void writeAdHocLog(String message, boolean append) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, append))) {
             writer.write("log de secours survenue à " + java.time.LocalDateTime.now() + " : " + message);
@@ -127,6 +160,10 @@ public class LoggerFactory {
         }
     }
 
+    /**
+     * Écrit un log ad hoc dans un fichier de secours.
+     * @param message Le message à écrire.
+     */
     public static void writeAdHocLog(String message) {
         writeAdHocLog(message, true);
     }
