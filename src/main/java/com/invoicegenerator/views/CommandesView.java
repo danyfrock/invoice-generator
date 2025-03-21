@@ -139,6 +139,7 @@ public class CommandesView extends Application {
 
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(this.source.getSource().getParameters().getPleinEcran());
         primaryStage.show();
 
         selectFirstRow();

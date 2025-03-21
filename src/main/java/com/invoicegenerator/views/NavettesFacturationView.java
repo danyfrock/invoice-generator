@@ -185,6 +185,7 @@ public class NavettesFacturationView extends Application {
 
             Scene scene = new Scene(root, 800, 600);
             primaryStage.setScene(scene);
+            primaryStage.setMaximized(this.sourceFacturation.getParameters().getPleinEcran());
             primaryStage.show();
 
             logger.log(Level.INFO, "Interface NavettesFacturationView affichée avec succès");

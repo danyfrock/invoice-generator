@@ -26,6 +26,7 @@ public class ParametresView extends Application {
     private final TextField textAnneeMin = new TextField();
     private final TextField textAnneeMax = new TextField();
     private final TextField textDossier = new TextField();
+    private final CheckBox  pleinEcranCheckBox = new CheckBox();
     private final ListView<String> listCodes = new ListView<>();
 
     /**
@@ -49,10 +50,12 @@ public class ParametresView extends Application {
         logger.log(Level.INFO, "Démarrage de l'interface ParametresView");
         primaryStage.setTitle("Paramètres");
 
+        // grille
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
 
+        // composants
         Label labelDossier = new Label("Emplacement du dossier de sortie");
         textDossier.setEditable(false);
         Button btnDossier = new Button("Sélectionner");
@@ -68,6 +71,9 @@ public class ParametresView extends Application {
             logger.log(Level.FINE, "Entrée invalide pour le code d'activité : {0}", newText);
             return null;
         }));
+
+        Label labelPleinEcran = new Label("Maximiser les fenêtres");
+
         Button btnAjouter = new Button("Ajouter");
         Button btnSupprimer = new Button("Supprimer");
 
@@ -107,6 +113,7 @@ public class ParametresView extends Application {
             primaryStage.close();
         });
 
+        // placer
         grid.add(labelDossier, 0, 0);
         grid.add(textDossier, 1, 0);
         grid.add(btnDossier, 2, 0);
@@ -117,15 +124,19 @@ public class ParametresView extends Application {
         grid.add(btnAjouter, 2, 4);
         grid.add(btnSupprimer, 2, 5);
 
+        grid.add(labelAnneeMin, 0, 6);
         grid.add(textAnneeMin, 1, 6);
-        grid.add(labelAnneeMin, 2, 6);
 
+        grid.add(labelAnneeMax, 0, 7);
         grid.add(textAnneeMax, 1, 7);
-        grid.add(labelAnneeMax, 2, 7);
 
-        grid.add(btnEnregistrer, 1, 8);
-        grid.add(btnAnnuler, 2, 8);
+        grid.add(labelPleinEcran, 0, 9);
+        grid.add(pleinEcranCheckBox,1,9);
 
+        grid.add(btnEnregistrer, 1, 10);
+        grid.add(btnAnnuler, 2, 10);
+
+        // listeners
         btnAjouter.setOnAction(e -> {
             String code = textCode.getText().trim();
             if (!code.isEmpty() && !listCodes.getItems().contains(code)) {
@@ -159,11 +170,17 @@ public class ParametresView extends Application {
     private void enregistrerParametres() {
         try {
             logger.log(Level.FINE, "Enregistrement des paramètres");
+
+            //mettre à jour modele
             this.source.getParameters().setMaxYear(Integer.parseInt(this.textAnneeMax.getText()));
             this.source.getParameters().setMinYear(Integer.parseInt(this.textAnneeMin.getText()));
             this.source.getParameters().setOutputFolder(this.textDossier.getText());
             this.source.getParameters().setActivityCodes(listCodes.getItems());
+            this.source.getParameters().setPleinEcran(this.pleinEcranCheckBox.isSelected());
+
+            // enregistrer
             new ParametresService(this.source.getParameters().getParametersFileName()).enregistrerParametres(this.source.getParameters());
+
             logger.log(Level.INFO, "Paramètres enregistrés avec succès");
         } catch (NumberFormatException e) {
             logger.log(Level.SEVERE, "Erreur lors de la conversion des années min/max en nombres : {0}", e.getMessage());
@@ -181,6 +198,7 @@ public class ParametresView extends Application {
             this.textAnneeMax.setText(String.valueOf(this.source.getParameters().getMaxYear()));
             this.textAnneeMin.setText(String.valueOf(this.source.getParameters().getMinYear()));
             this.textDossier.setText(this.source.getParameters().getOutputFolder());
+            this.pleinEcranCheckBox.setSelected(this.source.getParameters().getPleinEcran());
             listCodes.setItems(FXCollections.observableArrayList(this.source.getParameters().getActivityCodes()));
             logger.log(Level.INFO, "Paramètres chargés avec succès");
         } catch (Exception e) {

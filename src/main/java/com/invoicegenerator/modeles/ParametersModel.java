@@ -24,6 +24,7 @@ public class ParametersModel {
     private String parametersFileName = Paths.get(System.getProperty("user.home"), "") + "\\parametres.json";
     private String dernierEmplacementConnuEntrees = Paths.get(System.getProperty("user.home"), "") + "\\";
     private String dernierEmplacementConnuProgression = Paths.get(System.getProperty("user.home"), "") + "\\";
+    private Boolean pleinEcran = true;
 
     /**
      * Constructeur par défaut pour ParametersModel.
@@ -184,5 +185,21 @@ public class ParametersModel {
      */
     public void setDernierEmplacementConnuProgression(String dernierEmplacementConnuProgression) {
         this.dernierEmplacementConnuProgression = dernierEmplacementConnuProgression;
+    }
+
+    /**
+     * Stipule si les écrans sont maximisés.
+     *
+     */
+    public Boolean getPleinEcran() {
+        return pleinEcran;
+    }
+
+    /**
+     * Défini si les écrans sont maximisés.
+     *
+     */
+    public void setPleinEcran(Boolean pleinEcran) {
+        this.pleinEcran = pleinEcran;
     }
 }

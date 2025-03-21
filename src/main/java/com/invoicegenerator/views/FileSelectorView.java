@@ -139,6 +139,7 @@ public class FileSelectorView extends Application {
             }
         });
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(this.source.getParameters().getPleinEcran());
         primaryStage.show();
 
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
