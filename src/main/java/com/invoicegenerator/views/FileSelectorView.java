@@ -95,6 +95,7 @@ public class FileSelectorView extends Application {
         MenuBar menuBar = new MenuBar();
         Supplier<String> dernierEmplacementSupplier = () -> this.source.getParameters().getDernierEmplacementConnuProgression();
         Menu fileMenu = new MenuBuilder("Menu", primaryStage)
+                .avecSelectionExcel(this::selectFiles)
                 .avecChargementJson(
                         "Charger sauvegarde + paramètres (Ctrl+L)", "Ctrl+L",
                         dernierEmplacementSupplier,
