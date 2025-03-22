@@ -1,6 +1,7 @@
 package com.invoicegenerator.services;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.invoicegenerator.modeles.ParametersModel;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 
@@ -27,17 +28,18 @@ public class ParametresService {
     }
 
     /**
-     * Enregistre les paramètres dans un fichier JSON.
+     * Enregistre les paramètres dans un fichier JSON avec un formatage lisible.
      * @param parametres Les paramètres à enregistrer.
      */
     public void enregistrerParametres(ParametersModel parametres) {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .create();
         try (FileWriter writer = new FileWriter(parametresFileName)) {
             gson.toJson(parametres, writer);
             logger.info("Paramètres enregistrés avec succès dans le fichier : " + parametresFileName);
         } catch (IOException e) {
             logger.severe("Erreur lors de l'enregistrement des paramètres : " + e.getMessage());
-            e.printStackTrace();
         }
     }
 

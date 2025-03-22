@@ -132,7 +132,7 @@ public class CommandesView extends Application {
         MenuBar menuBar = new MenuBar();
         Menu menu = new MenuBuilder("Menu", primaryStage)
                 .avecSauvegardeJson(
-                        source.getSource().getParameters().getDernierEmplacementConnuProgression(),
+                        () -> source.getSource().getParameters().getDernierEmplacementConnuProgression(),
                         "Sauvegarder progression",
                         this::sauvegarderProgression
                 )

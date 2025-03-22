@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.function.Supplier;
 
 /**
  * Builder fluide pour créer des menus JavaFX avec des actions prédéfinies.
@@ -56,20 +57,13 @@ public class MenuBuilder {
     /**
      * Ajoute un item pour sélectionner plusieurs fichiers Excel.
      *
-     * @param initialDir   Répertoire initial pour le FileChooser
-     * @param onFilesSelected Action à exécuter avec la liste des fichiers sélectionnés
+     * @param selectFilesAction Action à exécuter pour gérer la sélection des fichiers
      * @return MenuBuilder pour chaînage fluide
      */
-    public MenuBuilder avecSelectionExcel(String initialDir, Consumer<List<File>> onFilesSelected) {
+    public MenuBuilder avecSelectionExcel(Runnable selectFilesAction) {
         return avecAction("Sélectionner fichier (Ctrl+O)", "Ctrl+O", e -> {
             logger.log(Level.INFO, "Ouverture du dialogue pour sélectionner des fichiers Excel");
-            List<File> files = FileChooserHelper.showOpenExcelDialog(stage, initialDir, "Sélectionner des fichiers Excel");
-            if (files != null && !files.isEmpty()) {
-                logger.log(Level.INFO, "{0} fichier(s) Excel sélectionné(s)", files.size());
-                onFilesSelected.accept(files);
-            } else {
-                logger.log(Level.FINE, "Aucun fichier Excel sélectionné");
-            }
+            selectFilesAction.run();
         });
     }
 
@@ -83,10 +77,10 @@ public class MenuBuilder {
      * @param onFileLoaded Action à exécuter avec le fichier chargé
      * @return MenuBuilder pour chaînage fluide
      */
-    public MenuBuilder avecChargementJson(String text, String shortcut, String initialDir, String title, Consumer<File> onFileLoaded) {
+    public MenuBuilder avecChargementJson(String text, String shortcut, Supplier<String> initialDir, String title, Consumer<File> onFileLoaded) {
         return avecAction(text, shortcut, e -> {
             logger.log(Level.INFO, "Ouverture du dialogue pour charger un JSON : {0}", title);
-            File file = FileChooserHelper.showOpenJsonDialog(stage, initialDir, title);
+            File file = FileChooserHelper.showOpenJsonDialog(stage, initialDir.get(), title);
             if (file != null) {
                 logger.log(Level.INFO, "Fichier JSON chargé : {0}", file.getAbsolutePath());
                 onFileLoaded.accept(file);
@@ -104,10 +98,10 @@ public class MenuBuilder {
      * @param onFileSaved Action à exécuter avec le fichier sauvegardé
      * @return MenuBuilder pour chaînage fluide
      */
-    public MenuBuilder avecSauvegardeJson(String initialDir, String title, Consumer<File> onFileSaved) {
+    public MenuBuilder avecSauvegardeJson(Supplier<String> initialDir, String title, Consumer<File> onFileSaved) {
         return avecAction("Sauvegarder progression (Ctrl+S)", "Ctrl+S", e -> {
             logger.log(Level.INFO, "Ouverture du dialogue pour sauvegarder un JSON : {0}", title);
-            File file = FileChooserHelper.showSaveJsonDialog(stage, initialDir, title);
+            File file = FileChooserHelper.showSaveJsonDialog(stage, initialDir.get(), title);
             if (file != null) {
                 logger.log(Level.INFO, "Fichier JSON sauvegardé : {0}", file.getAbsolutePath());
                 onFileSaved.accept(file);

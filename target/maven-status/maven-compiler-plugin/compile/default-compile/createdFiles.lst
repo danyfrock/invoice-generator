@@ -3,6 +3,7 @@ com\invoicegenerator\views\CommandeView.class
 com\invoicegenerator\viewModels\CommandesViewModel.class
 com\invoicegenerator\utils\ihm\FileChooserHelper.class
 com\invoicegenerator\views\CommandeView$1.class
+com\invoicegenerator\views\CommandesView$3.class
 com\invoicegenerator\modeles\ActionResult.class
 com\invoicegenerator\modeles\ParametersModel.class
 module-info.class

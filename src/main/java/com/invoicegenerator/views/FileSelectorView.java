@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.function.Supplier;
 
 /**
  * Vue pour la sélection des fichiers dans l'application de gestion des navettes de facturation.
@@ -92,25 +93,22 @@ public class FileSelectorView extends Application {
 
         // Ajout du MenuBar avec MenuBuilder
         MenuBar menuBar = new MenuBar();
+        Supplier<String> dernierEmplacementSupplier = () -> this.source.getParameters().getDernierEmplacementConnuProgression();
         Menu fileMenu = new MenuBuilder("Menu", primaryStage)
-                .avecSelectionExcel(
-                        this.source.getParameters().getDernierEmplacementConnuEntrees(),
-                        this::selectFiles
-                )
                 .avecChargementJson(
                         "Charger sauvegarde + paramètres (Ctrl+L)", "Ctrl+L",
-                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        dernierEmplacementSupplier,
                         "Charger sauvegarde",
                         file -> chargerUneProgression(primaryStage, file, true)
                 )
                 .avecChargementJson(
                         "Charger une sauvegarde sans paramètres (Ctrl+M)", "Ctrl+M",
-                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        dernierEmplacementSupplier,
                         "Charger sauvegarde sans paramètres",
                         file -> chargerUneProgression(primaryStage, file, false)
                 )
                 .avecSauvegardeJson(
-                        this.source.getParameters().getDernierEmplacementConnuProgression(),
+                        dernierEmplacementSupplier,
                         "Sauvegarder progression",
                         this::sauvegarderProgression
                 )
@@ -157,14 +155,16 @@ public class FileSelectorView extends Application {
 
     private void chargerUneProgression(Stage primaryStage, File file, boolean avecParametres) {
         logger.log(Level.INFO, "Chargement d'une sauvegarde depuis : {0}", file.getAbsolutePath());
-        this.source.getParameters().setDernierEmplacementConnuEntrees(file.getParentFile().getAbsolutePath());
+        this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
         billingService = new BillingProcessService(file.getAbsolutePath());
         BillingProcessModel loadedModel = billingService.chargerBillingProcess();
 
         if (avecParametres) {
             this.parametresService.enregistrerParametres(loadedModel.getParameters());
         } else {
-            this.source.setParameters(this.parametresService.chargerParametres());
+            loadedModel.setParameters(this.parametresService.chargerParametres());
+            loadedModel.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
+            this.parametresService.enregistrerParametres(loadedModel.getParameters());
         }
 
         new FileSelectorView(loadedModel).start(new Stage());
