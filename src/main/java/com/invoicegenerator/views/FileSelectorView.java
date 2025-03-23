@@ -8,6 +8,7 @@ import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.utils.ihm.FileChooserHelper;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
 import javafx.application.Application;
+import javafx.collections.ListChangeListener;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -69,11 +70,14 @@ public class FileSelectorView extends Application {
         fileTable.getColumns().addAll(fileNameColumn, filePathColumn);
 
         fileTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-/*
-        fileTable.getItems().addListener((obs, oldVal, newVal) -> {
 
+        fileTable.getItems().addListener((ListChangeListener<PvEntityPvModel>) change -> {
+            source.getPvEntities().clear();
+            source.getPvEntities().addAll(fileTable.getItems());
+            logger.log(Level.FINE, "Synchronisation de source.getPvEntities() avec fileTable : {0} éléments", fileTable.getItems().size());
+            updateNextButtonState();
         });
-  */
+
         Button selectButton = new Button("Sélectionner fichier (Ctrl+O)");
         selectButton.setOnAction(e -> selectFiles());
 
@@ -85,8 +89,6 @@ public class FileSelectorView extends Application {
         Button paramsButton = new Button("Paramètres");
         paramsButton.setOnAction(e -> {
             logger.log(Level.INFO, "Passage à ParametresView avec {0} éléments", fileTable.getItems().size());
-            source.getPvEntities().clear();
-            source.getPvEntities().addAll(fileTable.getItems());
             new ParametresView(source).start(new Stage());
             primaryStage.close();
         });
@@ -151,8 +153,6 @@ public class FileSelectorView extends Application {
     private void goNext(Stage primaryStage) {
         if (this.canGoNext) {
             logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
-            source.getPvEntities().clear();
-            source.getPvEntities().addAll(fileTable.getItems());
             new CommandesView(source).start(new Stage());
             primaryStage.close();
         }
@@ -172,16 +172,12 @@ public class FileSelectorView extends Application {
             this.parametresService.enregistrerParametres(loadedModel.getParameters());
         }
 
-        source.getPvEntities().clear();
-        source.getPvEntities().addAll(fileTable.getItems());
         new FileSelectorView(loadedModel).start(new Stage());
         primaryStage.close();
     }
 
     private void sauvegarderProgression(File file) {
         logger.log(Level.INFO, "Sauvegarde de la progression dans : {0}", file.getAbsolutePath());
-        source.getPvEntities().clear();
-        source.getPvEntities().addAll(fileTable.getItems());
         this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
         this.parametresService.enregistrerParametres(this.source.getParameters());
         billingService = new BillingProcessService(file.getAbsolutePath());
@@ -203,8 +199,6 @@ public class FileSelectorView extends Application {
                 logger.log(Level.FINE, "Fichier déjà existant ignoré : {0}", file.getAbsolutePath());
             }
         }
-        source.getPvEntities().clear();
-        source.getPvEntities().addAll(fileTable.getItems());
         updateNextButtonState();
     }
 
@@ -221,8 +215,6 @@ public class FileSelectorView extends Application {
         List<PvEntityPvModel> selectedItems = fileTable.getSelectionModel().getSelectedItems();
         if (!selectedItems.isEmpty()) {
             fileTable.getItems().removeAll(selectedItems);
-            source.getPvEntities().clear();
-            source.getPvEntities().addAll(fileTable.getItems());
             logger.log(Level.FINE, "Suppression de {0} éléments sélectionnés", selectedItems.size());
             updateNextButtonState();
         } else {
