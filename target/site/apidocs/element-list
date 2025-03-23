@@ -2,6 +2,7 @@ module:InvoiceGenerator
 com.invoicegenerator
 com.invoicegenerator.modeles
 com.invoicegenerator.services
+com.invoicegenerator.utils
 com.invoicegenerator.utils.backend
 com.invoicegenerator.utils.ihm
 com.invoicegenerator.viewModels

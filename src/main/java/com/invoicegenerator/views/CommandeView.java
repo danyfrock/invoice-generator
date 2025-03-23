@@ -226,21 +226,17 @@ public class CommandeView extends VBox {
      * Si la date est valide, elle est stockée dans la propriété correspondante du ViewModel.
      * Si elle est invalide, le champ est effacé.
      *
-     * @param oldVM      Le ViewModel actuel qui doit être mis à jour avant le changement.
      * @param datePicker Le DatePicker à valider et enregistrer.
      * @param propertyGetter Un fournisseur qui retourne la propriété à mettre à jour.
      */
-    private void validateAndCommitDate(CommandeViewModel oldVM, DatePicker datePicker,
+    private void validateAndCommitDate(DatePicker datePicker,
                                        Supplier<Property<LocalDate>> propertyGetter) {
         if (datePicker.isFocused()) {
             String inputText = datePicker.getEditor().getText();
 
             if (isValidDate(inputText, datePicker)) {
                 LocalDate validDate = datePicker.getConverter().fromString(inputText);
-                propertyGetter.get().setValue(validDate); // Met à jour la bonne propriété
-                datePicker.commitValue(); // Applique la valeur au DatePicker
-            } else {
-                datePicker.getEditor().setText(""); // Efface la saisie invalide
+                propertyGetter.get().setValue(validDate); // Met à jour la propriété du VM.
             }
         }
     }
@@ -269,8 +265,10 @@ public class CommandeView extends VBox {
      * @param oldVM Le ViewModel actuel qui doit être mis à jour avant le changement.
      */
     public void validateAndCommitDates(CommandeViewModel oldVM) {
-        validateAndCommitDate(oldVM, dateDebutPicker, oldVM::getDateDebutProperty);
-        validateAndCommitDate(oldVM, dateFinPicker, oldVM::getDateFinProrperty);
+        if(oldVM != null) {
+            validateAndCommitDate(dateDebutPicker, oldVM::getDateDebutProperty);
+            validateAndCommitDate(dateFinPicker, oldVM::getDateFinProrperty);
+        }
     }
 
 }
