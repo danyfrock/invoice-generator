@@ -2,6 +2,8 @@ package com.invoicegenerator.views;
 
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.viewModels.CommandeViewModel;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
@@ -16,6 +18,7 @@ import javafx.util.StringConverter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -216,6 +219,58 @@ public class CommandeView extends VBox {
         } else {
             logger.log(Level.WARNING, "Aucun code d'activité disponible");
         }
+    }
+
+    /**
+     * Valide et applique la date du DatePicker avant un changement de sélection.
+     * Si la date est valide, elle est stockée dans la propriété correspondante du ViewModel.
+     * Si elle est invalide, le champ est effacé.
+     *
+     * @param oldVM      Le ViewModel actuel qui doit être mis à jour avant le changement.
+     * @param datePicker Le DatePicker à valider et enregistrer.
+     * @param propertyGetter Un fournisseur qui retourne la propriété à mettre à jour.
+     */
+    private void validateAndCommitDate(CommandeViewModel oldVM, DatePicker datePicker,
+                                       Supplier<Property<LocalDate>> propertyGetter) {
+        if (datePicker.isFocused()) {
+            String inputText = datePicker.getEditor().getText();
+
+            if (isValidDate(inputText, datePicker)) {
+                LocalDate validDate = datePicker.getConverter().fromString(inputText);
+                propertyGetter.get().setValue(validDate); // Met à jour la bonne propriété
+                datePicker.commitValue(); // Applique la valeur au DatePicker
+            } else {
+                datePicker.getEditor().setText(""); // Efface la saisie invalide
+            }
+        }
+    }
+
+    /**
+     * Vérifie si une date saisie est valide selon le convertisseur du DatePicker.
+     *
+     * @param text       La date sous forme de texte.
+     * @param datePicker Le DatePicker utilisé pour la conversion.
+     * @return true si la date est valide, false sinon.
+     */
+    private boolean isValidDate(String text, DatePicker datePicker) {
+        if (text == null || text.trim().isEmpty()) {
+            return false;
+        }
+        try {
+            return datePicker.getConverter().fromString(text) != null;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Valide et applique les dates des DatePickers avant de changer de sélection.
+     *
+     * @param oldVM Le ViewModel actuel qui doit être mis à jour avant le changement.
+     */
+    public void validateAndCommitDates(CommandeViewModel oldVM) {
+        validateAndCommitDate(oldVM, dateDebutPicker, oldVM::getDateDebutProperty);
+        validateAndCommitDate(oldVM, dateFinPicker, oldVM::getDateFinProrperty);
     }
 
 }

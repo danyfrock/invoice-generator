@@ -121,6 +121,8 @@ public class CommandesView extends Application {
 
         fileTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             logger.log(Level.FINE, "Sélection changée : {0} -> {1}", new Object[]{oldVal != null ? oldVal.nomFichierProperty().get() : "null", newVal != null ? newVal.nomFichierProperty().get() : "null"});
+
+            commandeView.validateAndCommitDates(oldVal);
             commandeView.setViewModel(newVal);
         });
 
