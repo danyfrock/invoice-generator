@@ -93,12 +93,12 @@ public class CommandesViewModel {
     private void updateOutputFileName() {
         logger.log(Level.FINE, "Mise à jour du nom du fichier de sortie");
 
-        // get data
+        // Récupère les données
         String codeContrat = commandes.isEmpty() ? "" : commandes.getFirst().getSource().getCommand().getContractCode();
         codeContrat = codeContrat == null ? "" : codeContrat;
         String comp = complement.get() == null ? "" : complement.get();
 
-        // set
+        // Définit le nom du fichier de sortie
         String basePath = FileUtil.concat(source.getParameters().getOutputFolder(), source.getParameters().getOutputFileDefaultName());
         String sortie = FileUtil.addSuffixToFileName(basePath, codeContrat);
         sortie = FileUtil.addSuffixToFileName(sortie, comp);

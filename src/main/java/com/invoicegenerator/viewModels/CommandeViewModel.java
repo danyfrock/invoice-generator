@@ -166,14 +166,25 @@ public class CommandeViewModel {
         return codeContrat;
     }
 
+    /**
+     * Retourne la propriété contenant le code d'activité.
+     *
+     * @return SimpleStringProperty pour codeActivite
+     */
     public SimpleStringProperty CodeActiviteProperty() {
         return codeActivite;
     }
 
+    /*
+    * Retourne la propriété contenant la date de début.
+    * */
     public Property<LocalDate> getDateDebutProperty() {
         return dateDebutProperty;
     }
 
+    /*
+     * Retourne la propriété contenant la date de fin.
+     * */
     public Property<LocalDate> getDateFinProrperty() {
         return dateFinProrperty;
     }
@@ -222,15 +233,27 @@ public class CommandeViewModel {
         this.updateValidationProperties();
     }
 
+    /*
+    * Obtient le ViewModel parent.
+    * */
     public CommandesViewModel getBackReference() {
         return backReference;
     }
 
-
+    /**
+     * Indique si cette entité a un rôle décisionnaire sur certaines informations
+     * au sein de {@link CommandeViewModel}.
+     */
     public boolean isEstLeader() {
         return estLeader.get();
     }
 
+    /**
+     * Retourne la propriété observable associée à l'état de leader de l'entité.
+     * Permet de lier cet état à une interface graphique ou un autre composant réactif.
+     *
+     * @return la propriété SimpleBooleanProperty représentant l'état de leader.
+     */
     public SimpleBooleanProperty estLeaderProperty() {
         return estLeader;
     }
