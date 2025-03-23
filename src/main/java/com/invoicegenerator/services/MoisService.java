@@ -7,6 +7,11 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Service dédié à l'extraction du mois à partir d'un objet LocalDate.
+ * Ce service utilise des fichiers de ressources pour retourner le nom du mois
+ * dans la langue définie par une Locale (par exemple, "mars" en français ou "March" en anglais).
+ */
 public class MoisService {
     private static final Logger logger = Logger.getLogger(MoisService.class.getName());
 
