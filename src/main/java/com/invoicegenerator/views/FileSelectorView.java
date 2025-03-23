@@ -69,7 +69,11 @@ public class FileSelectorView extends Application {
         fileTable.getColumns().addAll(fileNameColumn, filePathColumn);
 
         fileTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+/*
+        fileTable.getItems().addListener((obs, oldVal, newVal) -> {
 
+        });
+  */
         Button selectButton = new Button("Sélectionner fichier (Ctrl+O)");
         selectButton.setOnAction(e -> selectFiles());
 
@@ -168,12 +172,16 @@ public class FileSelectorView extends Application {
             this.parametresService.enregistrerParametres(loadedModel.getParameters());
         }
 
+        source.getPvEntities().clear();
+        source.getPvEntities().addAll(fileTable.getItems());
         new FileSelectorView(loadedModel).start(new Stage());
         primaryStage.close();
     }
 
     private void sauvegarderProgression(File file) {
         logger.log(Level.INFO, "Sauvegarde de la progression dans : {0}", file.getAbsolutePath());
+        source.getPvEntities().clear();
+        source.getPvEntities().addAll(fileTable.getItems());
         this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
         this.parametresService.enregistrerParametres(this.source.getParameters());
         billingService = new BillingProcessService(file.getAbsolutePath());
@@ -195,6 +203,8 @@ public class FileSelectorView extends Application {
                 logger.log(Level.FINE, "Fichier déjà existant ignoré : {0}", file.getAbsolutePath());
             }
         }
+        source.getPvEntities().clear();
+        source.getPvEntities().addAll(fileTable.getItems());
         updateNextButtonState();
     }
 
@@ -211,6 +221,8 @@ public class FileSelectorView extends Application {
         List<PvEntityPvModel> selectedItems = fileTable.getSelectionModel().getSelectedItems();
         if (!selectedItems.isEmpty()) {
             fileTable.getItems().removeAll(selectedItems);
+            source.getPvEntities().clear();
+            source.getPvEntities().addAll(fileTable.getItems());
             logger.log(Level.FINE, "Suppression de {0} éléments sélectionnés", selectedItems.size());
             updateNextButtonState();
         } else {
