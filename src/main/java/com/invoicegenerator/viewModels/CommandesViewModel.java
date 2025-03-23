@@ -34,6 +34,7 @@ public class CommandesViewModel {
 
     /**
      * Constructeur pour initialiser le ViewModel avec le modèle de processus de facturation.
+     *
      * @param source Le modèle de processus de facturation.
      */
     public CommandesViewModel(BillingProcessModel source) {
@@ -117,6 +118,7 @@ public class CommandesViewModel {
 
     /**
      * Met à jour le code contrat pour toutes les commandes.
+     *
      * @param newCode Le nouveau code contrat.
      */
     public void updateAllContractCodes(String newCode) {
@@ -131,6 +133,7 @@ public class CommandesViewModel {
 
     /**
      * Sauvegarde la progression actuelle dans un fichier.
+     *
      * @param file Le fichier dans lequel sauvegarder la progression.
      */
     public void sauvegarderProgression(File file) {
@@ -141,6 +144,7 @@ public class CommandesViewModel {
     }
 
     /**
+     * Obtient le modèle contenant les données brutes.
      * @return Le modèle de processus de facturation source.
      */
     public BillingProcessModel getSource() {
@@ -148,6 +152,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Liste de commandes contenues.
+     *
      * @return La liste observable des commandes.
      */
     public ObservableList<CommandeViewModel> getCommandes() {
@@ -155,6 +161,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Obtient la propriété représentant le complément d'information.
+     *
      * @return La propriété complement.
      */
     public SimpleStringProperty complementProperty() {
@@ -162,6 +170,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Représente le complément d'information.
+     *
      * @return Le complément actuel.
      */
     public String getComplement() {
@@ -170,6 +180,7 @@ public class CommandesViewModel {
 
     /**
      * Définit le complément.
+     *
      * @param complement Le nouveau complément.
      */
     public void setComplement(String complement) {
@@ -177,6 +188,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Représente la propriété qui contient le chemin du fichier de sortie.
+     *
      * @return La propriété outputFileName.
      */
     public SimpleStringProperty outputFileNameProperty() {
@@ -184,6 +197,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Obtient le nom du fichier de sortie actuel.
+     *
      * @return Le nom du fichier de sortie actuel.
      */
     public String getOutputFileName() {
@@ -191,6 +206,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Représente la propriété qui stipule si toutes les données du modèle sont complète et valides.
+     *
      * @return La propriété allVerified.
      */
     public SimpleBooleanProperty allVerifiedProperty() {
@@ -198,6 +215,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Stipule si toutes les données du modèle sont complète et valides.
+     *
      * @return L'état de vérification de toutes les commandes.
      */
     public boolean isAllVerified() {
@@ -205,6 +224,8 @@ public class CommandesViewModel {
     }
 
     /**
+     * Service spécifique aux entités de PV.
+     *
      * @return Le service EntitePv.
      */
     public EntitePvService getPvService() {
