@@ -175,16 +175,18 @@ public class CommandeViewModel {
         return codeActivite;
     }
 
-    /*
-    * Retourne la propriété contenant la date de début.
-    * */
+    /**
+     * Retourne la propriété contenant la date de début.
+     * @return La propriété de type LocalDate représentant la date de début.
+     */
     public Property<LocalDate> getDateDebutProperty() {
         return dateDebutProperty;
     }
 
-    /*
+    /**
      * Retourne la propriété contenant la date de fin.
-     * */
+     * @return La propriété de type LocalDate représentant la date de fin.
+     */
     public Property<LocalDate> getDateFinProrperty() {
         return dateFinProrperty;
     }
@@ -233,7 +235,7 @@ public class CommandeViewModel {
         this.updateValidationProperties();
     }
 
-    /*
+    /**
     * Obtient le ViewModel parent.
     * */
     public CommandesViewModel getBackReference() {
