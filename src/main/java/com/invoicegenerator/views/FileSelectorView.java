@@ -9,6 +9,8 @@ import com.invoicegenerator.utils.ihm.FileChooserHelper;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
 import javafx.application.Application;
 import javafx.collections.ListChangeListener;
+import javafx.concurrent.Task;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -16,6 +18,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -153,8 +156,35 @@ public class FileSelectorView extends Application {
     private void goNext(Stage primaryStage) {
         if (this.canGoNext) {
             logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
-            new CommandesView(source).start(new Stage());
-            primaryStage.close();
+
+            // Fenêtre de chargement avec un indicateur indéfini
+            Stage loadingStage = new Stage();
+            ProgressIndicator indicator = new ProgressIndicator(-1); // Chargement indéfini
+            Label loadingLabel = new Label("Chargement des commandes...");
+            VBox loadingLayout = new VBox(10, loadingLabel, indicator);
+            loadingLayout.setAlignment(Pos.CENTER);
+            Scene loadingScene = new Scene(loadingLayout, 300, 150);
+            loadingStage.setScene(loadingScene);
+            loadingStage.setTitle("Chargement");
+            loadingStage.initModality(Modality.APPLICATION_MODAL);
+            loadingStage.show();
+
+            // Tâche asynchrone
+            Task<CommandesView> loadingTask = new Task<>() {
+                @Override
+                protected CommandesView call() throws Exception {
+                    return new CommandesView(source);
+                }
+            };
+
+            loadingTask.setOnSucceeded(event -> {
+                CommandesView commandesView = loadingTask.getValue();
+                commandesView.start(new Stage());
+                loadingStage.close();
+                primaryStage.close();
+            });
+
+            new Thread(loadingTask).start();
         }
     }
 

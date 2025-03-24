@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
@@ -22,17 +23,18 @@ import javafx.application.Application;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.concurrent.Task;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -199,9 +201,37 @@ public class NavettesFacturationView extends Application {
     private void goNext() {
         try {
             logger.log(Level.INFO, "Écriture des navettes dans le fichier : {0}", fichierSortie.getAbsolutePath());
-            ActionResult resultat = ExcelNavetteWritterUtil.writeNavette(Arrays.asList(source), fichierSortie.getAbsolutePath(), "Facturation uniquement");
-            resultLabel.setText(resultat.message());
-            logger.log(Level.FINE, "Résultat de l'écriture : {0}", resultat.message());
+
+            AtomicReference<ActionResult> resultant = new AtomicReference<>();
+
+            // Fenêtre de chargement avec un indicateur indéfini
+            Stage loadingStage = new Stage();
+            ProgressIndicator indicator = new ProgressIndicator(-1); // Chargement indéfini
+            Label loadingLabel = new Label("Écriture du fichier de sortie.");
+            VBox loadingLayout = new VBox(10, loadingLabel, indicator);
+            loadingLayout.setAlignment(Pos.CENTER);
+            Scene loadingScene = new Scene(loadingLayout, 300, 150);
+            loadingStage.setScene(loadingScene);
+            loadingStage.setTitle("Chargement");
+            loadingStage.initModality(Modality.APPLICATION_MODAL);
+            loadingStage.show();
+
+            // Tâche asynchrone
+            Task<ActionResult> loadingTask = new Task<>() {
+                @Override
+                protected ActionResult call() throws Exception {
+                    return ExcelNavetteWritterUtil.writeNavette(Arrays.asList(source), fichierSortie.getAbsolutePath(), "Facturation uniquement");
+                }
+            };
+
+            loadingTask.setOnSucceeded(event -> {
+                resultant.set(loadingTask.getValue());
+                logger.log(Level.FINE, "Résultat de l'écriture : {0}", resultant.get().message());
+                resultLabel.setText(resultant.get().message());
+                loadingStage.close();
+            });
+
+            new Thread(loadingTask).start();
         } catch (Exception ex) {
             logger.log(Level.SEVERE, "Erreur lors de l'écriture des navettes : {0}", ex.getMessage());
             resultLabel.setText("Erreur lors de l'écriture : " + ex.getMessage());

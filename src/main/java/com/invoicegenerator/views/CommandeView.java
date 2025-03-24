@@ -2,7 +2,6 @@ package com.invoicegenerator.views;
 
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.viewModels.CommandeViewModel;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
