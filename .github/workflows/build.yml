@@ -3,7 +3,7 @@ name: Build and Release Invoice Generator
 on:
   push:
     branches:
-      - main  # Déclenche sur push vers main
+      - master  # Déclenche sur push vers main
 workflow_dispatch:
 jobs:
   build:
