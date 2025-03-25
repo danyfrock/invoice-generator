@@ -36,15 +36,17 @@ jobs:
           mvn -B javadoc:javadoc
         shell: cmd
 
+      # Étape 4.1 : Lister les fichiers dans target (debug)
+      - name: List files in target directory
+        run: dir target
+        shell: cmd
+
       # Étape 5 : Extraire la version du pom.xml et construire JAR_NAME
       - name: Extract version from pom.xml
         id: get_version
         run: |
-          for /f "tokens=2 delims=<>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*.*</version>" pom.xml') do (
-            set "VERSION=%%i"
-            set "EXE_VERSION=%%i"
-          )
-          set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
+          for /f %%i in ('mvn -q -Dexec.executable=echo -Dexec.args="${project.version}" --non-recursive exec:exec') do set "VERSION=%%i"
+          set "EXE_VERSION=%VERSION:-SNAPSHOT=%"
           set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
           set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
           echo VERSION=%VERSION% >> %GITHUB_ENV%
