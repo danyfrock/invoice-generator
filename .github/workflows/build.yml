@@ -47,6 +47,7 @@ jobs:
             echo VERSION=!VERSION! >> %GITHUB_ENV%
             echo EXE_VERSION=!EXE_VERSION! >> %GITHUB_ENV%
           )
+          echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%
         shell: cmd
 
       # Étape 6 : Créer le runtime avec jlink
@@ -64,7 +65,7 @@ jobs:
       # Étape 8 : Publier dans une release
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         with:
           tag_name: v${{ env.EXE_VERSION }}
           name: Release v${{ env.EXE_VERSION }}
