@@ -37,7 +37,7 @@ jobs:
         shell: cmd
 
       # Étape 5 : Extraire la version du pom.xml et construire JAR_NAME
-      - name: Extract version from pom.xml with token version
+      - name: Extract version from pom.xml with token version # Test mise à jour
         id: get_version
         run: |
           for /f "tokens=2 delims=<version></version>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*-SNAPSHOT</version>" pom.xml') do (
