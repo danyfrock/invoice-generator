@@ -71,6 +71,6 @@ jobs:
         with:
           tag_name: v${{ env.EXE_VERSION }}
           name: Release v${{ env.EXE_VERSION }}
-          files: target/InvoiceGenerator-${{ env.EXE_VERSION }}.exe
+          files: target/InvoiceGenerator-0.0.1.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
