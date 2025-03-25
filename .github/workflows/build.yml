@@ -61,7 +61,7 @@ jobs:
       # Étape 7 : Générer l'exécutable avec jpackage
       - name: Generate executable with jpackage
         run: |
-          jpackage --input target --main-jar "%JAR_NAME%" --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version %EXE_VERSION% --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          jpackage --input target --main-jar InvoiceGenerator-0.0.1-SNAPSHOT.jar --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version %EXE_VERSION% --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
         shell: cmd
 
       # Étape 8 : Publier dans une release
