@@ -2,9 +2,9 @@ name: Build and Release Invoice Generator
 
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
+    tags:
+      - 'v*.*.*'  # Déclenche sur les tags comme v0.0.1, v1.2.3, etc.
+  workflow_dispatch:  # Permet de lancer manuellement si besoin
 
 jobs:
   build:
@@ -40,7 +40,7 @@ jobs:
       - name: Extract version from pom.xml
         id: get_version
         run: |
-          for /f "tokens=2 delims=<version></version>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*-SNAPSHOT</version>" pom.xml') do (
+          for /f "tokens=2 delims=<>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*.*</version>" pom.xml') do (
             set "VERSION=%%i"
             set "EXE_VERSION=%%i"
           )
@@ -63,13 +63,12 @@ jobs:
       # Étape 7 : Générer l'exécutable avec jpackage
       - name: Generate executable with jpackage
         run: |
-          jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version %EXE_VERSION% --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
         shell: cmd
 
       # Étape 8 : Publier dans une release
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
-        if: github.ref == 'refs/heads/master'
         with:
           tag_name: v${{ env.EXE_VERSION }}
           name: Release v${{ env.EXE_VERSION }}
