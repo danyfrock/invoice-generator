@@ -18,6 +18,7 @@ import com.invoicegenerator.services.PvToNavetteService;
 import com.invoicegenerator.utils.backend.ExcelNavetteWritterUtil;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
+import com.invoicegenerator.utils.ihm.StyleConstants;
 import com.invoicegenerator.viewModels.NavetteFacturationViewModel;
 import javafx.application.Application;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -34,6 +35,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -228,6 +230,15 @@ public class NavettesFacturationView extends Application {
                 resultant.set(loadingTask.getValue());
                 logger.log(Level.FINE, "Résultat de l'écriture : {0}", resultant.get().message());
                 resultLabel.setText(resultant.get().message());
+
+                if(resultant.get().success()){
+                    ////resultLabel.setTextFill(Color.web(StyleConstants.COLOR_VERT_CLAIR));
+                    resultLabel.setStyle(StyleConstants.SUCCESS_FRONT_STYLE);
+                } else {
+                    ////resultLabel.setTextFill(Color.web(StyleConstants.COLOR_ROUGE_FONCE));
+                    resultLabel.setStyle(StyleConstants.ERROR_FRONT_STYLE);
+                }
+
                 loadingStage.close();
             });
 
