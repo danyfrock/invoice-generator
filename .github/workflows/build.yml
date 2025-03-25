@@ -3,8 +3,9 @@ name: Build and Release Invoice Generator
 on:
   push:
     branches:
-      - master  # Déclenche sur push vers main
+      - master
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: windows-latest  # On utilise Windows pour générer un .exe
