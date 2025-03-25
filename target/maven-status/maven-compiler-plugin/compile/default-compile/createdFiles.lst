@@ -9,6 +9,7 @@ com\invoicegenerator\services\BillingProcessService.class
 com\invoicegenerator\views\package-info.class
 com\invoicegenerator\views\CommandesView$1.class
 com\invoicegenerator\viewModels\CommandeViewModel.class
+com\invoicegenerator\views\FileSelectorView$1.class
 com\invoicegenerator\views\FileSelectorView.class
 com\invoicegenerator\utils\backend\LoggerFactory.class
 com\invoicegenerator\Main.class
@@ -19,6 +20,7 @@ com\invoicegenerator\services\PvToNavetteService.class
 com\invoicegenerator\modeles\CommandModel.class
 com\invoicegenerator\modeles\BillingProcessModel.class
 com\invoicegenerator\viewModels\package-info.class
+com\invoicegenerator\utils\ihm\StyleConstants.class
 com\invoicegenerator\utils\backend\package-info.class
 com\invoicegenerator\utils\ihm\FileChooserHelper.class
 com\invoicegenerator\views\CommandeView$1.class
@@ -27,6 +29,7 @@ module-info.class
 com\invoicegenerator\utils\backend\ExcelPvReaderUtil$1.class
 com\invoicegenerator\modeles\UoCommandLineModel.class
 com\invoicegenerator\services\ParametresService.class
+com\invoicegenerator\views\NavettesFacturationView$1.class
 com\invoicegenerator\utils\package-info.class
 com\invoicegenerator\modeles\PvEntityPvModel.class
 com\invoicegenerator\viewModels\NavetteFacturationViewModel.class
