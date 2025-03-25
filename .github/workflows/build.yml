@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '22'
-          distribution: 'temurin'  # Eclipse Temurin est une distrib fiable
+          distribution: 'temurin'
 
       # Étape 3 : Télécharger et configurer JavaFX SDK
       - name: Download JavaFX SDK
@@ -36,7 +36,7 @@ jobs:
           mvn -B javadoc:javadoc
         shell: cmd
 
-      # Étape 5 : Extraire la version du pom.xml
+      # Étape 5 : Extraire la version du pom.xml et construire JAR_NAME
       - name: Extract version from pom.xml
         id: get_version
         run: |
@@ -44,11 +44,12 @@ jobs:
             set "VERSION=%%i"
             set "EXE_VERSION=%%i"
           )
-          set "VERSION=%VERSION: =%"
           set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
+          set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
           echo VERSION=%VERSION% >> %GITHUB_ENV%
           echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
-          echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%
+          echo JAR_NAME=%JAR_NAME% >> %GITHUB_ENV%
+          echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%
         shell: cmd
 
       # Étape 6 : Créer le runtime avec jlink
@@ -60,7 +61,7 @@ jobs:
       # Étape 7 : Générer l'exécutable avec jpackage
       - name: Generate executable with jpackage
         run: |
-          jpackage --input target --main-jar "InvoiceGenerator-${{ env.VERSION }}.jar" --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          jpackage --input target --main-jar "%JAR_NAME%" --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version %EXE_VERSION% --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
         shell: cmd
 
       # Étape 8 : Publier dans une release
