@@ -46,10 +46,12 @@ jobs:
           )
           set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
           set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
+          set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
           echo VERSION=%VERSION% >> %GITHUB_ENV%
           echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
           echo JAR_NAME=%JAR_NAME% >> %GITHUB_ENV%
-          echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%
+          echo EXE_NAME=%EXE_NAME% >> %GITHUB_ENV%
+          echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%, EXE_NAME=%EXE_NAME%
         shell: cmd
 
       # Étape 6 : Créer le runtime avec jlink
