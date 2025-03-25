@@ -45,7 +45,10 @@ jobs:
       - name: Extract version from pom.xml
         id: get_version
         run: |
-          for /f %%i in ('mvn -q -Dexec.executable=echo -Dexec.args="${project.version}" --non-recursive exec:exec') do set "VERSION=%%i"
+          for /f "tokens=2 delims=<version></version>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*-SNAPSHOT</version>" pom.xml') do (
+            set "VERSION=%%i"
+            set "EXE_VERSION=%%i"
+          )
           set "EXE_VERSION=%VERSION:-SNAPSHOT=%"
           set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
           set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
