@@ -44,6 +44,7 @@ jobs:
             set "VERSION=%%i"
             set "EXE_VERSION=%%i"
           )
+          set "VERSION=%VERSION: =%"
           set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
           echo VERSION=%VERSION% >> %GITHUB_ENV%
           echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
