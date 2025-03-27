@@ -3,56 +3,54 @@ name: Build and Analyze Invoice Generator
 on:
   push:
     branches:
-      - dev  # Analyse sur dev pour tes commits
+      - dev
     tags:
-      - 'v*.*.*'  # Release sur tags
-  workflow_dispatch:  # Manuel si besoin
+      - 'v*.*.*'
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: windows-latest
-
+  sonarcloud:
+    runs-on: ubuntu-latest
     steps:
-      # Étape 1 : Checkout du code
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Pour SonarCloud, récupère tout l’historique
+          fetch-depth: 0  # Pour SonarCloud
 
-      # Étape 2 : Configurer JDK 22
       - name: Set up JDK 22
         uses: actions/setup-java@v3
         with:
           java-version: '22'
           distribution: 'temurin'
 
-      # Étape 3 : Télécharger JavaFX SDK
+      - name: Build with Maven (pour SonarCloud)
+        run: mvn -B clean verify sonar:sonar -Dsonar.projectKey=danyfrock_invoice-generator -Dsonar.organization=danyfrock -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+
+  build-and-release:
+    runs-on: windows-latest
+    needs: sonarcloud  # Attend que SonarCloud finisse
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 22
+        uses: actions/setup-java@v3
+        with:
+          java-version: '22'
+          distribution: 'temurin'
+
       - name: Download JavaFX SDK
         run: |
           curl -L -o javafx-sdk.zip https://download2.gluonhq.com/openjfx/23.0.2/openjfx-23.0.2_windows-x64_bin-sdk.zip
           unzip javafx-sdk.zip -d C:\JavaFX
         shell: cmd
 
-      # Étape 4 : Construire avec Maven
       - name: Build with Maven
-        run: |
-          mvn -B clean package
+        run: mvn -B clean package
         shell: cmd
 
-      # Étape 5 : Analyse SonarCloud (avant release)
-      - name: Run SonarCloud Analysis
-        if: github.event_name != 'workflow_dispatch'  # Sauf si manuel
-        uses: sonarsource/sonarcloud-github-action@v2
-        with:
-          organization: danyfrock  # Ton organisation SonarCloud
-          projectKey: danyfrock_invoice-generator  # Ta clé de projet
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Étape 6 : Extraire la version (seulement pour tags)
       - name: Extract version from pom.xml
-        if: startsWith(github.ref, 'refs/tags/v')  # Uniquement sur tags
+        if: startsWith(github.ref, 'refs/tags/v')
         id: get_version
         run: |
           for /f "tokens=2 delims=<version></version>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*-SNAPSHOT</version>" pom.xml') do (
@@ -68,21 +66,18 @@ jobs:
           echo EXE_NAME=%EXE_NAME% >> %GITHUB_ENV%
         shell: cmd
 
-      # Étape 7 : Créer runtime avec jlink (seulement pour tags)
       - name: Create runtime with jlink
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           jlink --module-path "C:\Program Files\Eclipse Adoptium\jdk-22.0.2+9\jmods;C:\JavaFX\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --output target\runtime
         shell: cmd
 
-      # Étape 8 : Générer .exe avec jpackage (seulement pour tags)
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
         shell: cmd
 
-      # Étape 9 : Publier la release (seulement pour tags)
       - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
