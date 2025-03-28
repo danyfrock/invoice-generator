@@ -19,7 +19,7 @@ public class FileUtil {
      * @return Le chemin complet du fichier avec le suffixe ajouté.
      */
     public static String addSuffixToFileName(String filePath, String suffix) {
-        logger.info(String.format("Ajout du suffixe '%s' au fichier : %s", suffix, filePath));
+        logger.log(Level.INFO, "Ajout du suffixe '{0}' au fichier : {1}", new Object[]{suffix, filePath});
         File file = new File(filePath);
         String name = file.getName();
         int lastDot = name.lastIndexOf('.');
@@ -44,7 +44,7 @@ public class FileUtil {
      * @return Le chemin complet du fichier.
      */
     public static String concat(String path, String fileName) {
-        logger.info(String.format("Concaténation du chemin : %s avec le nom de fichier : %s", path, fileName));
+        logger.log(Level.INFO, "Concaténation du chemin : {0} avec le nom de fichier : {1}", new Object[]{path, fileName});
         Path fullPath = Paths.get(path, fileName);
         String result = fullPath.toString();
         logger.log(Level.INFO, "Chemin complet du fichier : {0}", result);

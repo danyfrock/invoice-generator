@@ -1,4 +1,4 @@
-package com.invoicegenerator.modeles.NavetteDTOs;
+package com.invoicegenerator.modeles.NavetteDtos;
 
 /**
  * Modèle pour les détails des événements de facturation.

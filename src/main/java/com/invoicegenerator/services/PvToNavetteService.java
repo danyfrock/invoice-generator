@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.invoicegenerator.modeles.NavetteDTOs.BillingDetailsModel;
-import com.invoicegenerator.modeles.NavetteDTOs.EventDetailsModel;
-import com.invoicegenerator.modeles.NavetteDTOs.ItemDetailsModel;
+import com.invoicegenerator.modeles.NavetteDtos.BillingDetailsModel;
+import com.invoicegenerator.modeles.NavetteDtos.EventDetailsModel;
+import com.invoicegenerator.modeles.NavetteDtos.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.UoCommandLineModel;
-import com.invoicegenerator.modeles.NavetteDTOs.BillingShuttleModel;
+import com.invoicegenerator.modeles.NavetteDtos.BillingShuttleModel;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 
 /**

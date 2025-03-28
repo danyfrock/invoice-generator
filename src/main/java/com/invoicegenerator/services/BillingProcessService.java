@@ -51,7 +51,7 @@ public class BillingProcessService {
                 logger.log(Level.INFO, "Modèle BillingProcessModel enregistré avec succès dans le fichier : {0}", billingFileName);
             }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Erreur lors de l'enregistrement du modèle : {0}", e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l''enregistrement du modèle : {0}", e.getMessage());
         }
     }
 
@@ -68,7 +68,7 @@ public class BillingProcessService {
         File file = new File(billingFileName);
 
         if (!file.exists()) {
-            logger.log(Level.WARNING, "Le fichier du modèle n'existe pas : {0}", billingFileName);
+            logger.log(Level.WARNING, "Le fichier du modèle n''existe pas : {0}", billingFileName);
             return new BillingProcessModel();
         }
 

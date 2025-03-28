@@ -40,7 +40,7 @@ public class ParametresService {
             gson.toJson(parametres, writer);
             logger.log(Level.INFO, "Paramètres enregistrés avec succès dans le fichier : {0}", parametresFileName);
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Erreur lors de l'enregistrement des paramètres : {0}", e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l''enregistrement des paramètres : {0}", e.getMessage());
         }
     }
 
@@ -53,7 +53,7 @@ public class ParametresService {
         File file = new File(parametresFileName);
 
         if (!file.exists()) {
-            logger.log(Level.WARNING, "Le fichier de paramètres n'existe pas : {0}", parametresFileName);
+            logger.log(Level.WARNING, "Le fichier de paramètres n''existe pas : {0}", parametresFileName);
             return new ParametersModel(); // Retourne un objet vide si le fichier n'existe pas
         }
 

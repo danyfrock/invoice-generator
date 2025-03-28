@@ -1,4 +1,4 @@
-package com.invoicegenerator.modeles.NavetteDTOs;
+package com.invoicegenerator.modeles.NavetteDtos;
 
 import java.time.LocalDate;
 
