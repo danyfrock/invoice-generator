@@ -23,7 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            logger.log(Level.INFO, "Démarrage de l'application depuis : {0}", CURRENT_DIR);
+            logger.log(Level.INFO, "Démarrage de l''application depuis : {0}", CURRENT_DIR);
             FileSelectorView fileSelectorView = new FileSelectorView();
             fileSelectorView.start(primaryStage);
             logger.info("FileSelectorView initialisé avec succès");

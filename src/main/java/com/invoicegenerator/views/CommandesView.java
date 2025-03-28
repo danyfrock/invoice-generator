@@ -167,9 +167,9 @@ public class CommandesView extends Application {
             private final CheckBox checkBox = createCheckBox();
 
             private CheckBox createCheckBox() {
-                CheckBox checkBox = new CheckBox();
-                checkBox.setDisable(true);
-                return checkBox;
+                CheckBox check = new CheckBox();
+                check.setDisable(true);
+                return check;
             }
 
             @Override
