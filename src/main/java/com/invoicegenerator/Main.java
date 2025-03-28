@@ -4,6 +4,8 @@ import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.views.FileSelectorView;
 import javafx.application.Application;
 import javafx.stage.Stage;
+
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -21,12 +23,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            logger.info("Démarrage de l'application depuis : " + CURRENT_DIR);
+            logger.log(Level.INFO, "Démarrage de l'application depuis : ", CURRENT_DIR);
             FileSelectorView fileSelectorView = new FileSelectorView();
             fileSelectorView.start(primaryStage);
             logger.info("FileSelectorView initialisé avec succès");
         } catch (Exception e) {
-            logger.severe("Erreur au démarrage de FileSelectorView : " + e.getMessage());
+            logger.log(Level.SEVERE, "Erreur au démarrage de FileSelectorView : ", e.getMessage());
         }
     }
 
@@ -43,7 +45,7 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
         if (args.length > 0) {
-            logger.info("Arguments reçus : " + String.join(", ", args));
+            logger.log(Level.INFO, "Arguments reçus : ", String.join(", ", args));
         } else {
             logger.info("Aucun argument fourni au démarrage");
         }

@@ -185,7 +185,7 @@ public class ParametresView extends Application {
         } catch (NumberFormatException e) {
             logger.log(Level.SEVERE, "Erreur lors de la conversion des années min/max en nombres : {0}", e.getMessage());
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Erreur lors de l'enregistrement des paramètres : {0}", e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l''enregistrement des paramètres : {0}", e.getMessage());
         }
     }
 

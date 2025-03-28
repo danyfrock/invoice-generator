@@ -189,7 +189,7 @@ public class FileSelectorView extends Application {
     }
 
     private void chargerUneProgression(Stage primaryStage, File file, boolean avecParametres) {
-        logger.log(Level.INFO, "Chargement d'une sauvegarde depuis : {0}", file.getAbsolutePath());
+        logger.log(Level.INFO, "Chargement d''une sauvegarde depuis : {0}", file.getAbsolutePath());
         this.source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
         billingService = new BillingProcessService(file.getAbsolutePath());
         BillingProcessModel loadedModel = billingService.chargerBillingProcess();

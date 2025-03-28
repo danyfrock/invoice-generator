@@ -22,7 +22,7 @@ public class PvEntityPvModel {
      * Initialise le nom et le chemin du fichier à des chaînes vides et crée une nouvelle instance de CommandModel.
      */
     public PvEntityPvModel() {
-        logger.log(Level.INFO, "Création d'une nouvelle instance de PvEntityPvModel avec valeurs par défaut : fileName={0}, filePath={1}",
+        logger.log(Level.INFO, "Création d''une nouvelle instance de PvEntityPvModel avec valeurs par défaut : fileName={0}, filePath={1}",
                 new Object[]{fileName, filePath});
     }
 

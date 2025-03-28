@@ -2,14 +2,15 @@ package com.invoicegenerator.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.invoicegenerator.modeles.NavetteDtos.BillingDetailsModel;
-import com.invoicegenerator.modeles.NavetteDtos.EventDetailsModel;
-import com.invoicegenerator.modeles.NavetteDtos.ItemDetailsModel;
+import com.invoicegenerator.modeles.navetteDtos.BillingDetailsModel;
+import com.invoicegenerator.modeles.navetteDtos.EventDetailsModel;
+import com.invoicegenerator.modeles.navetteDtos.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.UoCommandLineModel;
-import com.invoicegenerator.modeles.NavetteDtos.BillingShuttleModel;
+import com.invoicegenerator.modeles.navetteDtos.BillingShuttleModel;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 
 /**
@@ -23,13 +24,13 @@ public class PvToNavetteService {
 	 * @param entites Les entités PvEntityPvModel à convertir.
 	 * @return Un tableau de BillingShuttleModel.
 	 */
-	public BillingShuttleModel[] Convertir(PvEntityPvModel[] entites) {
+	public BillingShuttleModel[] convertir(PvEntityPvModel[] entites) {
 		logger.info("Début de la conversion des entités Pv en modèles de navette de facturation");
 		List<BillingShuttleModel> navettesList = new ArrayList<>();
 		int i = 0;
 		for (PvEntityPvModel entite : entites) {
 			i++;
-			logger.info("Traitement de l'entité Pv numéro : " + i);
+			logger.log(Level.INFO, "Traitement de l'entité Pv numéro : {0}", i);
 			for (UoCommandLineModel ligne : entite.getCommand().getCommandLines()) {
 				BillingShuttleModel navette = new BillingShuttleModel()
 						.setItemDetails(new ItemDetailsModel()

@@ -1,7 +1,7 @@
 package com.invoicegenerator.utils.backend;
 
 import com.invoicegenerator.modeles.ActionResult;
-import com.invoicegenerator.viewModels.NavetteFacturationViewModel;
+import com.invoicegenerator.viewmodels.NavetteFacturationViewModel;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -19,6 +19,8 @@ import java.util.logging.Logger;
 public class ExcelNavetteWritterUtil {
     private static final Logger logger = LoggerFactory.getLogger(ExcelNavetteWritterUtil.class.getName());
     private static final int HEADER_ROW_INDEX = 3; // Ligne 4 en Excel (index 3 en Java)
+
+    private  ExcelNavetteWritterUtil() { throw new IllegalStateException("Utility class");}
 
     /**
      * Écrit un nouveau modèle de fichier Excel à l'emplacement spécifié.

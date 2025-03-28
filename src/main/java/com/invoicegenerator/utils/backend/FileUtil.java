@@ -3,6 +3,7 @@ package com.invoicegenerator.utils.backend;
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.MessageFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +13,8 @@ import java.util.logging.Logger;
 public class FileUtil {
     private static final Logger logger = LoggerFactory.getLogger(FileUtil.class.getName());
 
+    private  FileUtil() { throw new IllegalStateException("Utility class");}
+
     /**
      * Ajoute un suffixe au nom de fichier avant l'extension.
      * @param filePath Le chemin du fichier.
@@ -19,14 +22,16 @@ public class FileUtil {
      * @return Le chemin complet du fichier avec le suffixe ajouté.
      */
     public static String addSuffixToFileName(String filePath, String suffix) {
-        logger.log(Level.INFO, "Ajout du suffixe '{0}' au fichier : {1}", new Object[]{suffix, filePath});
+        String message = MessageFormat.format("Ajout du suffixe '{0}' au fichier : {1}", suffix, filePath);
+        logger.info(message);
+
         File file = new File(filePath);
         String name = file.getName();
         int lastDot = name.lastIndexOf('.');
 
         if (lastDot == -1) {
             String newPath = new File(file.getParent(), name + suffix).getAbsolutePath();
-            logger.info("Nouveau chemin de fichier : " + newPath);
+            logger.log(Level.INFO, "Nouveau chemin de fichier : {0}", newPath);
             return newPath;
         }
 

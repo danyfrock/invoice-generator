@@ -16,12 +16,12 @@ import java.util.logging.Level;
 public class ParametersModel {
     private static final Logger logger = LoggerFactory.getLogger(ParametersModel.class.getName());
 
-    private final String USER_HOME = "user.home";
+    private static final String USER_HOME = "user.home";
     private String outputFolder = Paths.get(System.getProperty(USER_HOME), "Desktop").toString();
     private List<String> activityCodes = Arrays.asList("30001", "30003", "30005", "30007", "30009");
     private int minYear = 2024;
     private int maxYear = 2029;
-    private final String OUTPUTFILE_DEFAULT_NAME = "WST-CO_.xlsm";
+    private final static String OUTPUTFILE_DEFAULT_NAME = "WST-CO_.xlsm";
     private final String parametersFileName = Paths.get(System.getProperty(USER_HOME), "") + "\\parametres.json";
     private String dernierEmplacementConnuEntrees = Paths.get(System.getProperty(USER_HOME), "") + "\\";
     private String dernierEmplacementConnuProgression = Paths.get(System.getProperty(USER_HOME), "") + "\\";
@@ -31,7 +31,7 @@ public class ParametersModel {
      * Constructeur par défaut pour ParametersModel.
      */
     public ParametersModel() {
-        logger.log(Level.INFO, "Création d'une nouvelle instance de ParametersModel avec valeurs par défaut");
+        logger.log(Level.INFO, "Création d''une nouvelle instance de ParametersModel avec valeurs par défaut");
     }
 
     /**
@@ -40,7 +40,7 @@ public class ParametersModel {
      * @return L'emplacement du dossier de sortie.
      */
     public String getOutputFolder() {
-        logger.log(Level.FINE, "Récupération de l'emplacement du dossier de sortie : {0}", outputFolder);
+        logger.log(Level.FINE, "Récupération de l''emplacement du dossier de sortie : {0}", outputFolder);
         return outputFolder;
     }
 
@@ -61,7 +61,7 @@ public class ParametersModel {
      */
     public List<String> getActivityCodes() {
         List<String> result = (activityCodes == null) ? Collections.emptyList() : new ArrayList<>(activityCodes);
-        logger.log(Level.FINE, "Récupération de la liste des codes d'activité, taille : {0}", result.size());
+        logger.log(Level.FINE, "Récupération de la liste des codes d''activité, taille : {0}", result.size());
         return result;
     }
 
@@ -72,7 +72,7 @@ public class ParametersModel {
      */
     public void setActivityCodes(List<String> codes) {
         this.activityCodes = (codes == null) ? new ArrayList<>() : new ArrayList<>(codes);
-        logger.log(Level.FINE, "Liste des codes d'activité définie, taille : {0}", this.activityCodes.size());
+        logger.log(Level.FINE, "Liste des codes d''activité définie, taille : {0}", this.activityCodes.size());
     }
 
     /**
@@ -81,7 +81,7 @@ public class ParametersModel {
      * @return L'année minimum.
      */
     public int getMinYear() {
-        logger.log(Level.FINE, "Récupération de l'année minimum : {0}", minYear);
+        logger.log(Level.FINE, "Récupération de l''année minimum : {0}", minYear);
         return minYear;
     }
 
@@ -101,7 +101,7 @@ public class ParametersModel {
      * @return L'année maximale.
      */
     public int getMaxYear() {
-        logger.log(Level.FINE, "Récupération de l'année maximale : {0}", maxYear);
+        logger.log(Level.FINE, "Récupération de l''année maximale : {0}", maxYear);
         return maxYear;
     }
 
@@ -120,7 +120,7 @@ public class ParametersModel {
      *
      * @return Le nom par défaut du fichier de sortie.
      */
-    public String getOUTPUTFILE_DEFAULT_NAME() {
+    public String getoutputfileDefaultName() {
         logger.log(Level.FINE, "Récupération du nom par défaut du fichier de sortie : {0}", OUTPUTFILE_DEFAULT_NAME);
         return OUTPUTFILE_DEFAULT_NAME;
     }

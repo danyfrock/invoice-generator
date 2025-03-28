@@ -28,7 +28,7 @@ public class CommandModel {
      * Constructeur par défaut pour CommandModel.
      */
     public CommandModel() {
-        logger.log(Level.INFO, "Création d'une nouvelle instance de CommandModel avec valeurs par défaut");
+        logger.log(Level.INFO, "Création d''une nouvelle instance de CommandModel avec valeurs par défaut");
     }
 
     /**
@@ -97,7 +97,7 @@ public class CommandModel {
      * @return Le code de l'activité.
      */
     public String getActivityCode() {
-        logger.log(Level.FINE, "Récupération du code de l'activité : {0}", activityCode);
+        logger.log(Level.FINE, "Récupération du code de l''activité : {0}", activityCode);
         return activityCode;
     }
 
@@ -108,7 +108,7 @@ public class CommandModel {
      */
     public void setActivityCode(String activityCode) {
         this.activityCode = activityCode;
-        logger.log(Level.FINE, "Code de l'activité défini : {0}", activityCode);
+        logger.log(Level.FINE, "Code de l''activité défini : {0}", activityCode);
     }
 
     /**
@@ -172,7 +172,7 @@ public class CommandModel {
      * @return L'objet de la prestation.
      */
     public String getBenefitPurposeCellB11() {
-        logger.log(Level.FINE, "Récupération de l'objet de la prestation : {0}", objetDeLaPrestationCellB11);
+        logger.log(Level.FINE, "Récupération de l''objet de la prestation : {0}", objetDeLaPrestationCellB11);
         return objetDeLaPrestationCellB11;
     }
 

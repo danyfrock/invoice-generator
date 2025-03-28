@@ -1,8 +1,11 @@
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\Main.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\ActionResult.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\BillingProcessModel.java
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\BillingShuttleModel.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\CommandModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\navetteDtos\BillingDetailsModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\navetteDtos\BillingShuttleModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\navetteDtos\EventDetailsModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\navetteDtos\ItemDetailsModel.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\package-info.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\ParametersModel.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\modeles\PvEntityPvModel.java
@@ -24,10 +27,10 @@ C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\inv
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\utils\ihm\package-info.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\utils\ihm\StyleConstants.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\utils\package-info.java
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewModels\CommandesViewModel.java
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewModels\CommandeViewModel.java
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewModels\NavetteFacturationViewModel.java
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewModels\package-info.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewmodels\CommandesViewModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewmodels\CommandeViewModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewmodels\NavetteFacturationViewModel.java
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\viewmodels\package-info.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\views\CommandesView.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\views\CommandeView.java
 C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\com\invoicegenerator\views\FileSelectorView.java

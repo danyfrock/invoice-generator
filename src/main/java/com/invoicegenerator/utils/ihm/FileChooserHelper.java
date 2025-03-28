@@ -16,6 +16,9 @@ import java.util.logging.Logger;
 public class FileChooserHelper {
     private static final Logger logger = LoggerFactory.getLogger(FileChooserHelper.class.getName());
 
+
+    private  FileChooserHelper() { throw new IllegalStateException("Utility class");}
+
     /**
      * Affiche un dialogue pour sauvegarder un fichier JSON.
      *

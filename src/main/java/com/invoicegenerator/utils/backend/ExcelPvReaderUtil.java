@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,13 +19,16 @@ import java.util.logging.Level;
  */
 public class ExcelPvReaderUtil {
     private static final Logger logger = LoggerFactory.getLogger(ExcelPvReaderUtil.class.getName());
+    private  static  final int START_ROW = 3;
+
+    private  ExcelPvReaderUtil() { throw new IllegalStateException("Utility class");}
 
     /**
      * Obtient l'index de la ligne de départ pour la lecture des données.
      * @return L'index de la ligne de départ.
      */
     public static int getStartRow() {
-        return 3;
+        return START_ROW;
     }
 
     /**
@@ -201,12 +205,7 @@ public class ExcelPvReaderUtil {
                         logger.log(Level.FINE, "Chaîne vide dans la cellule, retour de 0.0");
                         return 0.0;
                     }
-                    try {
-                        return Double.parseDouble(value);
-                    } catch (NumberFormatException e) {
-                        logger.log(Level.WARNING, "Impossible de convertir la chaîne '{0}' en nombre, retour de 0.0", value);
-                        return 0.0;
-                    }
+                    return tryParseDouble(value);
                 case BOOLEAN:
                     return cell.getBooleanCellValue() ? 1.0 : 0.0;
                 case FORMULA:
@@ -226,6 +225,17 @@ public class ExcelPvReaderUtil {
             }
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Erreur lors de la lecture de la valeur numérique de la cellule : {0}", e.getMessage());
+            return 0.0;
+        }
+    }
+
+    private static double tryParseDouble(String value) {
+        try {
+            return Double.parseDouble(value);
+        } catch (NumberFormatException e) {
+            String message =
+                    MessageFormat.format("Impossible de convertir la chaîne ''{0}'' en nombre, retour de 0.0", value);
+            logger.warning(message);
             return 0.0;
         }
     }

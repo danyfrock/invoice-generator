@@ -1,6 +1,9 @@
 package com.invoicegenerator.utils.ihm;
 
 public class StyleConstants {
+
+    private  StyleConstants() { throw new IllegalStateException("Utility class");}
+
     // Couleurs en hexadécimal
     public static final String COLOR_BLEU_DOUX = "#007B7F";
     public static final String COLOR_GRIS_ANTHRACITE = "#2E2E2E";

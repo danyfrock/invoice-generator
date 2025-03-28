@@ -3,8 +3,8 @@ package com.invoicegenerator.views;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
-import com.invoicegenerator.viewModels.CommandeViewModel;
-import com.invoicegenerator.viewModels.CommandesViewModel;
+import com.invoicegenerator.viewmodels.CommandeViewModel;
+import com.invoicegenerator.viewmodels.CommandesViewModel;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -44,7 +44,7 @@ public class CommandesView extends Application {
 
         TableColumn<CommandeViewModel, Boolean> leadColumn = new TableColumn<>("Lead");
         leadColumn.setCellValueFactory(cellData -> cellData.getValue().estLeaderProperty());
-        leadColumn.setCellFactory(col -> getTableCellCheclBox());
+        leadColumn.setCellFactory(col -> getTableCellCheckBox());
 
         TableColumn<CommandeViewModel, String> fileNameColumn = new TableColumn<>("File Name");
         fileNameColumn.setCellValueFactory(cellData -> cellData.getValue().nomFichierProperty());
@@ -54,7 +54,7 @@ public class CommandesView extends Application {
 
         TableColumn<CommandeViewModel, Boolean> verifiedColumn = new TableColumn<>("Vérifié");
         verifiedColumn.setCellValueFactory(cellData -> cellData.getValue().estVerifieProperty());
-        verifiedColumn.setCellFactory(col -> getTableCellCheclBox());
+        verifiedColumn.setCellFactory(col -> getTableCellCheckBox());
 
         TableColumn<CommandeViewModel, String> mustFillColumn = new TableColumn<>("À remplir");
         mustFillColumn.setCellValueFactory(cellData -> cellData.getValue().doitRemplirProperty());
@@ -72,7 +72,7 @@ public class CommandesView extends Application {
         previewButton.setOnAction(e -> goNext(primaryStage));
 
         complementField.textProperty().bindBidirectional(source.complementProperty());
-        complementField.setTextFormatter(new TextFormatter<>(CommandesView::IsWord));
+        complementField.setTextFormatter(new TextFormatter<>(CommandesView::isWord));
 
         fichierSortieLabel.textProperty().bind(source.outputFileNameProperty());
 
@@ -122,7 +122,7 @@ public class CommandesView extends Application {
         logger.log(Level.INFO, "Interface CommandesView affichée avec succès");
     }
 
-    private static TextFormatter.Change IsWord(TextFormatter.Change change) {
+    private static TextFormatter.Change isWord(TextFormatter.Change change) {
         String newText = change.getControlNewText();
         return newText.matches("\\w*") ? change : null;
     }
@@ -162,12 +162,14 @@ public class CommandesView extends Application {
         };
     }
 
-    private static TableCell<CommandeViewModel, Boolean> getTableCellCheclBox() {
+    private static TableCell<CommandeViewModel, Boolean> getTableCellCheckBox() {
         return new TableCell<>() {
-            private final CheckBox checkBox = new CheckBox();
+            private final CheckBox checkBox = createCheckBox();
 
-            {
+            private CheckBox createCheckBox() {
+                CheckBox checkBox = new CheckBox();
                 checkBox.setDisable(true);
+                return checkBox;
             }
 
             @Override

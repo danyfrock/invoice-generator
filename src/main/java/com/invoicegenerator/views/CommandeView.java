@@ -1,7 +1,7 @@
 package com.invoicegenerator.views;
 
 import com.invoicegenerator.utils.backend.LoggerFactory;
-import com.invoicegenerator.viewModels.CommandeViewModel;
+import com.invoicegenerator.viewmodels.CommandeViewModel;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -26,7 +26,7 @@ import java.util.logging.Level;
  * Cette classe encapsule les contrôles UI et la logique pour afficher et modifier les données d'une commande.
  */
 public class CommandeView extends VBox {
-    private static final Logger logger = LoggerFactory.getLogger(CommandeViewModel.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(CommandeView.class.getName());
 
     private final DatePicker dateDebutPicker = new DatePicker();
     private final DatePicker dateFinPicker = new DatePicker();
@@ -158,14 +158,14 @@ public class CommandeView extends VBox {
     /**
      * Vide la vue en supprimant les bindings et en réinitialisant les champs.
      */
-    private void Clear() {
+    private void clear() {
         logger.log(Level.FINE, "Suppression des bindings et réinitialisation des champs");
 
         if (this.source != null) {
             dateDebutPicker.valueProperty().unbindBidirectional(this.source.getDateDebutProperty());
             dateFinPicker.valueProperty().unbindBidirectional(this.source.getDateFinProrperty());
             codeContratField.textProperty().unbindBidirectional(this.source.codeContratProperty());
-            codeActiviteComboBox.valueProperty().unbindBidirectional(this.source.CodeActiviteProperty());
+            codeActiviteComboBox.valueProperty().unbindBidirectional(this.source.codeActiviteProperty());
             nomFichierLabel.textProperty().unbind();
             pathFichierLabel.textProperty().unbind();
             tableView.itemsProperty().unbind();
@@ -187,14 +187,14 @@ public class CommandeView extends VBox {
     public void setViewModel(CommandeViewModel viewModel) {
         logger.log(Level.FINE, "Association d'un nouveau ViewModel à la vue");
 
-        this.Clear(); // Nettoie les anciens bindings
+        this.clear(); // Nettoie les anciens bindings
         this.source = viewModel;
 
         // Bindings bidirectionnels pour les champs modifiables
         dateDebutPicker.valueProperty().bindBidirectional(this.source.getDateDebutProperty());
         dateFinPicker.valueProperty().bindBidirectional(this.source.getDateFinProrperty());
         codeContratField.textProperty().bindBidirectional(this.source.codeContratProperty());
-        codeActiviteComboBox.valueProperty().bindBidirectional(this.source.CodeActiviteProperty());
+        codeActiviteComboBox.valueProperty().bindBidirectional(this.source.codeActiviteProperty());
 
         // Bindings unidirectionnels pour les champs en lecture seule
         nomFichierLabel.textProperty().bind(this.source.nomFichierProperty());

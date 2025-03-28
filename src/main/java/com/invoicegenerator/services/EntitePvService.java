@@ -18,11 +18,11 @@ public class EntitePvService {
 
     /**
      * Remplit un modèle PvEntityPv à partir d'un chemin de fichier.
+     *
      * @param path Le chemin du fichier.
-     * @param pv Le modèle PvEntityPv à remplir.
-     * @return Le modèle PvEntityPv rempli.
+     * @param pv   Le modèle PvEntityPv à remplir.
      */
-    public PvEntityPvModel FillPvFrom(String path, PvEntityPvModel pv) {
+    public void fillPvFrom(String path, PvEntityPvModel pv) {
         logger.log(Level.INFO, "Début de FillPvFrom avec le chemin : {0}", path);
         CommandModel commande = pv.getCommand();
         pv.setFilePath(path);
@@ -37,6 +37,5 @@ public class EntitePvService {
         }
 
         logger.info("Fin de FillPvFrom avec succès");
-        return pv;
     }
 }

@@ -24,6 +24,9 @@ public class LoggerFactory {
     private static final String ERROR_LOG_FILE = Paths.get(System.getProperty("user.home"), "invoice_generator_error_log.txt").toString();
     private static FileHandler sharedFileHandler; // Handler unique partagé
 
+
+    private  LoggerFactory() { throw new IllegalStateException("Utility class");}
+
     static {
         try {
             writeAdHocLog("Start LoggerFactory", false);
@@ -156,7 +159,7 @@ public class LoggerFactory {
             writer.write("log de secours survenue à " + java.time.LocalDateTime.now() + " : " + message);
             writer.newLine();
         } catch (IOException e) {
-            System.err.println("Erreur lors de l'écriture du log de secours : " + e.getMessage());
+            writeAdHocLog("Erreur lors de l'écriture du log de secours : " + e.getMessage());
         }
     }
 

@@ -10,11 +10,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
-import com.invoicegenerator.modeles.NavetteDtos.BillingDetailsModel;
-import com.invoicegenerator.modeles.NavetteDtos.EventDetailsModel;
-import com.invoicegenerator.modeles.NavetteDtos.ItemDetailsModel;
+import com.invoicegenerator.modeles.navetteDtos.BillingDetailsModel;
+import com.invoicegenerator.modeles.navetteDtos.EventDetailsModel;
+import com.invoicegenerator.modeles.navetteDtos.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
-import com.invoicegenerator.modeles.NavetteDtos.BillingShuttleModel;
+import com.invoicegenerator.modeles.navetteDtos.BillingShuttleModel;
 import com.invoicegenerator.modeles.ActionResult;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.PvToNavetteService;
@@ -22,7 +22,7 @@ import com.invoicegenerator.utils.backend.ExcelNavetteWritterUtil;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
 import com.invoicegenerator.utils.ihm.StyleConstants;
-import com.invoicegenerator.viewModels.NavetteFacturationViewModel;
+import com.invoicegenerator.viewmodels.NavetteFacturationViewModel;
 import javafx.application.Application;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -132,10 +132,6 @@ public class NavettesFacturationView extends Application {
             TableColumn<NavetteFacturationViewModel, String> noteEvenementColumn = new TableColumn<>("Note de l'Événement");
             noteEvenementColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNoteEvenement()));
 
-            // Alternative si la quantité peux être décimale.
-            ////TableColumn<NavetteFacturationViewModel, Double> quantiteColumn = new TableColumn<>("Quantité");
-            ////quantiteColumn.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getQuantite()).asObject());
-
             // Alternative si la quantité ne peux être que entière.
             TableColumn<NavetteFacturationViewModel, Integer> quantiteColumn = new TableColumn<>("Quantité");
             quantiteColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getQuantiteAsInt()).asObject());
@@ -196,7 +192,7 @@ public class NavettesFacturationView extends Application {
 
             logger.log(Level.INFO, "Interface NavettesFacturationView affichée avec succès");
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Erreur lors du démarrage de l'interface : {0}", e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors du démarrage de l''interface : {0}", e.getMessage());
             Alert alert = new Alert(Alert.AlertType.ERROR, "Erreur lors de l'initialisation : " + e.getMessage());
             alert.showAndWait();
         }
@@ -234,10 +230,8 @@ public class NavettesFacturationView extends Application {
                 resultLabel.setText(resultant.get().message());
 
                 if(resultant.get().success()){
-                    ////resultLabel.setTextFill(Color.web(StyleConstants.COLOR_VERT_CLAIR));
                     resultLabel.setStyle(StyleConstants.SUCCESS_FRONT_STYLE);
                 } else {
-                    ////resultLabel.setTextFill(Color.web(StyleConstants.COLOR_ROUGE_FONCE));
                     resultLabel.setStyle(StyleConstants.ERROR_FRONT_STYLE);
                 }
 
@@ -246,7 +240,7 @@ public class NavettesFacturationView extends Application {
 
             new Thread(loadingTask).start();
         } catch (Exception ex) {
-            logger.log(Level.SEVERE, "Erreur lors de l'écriture des navettes : {0}", ex.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l''écriture des navettes : {0}", ex.getMessage());
             resultLabel.setText("Erreur lors de l'écriture : " + ex.getMessage());
         }
     }
@@ -283,7 +277,7 @@ public class NavettesFacturationView extends Application {
      * @return Un flux de NavetteFacturationViewModel
      */
     private static Stream<NavetteFacturationViewModel> getNavetteFacturationViewModelStream(BillingShuttleModel[] source) {
-        logger.log(Level.FINE, "Création d'un flux de NavetteFacturationViewModel à partir de {0} éléments", source.length);
+        logger.log(Level.FINE, "Création d''un flux de NavetteFacturationViewModel à partir de {0} éléments", source.length);
         return Arrays.stream(source).map(NavetteFacturationViewModel::new);
     }
 
@@ -299,7 +293,7 @@ public class NavettesFacturationView extends Application {
                 logger.log(Level.WARNING, "sourceFacturation ou ses entités Pv sont null");
                 return new BillingShuttleModel[0];
             }
-            return new PvToNavetteService().Convertir(sourceFacturation.getPvEntities().toArray(new PvEntityPvModel[0]));
+            return new PvToNavetteService().convertir(sourceFacturation.getPvEntities().toArray(new PvEntityPvModel[0]));
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Erreur lors de la récupération des navettes : {0}", e.getMessage());
             return new BillingShuttleModel[0]; // Retourne un tableau vide en cas d'erreur
@@ -312,86 +306,21 @@ public class NavettesFacturationView extends Application {
      * @param file Le fichier à ouvrir
      */
     private void openFile(File file) {
-        logger.log(Level.FINE, "Tentative d'ouverture du fichier : {0}", file.getAbsolutePath());
+        logger.log(Level.FINE, "Tentative d''ouverture du fichier : {0}", file.getAbsolutePath());
         try {
             if (file.exists()) {
                 Desktop.getDesktop().open(file);
                 logger.log(Level.FINE, "Fichier ouvert avec succès");
             } else {
-                logger.log(Level.WARNING, "Le fichier n'existe pas : {0}", file.getAbsolutePath());
+                logger.log(Level.WARNING, "Le fichier n''existe pas : {0}", file.getAbsolutePath());
                 resultLabel.setText("Le fichier n'existe pas.");
             }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Erreur lors de l'ouverture du fichier : {0}", e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l''ouverture du fichier : {0}", e.getMessage());
             resultLabel.setText("Erreur lors de l'ouverture du fichier : " + e.getMessage());
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Erreur inattendue lors de l'ouverture du fichier : {0}", e.getMessage());
+            logger.log(Level.SEVERE, "Erreur inattendue lors de l''ouverture du fichier : {0}", e.getMessage());
             resultLabel.setText("Erreur inattendue : " + e.getMessage());
-        }
-    }
-
-    /**
-     * Ouvre un dossier avec l'explorateur de fichiers du système.
-     *
-     * @param folder Le dossier à ouvrir
-     */
-    private void openFolder(File folder) {
-        logger.log(Level.FINE, "Tentative d'ouverture du dossier : {0}", folder.getAbsolutePath());
-        try {
-                if (folder.exists()) {
-                    openFolderInExplorer(folder);
-                    logger.log(Level.FINE, "Dossier ouvert avec succès");
-                } else {
-                    logger.log(Level.WARNING, "Le dossier n'existe pas : {0}", folder.getAbsolutePath());
-                    resultLabel.setText("Le dossier n'existe pas.");
-                }
-            } catch (Exception e) {
-                logger.log(Level.SEVERE, "Erreur inattendue lors de l'ouverture du dossier : {0}", e.getMessage());
-                resultLabel.setText("Erreur inattendue : " + e.getMessage());
-            }
-    }
-
-    /**
-     * Opens the file explorer at the specified folder location based on the operating system.
-     * <p>
-     * This method uses {@link ProcessBuilder} to launch the system's default file explorer:
-     * <ul>
-     *     <li><b>Windows</b>: Opens Windows Explorer using "explorer.exe".</li>
-     *     <li><b>macOS</b>: Opens Finder using "open".</li>
-     *     <li><b>Linux</b>: Opens the default file manager using "xdg-open".</li>
-     * </ul>
-     * If the operation succeeds, an INFO log is recorded. If the operating system is not supported,
-     * a WARNING log is recorded. In case of an I/O error, a SEVERE log is recorded with the error details.
-     * </p>
-     *
-     * @param folder the {@link File} object representing the folder to open in the file explorer
-     */
-    public void openFolderInExplorer(File folder) {
-        String os = System.getProperty("os.name").toLowerCase();
-        String path = folder.getAbsolutePath();
-
-        try {
-            ProcessBuilder pb;
-            if (os.contains("win")) {
-                // Pour Windows
-                pb = new ProcessBuilder("explorer.exe", path);
-                pb.start();
-                logger.log(Level.INFO, "Explorateur ouvert avec succès : " + path);
-            } else if (os.contains("mac")) {
-                // Pour macOS
-                pb = new ProcessBuilder("open", path);
-                pb.start();
-                logger.log(Level.INFO, "Finder ouvert avec succès : " + path);
-            } else if (os.contains("nix") || os.contains("nux")) {
-                // Pour Linux
-                pb = new ProcessBuilder("xdg-open", path);
-                pb.start();
-                logger.log(Level.INFO, "Gestionnaire de fichiers ouvert avec succès : " + path);
-            } else {
-                logger.log(Level.WARNING, "Système d'exploitation non pris en charge : " + os);
-            }
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Erreur lors de l'ouverture du dossier : " + folder.getAbsolutePath(), e);
         }
     }
 

@@ -1,7 +1,6 @@
 package com.invoicegenerator.services;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -37,7 +36,7 @@ public class MoisService {
         MoisService service = new MoisService();
         LocalDate date = LocalDate.of(2025, 3, 11); // 11 mars 2025
 
-        System.out.println(service.extraireMois(date, Locale.FRANCE)); // "Mars"
-        System.out.println(service.extraireMois(date, Locale.ENGLISH)); // "March"
+        logger.fine(service.extraireMois(date, Locale.FRANCE));
+        logger.fine(service.extraireMois(date, Locale.ENGLISH));
     }
 }
