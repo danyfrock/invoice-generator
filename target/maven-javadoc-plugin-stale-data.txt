@@ -21,24 +21,24 @@ com.invoicegenerator
 -docencoding
 'UTF-8'
 -doctitle
-'InvoiceGenerator 0.0.1-SNAPSHOT API'
+'InvoiceGenerator 0.0.3-SNAPSHOT API'
 -use
 -version
 -windowtitle
-'InvoiceGenerator 0.0.1-SNAPSHOT API'
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\module-info.java = 1742524286303
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java = 1742524286303
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\allclasses-index.html = 1742912630414
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\allpackages-index.html = 1742912630422
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\constant-values.html = 1742912630187
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\element-list = 1742912630048
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\help-doc.html = 1742912630483
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\index-all.html = 1742912630466
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\index.html = 1742912630477
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\member-search-index.js = 1742912630438
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\module-search-index.js = 1742912630425
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\overview-tree.html = 1742912630385
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\package-search-index.js = 1742912630429
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\search.html = 1742912630472
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\tag-search-index.js = 1742912630443
-C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\type-search-index.js = 1742912630432
+'InvoiceGenerator 0.0.3-SNAPSHOT API'
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java\module-info.java = 1743097860227
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\src\main\java = 1743097860227
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\allclasses-index.html = 1743098105082
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\allpackages-index.html = 1743098105086
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\constant-values.html = 1743098104890
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\element-list = 1743098104773
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\help-doc.html = 1743098105144
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\index-all.html = 1743098105129
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\index.html = 1743098105137
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\member-search-index.js = 1743098105102
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\module-search-index.js = 1743098105091
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\overview-tree.html = 1743098105060
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\package-search-index.js = 1743098105094
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\search.html = 1743098105133
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\tag-search-index.js = 1743098105107
+C:\Users\daniel.lorenzi\eclipse-workspace\InvoiceGenerator\target\site\apidocs\type-search-index.js = 1743098105097

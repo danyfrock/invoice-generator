@@ -10,8 +10,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
+import com.invoicegenerator.modeles.NavetteDTOs.BillingDetailsModel;
+import com.invoicegenerator.modeles.NavetteDTOs.EventDetailsModel;
+import com.invoicegenerator.modeles.NavetteDTOs.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
-import com.invoicegenerator.modeles.BillingShuttleModel;
+import com.invoicegenerator.modeles.NavetteDTOs.BillingShuttleModel;
 import com.invoicegenerator.modeles.ActionResult;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.PvToNavetteService;
@@ -35,7 +38,6 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -401,8 +403,16 @@ public class NavettesFacturationView extends Application {
     public static void main(String[] args) {
         logger.log(Level.INFO, "Lancement de l'application NavettesFacturationView");
         BillingShuttleModel[] source = {
-                new BillingShuttleModel("EU005", "Projet1", "Activité1", 1, "Note1", 10.0, "UNT", 100.0, 1000.0, 1000.0, LocalDate.now(), LocalDate.now(), "Item1", "Facture1"),
-                new BillingShuttleModel("EU005", "Projet2", "Activité2", 2, "Note2", 20.0, "UNT", 200.0, 2000.0, 2000.0, LocalDate.now(), LocalDate.now(), "Item2", "Facture2")
+                new BillingShuttleModel(
+                        new BillingDetailsModel(1, 1000.0, LocalDate.now(), LocalDate.now(), "Facture1"),
+                        new EventDetailsModel("Note1", 1000.0),
+                        new ItemDetailsModel("EU005", "Projet1", "Activité1", 10.0, "UNT", 100.0, "Item1")
+                ),
+                new BillingShuttleModel(
+                        new BillingDetailsModel(2, 2000.0, LocalDate.now(), LocalDate.now(), "Facture2"),
+                        new EventDetailsModel("Note2", 2000.0),
+                        new ItemDetailsModel("EU005", "Projet2", "Activité2", 20.0, "UNT", 200.0, "Item2")
+                )
         };
         String fichierSortie = "chemin/vers/fichierSortie.xlsx";
         NavettesFacturationView app = new NavettesFacturationView(source, fichierSortie);

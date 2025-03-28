@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import com.invoicegenerator.modeles.NavetteDTOs.BillingDetailsModel;
+import com.invoicegenerator.modeles.NavetteDTOs.EventDetailsModel;
+import com.invoicegenerator.modeles.NavetteDTOs.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.UoCommandLineModel;
-import com.invoicegenerator.modeles.BillingShuttleModel;
+import com.invoicegenerator.modeles.NavetteDTOs.BillingShuttleModel;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 
 /**
@@ -28,36 +31,29 @@ public class PvToNavetteService {
 			i++;
 			logger.info("Traitement de l'entité Pv numéro : " + i);
 			for (UoCommandLineModel ligne : entite.getCommand().getCommandLines()) {
-				BillingShuttleModel navette = new BillingShuttleModel();
-
-				navette.setPcBu("EU005");
-				navette.setMeasureUnit("UNT = Units");
-				navette.setActivity(entite.getCommand().getActivityCode());
-				navette.setProject(entite.getCommand().getContractCode());
-
-				/*
-					o	<Bon de commande>+<Objet de la prestation>+ <Référence UO> + <Description UO>
-					o	Ces informations sont issues des PVs :
-					A:	<Bon de commande>  Texte « BDC PO» + Onglet « PV » cellule B9  Exemple « BDC PO1000376967 »
-					B:	<Objet de la prestation>  Onglet « PV » cellule B11  Exemple « Accompagnement Architecture applicative »
-					C:	<Référence UO>  Onglet « Détails des prestations du PV » colonne « Type d’UO »  Exemple : « L5 – P15.1.re.a »
-					D:	<Description UO>  Onglet « Détails des prestations du PV » colonne « Libellé de la ligne de commande»  Exemple : « Architecture Applicative Simple»
-				 */
-				navette.setEventNote(
-						entite.getCommand().getBonDeCommandePrefix() + entite.getCommand().getBonDeCommandeCellB9() + // A
-								"-" + entite.getCommand().getBenefitPurposeCellB11() + // B
-								"-" + ligne.getUoType() + // C
-								"- " + ligne.getCommandLabel()); // D
-
-				navette.setBillAmount(ligne.getUoTotal().getTotalHT());
-				navette.setUnitPrice(ligne.getUnitPrice());
-				navette.setQuantity(ligne.getUoTotal().getNumber());
-				navette.setCalculatedEventAmount(ligne.getUoTotal().getTotalHT());
-				navette.setBillPeriodFrom(entite.getCommand().getDateDebut());
-				navette.setBillPeriodTo(entite.getCommand().getDateFin());
-				navette.setBillNumber(i);
-				navette.setItemId(ligne.getCommandLabel() + "-" + i);
-				navette.setBillNumber(i);
+				BillingShuttleModel navette = new BillingShuttleModel()
+						.setItemDetails(new ItemDetailsModel()
+								.setPcBu("EU005")
+								.setMeasureUnit("UNT = Units")
+								.setActivity(entite.getCommand().getActivityCode())
+								.setProject(entite.getCommand().getContractCode())
+								.setUnitPrice(ligne.getUnitPrice())
+								.setQuantity(ligne.getUoTotal().getNumber())
+								.setItemId(ligne.getCommandLabel() + "-" + i)
+						)
+						.setEventDetails(new EventDetailsModel()
+								.setEventNote(entite.getCommand().getBonDeCommandePrefix() + entite.getCommand().getBonDeCommandeCellB9() + // A
+										"-" + entite.getCommand().getBenefitPurposeCellB11() + // B
+										"-" + ligne.getUoType() + // C
+										"- " + ligne.getCommandLabel())
+								.setCalculatedEventAmount(ligne.getUoTotal().getTotalHT())
+						)
+						.setBillingDetails(new BillingDetailsModel()
+								.setBillAmount(ligne.getUoTotal().getTotalHT())
+								.setBillPeriodFrom(entite.getCommand().getDateDebut())
+								.setBillPeriodTo(entite.getCommand().getDateFin())
+								.setBillNumber(i)
+						);
 
 				logger.info("Ajout de la navette pour la ligne de commande : " + ligne.getCommandLabel());
 				navettesList.add(navette);

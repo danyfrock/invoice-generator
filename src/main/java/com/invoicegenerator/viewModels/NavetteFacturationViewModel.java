@@ -1,6 +1,6 @@
 package com.invoicegenerator.viewModels;
 
-import com.invoicegenerator.modeles.BillingShuttleModel;
+import com.invoicegenerator.modeles.NavetteDTOs.BillingShuttleModel;
 import com.invoicegenerator.services.MoisService;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 
@@ -68,7 +68,7 @@ public class NavetteFacturationViewModel {
      * @return Le PcBu ou une valeur par défaut si non disponible
      */
     public String getPcBu() {
-        String pcBu = (modele != null && modele.getPcBu() != null) ? modele.getPcBu() : "Default PcBu";
+        String pcBu = (modele != null && modele.getItemDetails().getPcBu() != null) ? modele.getItemDetails().getPcBu() : "Default PcBu";
         logger.log(Level.FINE, "Récupération de PcBu : {0}", pcBu);
         return pcBu;
     }
@@ -79,7 +79,7 @@ public class NavetteFacturationViewModel {
      * @return Le projet ou une valeur par défaut si non disponible
      */
     public String getProjet() {
-        String projet = (modele != null && modele.getProject() != null) ? modele.getProject() : "Default Projet";
+        String projet = (modele != null && modele.getItemDetails().getProject() != null) ? modele.getItemDetails().getProject() : "Default Projet";
         logger.log(Level.FINE, "Récupération de Projet : {0}", projet);
         return projet;
     }
@@ -90,7 +90,7 @@ public class NavetteFacturationViewModel {
      * @return L'activité ou une valeur par défaut si non disponible
      */
     public String getActivite() {
-        String activite = (modele != null && modele.getActivity() != null) ? modele.getActivity() : "Default Activite";
+        String activite = (modele != null && modele.getItemDetails().getActivity() != null) ? modele.getItemDetails().getActivity() : "Default Activite";
         logger.log(Level.FINE, "Récupération de Activite : {0}", activite);
         return activite;
     }
@@ -101,7 +101,7 @@ public class NavetteFacturationViewModel {
      * @return Le nombre de factures ou 0 si non disponible
      */
     public int getNombreFactures() {
-        int nombre = (modele != null) ? modele.getBillNumber() : 0;
+        int nombre = (modele != null) ? modele.getBillingDetails().getBillNumber() : 0;
         logger.log(Level.FINE, "Récupération de NombreFactures : {0}", nombre);
         return nombre;
     }
@@ -112,20 +112,9 @@ public class NavetteFacturationViewModel {
      * @return La note d'événement ou une valeur par défaut si non disponible
      */
     public String getNoteEvenement() {
-        String note = (modele != null && modele.getEventNote() != null) ? modele.getEventNote() : "Default Note";
+        String note = (modele != null && modele.getEventDetails().getEventNote() != null) ? modele.getEventDetails().getEventNote() : "Default Note";
         logger.log(Level.FINE, "Récupération de NoteEvenement : {0}", note);
         return note;
-    }
-
-    /**
-     * Retourne la quantité du modèle.
-     *
-     * @return La quantité ou 0.0 si non disponible
-     */
-    public double getQuantite() {
-        double quantite = (modele != null) ? modele.getQuantity() : 0.0;
-        logger.log(Level.FINE, "Récupération de Quantite : {0}", quantite);
-        return quantite;
     }
 
     /**
@@ -134,13 +123,13 @@ public class NavetteFacturationViewModel {
      * @return La quantité ou 0 si non disponible
      */
     public int getQuantiteAsInt() {
-        int quantite = (modele != null) ? (int) modele.getQuantity() : 0;
+        int quantite = (modele != null) ? (int) modele.getItemDetails().getQuantity() : 0;
         logger.log(Level.FINE, "Récupération de Quantite : {0}", quantite);
         return quantite;
     }
 
     public double getQuantiteAsDouble(){
-        return modele.getQuantity();
+        return modele.getItemDetails().getQuantity();
     }
 
     /**
@@ -149,7 +138,7 @@ public class NavetteFacturationViewModel {
      * @return L'unité de mesure ou une valeur par défaut si non disponible
      */
     public String getUniteMesure() {
-        String unite = (modele != null && modele.getMeasureUnit() != null) ? modele.getMeasureUnit() : "Default Unite";
+        String unite = (modele != null && modele.getItemDetails().getMeasureUnit() != null) ? modele.getItemDetails().getMeasureUnit() : "Default Unite";
         logger.log(Level.FINE, "Récupération de UniteMesure : {0}", unite);
         return unite;
     }
@@ -160,7 +149,7 @@ public class NavetteFacturationViewModel {
      * @return Le prix unitaire arrondi ou 0.0 si non disponible
      */
     public double getPrixUnitaireRound() {
-        double prix = (modele != null) ? Math.round(modele.getUnitPrice() * 100.0) / 100.0 : 0.0;
+        double prix = (modele != null) ? Math.round(modele.getItemDetails().getUnitPrice() * 100.0) / 100.0 : 0.0;
         logger.log(Level.FINE, "Récupération de PrixUnitaireRound : {0}", prix);
         return prix;
     }
@@ -171,7 +160,7 @@ public class NavetteFacturationViewModel {
      * @return Le montant de facturation arrondi ou 0.0 si non disponible
      */
     public double getMontantFacturationRound() {
-        double montant = (modele != null) ? Math.round(modele.getBillAmount() * 100.0) / 100.0 : 0.0;
+        double montant = (modele != null) ? Math.round(modele.getBillingDetails().getBillAmount() * 100.0) / 100.0 : 0.0;
         logger.log(Level.FINE, "Récupération de MontantFacturationRound : {0}", montant);
         return montant;
     }
@@ -182,7 +171,7 @@ public class NavetteFacturationViewModel {
      * @return Le montant calculé arrondi ou 0.0 si non disponible
      */
     public double getMontantEvenementCalculeRound() {
-        double montant = (modele != null) ? Math.round(modele.getCalculatedEventAmount() * 100.0) / 100.0 : 0.0;
+        double montant = (modele != null) ? Math.round(modele.getEventDetails().getCalculatedEventAmount() * 100.0) / 100.0 : 0.0;
         logger.log(Level.FINE, "Récupération de MontantEvenementCalculeRound : {0}", montant);
         return montant;
     }
@@ -193,7 +182,7 @@ public class NavetteFacturationViewModel {
      * @return Le prix unitaire ou 0.0 si non disponible
      */
     public double getPrixUnitaire() {
-        double prix = (modele != null) ? modele.getUnitPrice() : 0.0;
+        double prix = (modele != null) ? modele.getItemDetails().getUnitPrice() : 0.0;
         logger.log(Level.FINE, "Récupération de PrixUnitaire : {0}", prix);
         return prix;
     }
@@ -204,7 +193,7 @@ public class NavetteFacturationViewModel {
      * @return Le montant de facturation ou 0.0 si non disponible
      */
     public double getMontantFacturation() {
-        double montant = (modele != null) ? modele.getBillAmount() : 0.0;
+        double montant = (modele != null) ? modele.getBillingDetails().getBillAmount() : 0.0;
         logger.log(Level.FINE, "Récupération de MontantFacturation : {0}", montant);
         return montant;
     }
@@ -215,7 +204,7 @@ public class NavetteFacturationViewModel {
      * @return Le montant calculé ou 0.0 si non disponible
      */
     public double getMontantEvenementCalcule() {
-        double montant = (modele != null) ? modele.getCalculatedEventAmount() : 0.0;
+        double montant = (modele != null) ? modele.getEventDetails().getCalculatedEventAmount() : 0.0;
         logger.log(Level.FINE, "Récupération de MontantEvenementCalcule : {0}", montant);
         return montant;
     }
@@ -226,7 +215,7 @@ public class NavetteFacturationViewModel {
      * @return Le jour ou une chaîne vide si non disponible
      */
     public String getPeriodeFacturationDu() {
-        String jour = (modele != null) ? formatDate(modele.getBillPeriodFrom(), PRETTYDATE_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillingDetails().getBillPeriodFrom(), PRETTYDATE_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de PeriodeFacturationDu : {0}", jour);
         return jour;
     }
@@ -237,7 +226,7 @@ public class NavetteFacturationViewModel {
      * @return Le jour ou une chaîne vide si non disponible
      */
     public String getPeriodeFacturationAu() {
-        String jour = (modele != null) ? formatDate(modele.getBillPeriodTo(), PRETTYDATE_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillingDetails().getBillPeriodTo(), PRETTYDATE_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de PeriodeFacturationAu : {0}", jour);
         return jour;
     }
@@ -248,7 +237,7 @@ public class NavetteFacturationViewModel {
      * @return L'identifiant ou une valeur par défaut si non disponible
      */
     public String getItemId() {
-        String itemId = (modele != null && modele.getItemId() != null) ? modele.getItemId() : "Default ItemId";
+        String itemId = (modele != null && modele.getItemDetails().getItemId() != null) ? modele.getItemDetails().getItemId() : "Default ItemId";
         logger.log(Level.FINE, "Récupération de ItemId : {0}", itemId);
         return itemId;
     }
@@ -259,7 +248,7 @@ public class NavetteFacturationViewModel {
      * @return La facture initiale ou une valeur par défaut si non disponible
      */
     public String getFactureInitiale() {
-        String facture = (modele != null && modele.getInitialBill() != null) ? modele.getInitialBill() : "Default Facture";
+        String facture = (modele != null && modele.getBillingDetails().getInitialBill() != null) ? modele.getBillingDetails().getInitialBill() : "Default Facture";
         logger.log(Level.FINE, "Récupération de FactureInitiale : {0}", facture);
         return facture;
     }
@@ -280,7 +269,7 @@ public class NavetteFacturationViewModel {
      * @return Le jour ou une chaîne vide si non disponible
      */
     public String getJourPeriodeFacturationDu() {
-        String jour = (modele != null) ? formatDate(modele.getBillPeriodFrom(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillingDetails().getBillPeriodFrom(), JOUR_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de JourPeriodeFacturationDu : {0}", jour);
         return jour;
     }
@@ -291,7 +280,7 @@ public class NavetteFacturationViewModel {
      * @return L'année ou une chaîne vide si non disponible
      */
     public String getAnneePeriodeFacturationDu() {
-        String annee = (modele != null) ? formatDate(modele.getBillPeriodFrom(), ANNEE_FORMAT) : "";
+        String annee = (modele != null) ? formatDate(modele.getBillingDetails().getBillPeriodFrom(), ANNEE_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de AnneePeriodeFacturationDu : {0}", annee);
         return annee;
     }
@@ -303,7 +292,7 @@ public class NavetteFacturationViewModel {
      */
     public String getMoisTextePeriodeFacturationDu() {
         String mois;
-        mois = extraireMois(modele.getBillPeriodFrom());
+        mois = extraireMois(modele.getBillingDetails().getBillPeriodFrom());
         return mois;
     }
 
@@ -315,25 +304,12 @@ public class NavetteFacturationViewModel {
     }
 
     /**
-     * Capitalize the first letter of the given string.
-     *
-     * @param mois The string to capitalize.
-     * @return The string with the first letter capitalized.
-     */
-    private String capitalizeFirstLetter(String mois) {
-        if (mois == null || mois.isEmpty()) {
-            return mois;
-        }
-        return mois.substring(0, 1).toUpperCase() + mois.substring(1).toLowerCase();
-    }
-
-    /**
      * Retourne le jour de fin de la période de facturation.
      *
      * @return Le jour ou une chaîne vide si non disponible
      */
     public String getJourPeriodeFacturationAu() {
-        String jour = (modele != null) ? formatDate(modele.getBillPeriodTo(), JOUR_FORMAT) : "";
+        String jour = (modele != null) ? formatDate(modele.getBillingDetails().getBillPeriodTo(), JOUR_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de JourPeriodeFacturationAu : {0}", jour);
         return jour;
     }
@@ -344,7 +320,7 @@ public class NavetteFacturationViewModel {
      * @return L'année ou une chaîne vide si non disponible
      */
     public String getAnneePeriodeFacturationAu() {
-        String annee = (modele != null) ? formatDate(modele.getBillPeriodTo(), ANNEE_FORMAT) : "";
+        String annee = (modele != null) ? formatDate(modele.getBillingDetails().getBillPeriodTo(), ANNEE_FORMAT) : "";
         logger.log(Level.FINE, "Récupération de AnneePeriodeFacturationAu : {0}", annee);
         return annee;
     }
@@ -356,7 +332,7 @@ public class NavetteFacturationViewModel {
      */
     public String getMoisTextePeriodeFacturationAu() {
         String mois;
-        mois = extraireMois(modele.getBillPeriodTo());
+        mois = extraireMois(modele.getBillingDetails().getBillPeriodTo());
         return mois;
     }
 }
