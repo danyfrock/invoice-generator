@@ -42,7 +42,6 @@ public class ExcelPvReaderUtil {
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Erreur lors de la lecture du fichier Excel : {0}", e.getMessage());
             retour = new ActionResult(false, filePath + " KO : " + e.getMessage());
-            e.printStackTrace();
         }
         return retour;
     }
@@ -76,7 +75,6 @@ public class ExcelPvReaderUtil {
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Erreur lors de la lecture des informations générales : {0}", e.getMessage());
             retour = new ActionResult(false, e.getMessage());
-            e.printStackTrace();
         }
 
         return retour;
@@ -124,40 +122,7 @@ public class ExcelPvReaderUtil {
                         break; // Sortir de la boucle si la première cellule est vide
                     }
 
-                    UoCommandLineModel ligneCommande = new UoCommandLineModel();
-                    for (Map.Entry<String, Integer> entry : headerMap.entrySet()) {
-                        Cell cell = row.getCell(entry.getValue());
-                        if (cell != null) {
-                            switch (entry.getKey()) {
-                                case "Détails de la Commande - Libellé de la ligne de commande":
-                                    ligneCommande.setCommandLabel(getStringCellValue(cell));
-                                    break;
-                                case "Détails de la Commande - Type d’UO":
-                                    ligneCommande.setUoType(getStringCellValue(cell));
-                                    break;
-                                case "Détails de la Commande - Prix Unitaire UO HT":
-                                    ligneCommande.setUnitPrice(getNumericCellValue(cell));
-                                    break;
-                                case "Détails de la Commande - Nombre d’UO":
-                                    ligneCommande.setUoNumber((int) getNumericCellValue(cell));
-                                    break;
-                                case "Détails de la Commande - Taux de TVA":
-                                    ligneCommande.setTVA(getNumericCellValue(cell));
-                                    break;
-                                case "Total des PV signés (supposés facturés) - Nombre d’UO":
-                                    ligneCommande.getUoTotal().setNumber((int) getNumericCellValue(cell));
-                                    break;
-                                case "Montant du PV (au jalon considéré) - Nombre d’UO":
-                                    ligneCommande.getUoCost().setNumber((int) getNumericCellValue(cell));
-                                    break;
-                                case "Reste à dépenser (après ce PV) - Nombre d’UO":
-                                    ligneCommande.getUoToSpend().setNumber((int) getNumericCellValue(cell));
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
+                    UoCommandLineModel ligneCommande = getUoCommandLineModel(headerMap, row);
                     listeLigneCommande.add(ligneCommande);
                 }
             }
@@ -168,10 +133,51 @@ public class ExcelPvReaderUtil {
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Erreur lors de la lecture des détails des prestations : {0}", e.getMessage());
             retour = new ActionResult(false, e.getMessage());
-            e.printStackTrace();
         }
 
         return retour;
+    }
+
+    private static UoCommandLineModel getUoCommandLineModel(Map<String, Integer> headerMap, Row row) {
+        UoCommandLineModel ligneCommande = new UoCommandLineModel();
+        for (Map.Entry<String, Integer> entry : headerMap.entrySet()) {
+            extractCell(entry, row, ligneCommande);
+        }
+        return ligneCommande;
+    }
+
+    private static void extractCell(Map.Entry<String, Integer> entry, Row row, UoCommandLineModel ligneCommande) {
+        Cell cell = row.getCell(entry.getValue());
+        if (cell != null) {
+            switch (entry.getKey()) {
+                case "Détails de la Commande - Libellé de la ligne de commande":
+                    ligneCommande.setCommandLabel(getStringCellValue(cell));
+                    break;
+                case "Détails de la Commande - Type d’UO":
+                    ligneCommande.setUoType(getStringCellValue(cell));
+                    break;
+                case "Détails de la Commande - Prix Unitaire UO HT":
+                    ligneCommande.setUnitPrice(getNumericCellValue(cell));
+                    break;
+                case "Détails de la Commande - Nombre d’UO":
+                    ligneCommande.setUoNumber((int) getNumericCellValue(cell));
+                    break;
+                case "Détails de la Commande - Taux de TVA":
+                    ligneCommande.setTVA(getNumericCellValue(cell));
+                    break;
+                case "Total des PV signés (supposés facturés) - Nombre d’UO":
+                    ligneCommande.getUoTotal().setNumber((int) getNumericCellValue(cell));
+                    break;
+                case "Montant du PV (au jalon considéré) - Nombre d’UO":
+                    ligneCommande.getUoCost().setNumber((int) getNumericCellValue(cell));
+                    break;
+                case "Reste à dépenser (après ce PV) - Nombre d’UO":
+                    ligneCommande.getUoToSpend().setNumber((int) getNumericCellValue(cell));
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     /**

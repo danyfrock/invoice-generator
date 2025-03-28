@@ -47,7 +47,7 @@ public class ParametresView extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        logger.log(Level.INFO, "Démarrage de l'interface ParametresView");
+        logger.log(Level.INFO, "Démarrage de l''interface ParametresView");
         primaryStage.setTitle("Paramètres");
 
         // grille
@@ -61,14 +61,14 @@ public class ParametresView extends Application {
         Button btnDossier = new Button("Sélectionner");
         btnDossier.setOnAction(e -> selectOutputFolder());
 
-        Label labelCodes = new Label("Codes d'activité");
+        Label labelCodes = new Label("Codes d''activité");
         TextField textCode = new TextField();
         textCode.setTextFormatter(new TextFormatter<>(change -> {
             String newText = change.getControlNewText();
             if (newText.matches("[\\w]{0,5}")) {
                 return change;
             }
-            logger.log(Level.FINE, "Entrée invalide pour le code d'activité : {0}", newText);
+            logger.log(Level.FINE, "Entrée invalide pour le code d''activité : {0}", newText);
             return null;
         }));
 

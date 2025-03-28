@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -17,7 +18,7 @@ import java.util.logging.Logger;
  */
 public class BillingProcessService {
     private static final Logger logger = LoggerFactory.getLogger(BillingProcessService.class.getName());
-    private String billingFileName;
+    private final String billingFileName;
 
     /**
      * Constructeur de la classe BillingProcessService.
@@ -25,7 +26,7 @@ public class BillingProcessService {
      */
     public BillingProcessService(String billingFileName) {
         this.billingFileName = billingFileName;
-        logger.info("BillingProcessService initialisé avec le fichier : " + billingFileName);
+        logger.log(Level.INFO, "BillingProcessService initialisé avec le fichier : {0}", billingFileName);
     }
 
     /**
@@ -42,16 +43,15 @@ public class BillingProcessService {
         try {
             // Afficher le JSON dans les logs pour vérification
             String jsonString = gson.toJson(model);
-            logger.info("Contenu JSON avant enregistrement : \n" + jsonString);
+            logger.log(Level.INFO, "Contenu JSON avant enregistrement : \n{0}", jsonString);
 
             // Écrire dans le fichier
             try (FileWriter writer = new FileWriter(billingFileName)) {
                 gson.toJson(model, writer);
-                logger.info("Modèle BillingProcessModel enregistré avec succès dans le fichier : " + billingFileName);
+                logger.log(Level.INFO, "Modèle BillingProcessModel enregistré avec succès dans le fichier : {0}", billingFileName);
             }
         } catch (IOException e) {
-            logger.severe("Erreur lors de l'enregistrement du modèle : " + e.getMessage());
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Erreur lors de l'enregistrement du modèle : {0}", e.getMessage());
         }
     }
 
@@ -68,17 +68,16 @@ public class BillingProcessService {
         File file = new File(billingFileName);
 
         if (!file.exists()) {
-            logger.warning("Le fichier du modèle n'existe pas : " + billingFileName);
+            logger.log(Level.WARNING, "Le fichier du modèle n'existe pas : {0}", billingFileName);
             return new BillingProcessModel();
         }
 
         try (FileReader reader = new FileReader(file)) {
             BillingProcessModel model = gson.fromJson(reader, BillingProcessModel.class);
-            logger.info("Modèle BillingProcessModel chargé avec succès depuis le fichier : " + billingFileName);
+            logger.log(Level.INFO, "Modèle BillingProcessModel chargé avec succès depuis le fichier : {0}", billingFileName);
             return model;
         } catch (IOException e) {
-            logger.severe("Erreur lors du chargement du modèle : " + e.getMessage());
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Erreur lors du chargement du modèle : {0}", e.getMessage());
             return new BillingProcessModel();
         }
     }

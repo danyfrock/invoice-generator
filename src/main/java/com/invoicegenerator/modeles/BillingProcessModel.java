@@ -25,8 +25,8 @@ public class BillingProcessModel {
      * Constructeur par défaut. Initialise les paramètres et la liste d'entités PV.
      */
     public BillingProcessModel() {
-        logger.log(Level.INFO, "Création d'une nouvelle instance de BillingProcessModel avec valeurs par défaut : pvEntityPvModels.size={0}, outputFileName={1}, complement={2}",
-                new Object[]{pvEntityPvModels.size(), outputFileName, complement});
+        logger.log(Level.INFO, "Création d''une nouvelle instance de BillingProcessModel avec valeurs par défaut : pvEntityPvModels.size={0}, outputFileName={1}, complement={2}",
+                new Object[]{0, outputFileName, complement});
     }
 
     /**

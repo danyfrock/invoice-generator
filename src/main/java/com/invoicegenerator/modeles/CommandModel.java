@@ -20,7 +20,7 @@ public class CommandModel {
     private String contractCode;
     private String activityCode;
     private List<UoCommandLineModel> commandLines = new ArrayList<>();
-    private static final String bonDeCommandePrefix = "BDC PO";
+    private static final String BON_DE_COMMANDE_PREFIX = "BDC PO";
     private String bonDeCommandeCellB9;
     private String objetDeLaPrestationCellB11;
 
@@ -152,8 +152,8 @@ public class CommandModel {
      * @return Le préfix du bon de commande.
      */
     public String getBonDeCommandePrefix() {
-        logger.log(Level.FINE, "Récupération du bon de commande prefix : {0}", bonDeCommandePrefix);
-        return bonDeCommandePrefix;
+        logger.log(Level.FINE, "Récupération du bon de commande prefix : {0}", BON_DE_COMMANDE_PREFIX);
+        return BON_DE_COMMANDE_PREFIX;
     }
 
     /**

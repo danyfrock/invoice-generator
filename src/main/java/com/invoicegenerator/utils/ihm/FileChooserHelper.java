@@ -33,7 +33,7 @@ public class FileChooserHelper {
                 new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json")
         );
         File file = fileChooser.showSaveDialog(stage);
-        logger.log(Level.FINE, "Résultat de la sauvegarde : {0}", file != null ? file.getAbsolutePath() : "annulé");
+        logger.log(Level.FINE, "Résultat de la sauvegarde : {0}", file != null ? file.getAbsolutePath() : "Sauvegarde de JSON annulée");
         return file;
     }
 
@@ -54,7 +54,7 @@ public class FileChooserHelper {
                 new FileChooser.ExtensionFilter("Fichiers JSON (*.json)", "*.json")
         );
         File file = fileChooser.showOpenDialog(stage);
-        logger.log(Level.FINE, "Résultat de l'ouverture : {0}", file != null ? file.getAbsolutePath() : "annulé");
+        logger.log(Level.FINE, "Résultat de l''ouverture : {0}", file != null ? file.getAbsolutePath() : "ouverture de JSON annulée");
         return file;
     }
 
@@ -93,7 +93,7 @@ public class FileChooserHelper {
         directoryChooser.setInitialDirectory(new File(initialDir));
         directoryChooser.setTitle(title);
         File folder = directoryChooser.showDialog(stage);
-        logger.log(Level.FINE, "Résultat de la sélection : {0}", folder != null ? folder.getAbsolutePath() : "annulé");
+        logger.log(Level.FINE, "Résultat de la sélection : {0}", folder != null ? folder.getAbsolutePath() : "ouverture de dossier annulée");
         return folder;
     }
 }

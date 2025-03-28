@@ -100,7 +100,7 @@ public class CommandesViewModel {
         String comp = complement.get() == null ? "" : complement.get();
 
         // Définit le nom du fichier de sortie
-        String basePath = FileUtil.concat(source.getParameters().getOutputFolder(), source.getParameters().getOutputFileDefaultName());
+        String basePath = FileUtil.concat(source.getParameters().getOutputFolder(), source.getParameters().getOUTPUTFILE_DEFAULT_NAME());
         String sortie = FileUtil.addSuffixToFileName(basePath, codeContrat);
         sortie = FileUtil.addSuffixToFileName(sortie, comp);
         this.outputFileName.set(sortie);

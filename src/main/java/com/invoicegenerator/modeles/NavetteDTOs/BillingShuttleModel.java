@@ -18,7 +18,7 @@ public class BillingShuttleModel {
      * Constructeur vide pour BillingShuttleModel.
      */
     public BillingShuttleModel() {
-        logger.log(Level.INFO, "Création d'une instance vide de BillingShuttleModel");
+        logger.log(Level.INFO, "Création d''une instance vide de BillingShuttleModel");
     }
 
     /**
@@ -32,7 +32,7 @@ public class BillingShuttleModel {
         this.billingDetails = billingDetails;
         this.eventDetails = eventDetails;
         this.itemDetails = itemDetails;
-        logger.log(Level.INFO, "Création d'une instance de BillingShuttleModel avec paramètres personnalisés");
+        logger.log(Level.INFO, "Création d''une instance de BillingShuttleModel avec paramètres personnalisés");
     }
 
     /**

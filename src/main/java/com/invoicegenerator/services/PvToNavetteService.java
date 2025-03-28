@@ -42,7 +42,9 @@ public class PvToNavetteService {
 								.setItemId(ligne.getCommandLabel() + "-" + i)
 						)
 						.setEventDetails(new EventDetailsModel()
-								.setEventNote(entite.getCommand().getBonDeCommandePrefix() + entite.getCommand().getBonDeCommandeCellB9() + // A
+								.setEventNote(
+										entite.getCommand().getBonDeCommandePrefix() +
+												entite.getCommand().getBonDeCommandeCellB9() + // A
 										"-" + entite.getCommand().getBenefitPurposeCellB11() + // B
 										"-" + ligne.getUoType() + // C
 										"- " + ligne.getCommandLabel())

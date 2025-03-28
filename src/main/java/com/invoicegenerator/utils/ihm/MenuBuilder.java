@@ -46,7 +46,7 @@ public class MenuBuilder {
      * @return MenuBuilder pour chaînage fluide
      */
     public MenuBuilder avecAction(String text, String shortcut, EventHandler<ActionEvent> action) {
-        logger.log(Level.FINE, "Ajout de l'action {0} avec raccourci {1}", new Object[]{text, shortcut});
+        logger.log(Level.FINE, "Ajout de l''action {0} avec raccourci {1}", new Object[]{text, shortcut});
         MenuItem item = new MenuItem(text);
         item.setAccelerator(KeyCombination.keyCombination(shortcut));
         item.setOnAction(action);
@@ -192,10 +192,10 @@ public class MenuBuilder {
 
     private void tryShowHelp() {
         try {
-            logger.log(Level.INFO, "Tentative d'affichage de l'aide");
+            logger.log(Level.INFO, "Tentative d''affichage de l''aide");
             showHelp();
         } catch (IOException ex) {
-            logger.log(Level.SEVERE, "Échec de l'ouverture de help.html : {0}", ex.getMessage());
+            logger.log(Level.SEVERE, "Échec de l''ouverture de help.html : {0}", ex.getMessage());
         }
     }
 
@@ -208,7 +208,7 @@ public class MenuBuilder {
 
         File tempFile = File.createTempFile("help", ".html");
         tempFile.deleteOnExit();
-        logger.log(Level.FINE, "Création d'un fichier temporaire : {0}", tempFile.getAbsolutePath());
+        logger.log(Level.FINE, "Création d''un fichier temporaire : {0}", tempFile.getAbsolutePath());
 
         try (java.io.FileOutputStream outputStream = new java.io.FileOutputStream(tempFile)) {
             byte[] buffer = new byte[1024];
@@ -218,7 +218,7 @@ public class MenuBuilder {
             }
         }
 
-        logger.log(Level.INFO, "Ouverture de l'aide dans le navigateur");
+        logger.log(Level.INFO, "Ouverture de l''aide dans le navigateur");
         java.awt.Desktop.getDesktop().browse(tempFile.toURI());
     }
 }

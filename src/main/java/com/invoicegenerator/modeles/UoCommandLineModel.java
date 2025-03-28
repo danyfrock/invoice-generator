@@ -11,7 +11,7 @@ public class UoCommandLineModel {
     private int uoNumber;
     private final UoAmountModel uoTotal = new UoAmountModel();
     private final UoAmountModel uoCost = new UoAmountModel();
-    private UoAmountModel uoToSpend = new UoAmountModel();
+    private final UoAmountModel uoToSpend = new UoAmountModel();
 
     /**
      * Obtient l'étiquette.

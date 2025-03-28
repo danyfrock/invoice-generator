@@ -16,14 +16,15 @@ import java.util.logging.Level;
 public class ParametersModel {
     private static final Logger logger = LoggerFactory.getLogger(ParametersModel.class.getName());
 
-    private String outputFolder = Paths.get(System.getProperty("user.home"), "Desktop").toString();
+    private final String USER_HOME = "user.home";
+    private String outputFolder = Paths.get(System.getProperty(USER_HOME), "Desktop").toString();
     private List<String> activityCodes = Arrays.asList("30001", "30003", "30005", "30007", "30009");
     private int minYear = 2024;
     private int maxYear = 2029;
-    private String outputFileDefaultName = "WST-CO_.xlsm";
-    private String parametersFileName = Paths.get(System.getProperty("user.home"), "") + "\\parametres.json";
-    private String dernierEmplacementConnuEntrees = Paths.get(System.getProperty("user.home"), "") + "\\";
-    private String dernierEmplacementConnuProgression = Paths.get(System.getProperty("user.home"), "") + "\\";
+    private final String OUTPUTFILE_DEFAULT_NAME = "WST-CO_.xlsm";
+    private final String parametersFileName = Paths.get(System.getProperty(USER_HOME), "") + "\\parametres.json";
+    private String dernierEmplacementConnuEntrees = Paths.get(System.getProperty(USER_HOME), "") + "\\";
+    private String dernierEmplacementConnuProgression = Paths.get(System.getProperty(USER_HOME), "") + "\\";
     private Boolean pleinEcran = true;
 
     /**
@@ -119,9 +120,9 @@ public class ParametersModel {
      *
      * @return Le nom par défaut du fichier de sortie.
      */
-    public String getOutputFileDefaultName() {
-        logger.log(Level.FINE, "Récupération du nom par défaut du fichier de sortie : {0}", outputFileDefaultName);
-        return outputFileDefaultName;
+    public String getOUTPUTFILE_DEFAULT_NAME() {
+        logger.log(Level.FINE, "Récupération du nom par défaut du fichier de sortie : {0}", OUTPUTFILE_DEFAULT_NAME);
+        return OUTPUTFILE_DEFAULT_NAME;
     }
 
     /**

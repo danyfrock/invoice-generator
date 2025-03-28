@@ -58,8 +58,8 @@ public class FileSelectorView extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        logger.log(Level.INFO, "Démarrage de l'interface FileSelectorView");
-        primaryStage.setTitle("Application d'enregistrement de navettes de facturation.");
+        logger.log(Level.INFO, "Démarrage de l''interface FileSelectorView");
+        primaryStage.setTitle("Application d''enregistrement de navettes de facturation.");
 
         fileTable.setColumnResizePolicy(TableView.UNCONSTRAINED_RESIZE_POLICY);
         this.source.setParameters(new ParametresService(this.source.getParameters().getParametersFileName()).chargerParametres());

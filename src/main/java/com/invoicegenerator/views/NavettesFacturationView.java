@@ -75,7 +75,7 @@ public class NavettesFacturationView extends Application {
         logger.log(Level.INFO, "Initialisation de NavettesFacturationView avec BillingProcessModel");
         this.sourceFacturation = source;
         if (source == null || source.getOutputFileName() == null) {
-            logger.log(Level.WARNING, "sourceFacturation ou son fichier de sortie est null, utilisation d'un fichier par défaut");
+            logger.log(Level.WARNING, "sourceFacturation ou son fichier de sortie est null, utilisation d''un fichier par défaut");
             this.fichierSortie = new File("default_output.xlsx");
         } else {
             this.fichierSortie = new File(source.getOutputFileName());
@@ -92,7 +92,7 @@ public class NavettesFacturationView extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        logger.log(Level.INFO, "Démarrage de l'interface NavettesFacturationView");
+        logger.log(Level.INFO, "Démarrage de l''interface NavettesFacturationView");
         primaryStage.setTitle("Navettes de Facturation");
 
         try {

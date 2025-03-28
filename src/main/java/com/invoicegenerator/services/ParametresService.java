@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -16,7 +17,7 @@ import java.util.logging.Logger;
  */
 public class ParametresService {
     private static final Logger logger = LoggerFactory.getLogger(ParametresService.class.getName());
-    private String parametresFileName;
+    private final String parametresFileName;
 
     /**
      * Constructeur de la classe ParametresService.
@@ -24,7 +25,7 @@ public class ParametresService {
      */
     public ParametresService(String parametresFileName) {
         this.parametresFileName = parametresFileName;
-        logger.info("ParametresService initialisé avec le fichier : " + parametresFileName);
+        logger.log(Level.INFO, "ParametresService initialisé avec le fichier : {0}", parametresFileName);
     }
 
     /**
@@ -37,9 +38,9 @@ public class ParametresService {
                 .create();
         try (FileWriter writer = new FileWriter(parametresFileName)) {
             gson.toJson(parametres, writer);
-            logger.info("Paramètres enregistrés avec succès dans le fichier : " + parametresFileName);
+            logger.log(Level.INFO, "Paramètres enregistrés avec succès dans le fichier : {0}", parametresFileName);
         } catch (IOException e) {
-            logger.severe("Erreur lors de l'enregistrement des paramètres : " + e.getMessage());
+            logger.log(Level.SEVERE, "Erreur lors de l'enregistrement des paramètres : {0}", e.getMessage());
         }
     }
 
@@ -52,17 +53,16 @@ public class ParametresService {
         File file = new File(parametresFileName);
 
         if (!file.exists()) {
-            logger.warning("Le fichier de paramètres n'existe pas : " + parametresFileName);
+            logger.log(Level.WARNING, "Le fichier de paramètres n'existe pas : {0}", parametresFileName);
             return new ParametersModel(); // Retourne un objet vide si le fichier n'existe pas
         }
 
         try (FileReader reader = new FileReader(file)) {
             ParametersModel parametres = gson.fromJson(reader, ParametersModel.class);
-            logger.info("Paramètres chargés avec succès depuis le fichier : " + parametresFileName);
+            logger.log(Level.INFO, "Paramètres chargés avec succès depuis le fichier : {0}", parametresFileName);
             return parametres;
         } catch (IOException e) {
-            logger.severe("Erreur lors du chargement des paramètres : " + e.getMessage());
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Erreur lors du chargement des paramètres : {0}", e.getMessage());
             return new ParametersModel();
         }
     }

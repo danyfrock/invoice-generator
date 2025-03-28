@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -25,19 +26,23 @@ public class ExcelNavetteWritterUtil {
      * @return Un résultat d'action indiquant le succès ou l'échec de l'opération.
      */
     public static ActionResult writeNewTemplate(String sortie) {
-        logger.info("Début de l'écriture d'un nouveau modèle de fichier Excel à : " + sortie);
+        logger.log(Level.INFO, "Début de l''écriture d''un nouveau modèle de fichier Excel à : {0}", sortie);
+
         ActionResult result = new ActionResult(true, "");
-        InputStream inputStream = ExcelNavetteWritterUtil.class.getClassLoader().getResourceAsStream("WST-CO_.xlsm");
+        InputStream inputStream =
+                ExcelNavetteWritterUtil.class.getClassLoader().getResourceAsStream("WST-CO_.xlsm");
+
         try {
             if (inputStream != null) {
                 Files.copy(inputStream, Paths.get(sortie), StandardCopyOption.REPLACE_EXISTING);
-                logger.info("Modèle de fichier Excel écrit avec succès à : " + sortie);
+                logger.log(Level.INFO, "Modèle de fichier Excel écrit avec succès à : {0}", sortie);
             } else {
                 throw new FileNotFoundException("Fichier ressource non trouvé");
             }
         } catch (IOException e) {
-            logger.severe("Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
-            result = new ActionResult(false, "Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
+            String errorText = "Erreur lors de l''écriture du template fichier Excel : ";
+            logger.severe(errorText + e.getMessage());
+            result = new ActionResult(false, errorText + e.getMessage());
         }
 
         return result;
@@ -51,7 +56,7 @@ public class ExcelNavetteWritterUtil {
      * @return Un résultat d'action indiquant le succès ou l'échec de l'opération.
      */
     public static ActionResult writeNavette(List<NavetteFacturationViewModel> liste, String pathExcel, String sheetName) {
-        logger.info("Début de l'écriture des navettes dans le fichier Excel : " + pathExcel);
+        logger.log(Level.INFO, "Début de l''écriture des navettes dans le fichier Excel : {0}", pathExcel);
         return writeNewTemplate(pathExcel).plus(writeAllNavettes(liste, pathExcel, sheetName));
     }
 
@@ -68,8 +73,9 @@ public class ExcelNavetteWritterUtil {
 
             Sheet sheet = workbook.getSheet(sheetName); // Utiliser le nom de la feuille spécifié
             if (sheet == null) {
-                logger.warning("La feuille " + sheetName + " n'existe pas dans le fichier Excel.");
-                return new ActionResult(false, "La feuille " + sheetName + " n'existe pas dans le fichier Excel.");
+                String message = String.format("La feuille %s n'existe pas dans le fichier Excel.", sheetName);
+                logger.warning(message);
+                return new ActionResult(false, message);
             }
 
             // Trouver la première ligne vide
@@ -103,16 +109,18 @@ public class ExcelNavetteWritterUtil {
             }
 
             // Sauvegarde du fichier
+            String message = String.format("Données ajoutées avec succès à : %s", pathExcel);
             try (FileOutputStream fileOut = new FileOutputStream(pathExcel)) {
                 workbook.write(fileOut);
-                logger.info("Données ajoutées avec succès à : " + pathExcel);
+                logger.info(message);
             }
 
-            return new ActionResult(true, "Données ajoutées avec succès à : " + pathExcel);
+            return new ActionResult(true, message);
 
         } catch (IOException e) {
-            logger.severe("Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
-            return new ActionResult(false, "Erreur lors de l'écriture du fichier Excel : " + e.getMessage());
+            String errorText = String.format("Erreur lors de l''écriture du fichier Excel : %s", e.getMessage());
+            logger.severe(errorText);
+            return new ActionResult(false, errorText);
         }
     }
 
@@ -123,20 +131,6 @@ public class ExcelNavetteWritterUtil {
      * @param value La valeur à écrire dans la cellule.
      */
     private static void updateCell(Row row, int cellIndex, double value) {
-        Cell cell = row.getCell(cellIndex);
-        if (cell == null) {
-            cell = row.createCell(cellIndex);
-        }
-        cell.setCellValue(value);
-    }
-
-    /**
-     * Met à jour la valeur d'une cellule avec un entier.
-     * @param row La ligne contenant la cellule.
-     * @param cellIndex L'index de la cellule.
-     * @param value La valeur à écrire dans la cellule.
-     */
-    private static void updateCell(Row row, int cellIndex, int value) {
         Cell cell = row.getCell(cellIndex);
         if (cell == null) {
             cell = row.createCell(cellIndex);

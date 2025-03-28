@@ -35,7 +35,7 @@ public class CommandesView extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        logger.log(Level.INFO, "Démarrage de l'interface CommandesView");
+        logger.log(Level.INFO, "Démarrage de l''interface CommandesView");
         primaryStage.setTitle("Commandes UI");
 
         // TableView
