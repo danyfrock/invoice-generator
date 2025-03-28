@@ -10,11 +10,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
-import com.invoicegenerator.modeles.navetteDtos.BillingDetailsModel;
-import com.invoicegenerator.modeles.navetteDtos.EventDetailsModel;
-import com.invoicegenerator.modeles.navetteDtos.ItemDetailsModel;
+import com.invoicegenerator.modeles.navettedtos.BillingDetailsModel;
+import com.invoicegenerator.modeles.navettedtos.EventDetailsModel;
+import com.invoicegenerator.modeles.navettedtos.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
-import com.invoicegenerator.modeles.navetteDtos.BillingShuttleModel;
+import com.invoicegenerator.modeles.navettedtos.BillingShuttleModel;
 import com.invoicegenerator.modeles.ActionResult;
 import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.PvToNavetteService;

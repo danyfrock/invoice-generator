@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.invoicegenerator.modeles.navetteDtos.BillingDetailsModel;
-import com.invoicegenerator.modeles.navetteDtos.EventDetailsModel;
-import com.invoicegenerator.modeles.navetteDtos.ItemDetailsModel;
+import com.invoicegenerator.modeles.navettedtos.BillingDetailsModel;
+import com.invoicegenerator.modeles.navettedtos.EventDetailsModel;
+import com.invoicegenerator.modeles.navettedtos.ItemDetailsModel;
 import com.invoicegenerator.modeles.PvEntityPvModel;
 import com.invoicegenerator.modeles.UoCommandLineModel;
-import com.invoicegenerator.modeles.navetteDtos.BillingShuttleModel;
+import com.invoicegenerator.modeles.navettedtos.BillingShuttleModel;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 
 /**
@@ -30,7 +30,7 @@ public class PvToNavetteService {
 		int i = 0;
 		for (PvEntityPvModel entite : entites) {
 			i++;
-			logger.log(Level.INFO, "Traitement de l'entité Pv numéro : {0}", i);
+			logger.log(Level.INFO, "Traitement de l''entité Pv numéro : {0}", i);
 			for (UoCommandLineModel ligne : entite.getCommand().getCommandLines()) {
 				BillingShuttleModel navette = new BillingShuttleModel()
 						.setItemDetails(new ItemDetailsModel()

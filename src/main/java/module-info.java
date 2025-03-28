@@ -12,5 +12,5 @@ module InvoiceGenerator {
     exports com.invoicegenerator;
     opens com.invoicegenerator.modeles to com.google.gson, javafx.base;
     opens com.invoicegenerator.viewmodels to com.google.gson, javafx.base;
-    opens com.invoicegenerator.modeles.navetteDtos to com.google.gson, javafx.base;
+    opens com.invoicegenerator.modeles.navettedtos to com.google.gson, javafx.base;
 }

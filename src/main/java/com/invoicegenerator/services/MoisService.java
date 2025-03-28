@@ -36,7 +36,9 @@ public class MoisService {
         MoisService service = new MoisService();
         LocalDate date = LocalDate.of(2025, 3, 11); // 11 mars 2025
 
-        logger.fine(service.extraireMois(date, Locale.FRANCE));
-        logger.fine(service.extraireMois(date, Locale.ENGLISH));
+        if (logger.isLoggable(Level.FINE)) {
+            logger.fine(service.extraireMois(date, Locale.FRANCE));
+            logger.fine(service.extraireMois(date, Locale.ENGLISH));
+        }
     }
 }

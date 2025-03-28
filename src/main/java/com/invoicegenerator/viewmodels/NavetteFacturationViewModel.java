@@ -1,6 +1,6 @@
 package com.invoicegenerator.viewmodels;
 
-import com.invoicegenerator.modeles.navetteDtos.BillingShuttleModel;
+import com.invoicegenerator.modeles.navettedtos.BillingShuttleModel;
 import com.invoicegenerator.services.MoisService;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 

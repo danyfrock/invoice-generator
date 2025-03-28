@@ -21,7 +21,7 @@ public class ParametersModel {
     private List<String> activityCodes = Arrays.asList("30001", "30003", "30005", "30007", "30009");
     private int minYear = 2024;
     private int maxYear = 2029;
-    private final static String OUTPUTFILE_DEFAULT_NAME = "WST-CO_.xlsm";
+    private static final String OUTPUTFILE_DEFAULT_NAME = "WST-CO_.xlsm";
     private final String parametersFileName = Paths.get(System.getProperty(USER_HOME), "") + "\\parametres.json";
     private String dernierEmplacementConnuEntrees = Paths.get(System.getProperty(USER_HOME), "") + "\\";
     private String dernierEmplacementConnuProgression = Paths.get(System.getProperty(USER_HOME), "") + "\\";

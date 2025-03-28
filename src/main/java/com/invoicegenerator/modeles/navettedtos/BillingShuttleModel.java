@@ -1,4 +1,4 @@
-package com.invoicegenerator.modeles.navetteDtos;
+package com.invoicegenerator.modeles.navettedtos;
 
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import java.util.logging.Logger;

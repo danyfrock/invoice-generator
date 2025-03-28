@@ -22,7 +22,7 @@ public class FileUtil {
      * @return Le chemin complet du fichier avec le suffixe ajouté.
      */
     public static String addSuffixToFileName(String filePath, String suffix) {
-        String message = MessageFormat.format("Ajout du suffixe '{0}' au fichier : {1}", suffix, filePath);
+        String message = MessageFormat.format("Ajout du suffixe ''{0}'' au fichier : ''{1}''", suffix, filePath);
         logger.info(message);
 
         File file = new File(filePath);
