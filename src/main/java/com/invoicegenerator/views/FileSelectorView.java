@@ -44,7 +44,6 @@ public class FileSelectorView extends Application {
     public FileSelectorView() {
         logger.log(Level.INFO, "Initialisation de FileSelectorView sans modèle source");
         this.chargerParametres();
-        updateNextButtonState();
     }
 
     public FileSelectorView(BillingProcessModel source) {
@@ -53,7 +52,6 @@ public class FileSelectorView extends Application {
         for (PvEntityPvModel pv : source.getPvEntities()) {
             fileTable.getItems().add(pv);
         }
-        updateNextButtonState();
     }
 
     @Override
@@ -73,12 +71,12 @@ public class FileSelectorView extends Application {
         fileTable.getColumns().addAll(fileNameColumn, filePathColumn);
 
         fileTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        fileTable.getItems().addListener(this::onFileTableChange);
 
         fileTable.getItems().addListener((ListChangeListener<PvEntityPvModel>) change -> {
             source.getPvEntities().clear();
             source.getPvEntities().addAll(fileTable.getItems());
             logger.log(Level.FINE, "Synchronisation de source.getPvEntities() avec fileTable : {0} éléments", fileTable.getItems().size());
-            updateNextButtonState();
         });
 
         Button selectButton = new Button("Sélectionner fichier (Ctrl+O)");
@@ -151,6 +149,13 @@ public class FileSelectorView extends Application {
         primaryStage.show();
 
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
+    }
+
+    private void onFileTableChange(ListChangeListener.Change<? extends PvEntityPvModel> change) {
+        source.getPvEntities().clear();
+        source.getPvEntities().addAll(fileTable.getItems());
+        logger.log(Level.FINE, "Synchronisation de source.getPvEntities() avec fileTable : {0} éléments", fileTable.getItems().size());
+        updateNextButtonState();
     }
 
     private void goNext(Stage primaryStage) {
@@ -229,7 +234,6 @@ public class FileSelectorView extends Application {
                 logger.log(Level.FINE, "Fichier déjà existant ignoré : {0}", file.getAbsolutePath());
             }
         }
-        updateNextButtonState();
     }
 
     private void selectFiles() {
@@ -246,7 +250,6 @@ public class FileSelectorView extends Application {
         if (!selectedItems.isEmpty()) {
             fileTable.getItems().removeAll(selectedItems);
             logger.log(Level.FINE, "Suppression de {0} éléments sélectionnés", selectedItems.size());
-            updateNextButtonState();
         } else {
             logger.log(Level.FINE, "Aucune sélection à supprimer");
         }
