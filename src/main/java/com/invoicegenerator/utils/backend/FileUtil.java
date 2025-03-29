@@ -61,7 +61,6 @@ public class FileUtil {
         logger.log(Level.INFO, "Chemin complet du fichier : {0}", result);
         return result;
     }
-
     /**
      * Crée un fichier temporaire sécurisé.
      * Sous Unix/Linux, utilise des permissions strictes (rwx------).
@@ -70,25 +69,55 @@ public class FileUtil {
      * @param prefix Préfixe du fichier temporaire.
      * @param suffix Extension du fichier (ex: ".html").
      * @return Le fichier temporaire sécurisé.
-     * @throws IOException Si la création échoue.
      */
-    public static File createTempFile(String prefix, String suffix) throws IOException {
+    public static File createTempFile(String prefix, String suffix) {
         try {
             if (isUnix()) {
-                // Permissions strictes sous Unix/Linux
-                FileAttribute<Set<PosixFilePermission>> attr =
-                        PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------"));
-                return Files.createTempFile(prefix, suffix, attr).toFile();
+                return createUnixTempFile(prefix, suffix);
             } else {
-                // Sous Windows, création d'un répertoire temporaire sécurisé
-                Path secureTempDir = Files.createTempDirectory("secureTemp");
-                File tempFile = File.createTempFile(prefix, suffix, secureTempDir.toFile());
-                tempFile.deleteOnExit(); // Nettoyage à la fin du programme
-                return tempFile;
+                return createWindowsTempFile(prefix, suffix);
             }
         } catch (IOException e) {
             logger.severe("Erreur lors de la création du fichier temporaire sécurisé : " + e.getMessage());
-            throw new IOException("Échec de la création du fichier temporaire sécurisé", e);
+            return new File(""); // Retourne un fichier vide en cas d'erreur
+        }
+    }
+
+    private static File createUnixTempFile(String prefix, String suffix) throws IOException {
+        FileAttribute<Set<PosixFilePermission>> attr =
+                PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------"));
+        return Files.createTempFile(prefix, suffix, attr).toFile();
+    }
+
+    private static File createWindowsTempFile(String prefix, String suffix) throws IOException {
+        File secureDir = new File(System.getProperty("user.home"), "mySecureTemp");
+
+        // Fusionner l'existence du répertoire et sa création
+        if (!secureDir.exists() && !secureDir.mkdirs()) {
+            logger.severe("Impossible de créer le dossier sécurisé : " + secureDir.getAbsolutePath());
+        }
+
+        // Définir les permissions
+        setPermissions(secureDir);
+
+        // Créer le fichier temporaire
+        Path tempFilePath = Files.createTempFile(secureDir.toPath(), prefix, suffix);
+        File tempFile = tempFilePath.toFile();
+        tempFile.deleteOnExit(); // Nettoyage à la fin du programme
+        return tempFile;
+    }
+
+    private static void setPermissions(File dir) {
+        if (!dir.setReadable(true, true)) {
+            logger.log(Level.SEVERE,  "Impossible de définir la permission en lecture pour le dossier : {0}", dir.getAbsolutePath());
+        }
+
+        if (!dir.setWritable(true, true)) {
+            logger.log(Level.SEVERE, "Impossible de définir la permission en écriture pour le dossier : {0}", dir.getAbsolutePath());
+        }
+
+        if (!dir.setExecutable(false, true)) {
+            logger.log(Level.SEVERE, "Impossible de définir la permission d'exécution pour le dossier : {0}", dir.getAbsolutePath());
         }
     }
 
