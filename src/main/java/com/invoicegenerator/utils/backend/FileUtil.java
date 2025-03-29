@@ -1,9 +1,17 @@
 package com.invoicegenerator.utils.backend;
 
+import org.apache.commons.lang3.SystemUtils;
+
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.FileAttribute;
+import java.nio.file.attribute.PosixFilePermission;
+import java.nio.file.attribute.PosixFilePermissions;
 import java.text.MessageFormat;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -54,5 +62,38 @@ public class FileUtil {
         String result = fullPath.toString();
         logger.log(Level.INFO, "Chemin complet du fichier : {0}", result);
         return result;
+    }
+
+    /**
+     * Crée un fichier temporaire dans un répertoire sécurisé.
+     * <p>
+     * Sur Unix, les permissions sont restreintes à l'utilisateur (rwx------).
+     * Sur Windows, un dossier temporaire dédié est utilisé.
+     * </p>
+     *
+     * @param prefix Préfixe du nom du fichier temporaire.
+     * @param suffix Suffixe du fichier temporaire (ex: ".txt", ".html").
+     * @return Un fichier temporaire sécurisé.
+     * @throws IOException Si la création du fichier échoue.
+     */
+    public static File createTempFile(String prefix, String suffix) throws IOException {
+        Path secureTempDir;
+
+        try {
+            if (SystemUtils.IS_OS_UNIX) {
+                // Définition des permissions strictes sous Unix
+                FileAttribute<Set<PosixFilePermission>> attr =
+                        PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------"));
+                secureTempDir = Files.createTempDirectory("mySecureDirectory", attr);
+            } else {
+                // Création du dossier temporaire sous Windows
+                secureTempDir = Files.createTempDirectory("mySecureDirectory");
+            }
+
+            return File.createTempFile(prefix, suffix, secureTempDir.toFile());
+
+        } catch (IOException e) {
+            throw new IOException("Échec de la création du fichier temporaire sécurisé", e);
+        }
     }
 }

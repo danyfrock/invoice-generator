@@ -1,5 +1,6 @@
 package com.invoicegenerator.utils.ihm;
 
+import com.invoicegenerator.utils.backend.FileUtil;
 import com.invoicegenerator.utils.backend.LoggerFactory;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,7 +12,6 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -206,7 +206,7 @@ public class MenuBuilder {
             throw new IOException("Resource help.html not found in classpath");
         }
 
-        File tempFile = File.createTempFile("help", ".html");
+        File tempFile = FileUtil.createTempFile("help", ".html");
         tempFile.deleteOnExit();
         logger.log(Level.FINE, "Création d''un fichier temporaire : {0}", tempFile.getAbsolutePath());
 
