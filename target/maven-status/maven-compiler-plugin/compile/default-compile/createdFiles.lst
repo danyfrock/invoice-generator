@@ -9,6 +9,7 @@ com\invoicegenerator\utils\backend\ExcelNavetteWritterUtil.class
 com\invoicegenerator\views\ParametresView.class
 com\invoicegenerator\services\BillingProcessService.class
 com\invoicegenerator\viewmodels\CommandeViewModel.class
+com\invoicegenerator\modeles\navettedtos\package-info.class
 com\invoicegenerator\viewmodels\NavetteFacturationViewModel.class
 com\invoicegenerator\views\package-info.class
 com\invoicegenerator\views\CommandesView$1.class

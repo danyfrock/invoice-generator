@@ -11,6 +11,9 @@ module InvoiceGenerator {
     requires java.desktop;
 
     exports com.invoicegenerator;
+    exports com.invoicegenerator.utils.backend; // Ajouté pour FileUtil
+    exports com.invoicegenerator.utils.ihm; // Ajouté pour MenuBuilder
+
     opens com.invoicegenerator.modeles to com.google.gson, javafx.base;
     opens com.invoicegenerator.viewmodels to com.google.gson, javafx.base;
     opens com.invoicegenerator.modeles.navettedtos to com.google.gson, javafx.base;
