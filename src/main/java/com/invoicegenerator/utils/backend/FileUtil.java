@@ -117,7 +117,7 @@ public class FileUtil {
         }
 
         if (!dir.setExecutable(false, true)) {
-            logger.log(Level.SEVERE, "Impossible de définir la permission d'exécution pour le dossier : {0}", dir.getAbsolutePath());
+            logger.log(Level.SEVERE, "Impossible de définir la permission d''exécution pour le dossier : {0}", dir.getAbsolutePath());
         }
     }
 
