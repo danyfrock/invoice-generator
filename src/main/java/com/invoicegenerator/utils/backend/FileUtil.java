@@ -1,14 +1,11 @@
 package com.invoicegenerator.utils.backend;
 
-import org.apache.commons.lang3.SystemUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.FileAttribute;
-import java.nio.file.attribute.PosixFilePermission;
 import java.nio.file.attribute.PosixFilePermissions;
 import java.text.MessageFormat;
 import java.util.Set;
@@ -65,35 +62,70 @@ public class FileUtil {
     }
 
     /**
-     * Crée un fichier temporaire dans un répertoire sécurisé.
+     * Crée un fichier temporaire sécurisé.
      * <p>
-     * Sur Unix, les permissions sont restreintes à l'utilisateur (rwx------).
-     * Sur Windows, un dossier temporaire dédié est utilisé.
+     * Sur Unix/Linux, il restreint les permissions à l'utilisateur (rwx------).
+     * Sur Windows, il utilise un dossier sécurisé.
      * </p>
      *
-     * @param prefix Préfixe du nom du fichier temporaire.
-     * @param suffix Suffixe du fichier temporaire (ex: ".txt", ".html").
+     * @param prefix Préfixe du fichier temporaire.
+     * @param suffix Extension du fichier (ex: ".txt", ".html").
      * @return Un fichier temporaire sécurisé.
-     * @throws IOException Si la création du fichier échoue.
      */
-    public static File createTempFile(String prefix, String suffix) throws IOException {
-        Path secureTempDir;
-
-        try {
-            if (SystemUtils.IS_OS_UNIX) {
-                // Définition des permissions strictes sous Unix
-                FileAttribute<Set<PosixFilePermission>> attr =
-                        PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------"));
-                secureTempDir = Files.createTempDirectory("mySecureDirectory", attr);
-            } else {
-                // Création du dossier temporaire sous Windows
-                secureTempDir = Files.createTempDirectory("mySecureDirectory");
+    public static File createTempFile(String prefix, String suffix) {
+        Path tempFile = null;
+        if (isUnix()) {
+            // Permissions strictes pour éviter tout accès externe
+            FileAttribute<Set<java.nio.file.attribute.PosixFilePermission>> attr =
+                    PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwx------"));
+            try {
+                tempFile = Files.createTempFile(prefix, suffix, attr);
+            } catch (IOException e) {
+                logger.severe("Erreur lors de la création du fichier temporaire sur Unix/Linux : " + e.getMessage());
+            }
+        } else {
+            // Windows : créer un fichier temporaire dans un dossier privé
+            File secureDir = new File(System.getProperty("user.home"), "mySecureTemp");
+            if (!secureDir.exists()) {
+                if (!secureDir.mkdirs()) {
+                    logger.severe("Impossible de créer le dossier sécurisé : " + secureDir.getAbsolutePath());
+                }
             }
 
-            return File.createTempFile(prefix, suffix, secureTempDir.toFile());
+            if (!secureDir.setReadable(true, true)) {
+                logger.severe("Impossible de définir la permission en lecture pour le dossier : " + secureDir.getAbsolutePath());
+            }
 
-        } catch (IOException e) {
-            throw new IOException("Échec de la création du fichier temporaire sécurisé", e);
+            if (!secureDir.setWritable(true, true)) {
+                logger.severe("Impossible de définir la permission en écriture pour le dossier : " + secureDir.getAbsolutePath());
+            }
+
+            if (!secureDir.setExecutable(false, true)) {
+                logger.severe("Impossible de définir la permission d'exécution pour le dossier : " + secureDir.getAbsolutePath());
+            }
+
+            try {
+                tempFile = Files.createTempFile(secureDir.toPath(), prefix, suffix);
+            } catch (IOException e) {
+                logger.severe("Erreur lors de la création du fichier temporaire dans le dossier sécurisé : " + e.getMessage());
+            }
         }
+
+        // Si la création du fichier a échoué, loguer une erreur.
+        if (tempFile == null) {
+            logger.severe("La création du fichier temporaire a échoué.");
+        }
+
+        return tempFile == null ? new File("") : tempFile.toFile();
+    }
+
+    /**
+     * Vérifie si le système d'exploitation est Unix/Linux.
+     *
+     * @return true si Unix/Linux, false sinon.
+     */
+    private static boolean isUnix() {
+        String os = System.getProperty("os.name").toLowerCase();
+        return os.contains("nix") || os.contains("nux") || os.contains("mac");
     }
 }
