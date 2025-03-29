@@ -1,5 +1,4 @@
 module InvoiceGenerator {
-    requires java.desktop;
     requires org.apache.poi.poi;
     requires org.apache.poi.ooxml;
     requires javafx.controls;
@@ -8,6 +7,8 @@ module InvoiceGenerator {
     requires com.google.gson;
     requires java.logging;
     requires commons.math3;
+    requires org.apache.commons.lang3;
+    requires java.desktop;
 
     exports com.invoicegenerator;
     opens com.invoicegenerator.modeles to com.google.gson, javafx.base;
