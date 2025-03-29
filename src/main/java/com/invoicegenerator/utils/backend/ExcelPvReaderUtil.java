@@ -106,10 +106,9 @@ public class ExcelPvReaderUtil {
             Map<String, Integer> headerMap = new HashMap<>();
             String header1 = "";
             for (Cell cell : headerRow2) {
-                if (headerRow1.getCell(cell.getColumnIndex()) != null) {
-                    if (!getStringCellValue(headerRow1.getCell(cell.getColumnIndex())).isEmpty()) {
-                        header1 = getStringCellValue(headerRow1.getCell(cell.getColumnIndex()));
-                    }
+                if (headerRow1.getCell(cell.getColumnIndex()) != null &&
+                        !getStringCellValue(headerRow1.getCell(cell.getColumnIndex())).isEmpty()) {
+                    header1 = getStringCellValue(headerRow1.getCell(cell.getColumnIndex()));
                 }
                 String header = header1 + " - " + getStringCellValue(cell);
                 headerMap.put(header, cell.getColumnIndex());
