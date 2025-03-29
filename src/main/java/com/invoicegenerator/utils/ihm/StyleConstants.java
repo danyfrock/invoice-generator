@@ -1,5 +1,9 @@
 package com.invoicegenerator.utils.ihm;
 
+/**
+ * Classe utilitaire contenant des constantes de style pour l'application de génération de factures.
+ * Cette classe fournit des codes de couleur et des définitions de style pour les messages de succès et d'erreur.
+ */
 public class StyleConstants {
 
     private  StyleConstants() { throw new IllegalStateException("Utility class");}
