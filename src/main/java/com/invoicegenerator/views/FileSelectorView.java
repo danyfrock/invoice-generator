@@ -71,12 +71,9 @@ public class FileSelectorView extends Application {
         fileTable.getColumns().addAll(fileNameColumn, filePathColumn);
 
         fileTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        fileTable.getItems().addListener(this::onFileTableChange);
 
         fileTable.getItems().addListener((ListChangeListener<PvEntityPvModel>) change -> {
-            source.getPvEntities().clear();
-            source.getPvEntities().addAll(fileTable.getItems());
-            logger.log(Level.FINE, "Synchronisation de source.getPvEntities() avec fileTable : {0} éléments", fileTable.getItems().size());
+            onFileTableChange();
         });
 
         Button selectButton = new Button("Sélectionner fichier (Ctrl+O)");
@@ -151,7 +148,7 @@ public class FileSelectorView extends Application {
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
     }
 
-    private void onFileTableChange(ListChangeListener.Change<? extends PvEntityPvModel> change) {
+    private void onFileTableChange() {
         source.getPvEntities().clear();
         source.getPvEntities().addAll(fileTable.getItems());
         logger.log(Level.FINE, "Synchronisation de source.getPvEntities() avec fileTable : {0} éléments", fileTable.getItems().size());
