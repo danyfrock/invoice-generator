@@ -137,8 +137,8 @@ public class CommandesView extends Application {
                 )
                 .silVousPlait();
         Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
-                .avecNavigationSuivant("Prévisualisation (Ctrl+Flèche Droite)", "Ctrl+Right", e -> goNext(primaryStage))
-                .avecNavigationPrecedent("Retour au choix de fichiers (Ctrl+Flèche Gauche)", "Ctrl+Left", e -> goPrecedent(primaryStage))
+                .avecNavigationSuivant(e -> goNext(primaryStage))
+                .avecNavigationPrecedent(e -> goPrecedent(primaryStage))
                 .silVousPlait();
         Menu helpMenu = new MenuBuilder("Help", primaryStage).avecAide().silVousPlait();
         menuBar.getMenus().addAll(menu, navigateMenu, helpMenu);

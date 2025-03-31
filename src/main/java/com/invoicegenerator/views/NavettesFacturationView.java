@@ -104,8 +104,8 @@ public class NavettesFacturationView extends Application {
                     .silVousPlait();
 
             Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
-                    .avecNavigationSuivant("Écrire Navettes (Ctrl+Flèche Droite)", "Ctrl+Right", e -> goNext())
-                    .avecNavigationPrecedent("Retour à la saisie (Ctrl+Flèche Gauche)", "Ctrl+Left", e -> goPrecedent(primaryStage))
+                    .avecNavigationSuivant(e -> goNext())
+                    .avecNavigationPrecedent(e -> goPrecedent(primaryStage))
                     .silVousPlait();
 
             Menu helpMenu = new MenuBuilder("Help", primaryStage)
