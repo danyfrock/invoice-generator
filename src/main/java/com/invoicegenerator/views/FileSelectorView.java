@@ -39,7 +39,6 @@ public class FileSelectorView extends Application {
     private BillingProcessModel source = new BillingProcessModel();
     private BillingProcessService billingService = new BillingProcessService("billing_process.json"); // Instance par défaut
     private final ParametresService parametresService = new ParametresService(this.source.getParameters().getParametersFileName());
-    private boolean canGoNext = false;
 
     public FileSelectorView() {
         logger.log(Level.INFO, "Initialisation de FileSelectorView sans modèle source");
@@ -83,6 +82,7 @@ public class FileSelectorView extends Application {
         deleteButton.setOnAction(e -> deleteSelection());
 
         nextButton.setOnAction(e -> goNext(primaryStage));
+        updateNextButtonState();
 
         Button paramsButton = new Button("Paramètres");
         paramsButton.setOnAction(e -> {
@@ -120,7 +120,7 @@ public class FileSelectorView extends Application {
                 .silVousPlait();
 
         Menu navigateMenu = new MenuBuilder("Naviguer", primaryStage)
-                .avecNavigationSuivant("Suivant (Ctrl+Flèche Droite)", "Ctrl+Right", e -> goNext(primaryStage))
+                .avecNavigationSuivant(e -> goNext(primaryStage))
                 .silVousPlait();
 
         Menu helpMenu = new MenuBuilder("Help", primaryStage)
@@ -156,7 +156,7 @@ public class FileSelectorView extends Application {
     }
 
     private void goNext(Stage primaryStage) {
-        if (this.canGoNext) {
+        if (this.canGoNext()) {
             logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
 
             // Fenêtre de chargement avec un indicateur indéfini
@@ -253,12 +253,15 @@ public class FileSelectorView extends Application {
     }
 
     private void updateNextButtonState() {
-        boolean isDisabled = fileTable.getItems().isEmpty() ||
-                source.getParameters().getOutputFolder() == null ||
-                source.getParameters().getOutputFolder().isEmpty();
-        nextButton.setDisable(isDisabled);
-        this.canGoNext = !isDisabled;
+        Boolean isDisabled = !this.canGoNext();
+        nextButton.setDisable(!this.canGoNext());
         logger.log(Level.FINE, "État du bouton Suivant mis à jour : désactivé = {0}", isDisabled);
+    }
+
+    private Boolean canGoNext(){
+        return !(fileTable.getItems().isEmpty() ||
+                source.getParameters().getOutputFolder() == null ||
+                source.getParameters().getOutputFolder().isEmpty());
     }
 
     private void chargerParametres() {

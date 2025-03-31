@@ -134,14 +134,12 @@ public class MenuBuilder {
     /**
      * Ajoute un item de navigation "Suivant".
      *
-     * @param text    Texte de l'item
-     * @param shortcut Raccourci clavier
      * @param onNext   Action à exécuter
      * @return MenuBuilder pour chaînage fluide
      */
-    public MenuBuilder avecNavigationSuivant(String text, String shortcut, EventHandler<ActionEvent> onNext) {
-        return avecAction(text, shortcut, e -> {
-            logger.log(Level.FINE, "Navigation suivante demandée : {0}", text);
+    public MenuBuilder avecNavigationSuivant(EventHandler<ActionEvent> onNext) {
+        return avecAction("Suivant (Alt + Flèche Droite)", "Alt+Right", e -> {
+            logger.fine("Navigation suivante demandée.");
             onNext.handle(e);
         });
     }
@@ -149,14 +147,12 @@ public class MenuBuilder {
     /**
      * Ajoute un item de navigation "Précédent".
      *
-     * @param text      Texte de l'item
-     * @param shortcut   Raccourci clavier
      * @param onPrevious Action à exécuter
      * @return MenuBuilder pour chaînage fluide
      */
-    public MenuBuilder avecNavigationPrecedent(String text, String shortcut, EventHandler<ActionEvent> onPrevious) {
-        return avecAction(text, shortcut, e -> {
-            logger.log(Level.FINE, "Navigation précédente demandée : {0}", text);
+    public MenuBuilder avecNavigationPrecedent(EventHandler<ActionEvent> onPrevious) {
+        return avecAction("Précedent", "Alt+Left", e -> {
+            logger.fine("Navigation précédente demandée");
             onPrevious.handle(e);
         });
     }
