@@ -253,12 +253,12 @@ public class FileSelectorView extends Application {
     }
 
     private void updateNextButtonState() {
-        Boolean isDisabled = !this.canGoNext();
-        nextButton.setDisable(!this.canGoNext());
+        boolean isDisabled = !this.canGoNext();
+        nextButton.setDisable(isDisabled);
         logger.log(Level.FINE, "État du bouton Suivant mis à jour : désactivé = {0}", isDisabled);
     }
 
-    private Boolean canGoNext(){
+    private boolean canGoNext(){
         return !(fileTable.getItems().isEmpty() ||
                 source.getParameters().getOutputFolder() == null ||
                 source.getParameters().getOutputFolder().isEmpty());
