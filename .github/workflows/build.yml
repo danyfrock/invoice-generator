@@ -57,7 +57,7 @@ jobs:
         run: |
           echo %CD%  REM Affiche le répertoire courant
           dir target\libs
-          mvn dependency:copy-dependencies
+          mvn dependency:copy-dependencies - outputDirectory=target\libs
         shell: cmd
 
       - name: Create runtime with jlink
@@ -71,7 +71,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir target\libs
-          mvn dependency:copy-dependencies
+          mvn dependency:copy-dependencies - outputDirectory=target\libs
         shell: cmd
 
       - name: Generate executable with jpackage
