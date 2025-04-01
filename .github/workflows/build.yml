@@ -56,9 +56,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           echo %CD%  REM Affiche le répertoire courant
-          rmdir /s /q target\runtime 2>nul || echo Aucun runtime à supprimer
           dir target\libs
-          copy target\libs\*.jar target\ 2>nul || echo Erreur lors de la copie, mais on continue
+          mvn dependency:copy-dependencies
         shell: cmd
 
       - name: Create runtime with jlink
@@ -72,14 +71,14 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir target\libs
-          copy target\libs\*.jar target\ 2>nul || echo Erreur lors de la copie, mais on continue
+          mvn dependency:copy-dependencies
         shell: cmd
 
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir javafx-sdk  REM Vérifie JavaFX
-          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path target;javafx-sdk\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging,commons-math3,poi --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose --win-console
+          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path target;javafx-sdk\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --class-path target\libs\* --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose --win-console
           dir target\runtime  REM Vérifie que le runtime est créé
         shell: cmd
 
