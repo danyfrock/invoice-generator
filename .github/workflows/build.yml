@@ -24,7 +24,7 @@ jobs:
       - name: Download JavaFX SDK
         run: |
           curl -L -o javafx-sdk.zip https://download2.gluonhq.com/openjfx/23.0.2/openjfx-23.0.2_windows-x64_bin-sdk.zip
-          unzip javafx-sdk.zip -d javafx-sdk  # Changement : unzip dans javafx-sdk au lieu de C:\JavaFX
+          unzip javafx-sdk.zip -d javafx-sdk
         shell: cmd
 
       - name: Build with Maven
