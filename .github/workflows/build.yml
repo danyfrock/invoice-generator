@@ -48,6 +48,10 @@ jobs:
         run: mvn -B clean package
         shell: cmd
 
+      - name: Install with Maven
+        run: mvn install -U
+        shell: cmd
+
       - name: Create runtime with jlink
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
@@ -59,7 +63,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir target\libs
-          mvn dependency:copy-dependencies -DoutputDirectory=target\libs
+          mvn dependency:copy-dependencies -DoutputDirectory="target\libs"
         shell: cmd
 
       - name: Generate executable with jpackage
