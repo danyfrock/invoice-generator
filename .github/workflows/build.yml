@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build and Analyze Invoice Generator
 
 on:
   push:
@@ -9,31 +9,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: windows-latest  # Pour générer un .exe
-
+  build-and-release:
+    runs-on: windows-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set version from tag
-        run: |
-          echo VERSION=%GITHUB_REF_NAME% >> %GITHUB_ENV%
-          echo EXE_VERSION=%GITHUB_REF_NAME:v=% >> %GITHUB_ENV%
-        shell: cmd
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up JDK 22
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '22'
           distribution: 'temurin'
-
-      - name: Cache Maven dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-maven-
 
       - name: Download JavaFX SDK
         run: |
@@ -43,28 +29,53 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B clean package
+        shell: cmd
 
-      - name: Create runtime image with jlink
+      - name: Extract version from pom.xml
+        if: startsWith(github.ref, 'refs/tags/v')
+        id: get_version
         run: |
-          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" \
-                --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging \
-                --output target/runtime
+          for /f "tokens=2 delims=<version></version>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*-SNAPSHOT</version>" pom.xml') do (
+            set "VERSION=%%i"
+            set "EXE_VERSION=%%i"
+          )
+          set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
+          set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
+          set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
+          echo VERSION=%VERSION% >> %GITHUB_ENV%
+          echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
+          echo JAR_NAME=%JAR_NAME% >> %GITHUB_ENV%
+          echo EXE_NAME=%EXE_NAME% >> %GITHUB_ENV%
+        shell: cmd
 
-      - name: Package executable with jpackage
+      - name: Build with Maven
+        run: mvn -B clean package
+        shell: cmd
+
+      - name: Copy dependencies
+        if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jpackage --input target \
-                   --main-jar target/invoice-generator-${{ env.VERSION }}.jar \
-                   --main-class com.invoicegenerator.Main \
-                   --name InvoiceGenerator \
-                   --app-version ${{ env.EXE_VERSION }} \
-                   --type exe \
-                   --runtime-image target/runtime \
-                   --win-dir-chooser \
-                   --dest target \
-                   --verbose
+          copy target\libs\*.jar target\ 2>nul || echo Erreur lors de la copie, mais on continue
+        shell: cmd
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Create runtime with jlink
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --output target\runtime --verbose
+        shell: cmd
+
+      - name: Generate executable with jpackage
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+        shell: cmd
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
         with:
-          name: InvoiceGenerator-${{ env.EXE_VERSION }}
-          path: target/InvoiceGenerator-${{ env.EXE_VERSION }}.exe
+          tag_name: v${{ env.EXE_VERSION }}
+          name: Release v${{ env.EXE_VERSION }}
+          files: target/${{ env.EXE_NAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
