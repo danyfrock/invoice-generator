@@ -60,7 +60,7 @@ public class CommandesView extends Application {
         mustFillColumn.setCellValueFactory(cellData -> cellData.getValue().doitRemplirProperty());
         mustFillColumn.setCellFactory(col -> getTableCellMustFillText());
 
-        fileTable.getColumns().addAll(leadColumn, fileNameColumn, filePathColumn, verifiedColumn, mustFillColumn);
+        fileTable.getColumns().addAll(leadColumn, fileNameColumn, verifiedColumn, mustFillColumn, filePathColumn);
 
         // Boutons de navigation
         Button backButton = new Button("Retour au choix de fichiers");

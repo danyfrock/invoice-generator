@@ -14,15 +14,17 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.function.Supplier;
@@ -84,16 +86,24 @@ public class FileSelectorView extends Application {
         nextButton.setOnAction(e -> goNext(primaryStage));
         updateNextButtonState();
 
-        Button paramsButton = new Button("Paramètres");
+        Button paramsButton = new Button();
+        paramsButton.setTooltip(new Tooltip("Paramètres"));
         paramsButton.setOnAction(e -> {
             logger.log(Level.INFO, "Passage à ParametresView avec {0} éléments", fileTable.getItems().size());
             new ParametresView(source).start(new Stage());
             primaryStage.close();
         });
 
+        ParemetrerBouton(paramsButton);
+
         HBox buttonBox = new HBox(10, selectButton, deleteButton, nextButton);
         Label outputFolderPathLabel = new Label("Dossier de sortie: " + source.getParameters().getOutputFolder());
-        HBox outputBox = new HBox(10, outputFolderPathLabel, paramsButton);
+        Region espaceEntre = new Region();
+        Region espaceFin = new Region();
+        espaceFin.setMinWidth(paramsButton.getMaxWidth());
+        HBox outputBox = new HBox(10, outputFolderPathLabel, espaceEntre,paramsButton, espaceFin);
+        HBox.setHgrow(paramsButton, Priority.NEVER);
+        HBox.setHgrow(espaceEntre, Priority.ALWAYS);
 
         // Ajout du MenuBar avec MenuBuilder
         MenuBar menuBar = new MenuBar();
@@ -146,6 +156,40 @@ public class FileSelectorView extends Application {
         primaryStage.show();
 
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
+    }
+
+    private void ParemetrerBouton(Button paramsButton) {
+        paramsButton.setStyle("-fx-background-color: transparent; -fx-padding: 0;");
+
+        parametrerAnimatedBouton(paramsButton);
+    }
+
+    private void parametrerAnimatedBouton(Button paramsButton) {
+        try {
+            // Récupérer les icônes
+            Image staticGear = new Image(
+                    Objects.requireNonNull(getClass().getResourceAsStream("/icons/icons8-gear-32.png")));
+            Image animatedGear = new Image(
+                    Objects.requireNonNull(getClass().getResourceAsStream("/icons/icons8-gear.gif")));
+            ImageView gearIcon = new ImageView(staticGear);
+            gearIcon.setFitHeight(32);
+            gearIcon.setFitWidth(32);
+
+            // Setter le bouton avec animation au survol
+            paramsButton.setOnMouseEntered(e -> gearIcon.setImage(animatedGear));
+            paramsButton.setOnMouseExited(e -> gearIcon.setImage(staticGear));
+            paramsButton.setGraphic(gearIcon);
+        } catch (Exception e) {
+            // En cas d’erreur (ex. icône introuvable), fallback sur un bouton simple
+            logger.log(Level.WARNING, "Échec du chargement des icônes, passage au mode secours", e);
+            parametrerBoutonSimple(paramsButton);
+        }
+    }
+
+    private void parametrerBoutonSimple(Button paramsButton) {
+        // Bouton simple avec Unicode ⚙
+        paramsButton.setText("\u2699");
+        paramsButton.setFont(Font.font("Segoe UI Symbol", 32)); // Taille 32
     }
 
     private void onFileTableChange() {
