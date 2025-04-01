@@ -10,16 +10,27 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest  # Pour générer un .exe
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set version from tag
+      - name: Extract version from pom.xml
+        if: startsWith(github.ref, 'refs/tags/v')
+        id: get_version
         run: |
-          echo VERSION=%GITHUB_REF_NAME% >> %GITHUB_ENV%
-          echo EXE_VERSION=%GITHUB_REF_NAME:v=% >> %GITHUB_ENV%
+          for /f "tokens=2 delims=<version></version>" %%i in ('findstr /r "<version>[0-9]*\.[0-9]*\.[0-9]*-SNAPSHOT</version>" pom.xml') do (
+            set "VERSION=%%i"
+            set "EXE_VERSION=%%i"
+          )
+          set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
+          set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
+          set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
+          echo VERSION=%VERSION% >> %GITHUB_ENV%
+          echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
+          echo JAR_NAME=%JAR_NAME% >> %GITHUB_ENV%
+          echo EXE_NAME=%EXE_NAME% >> %GITHUB_ENV%
         shell: cmd
 
       - name: Set up JDK 22
@@ -43,25 +54,28 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B clean package
+        shell: cmd
 
       - name: Create runtime image with jlink
         run: |
-          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" \
-                --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging \
+          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" ^
+                --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging ^
                 --output target/runtime
+        shell: cmd
 
       - name: Package executable with jpackage
         run: |
-          jpackage --input target \
-                   --main-jar target/invoice-generator-${{ env.VERSION }}.jar \
-                   --main-class com.invoicegenerator.Main \
-                   --name InvoiceGenerator \
-                   --app-version ${{ env.EXE_VERSION }} \
-                   --type exe \
-                   --runtime-image target/runtime \
-                   --win-dir-chooser \
-                   --dest target \
+          jpackage --input target ^
+                   --main-jar target/invoice-generator-${{ env.VERSION }}.jar ^
+                   --main-class com.invoicegenerator.Main ^
+                   --name InvoiceGenerator ^
+                   --app-version ${{ env.EXE_VERSION }} ^
+                   --type exe ^
+                   --runtime-image target/runtime ^
+                   --win-dir-chooser ^
+                   --dest target ^
                    --verbose
+        shell: cmd
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
