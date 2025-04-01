@@ -94,7 +94,7 @@ public class FileSelectorView extends Application {
             primaryStage.close();
         });
 
-        ParemetrerBouton(paramsButton);
+        paremetrerBouton(paramsButton);
 
         HBox buttonBox = new HBox(10, selectButton, deleteButton, nextButton);
         Label outputFolderPathLabel = new Label("Dossier de sortie: " + source.getParameters().getOutputFolder());
@@ -158,7 +158,7 @@ public class FileSelectorView extends Application {
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
     }
 
-    private void ParemetrerBouton(Button paramsButton) {
+    private void paremetrerBouton(Button paramsButton) {
         paramsButton.setStyle("-fx-background-color: transparent; -fx-padding: 0;");
 
         parametrerAnimatedBouton(paramsButton);
