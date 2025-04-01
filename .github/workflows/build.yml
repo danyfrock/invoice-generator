@@ -38,10 +38,10 @@ jobs:
           set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
           set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
           set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
-          echo VERSION=%VERSION% >> %GITHUB_ENV%
-          echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
-          echo JAR_NAME=%JAR_NAME% >> %GITHUB_ENV%
-          echo EXE_NAME=%EXE_NAME% >> %GITHUB_ENV%
+          echo VERSION=%VERSION% >> $GITHUB_ENV
+          echo EXE_VERSION=%EXE_VERSION% >> $GITHUB_ENV
+          echo JAR_NAME=%JAR_NAME% >> $GITHUB_ENV
+          echo EXE_NAME=%EXE_NAME% >> $GITHUB_ENV
         shell: cmd
 
       - name: Build with Maven
@@ -70,7 +70,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir javafx-sdk
-          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path target;javafx-sdk\javafx-sdk-23.0.2\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --class-path target\libs\* --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose --win-console
+          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target${{ runner.os == 'Windows' && ';' || ':' }}javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --class-path target\libs\* --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose --win-console
           dir target  REM Corrigé pour voir l'exécutable
         shell: cmd
 
