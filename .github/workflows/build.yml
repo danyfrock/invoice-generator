@@ -12,7 +12,7 @@ jobs:
   build-and-release:
     runs-on: windows-latest
     steps:
-      - name: Clean target directory
+      - name: Clean target directory if need
         run: |
           if exist target rmdir /s /q target
         shell: cmd
