@@ -75,8 +75,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir javafx-sdk
-          jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
-          dir target  REM Corrigé pour voir l'exécutable
+          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target;javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          dir target
         shell: cmd
 
       - name: Create GitHub Release
