@@ -12,6 +12,11 @@ jobs:
   build-and-release:
     runs-on: windows-latest
     steps:
+      - name: Clean target directory
+        run: |
+          if exist target rmdir /s /q target
+        shell: cmd
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -50,7 +55,7 @@ jobs:
         shell: cmd
 
       - name: Install with Maven
-        run: mvn install -U
+        run: mvn clean install -U
         shell: cmd
 
       - name: Create runtime with jlink
@@ -74,12 +79,30 @@ jobs:
           dir javafx-sdk
           dir javafx-sdk\javafx-sdk-23.0.2
           dir javafx-sdk\javafx-sdk-23.0.2\lib
+          dir "target\app\%JAR_NAME%"
+        shell: cmd
+
+      - name: Build with Maven
+        run: mvn -B clean package
+        shell: cmd
+
+      - name: Prepare jpackage input
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          mkdir target\app
+          move target\%JAR_NAME% target\app\
+          dir target\app
         shell: cmd
 
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\${{ env.JAR_NAME }};target\libs" --name InvoiceGenerator --app-version "${{ env.EXE_VERSION }}" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          echo Input directory:
+          dir target\app
+          echo Module path:
+          dir "target\app\%JAR_NAME%"
+          dir target\libs
+          jpackage --input target\app --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\app\target\%JAR_NAME%;target\libs" --name InvoiceGenerator --app-version "%EXE_VERSION%" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
           dir target
         shell: cmd
 
