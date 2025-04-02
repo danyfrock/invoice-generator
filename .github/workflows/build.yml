@@ -12,7 +12,7 @@ jobs:
   build-and-release:
     runs-on: windows-latest
     steps:
-      - name: Clean target directory if need
+      - name: Clean target directory
         run: |
           if exist target rmdir /s /q target
         shell: cmd
@@ -79,7 +79,6 @@ jobs:
           dir javafx-sdk
           dir javafx-sdk\javafx-sdk-23.0.2
           dir javafx-sdk\javafx-sdk-23.0.2\lib
-          dir "target\app\%JAR_NAME%"
         shell: cmd
 
       - name: Build with Maven
