@@ -78,7 +78,7 @@ jobs:
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\libs;javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\libs;javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --name InvoiceGenerator --app-version "${{ env.EXE_VERSION }}" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
           dir target
         shell: cmd
 
