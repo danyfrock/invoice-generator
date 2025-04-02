@@ -42,6 +42,7 @@ jobs:
           echo JAR_NAME=%JAR_NAME% >> $GITHUB_ENV
           echo EXE_NAME=%EXE_NAME% >> $GITHUB_ENV
           echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%, EXE_NAME=%EXE_NAME%
+          echo Module path will be: "target\%JAR_NAME%;target\libs"
         shell: cmd
 
       - name: Build with Maven
@@ -80,6 +81,13 @@ jobs:
         run: |
           jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\${{ env.JAR_NAME }};target\libs" --name InvoiceGenerator --app-version "${{ env.EXE_VERSION }}" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
           dir target
+        shell: cmd
+
+      - name: Debug environment variables
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%, EXE_NAME=%EXE_NAME%
+          echo Module path will be: "target\%JAR_NAME%;target\libs"
         shell: cmd
 
       - name: Debug target directory
