@@ -12,11 +12,6 @@ jobs:
   build-and-release:
     runs-on: windows-latest
     steps:
-      - name: Clean target directory
-        run: |
-          if exist target rmdir /s /q target
-        shell: cmd
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -47,7 +42,6 @@ jobs:
           echo JAR_NAME=%JAR_NAME% >> $GITHUB_ENV
           echo EXE_NAME=%EXE_NAME% >> $GITHUB_ENV
           echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%, EXE_NAME=%EXE_NAME%
-          echo Module path will be: "target\%JAR_NAME%;target\libs"
         shell: cmd
 
       - name: Build with Maven
@@ -72,19 +66,6 @@ jobs:
           mvn dependency:copy-dependencies -DoutputDirectory="target\libs"
         shell: cmd
 
-      - name: Debug target directory
-        if: startsWith(github.ref, 'refs/tags/v')
-        run: dir target
-          dir target\libs
-          dir javafx-sdk
-          dir javafx-sdk\javafx-sdk-23.0.2
-          dir javafx-sdk\javafx-sdk-23.0.2\lib
-        shell: cmd
-
-      - name: Build with Maven
-        run: mvn -B clean package
-        shell: cmd
-
       - name: Prepare jpackage input
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
@@ -101,7 +82,7 @@ jobs:
           echo Module path:
           dir "target\app\%JAR_NAME%"
           dir target\libs
-          jpackage --input target\app --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\app\target\%JAR_NAME%;target\libs" --name InvoiceGenerator --app-version "%EXE_VERSION%" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          jpackage --input target\app --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\app\%JAR_NAME%;target\libs" --name InvoiceGenerator --app-version "%EXE_VERSION%" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
           dir target
         shell: cmd
 
@@ -109,12 +90,12 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%, EXE_NAME=%EXE_NAME%
-          echo Module path will be: "target\%JAR_NAME%;target\libs"
         shell: cmd
 
       - name: Debug target directory
         if: startsWith(github.ref, 'refs/tags/v')
-        run: dir target
+        run: |
+          dir target
           dir target\libs
           dir javafx-sdk
           dir javafx-sdk\javafx-sdk-23.0.2
