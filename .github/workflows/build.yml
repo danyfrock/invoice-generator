@@ -66,11 +66,16 @@ jobs:
           mvn dependency:copy-dependencies -DoutputDirectory="target\libs"
         shell: cmd
 
+      - name: Debug target directory
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: dir target
+        shell: cmd
+
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir javafx-sdk
-          jpackage --input target --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target${{ runner.os == 'Windows' && ';' || ':' }}javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --class-path target\libs\* --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose --win-console
+          jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
           dir target  REM Corrigé pour voir l'exécutable
         shell: cmd
 
