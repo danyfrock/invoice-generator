@@ -12,6 +12,11 @@ jobs:
   build-and-release:
     runs-on: windows-latest
     steps:
+      - name: Clean target directory
+        run: |
+          if exist target rmdir /s /q target
+        shell: cmd
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -53,25 +58,32 @@ jobs:
         shell: cmd
 
       - name: Create runtime with jlink
-        if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging --output target\runtime --verbose
+          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib"
+                --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging
+                --output target\runtime
+                --verbose
           dir target\runtime
         shell: cmd
 
       - name: Copy dependencies
-        if: startsWith(github.ref, 'refs/tags/v')
         run: |
           dir target\libs
           mvn dependency:copy-dependencies -DoutputDirectory="target\libs"
         shell: cmd
 
       - name: Prepare jpackage input
-        if: startsWith(github.ref, 'refs/tags/v')
         run: |
+          echo copy JAR_NAME = %JAR_NAME%
           mkdir target\app
-          move target\%JAR_NAME% target\app\
+          if exist target\%JAR_NAME% (
+            copy target\%JAR_NAME% target\app\
+          ) else (
+            echo %JAR_NAME% not found!
+            exit 1
+          )
           dir target\app
+          dir target
         shell: cmd
 
       - name: Generate executable with jpackage
@@ -79,10 +91,21 @@ jobs:
         run: |
           echo Input directory:
           dir target\app
-          echo Module path:
+          echo trouver jar:
           dir "target\app\%JAR_NAME%"
+          echo Module path:
           dir target\libs
-          jpackage --input target\app --module InvoiceGenerator/com.invoicegenerator.Main --module-path "target\app\%JAR_NAME%;target\libs" --name InvoiceGenerator --app-version "%EXE_VERSION%" --type "exe" --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+          jpackage --input target\app \
+                   --module InvoiceGenerator/com.invoicegenerator.Main \
+                   --module-path "target\app\%JAR_NAME%;target\libs" \
+                   --name InvoiceGenerator \
+                   --app-version "%EXE_VERSION%" \
+                   --type "exe" \
+                   --runtime-image target\runtime \
+                   --win-dir-chooser \
+                   --dest target \
+                   --verbose
+
           dir target
         shell: cmd
 
