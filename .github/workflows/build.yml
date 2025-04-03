@@ -100,7 +100,7 @@ jobs:
           dir target\libs
           jpackage --input target\app ^
             --module InvoiceGenerator/com.invoicegenerator.Main ^
-            --module-path "target\libs" ^
+            --module-path "target\app\%JAR_NAME%;target\libs" ^
             --name InvoiceGenerator ^
             --app-version "%EXE_VERSION%" ^
             --type "exe" ^
