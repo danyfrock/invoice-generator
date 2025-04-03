@@ -62,12 +62,6 @@ jobs:
           echo EXE_NAME=%EXE_NAME%
           echo Checking target directory:
           dir target
-          echo Checking if JAR exists:
-          if exist "target\${{ env.JAR_NAME }}" (
-            echo JAR found: target\${{ env.JAR_NAME }}
-          ) else (
-            echo JAR not found: target\${{ env.JAR_NAME }}
-          )
 
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
