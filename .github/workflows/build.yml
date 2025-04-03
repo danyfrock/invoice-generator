@@ -62,8 +62,11 @@ jobs:
         shell: cmd
 
       - name: Copy dependencies to target
-        if: startsWith(github.ref, 'refs(tags/v')
-        run: copy target\libs\*.jar target\
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          dir target\libs
+          copy target\libs\*.jar target\
+          dir target
 
       - name: Debug before jpackage
         run: |
