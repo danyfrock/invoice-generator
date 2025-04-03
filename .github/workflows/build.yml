@@ -57,14 +57,14 @@ jobs:
 
       - name: Debug before jpackage
         run: |
-          echo JAR_NAME="${{ env.JAR_NAME }}"
-          echo EXE_NAME="${{ env.EXE_NAME }}"
+          echo JAR_NAME=${{ env.JAR_NAME }}
+          echo EXE_NAME=${{ env.EXE_NAME }}
           echo Checking target directory:
           dir target
 
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
-        run: jpackage --input target --main-jar "${{ env.JAR_NAME }}" --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version "${{ env.EXE_VERSION }}" --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
+        run: jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target\runtime --win-dir-chooser --dest target --verbose
 
       - name: Debug target directory
         if: startsWith(github.ref, 'refs/tags/v')
