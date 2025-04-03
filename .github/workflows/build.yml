@@ -55,6 +55,16 @@ jobs:
                 --verbose
           dir target\runtime
 
+      - name: Copy dependencies
+        run: |
+          dir target\libs
+          mvn dependency:copy-dependencies -DoutputDirectory="target\libs"
+        shell: cmd
+
+      - name: Copy dependencies to target
+        if: startsWith(github.ref, 'refs(tags/v')
+        run: copy target\libs\*.jar target\
+
       - name: Debug before jpackage
         run: |
           echo JAR_NAME=${{ env.JAR_NAME }}
