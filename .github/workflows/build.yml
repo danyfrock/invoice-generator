@@ -37,10 +37,10 @@ jobs:
           set "EXE_VERSION=%EXE_VERSION:-SNAPSHOT=%"
           set "JAR_NAME=InvoiceGenerator-%VERSION%.jar"
           set "EXE_NAME=InvoiceGenerator-%EXE_VERSION%.exe"
-          echo VERSION=%VERSION% >> $GITHUB_ENV
-          echo EXE_VERSION=%EXE_VERSION% >> $GITHUB_ENV
-          echo JAR_NAME=%JAR_NAME% >> $GITHUB_ENV
-          echo EXE_NAME=%EXE_NAME% >> $GITHUB_ENV
+          echo VERSION=%VERSION% >> %GITHUB_ENV%
+          echo EXE_VERSION=%EXE_VERSION% >> %GITHUB_ENV%
+          echo JAR_NAME=%JAR_NAME% >> %GITHUB_ENV%
+          echo EXE_NAME=%EXE_NAME% >> %GITHUB_ENV%
           echo Version extracted: VERSION=%VERSION%, EXE_VERSION=%EXE_VERSION%, JAR_NAME=%JAR_NAME%, EXE_NAME=%EXE_NAME%
         shell: cmd
 
@@ -56,15 +56,22 @@ jobs:
                 --verbose
           dir target\runtime
 
+      - name: Debug before jpackage
+        run: |
+          echo JAR_NAME=%JAR_NAME%
+          echo EXE_NAME=%EXE_NAME%
+          echo Checking target directory:
+          dir target
+
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           jpackage `
             --input target `
-            --main-jar "%JAR_NAME%" `
+            --main-jar "${{ env.JAR_NAME }}" `
             --main-class com.invoicegenerator.Main `
             --name InvoiceGenerator `
-            --app-version "%EXE_VERSION%" `
+            --app-version "${{ env.EXE_VERSION }}" `
             --type exe `
             --runtime-image target\runtime `
             --win-dir-chooser `
