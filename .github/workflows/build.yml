@@ -59,10 +59,10 @@ jobs:
 
       - name: Create runtime with jlink
         run: |
-          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib"
-                --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging
-                --output target\runtime
-                --verbose
+          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" ^
+          --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging ^
+          --output target\runtime ^
+          --verbose
           dir target\runtime
         shell: cmd
 
