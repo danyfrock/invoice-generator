@@ -65,12 +65,12 @@ jobs:
           echo "modules=$modules" >> $GITHUB_OUTPUT
 
       - name: Create runtime with jlink
-        if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jlink --module-path "%JAVA_HOME%\\jmods;javafx-sdk\\javafx-sdk-23.0.2" ^
-                --add-modules java.base,java.desktop,java.logging,javafx.controls,javafx.fxml,javafx.graphics ^
-                --output target\\runtime ^
-                --verbose
+          jlink `
+            --module-path "%JAVA_HOME%\\jmods;javafx-sdk\\javafx-sdk-23.0.2" `
+            --add-modules java.base,java.desktop,java.logging,javafx.controls,javafx.fxml,javafx.graphics `
+            --output target\\runtime `
+            --verbose
           dir target\\runtime
 
       - name: Copy dependencies
@@ -96,15 +96,15 @@ jobs:
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jpackage ^
-            --input target ^
-            --main-jar "${{ env.JAR_NAME }}" ^
-            --main-class com.invoicegenerator.Main ^
-            --name InvoiceGenerator ^
-            --app-version "${{ env.EXE_VERSION }}" ^
-            --type exe ^
-            --runtime-image target\\runtime ^
-            --dest target ^
+          jpackage `
+            --input target `
+            --main-jar "${{ env.JAR_NAME }}" `
+            --main-class com.invoicegenerator.Main `
+            --name InvoiceGenerator `
+            --app-version "${{ env.EXE_VERSION }}" `
+            --type exe `
+            --runtime-image target\runtime `
+            --dest target `
             --verbose
 
       - name: Debug target directory
