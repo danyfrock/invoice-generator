@@ -54,7 +54,7 @@ jobs:
             --ignore-missing-deps ^
             --module-path "%JAVA_HOME%\jmods;javafx-sdk/javafx-sdk-23.0.2/lib;target/libs" ^
             --print-module-deps ^
-            target/InvoiceGenerator-1.0.12-SNAPSHOT.jar > jdeps-modules.txt
+            target/${{ env.JAR_NAME }} > jdeps-modules.txt
 
       - name: Read jdeps result
         id: jdeps
@@ -98,7 +98,7 @@ jobs:
         run: |
           jpackage `
             --input target `
-            --main-jar "${{ env.JAR_NAME }}" `
+            --main-jar ${{ env.JAR_NAME }} `
             --main-class com.invoicegenerator.Main `
             --name InvoiceGenerator `
             --app-version "${{ env.EXE_VERSION }}" `
