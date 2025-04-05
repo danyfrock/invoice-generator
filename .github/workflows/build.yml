@@ -46,14 +46,32 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean package
 
+      - name: Analyze dependencies with jdeps
+        shell: cmd
+        run: |
+          jdeps ^
+            --multi-release 22 ^
+            --ignore-missing-deps ^
+            --module-path "%JAVA_HOME%\jmods;javafx-sdk/javafx-sdk-23.0.2/lib;target/libs" ^
+            --print-module-deps ^
+            target/InvoiceGenerator-1.0.12-SNAPSHOT.jar > jdeps-modules.txt
+
+      - name: Read jdeps result
+        id: jdeps
+        shell: bash
+        run: |
+          modules=$(cat jdeps-modules.txt | tr -d '\n' | tr -d ' ')
+          echo "modules=$modules"
+          echo "modules=$modules" >> $GITHUB_OUTPUT
+
       - name: Create runtime with jlink
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
-          jlink --module-path "%JAVA_HOME%\jmods;javafx-sdk\javafx-sdk-23.0.2\lib" `
-                --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,java.logging,java.desktop `
-                --output target\runtime `
+          jlink --module-path "%JAVA_HOME%\\jmods;javafx-sdk\\javafx-sdk-23.0.2" ^
+                --add-modules java.base,java.desktop,java.logging,javafx.controls,javafx.fxml,javafx.graphics ^
+                --output target\\runtime ^
                 --verbose
-          dir target\runtime
+          dir target\\runtime
 
       - name: Copy dependencies
         run: |
@@ -77,7 +95,17 @@ jobs:
 
       - name: Generate executable with jpackage
         if: startsWith(github.ref, 'refs/tags/v')
-        run: jpackage --input target --main-jar ${{ env.JAR_NAME }} --main-class com.invoicegenerator.Main --name InvoiceGenerator --app-version ${{ env.EXE_VERSION }} --type exe --runtime-image target/runtime --win-dir-chooser --dest target --verbose
+        run: |
+          jpackage ^
+            --input target ^
+            --main-jar "${{ env.JAR_NAME }}" ^
+            --main-class com.invoicegenerator.Main ^
+            --name InvoiceGenerator ^
+            --app-version "${{ env.EXE_VERSION }}" ^
+            --type exe ^
+            --runtime-image target\\runtime ^
+            --dest target ^
+            --verbose
 
       - name: Debug target directory
         if: startsWith(github.ref, 'refs/tags/v')
