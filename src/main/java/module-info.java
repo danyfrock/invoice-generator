@@ -7,7 +7,7 @@ module InvoiceGenerator {
     requires com.google.gson;
     requires java.logging;
     requires commons.math3;
-    ////requires org.apache.commons.lang3;
+    requires org.apache.commons.lang3;
     requires java.desktop;
 
     exports com.invoicegenerator;
