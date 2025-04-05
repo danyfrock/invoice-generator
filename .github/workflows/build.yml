@@ -101,7 +101,7 @@ jobs:
             --main-jar ${{ env.JAR_NAME }} `
             --main-class com.invoicegenerator.Main `
             --name InvoiceGenerator `
-            --app-version "${{ env.EXE_VERSION }}" `
+            --app-version ${{ env.EXE_VERSION }} `
             --type exe `
             --runtime-image target\runtime `
             --dest target `
