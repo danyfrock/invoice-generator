@@ -55,6 +55,7 @@ jobs:
             --module-path javafx-sdk/javafx-sdk-23.0.2/lib ^
             --print-module-deps ^
             target/InvoiceGenerator-1.0.12-SNAPSHOT.jar > jdeps-modules.txt
+        shell: cmd
 
       - name: Read jdeps result
         id: jdeps
