@@ -1,4 +1,5 @@
 com\invoicegenerator\views\CommandeView.class
+com\invoicegenerator\utils\ihm\ComponentFactory.class
 com\invoicegenerator\modeles\navettedtos\EventDetailsModel.class
 com\invoicegenerator\viewmodels\CommandesViewModel.class
 com\invoicegenerator\modeles\ActionResult.class

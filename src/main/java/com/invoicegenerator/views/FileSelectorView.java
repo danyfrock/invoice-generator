@@ -5,12 +5,12 @@ import com.invoicegenerator.modeles.BillingProcessModel;
 import com.invoicegenerator.services.BillingProcessService;
 import com.invoicegenerator.services.ParametresService;
 import com.invoicegenerator.utils.backend.LoggerFactory;
+import com.invoicegenerator.utils.ihm.ComponentFactory;
 import com.invoicegenerator.utils.ihm.FileChooserHelper;
 import com.invoicegenerator.utils.ihm.MenuBuilder;
 import javafx.application.Application;
 import javafx.collections.ListChangeListener;
 import javafx.concurrent.Task;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -19,7 +19,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -204,15 +203,7 @@ public class FileSelectorView extends Application {
             logger.log(Level.INFO, "Passage à CommandesView avec {0} éléments", fileTable.getItems().size());
 
             // Fenêtre de chargement avec un indicateur indéfini
-            Stage loadingStage = new Stage();
-            ProgressIndicator indicator = new ProgressIndicator(-1); // Chargement indéfini
-            Label loadingLabel = new Label("Chargement des commandes...");
-            VBox loadingLayout = new VBox(10, loadingLabel, indicator);
-            loadingLayout.setAlignment(Pos.CENTER);
-            Scene loadingScene = new Scene(loadingLayout, 300, 150);
-            loadingStage.setScene(loadingScene);
-            loadingStage.setTitle("Chargement");
-            loadingStage.initModality(Modality.APPLICATION_MODAL);
+            Stage loadingStage = ComponentFactory.createLoadingStage("Chargement des commandes...");
             loadingStage.show();
 
             // Tâche asynchrone
