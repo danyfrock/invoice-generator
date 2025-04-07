@@ -232,7 +232,6 @@ public class NavettesFacturationView extends Application {
             new Thread(loadingTask).start();
         } catch (Exception ex) {
             logger.log(Level.SEVERE, "Erreur lors de l''écriture des navettes : {0}", ex.getMessage());
-            resultLabel.setText("Erreur lors de l'écriture : " + ex.getMessage());
         }
     }
 

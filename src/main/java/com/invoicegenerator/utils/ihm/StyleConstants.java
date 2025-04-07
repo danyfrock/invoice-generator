@@ -10,7 +10,7 @@ public class StyleConstants {
 
     // Couleurs en hexadécimal
     public static final String COLOR_BLEU_DOUX = "#007B7F";
-    public static final String COLOR_GRIS_ANTHRACITE = "#2E2E2E";
+    public static  final String COLOR_WHITE = "#FFFFFF";
     public static final String COLOR_VERT_CLAIR = "#90EE90";
     public static final String COLOR_ROUGE_FONCE = "#7F0000";
 
@@ -24,5 +24,5 @@ public class StyleConstants {
             "-fx-background-color: " + COLOR_ROUGE_FONCE +
                     "; -fx-padding: 5px; " +
                     "-fx-background-radius: 5px; " +
-                    "-fx-text-fill: " + COLOR_GRIS_ANTHRACITE + ";";
+                    "-fx-text-fill: " + COLOR_WHITE + ";";
 }
