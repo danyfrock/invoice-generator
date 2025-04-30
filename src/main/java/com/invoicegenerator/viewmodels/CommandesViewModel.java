@@ -54,7 +54,10 @@ public class CommandesViewModel {
         for (PvEntityPvModel pv : source.getPvEntities()) {
             CommandeViewModel vm = new CommandeViewModel(pv, this);
             commandes.add(vm);
-            vm.estVerifieProperty().addListener((obs, oldVal, newVal) -> updateAllVerified());
+            vm.estVerifieProperty()
+                    .addListener(
+                            (obs, oldVal, newVal) ->
+                                    updateAllVerified());
         }
         if (!commandes.isEmpty()) {
             commandes.getFirst().estLeaderProperty().set(true);
@@ -95,12 +98,16 @@ public class CommandesViewModel {
         logger.log(Level.FINE, "Mise à jour du nom du fichier de sortie");
 
         // Récupère les données
-        String codeContrat = commandes.isEmpty() ? "" : commandes.getFirst().getSource().getCommand().getContractCode();
+        String codeContrat =
+                commandes.isEmpty() ? "" :
+                        commandes.getFirst().getSource().getCommand().getContractCode();
         codeContrat = codeContrat == null ? "" : codeContrat;
         String comp = complement.get() == null ? "" : complement.get();
 
         // Définit le nom du fichier de sortie
-        String basePath = FileUtil.concat(source.getParameters().getOutputFolder(), source.getParameters().getoutputfileDefaultName());
+        String basePath =
+                FileUtil.concat(source.getParameters().getOutputFolder(),
+                        source.getParameters().getoutputfileDefaultName());
         String sortie = FileUtil.addSuffixToFileName(basePath, codeContrat);
         sortie = FileUtil.addSuffixToFileName(sortie, comp);
         this.outputFileName.set(sortie);
@@ -111,7 +118,8 @@ public class CommandesViewModel {
      * Met à jour la propriété allVerified en fonction de l'état de vérification de toutes les commandes.
      */
     private void updateAllVerified() {
-        boolean allVerifiedNow = commandes.stream().allMatch(vm -> vm.estVerifieProperty().get());
+        boolean allVerifiedNow = commandes.stream()
+                .allMatch(vm -> vm.estVerifieProperty().get());
         this.allVerified.set(allVerifiedNow);
         logger.log(Level.FINE, "Mise à jour de allVerified : {0}", allVerifiedNow);
     }
@@ -138,7 +146,8 @@ public class CommandesViewModel {
      */
     public void sauvegarderProgression(File file) {
         logger.log(Level.INFO, "Sauvegarde de la progression dans : {0}", file.getAbsolutePath());
-        source.getParameters().setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
+        source.getParameters()
+                .setDernierEmplacementConnuProgression(file.getParentFile().getAbsolutePath());
         parametresService.enregistrerParametres(source.getParameters());
         new BillingProcessService(file.getAbsolutePath()).enregistrerBillingProcess(this.source);
     }

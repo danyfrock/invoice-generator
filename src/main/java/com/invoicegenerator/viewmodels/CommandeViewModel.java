@@ -260,7 +260,7 @@ public class CommandeViewModel {
     }
 
     private void autoFill() {
-        this.backReference.getPvService().fillPvFrom(this.source.getFilePath(), this.source);
+        this.backReference.getPvService().fillPvFrom(this.source);
         logger.log(Level.FINE, "Conversion du fichier {0} en PvEntityPvModel", this.source.getFilePath());
     }
 

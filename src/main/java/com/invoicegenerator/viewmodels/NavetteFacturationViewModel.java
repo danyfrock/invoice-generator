@@ -149,7 +149,8 @@ public class NavetteFacturationViewModel {
      * @return Le prix unitaire arrondi ou 0.0 si non disponible
      */
     public double getPrixUnitaireRound() {
-        double prix = (modele != null) ? Math.round(modele.getItemDetails().getUnitPrice() * 100.0) / 100.0 : 0.0;
+        double prix = (modele != null) ?
+                Math.round(modele.getItemDetails().getUnitPrice() * 100.0) / 100.0 : 0.0;
         logger.log(Level.FINE, "Récupération de PrixUnitaireRound : {0}", prix);
         return prix;
     }
@@ -160,7 +161,9 @@ public class NavetteFacturationViewModel {
      * @return Le montant de facturation arrondi ou 0.0 si non disponible
      */
     public double getMontantFacturationRound() {
-        double montant = (modele != null) ? Math.round(modele.getBillingDetails().getBillAmount() * 100.0) / 100.0 : 0.0;
+        double montant = (modele != null) ?
+                Math.round(modele.getBillingDetails().getBillAmount() * 100.0) / 100.0 :
+                0.0;
         logger.log(Level.FINE, "Récupération de MontantFacturationRound : {0}", montant);
         return montant;
     }
@@ -171,7 +174,9 @@ public class NavetteFacturationViewModel {
      * @return Le montant calculé arrondi ou 0.0 si non disponible
      */
     public double getMontantEvenementCalculeRound() {
-        double montant = (modele != null) ? Math.round(modele.getEventDetails().getCalculatedEventAmount() * 100.0) / 100.0 : 0.0;
+        double montant = (modele != null) ?
+                Math.round(modele.getEventDetails().getCalculatedEventAmount() * 100.0) / 100.0 :
+                0.0;
         logger.log(Level.FINE, "Récupération de MontantEvenementCalculeRound : {0}", montant);
         return montant;
     }
@@ -204,7 +209,9 @@ public class NavetteFacturationViewModel {
      * @return Le montant calculé ou 0.0 si non disponible
      */
     public double getMontantEvenementCalcule() {
-        double montant = (modele != null) ? modele.getEventDetails().getCalculatedEventAmount() : 0.0;
+        double montant = (modele != null) ?
+                modele.getEventDetails().getCalculatedEventAmount() :
+                0.0;
         logger.log(Level.FINE, "Récupération de MontantEvenementCalcule : {0}", montant);
         return montant;
     }
