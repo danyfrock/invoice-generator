@@ -16,9 +16,9 @@ import java.util.logging.Level;
  */
 public class NavetteFacturationViewModel {
     private static final Logger logger = LoggerFactory.getLogger(NavetteFacturationViewModel.class.getName());
-    private MoisService moisService = new MoisService();
+    private final MoisService moisService = new MoisService();
 
-    private BillingShuttleModel modele;
+    private final BillingShuttleModel modele;
     private static final DateTimeFormatter PRETTYDATE_FORMAT = DateTimeFormatter.ofPattern("dd MMMM yyyy");
     private static final DateTimeFormatter JOUR_FORMAT = DateTimeFormatter.ofPattern("dd");
     private static final DateTimeFormatter ANNEE_FORMAT = DateTimeFormatter.ofPattern("yyyy");
@@ -35,12 +35,12 @@ public class NavetteFacturationViewModel {
     /**
      * Constructeur avec un modèle. Initialise le modèle avec la valeur fournie ou un modèle par défaut si null.
      *
-     * @param modele Le modèle BillingShuttleModel à utiliser
+     * @param model Le modèle BillingShuttleModel à utiliser
      */
-    public NavetteFacturationViewModel(BillingShuttleModel modele) {
+    public NavetteFacturationViewModel(BillingShuttleModel model) {
         logger.log(Level.INFO, "Initialisation de NavetteFacturationViewModel avec modèle");
-        this.modele = (modele != null) ? modele : new BillingShuttleModel();
-        if (modele == null) {
+        this.modele = (model != null) ? model : new BillingShuttleModel();
+        if (model == null) {
             logger.log(Level.WARNING, "Le modèle fourni était null, utilisation d'une instance par défaut");
         }
     }
