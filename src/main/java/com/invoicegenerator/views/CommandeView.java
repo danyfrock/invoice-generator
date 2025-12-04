@@ -253,7 +253,7 @@ public class CommandeView extends VBox {
         }
         try {
             return datePicker.getConverter().fromString(text) != null;
-        } catch (Exception e) {
+        } catch (Exception _) {
             return false;
         }
     }

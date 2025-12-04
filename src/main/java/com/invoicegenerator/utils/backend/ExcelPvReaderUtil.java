@@ -233,7 +233,8 @@ public class ExcelPvReaderUtil {
             return Double.parseDouble(value);
         } catch (NumberFormatException e) {
             String message =
-                    MessageFormat.format("Impossible de convertir la chaîne ''{0}'' en nombre, retour de 0.0", value);
+                    MessageFormat.format("Impossible de convertir la chaîne ''{0}'' en nombre, retour de 0.0 ({1})",
+                            value, e.getMessage());
             logger.warning(message);
             return 0.0;
         }

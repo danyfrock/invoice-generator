@@ -77,7 +77,11 @@ public class LoggerFactory {
             try {
                 return Integer.parseInt(value);
             } catch (NumberFormatException e) {
-                writeAdHocLog("Valeur invalide pour " + property + " : " + value + ", utilisation de la valeur par défaut " + defaultValue);
+
+                writeAdHocLog(
+                        "Valeur invalide pour " + property + " : " + value +
+                                " (" + e.getMessage() + "), utilisation de la valeur par défaut " + defaultValue
+                );
             }
         }
         return defaultValue;
