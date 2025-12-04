@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 /**
  * Vue principale pour l'affichage et la gestion des commandes dans l'application.
  */
-public class CommandesView extends Application {
+public class CommandesView extends InvoiceGeneratorApplication {
     private static final Logger logger = LoggerFactory.getLogger(CommandesView.class.getName());
 
     private TableView<CommandeViewModel> fileTable;
@@ -34,7 +34,7 @@ public class CommandesView extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void setupView(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l''interface CommandesView");
         primaryStage.setTitle("Commandes UI");
 
@@ -116,7 +116,6 @@ public class CommandesView extends Application {
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.setMaximized(this.source.getSource().getParameters().getPleinEcran());
-        primaryStage.show();
 
         selectFirstRow();
         logger.log(Level.INFO, "Interface CommandesView affichée avec succès");
