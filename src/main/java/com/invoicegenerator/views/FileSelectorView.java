@@ -32,7 +32,7 @@ import java.util.function.Supplier;
  * Vue pour la sélection des fichiers dans l'application de gestion des navettes de facturation.
  * Permet à l'utilisateur de choisir des fichiers Excel, de les supprimer et de passer à l'étape suivante.
  */
-public class FileSelectorView extends Application {
+public class FileSelectorView extends InvoiceGeneratorApplication {
     private static final Logger logger = LoggerFactory.getLogger(FileSelectorView.class.getName());
 
     private TableView<PvEntityPvModel> fileTable = new TableView<>();
@@ -55,7 +55,7 @@ public class FileSelectorView extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void setupView(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l''interface FileSelectorView");
         primaryStage.setTitle("Application d''enregistrement de navettes de facturation.");
 
@@ -152,7 +152,6 @@ public class FileSelectorView extends Application {
         });
         primaryStage.setScene(scene);
         primaryStage.setMaximized(this.source.getParameters().getPleinEcran());
-        primaryStage.show();
 
         logger.log(Level.INFO, "Interface FileSelectorView affichée avec succès");
     }

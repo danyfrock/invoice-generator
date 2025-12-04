@@ -19,7 +19,7 @@ import java.util.logging.Level;
  * Vue pour la gestion des paramètres de l'application.
  * Permet de configurer le dossier de sortie, les années min/max et les codes d'activité.
  */
-public class ParametresView extends Application {
+public class ParametresView extends InvoiceGeneratorApplication {
     private static final Logger logger = LoggerFactory.getLogger(ParametresView.class.getName());
 
     private final BillingProcessModel source;
@@ -46,7 +46,7 @@ public class ParametresView extends Application {
      * @param primaryStage La fenêtre principale de l'application
      */
     @Override
-    public void start(Stage primaryStage) {
+    public void setupView(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l''interface ParametresView");
         primaryStage.setTitle("Paramètres");
 
@@ -160,7 +160,7 @@ public class ParametresView extends Application {
 
         Scene scene = new Scene(grid, 500, 400);
         primaryStage.setScene(scene);
-        primaryStage.show();
+
         logger.log(Level.INFO, "Interface ParametresView affichée avec succès");
     }
 

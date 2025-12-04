@@ -44,7 +44,7 @@ import javafx.stage.Stage;
  * Vue pour l'affichage et la gestion des navettes de facturation dans l'application.
  * Permet de visualiser les données, écrire dans un fichier Excel, et ouvrir des fichiers/dossiers.
  */
-public class NavettesFacturationView extends Application {
+public class NavettesFacturationView extends InvoiceGeneratorApplication {
     private static final Logger logger = LoggerFactory.getLogger(NavettesFacturationView.class.getName());
 
     private TableView<NavetteFacturationViewModel> table;
@@ -90,7 +90,7 @@ public class NavettesFacturationView extends Application {
      * @param primaryStage La fenêtre principale de l'application
      */
     @Override
-    public void start(Stage primaryStage) {
+    public void setupView(Stage primaryStage) {
         logger.log(Level.INFO, "Démarrage de l''interface NavettesFacturationView");
         primaryStage.setTitle("Navettes de Facturation");
 
@@ -187,7 +187,6 @@ public class NavettesFacturationView extends Application {
             Scene scene = new Scene(root, 800, 600);
             primaryStage.setScene(scene);
             primaryStage.setMaximized(this.sourceFacturation.getParameters().getPleinEcran());
-            primaryStage.show();
 
             logger.log(Level.INFO, "Interface NavettesFacturationView affichée avec succès");
         } catch (Exception e) {
@@ -232,7 +231,6 @@ public class NavettesFacturationView extends Application {
             new Thread(loadingTask).start();
         } catch (Exception ex) {
             logger.log(Level.SEVERE, "Erreur lors de l''écriture des navettes : {0}", ex.getMessage());
-            resultLabel.setText("Erreur lors de l'écriture : " + ex.getMessage());
         }
     }
 

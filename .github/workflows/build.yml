@@ -105,6 +105,7 @@ jobs:
             --type exe `
             --runtime-image target\runtime `
             --dest target `
+            --icon "src\main\resources\icons\nav fac ico.png" `
             --verbose
 
       - name: Debug target directory
